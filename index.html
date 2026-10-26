@@ -54,6 +54,11 @@ body{background:var(--bg);color:var(--fg);font-family:var(--mono);font-size:14px
 .tally b{color:var(--fg);font-variant-numeric:tabular-nums;text-align:right}
 .tally .sum b{color:var(--hero);font-size:18px}
 .tally .new{color:var(--fuel)}
+.tally b.on{color:var(--hero)}
+.tally b.off{color:var(--line)}
+.stars{letter-spacing:.04em;white-space:nowrap}
+.stars i{font-style:normal;color:var(--line)}
+.stars i.on{color:var(--hero)}
 #sNeed{color:var(--fuel)}
 #sNeed.open{color:var(--core)}
 .tools{display:flex;gap:8px;flex-wrap:wrap}
@@ -3574,14 +3579,15 @@ const STORE='fission-v1',DAT_STORE='fission-dat';
 const OLD_STORE='supaplex-remake-v1',OLD_DAT_STORE='supaplex-remake-dat';
 const reduceMotion=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let save={sound:true,set:'remake',sets:{remake:{done:{},best:{},score:{}},original:{done:{},best:{},score:{}}}};
+let save={sound:true,set:'remake',sets:{remake:{done:{},best:{},score:{},stars:{}},original:{done:{},best:{},score:{},stars:{}}}};
 // Progress lives in a cookie, packed small enough for one: v2~sound~set~fission~classic, where each
-// set is its cleared levels as index.bestSeconds.bestScore (both base 36) joined by _. localStorage
-// keeps a copy, because browsers drop cookies on pages opened from disk (file://).
+// set is its cleared levels as index.bestSeconds.bestScore.stars (base 36; stars is the bit mask
+// 1 cleared, 2 fast, 4 chain) joined by _. localStorage keeps a copy, because browsers drop cookies
+// on pages opened from disk (file://).
 const COOKIE='fission_progress',COOKIE_DAYS=400;
 function packSave(s){
   const b36=function(n){return n!=null?n.toString(36):'';};
-  const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k]);}).join('_');};
+  const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k])+'.'+b36(p.stars[k]);}).join('_');};
   return ['v2',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original)].join('~');
 }
 function unpackSave(str){
@@ -3589,8 +3595,12 @@ function unpackSave(str){
   if((v!=='v1'&&v!=='v2')||a.length<5) return null;
   const num=function(t){return t===''||t===undefined?null:(v==='v1'?+t:parseInt(t,36));};
   const set=function(t){
-    const p={done:{},best:{},score:{}};
-    if(t) t.split('_').forEach(function(e){const f=e.split('.');p.done[f[0]]=true;const b=num(f[1]),s=num(f[2]);if(b!=null) p.best[f[0]]=b;if(s!=null) p.score[f[0]]=s;});
+    const p={done:{},best:{},score:{},stars:{}};
+    if(t) t.split('_').forEach(function(e){
+      const f=e.split('.');p.done[f[0]]=true;
+      const b=num(f[1]),s=num(f[2]),st=num(f[3]);
+      if(b!=null) p.best[f[0]]=b;if(s!=null) p.score[f[0]]=s;p.stars[f[0]]=st!=null?st:1;
+    });
     return p;
   };
   return {sound:a[1]!=='0',set:a[2]==='o'?'original':'remake',sets:{remake:set(a[3]),original:set(a[4])}};
@@ -3608,7 +3618,11 @@ else try{
     else{save.sound=s.sound!==false;save.sets.remake.done=s.done||{};save.sets.remake.best=s.best||{};}
   }
 }catch(e){}
-for(const k in save.sets) if(!save.sets[k].score) save.sets[k].score={}; // saves from before scoring
+for(const k in save.sets){ // saves from before scoring and stars
+  const p=save.sets[k];
+  if(!p.score) p.score={};
+  if(!p.stars){p.stars={};for(const i in p.done) if(p.done[i]) p.stars[i]=1;}
+}
 function persist(){
   try{document.cookie=COOKIE+'='+encodeURIComponent(packSave(save))+';max-age='+(COOKIE_DAYS*86400)+';path=/;SameSite=Lax';}catch(e){}
   try{localStorage.setItem(STORE,JSON.stringify(save));}catch(e){}
@@ -4147,7 +4161,14 @@ const snaps=[],SNAP_MS=280;
 // Points are a layer over the game: the rules never read them. A pellet taken within COMBO_TICKS of
 // the last one raises the combo, and each pellet pays PTS.pellet times the combo.
 const PTS={pellet:100,red:50,fission:500,kill:250,clear:1000},COMBO_TICKS=16,PAR_SECS=600;
-let score=0,combo=0,comboTick=-99;
+let score=0,combo=0,comboTick=-99,maxCombo=0;
+// Stars: 1 cleared, 2 fast (under par), 4 chain (a combo of x5, or x need on a tiny level).
+const STAR_FAST=2,STAR_CHAIN=4;
+function parSecs(g){return 30+2*g.need+(g.W*g.H>=1000?60:0);}
+function chainGoal(g){return Math.min(5,Math.max(1,g.need));}
+function starsFor(g,secs){return 1|(secs<=parSecs(g)?STAR_FAST:0)|(maxCombo>=chainGoal(g)?STAR_CHAIN:0);}
+function countBits(m){return ((m&1)?1:0)+((m&2)?1:0)+((m&4)?1:0);}
+function starsHTML(m){return '<span class="stars">'+[1,2,4].map(function(b){return '<i'+((m&b)?' class="on"':'')+'>★</i>';}).join('')+'</span>';}
 const pops=[],POP_MS=900; // floating "+100 ×3" labels
 function award(n,x,y,label,col){score+=n;pops.push({x:x,y:y,text:(label?label+' ':'')+'+'+fmtN(n),col:col,t:performance.now()});}
 function fmtN(n){return Math.round(n).toLocaleString('en-US');}
@@ -4156,7 +4177,7 @@ function timeBonus(secs){return Math.max(0,PAR_SECS-Math.round(secs))*5;}
 function scoreTick(g,got0,red0){
   if(g.state!=='play'&&g.state!=='won') return;
   if(g.got>got0){
-    combo=g.tick-comboTick<=COMBO_TICKS?combo+1:1;comboTick=g.tick;
+    combo=g.tick-comboTick<=COMBO_TICKS?combo+1:1;comboTick=g.tick;if(combo>maxCombo) maxCombo=combo;
     for(let i=got0;i<g.got;i++) award(PTS.pellet*combo,g.m.x,g.m.y,combo>1?'×'+combo:'','#b4ff8c');
     SFX.combo(combo);
   }
@@ -4248,12 +4269,14 @@ function levelGrid(levels){
   const p=prog();
   return '<div class="levels'+(levels.length>20?' dense':'')+'">'+levels.map(function(lv,i){
     const best=p.best[i],sc=p.score[i];
-    return '<button type="button" class="lv'+(p.done[i]?' cleared':'')+'" data-act="lv" data-lv="'+i+'" title="'+esc(lv.name)+'">'+
+    const tip=esc(lv.name)+(p.done[i]?' · best '+(best!=null?fmt(best):'')+' · stars: cleared, fast, chain':'');
+    return '<button type="button" class="lv'+(p.done[i]?' cleared':'')+'" data-act="lv" data-lv="'+i+'" title="'+tip+'">'+
       '<span class="num">'+pad3(i+1)+'</span><span class="name">'+esc(lv.name)+'</span>'+
-      '<span class="meta">'+(p.done[i]?(best!=null?fmt(best):'Cleared')+(sc!=null?' · <b>'+fmtN(sc)+'</b>':''):needLabel(lv))+'</span></button>';
+      '<span class="meta">'+(p.done[i]?starsHTML(p.stars[i]||1)+(sc!=null?' <b>'+fmtN(sc)+'</b>':best!=null?' '+fmt(best):''):needLabel(lv))+'</span></button>';
   }).join('')+'</div>';
 }
 function totalScore(){const s=prog().score;let t=0;for(const k in s) t+=s[k];return t;}
+function totalStars(){const s=prog().stars;let t=0;for(const k in s) t+=countBits(s[k]);return t;}
 function showMenu(){
   if(screen==='play') clearInput();
   screen='menu';
@@ -4273,7 +4296,7 @@ function showMenu(){
     body=(set==='original'?'<div class="setbar"><span>'+esc(datName)+' · '+datLevels.length+' levels · '+cleared+' cleared'+(datKept?'':' · too large to remember, load it again next visit')+'</span>'+
         '<button type="button" class="linkbtn" data-act="pick">Use a different file</button><button type="button" class="linkbtn" data-act="forget">Forget this file</button></div>'+
         (datError?'<span class="err">'+esc(datError)+'</span>':''):'')+
-      '<div class="total">Total score <b>'+fmtN(totalScore())+'</b> · your best on every level, added up</div>'+
+      '<div class="total">Total score <b>'+fmtN(totalScore())+'</b> · <b>'+totalStars()+'</b>/'+(levels.length*3)+' <span class="stars"><i class="on">★</i></span> · fast = under par, chain = a combo of ×5</div>'+
       levelGrid(levels);
   }
   ov.innerHTML='<div class="panel">'+
@@ -4295,7 +4318,7 @@ function dialog(title,body,buttons){
 }
 function startLevel(i){
   const levels=L();
-  cur=i;game=createGame(levels[i]);game.levelSet=set;game.hasRed=game.cells.some(function(c){return c.t===RED;});acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;pops.length=0;eatT=-1e9;heat=null;score=0;combo=0;comboTick=-99;
+  cur=i;game=createGame(levels[i]);game.levelSet=set;game.hasRed=game.cells.some(function(c){return c.t===RED;});acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;pops.length=0;eatT=-1e9;heat=null;score=0;combo=0;comboTick=-99;maxCombo=0;
   screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();
   const hint=levels[i].hint||('Collect '+game.need+' Pellet'+(game.need===1?'':'s')+', then reach the Reactor.'+(game.grav?' Gravity is on.':''));
   toast(hint,7000);
@@ -4318,14 +4341,18 @@ function showWon(){
   if(p.best[cur]==null||secs<p.best[cur]) p.best[cur]=Math.round(secs);
   const bonus=timeBonus(secs),total=score+PTS.clear+bonus,newBest=p.score[cur]==null||total>p.score[cur];
   if(newBest) p.score[cur]=total;
+  const got=starsFor(game,secs),had=p.stars[cur]||0;
+  p.stars[cur]=had|got;
   persist();SFX.bonus();
   const last=cur===L().length-1;
+  const star=function(bit,label){const on=got&bit,kept=had&bit;return '<span class="'+(on&&!kept?'new':'')+'">'+label+'</span><b class="'+(on?'on':'off')+'">'+(on?'★':'☆')+'</b>';};
   const tally='<span class="tally">'+
     '<span>Pellets and bonuses</span><b>'+fmtN(score)+'</b>'+
     '<span>Reactor started</span><b>'+fmtN(PTS.clear)+'</b>'+
     '<span>Time bonus · '+fmt(secs)+'</span><b>'+fmtN(bonus)+'</b>'+
     '<span class="sum">Score</span><b class="sum">'+fmtN(total)+'</b>'+
-    '<span class="'+(newBest?'new':'')+'">'+(newBest?'New best':'Best '+fmtN(p.score[cur]))+'</span><b>'+(newBest?'★':'')+'</b></span>';
+    '<span class="'+(newBest?'new':'')+'">'+(newBest?'New best score':'Best '+fmtN(p.score[cur]))+'</span><b></b>'+
+    star(1,'Cleared')+star(STAR_FAST,'Fast · under '+fmt(parSecs(game)))+star(STAR_CHAIN,'Chain · combo ×'+chainGoal(game))+'</span>';
   dialog(last?'All levels cleared':(set==='original'?'Classic ':'Level ')+pad3(cur+1)+' complete',tally+(last?'<br>That was the last level.':''),
     last?[['levels','Levels'],['retry','Play again']]:[['next','Next level (Enter)'],['retry','Play again'],['levels','Levels']]);
 }
