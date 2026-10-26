@@ -44,6 +44,16 @@ body{background:var(--bg);color:var(--fg);font-family:var(--mono);font-size:14px
 .stat{display:flex;flex-direction:column;gap:2px}
 .stat .k{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 .stat .v{font-size:20px;font-weight:600;font-variant-numeric:tabular-nums;line-height:1.1}
+#sScore{color:var(--hero)}
+.combo{display:inline-block;margin-left:6px;padding:0 6px;border-radius:5px;background:var(--hero);color:#16140c;font-size:12px;font-weight:700;vertical-align:middle;animation:combo .25s ease-out}
+@keyframes combo{from{transform:scale(1.6)}to{transform:scale(1)}}
+.lv .meta b{color:var(--hero);font-weight:600}
+.total{font-size:12px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.total b{color:var(--hero);font-size:16px;letter-spacing:0;font-variant-numeric:tabular-nums}
+.tally{display:grid;grid-template-columns:auto auto;gap:4px 18px;justify-content:center;font-size:13px;color:var(--muted);text-align:left}
+.tally b{color:var(--fg);font-variant-numeric:tabular-nums;text-align:right}
+.tally .sum b{color:var(--hero);font-size:18px}
+.tally .new{color:var(--fuel)}
 #sNeed{color:var(--fuel)}
 #sNeed.open{color:var(--core)}
 .tools{display:flex;gap:8px;flex-wrap:wrap}
@@ -117,7 +127,8 @@ button{font:inherit;color:inherit}
     <div class="brand"><span class="logo"><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><span class="lvl" id="lvlName">Level 001</span></div>
     <div class="stats">
       <div class="stat"><span class="k">Pellets needed</span><span class="v" id="sNeed">000</span></div>
-      <div class="stat"><span class="k">Red canisters</span><span class="v" id="sRed">0</span></div>
+      <div class="stat"><span class="k">Score</span><span class="v" id="sScore">0<b class="combo" id="sCombo" hidden>×2</b></span></div>
+      <div class="stat" id="redStat" hidden><span class="k">Red canisters</span><span class="v" id="sRed">0</span></div>
       <div class="stat"><span class="k">Time</span><span class="v" id="sTime">0:00</span></div>
       <div class="stat" id="gravStat" hidden><span class="k">Gravity</span><span class="v" id="sGrav">Off</span></div>
     </div>
@@ -3344,7 +3355,7 @@ function createGame(level){
   const fromDat=!!level.codes;
   const H=fromDat?level.H:level.map.length,W=fromDat?level.W:level.map[0].length;
   const g={W:W,H:H,cells:new Array(W*H),tick:0,need:level.need,got:0,red:0,total:0,state:'play',endTick:-1,
-    pending:[],events:[],m:{x:-1,y:-1,face:1,bomb:0,snapTick:-9,snapDir:1},pushTicks:0,pushDir:-1,holdTicks:0,termTick:-99,
+    pending:[],events:[],marks:[],m:{x:-1,y:-1,face:1,bomb:0,snapTick:-9,snapDir:1},pushTicks:0,pushDir:-1,holdTicks:0,termTick:-99,
     grav:!!level.grav,freezeZ:!!level.freezeZ,freezeE:false,usesGrav:!!level.grav,exitLost:false};
   for(let y=0;y<H;y++){
     const row=fromDat?null:level.map[y];
@@ -3401,6 +3412,8 @@ function explode(g,cx,cy,info){
     if(c.t===HARD||c.t===INVIS) continue;
     if(c.t===EXIT&&!g.exitLost){g.exitLost=true;emit(g,'exitlost');}
     if(c.t===MURPHY) kill(g);
+    if(c.t===SNIK) g.marks.push({k:'kill',x:x,y:y});
+    if(!dx&&!dy&&info) g.marks.push({k:'fission',x:x,y:y});
     if(dx||dy){
       if(c.t===ORANGE||c.t===YELLOW||c.t===BOMB||c.t===SNIK||c.t===MURPHY) queue(g,x,y,false,1);
       else if(c.t===ELEC) queue(g,x,y,true,1);
@@ -3532,7 +3545,7 @@ function crawl(g,x,y,c){
 }
 
 function step(g,inp){
-  g.tick++;g.events.length=0;
+  g.tick++;g.events.length=0;g.marks=[]; // marks: where things worth points happened this tick (display only)
   const due=[];
   g.pending=g.pending.filter(function(p){if(--p.delay>0) return true;due.push(p);return false;});
   for(const p of due) explode(g,p.x,p.y,p.info);
@@ -3553,7 +3566,7 @@ function step(g,inp){
 (function(){
 const $=function(id){return document.getElementById(id);};
 const stage=$('stage'),cv=$('cv'),ctx=cv.getContext('2d'),ov=$('ov'),toastEl=$('toast');
-const sNeed=$('sNeed'),sRed=$('sRed'),sTime=$('sTime'),sGrav=$('sGrav'),gravStat=$('gravStat'),lvlName=$('lvlName'),bSound=$('bSound'),datFile=$('datFile');
+const sNeed=$('sNeed'),sScore=$('sScore'),sCombo=$('sCombo'),sRed=$('sRed'),redStat=$('redStat'),sTime=$('sTime'),sGrav=$('sGrav'),gravStat=$('gravStat'),lvlName=$('lvlName'),bSound=$('bSound'),datFile=$('datFile');
 const TICK=125;
 const FONT_D='"Chakra Petch","Bahnschrift","Segoe UI",sans-serif';
 const STORE='fission-v1',DAT_STORE='fission-dat';
@@ -3561,19 +3574,25 @@ const STORE='fission-v1',DAT_STORE='fission-dat';
 const OLD_STORE='supaplex-remake-v1',OLD_DAT_STORE='supaplex-remake-dat';
 const reduceMotion=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let save={sound:true,set:'remake',sets:{remake:{done:{},best:{}},original:{done:{},best:{}}}};
-// Progress lives in a cookie, packed small enough for one: v1~sound~set~fission~classic, where each
-// set is cleared levels as index.bestSeconds joined by _. localStorage keeps a copy, because browsers
-// drop cookies on pages opened from disk (file://).
+let save={sound:true,set:'remake',sets:{remake:{done:{},best:{},score:{}},original:{done:{},best:{},score:{}}}};
+// Progress lives in a cookie, packed small enough for one: v2~sound~set~fission~classic, where each
+// set is its cleared levels as index.bestSeconds.bestScore (both base 36) joined by _. localStorage
+// keeps a copy, because browsers drop cookies on pages opened from disk (file://).
 const COOKIE='fission_progress',COOKIE_DAYS=400;
 function packSave(s){
-  const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+(p.best[k]!=null?p.best[k]:'');}).join('_');};
-  return ['v1',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original)].join('~');
+  const b36=function(n){return n!=null?n.toString(36):'';};
+  const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k]);}).join('_');};
+  return ['v2',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original)].join('~');
 }
 function unpackSave(str){
-  const a=str.split('~');
-  if(a[0]!=='v1'||a.length<5) return null;
-  const set=function(t){const p={done:{},best:{}};if(t) t.split('_').forEach(function(e){const kb=e.split('.');p.done[kb[0]]=true;if(kb[1]!=='') p.best[kb[0]]=+kb[1];});return p;};
+  const a=str.split('~'),v=a[0];
+  if((v!=='v1'&&v!=='v2')||a.length<5) return null;
+  const num=function(t){return t===''||t===undefined?null:(v==='v1'?+t:parseInt(t,36));};
+  const set=function(t){
+    const p={done:{},best:{},score:{}};
+    if(t) t.split('_').forEach(function(e){const f=e.split('.');p.done[f[0]]=true;const b=num(f[1]),s=num(f[2]);if(b!=null) p.best[f[0]]=b;if(s!=null) p.score[f[0]]=s;});
+    return p;
+  };
   return {sound:a[1]!=='0',set:a[2]==='o'?'original':'remake',sets:{remake:set(a[3]),original:set(a[4])}};
 }
 function readCookie(){
@@ -3589,6 +3608,7 @@ else try{
     else{save.sound=s.sound!==false;save.sets.remake.done=s.done||{};save.sets.remake.best=s.best||{};}
   }
 }catch(e){}
+for(const k in save.sets) if(!save.sets[k].score) save.sets[k].score={}; // saves from before scoring
 function persist(){
   try{document.cookie=COOKIE+'='+encodeURIComponent(packSave(save))+';max-age='+(COOKIE_DAYS*86400)+';path=/;SameSite=Lax';}catch(e){}
   try{localStorage.setItem(STORE,JSON.stringify(save));}catch(e){}
@@ -3683,7 +3703,10 @@ const SFX={
   gravon:function(){tone(500,250,0.15,'sine',0.05);},
   gravoff:function(){tone(250,500,0.15,'sine',0.05);},
   thud:function(){tone(80,50,0.06,'triangle',0.05);},
-  zap:function(){tone(1900,700,0.09,'triangle',0.035);}
+  zap:function(){tone(1900,700,0.09,'triangle',0.035);},
+  // A pellet in a combo: the same chime, a semitone higher for every step of the combo.
+  combo:function(n){const f=880*Math.pow(2,Math.min(n-1,12)/12);tone(f,f*1.5,0.08,'square',0.045);},
+  bonus:function(){[660,880,1320].forEach(function(f,i){tone(f,f,0.1,'square',0.04,i*0.07);});}
 };
 
 /* ---------- drawing (unit square: 0..1) ---------- */
@@ -4106,9 +4129,43 @@ function render(now){
     D.snapLight(ctx,k,s.d);
   }
   ctx.setTransform(1,0,0,1,0,0);
+  for(let i=pops.length-1;i>=0;i--){
+    const p=pops[i],k=(now-p.t)/POP_MS;
+    if(k>=1){pops.splice(i,1);continue;}
+    const X=(p.x+.5-cam.x)*tsD,Y=(p.y+.25-cam.y)*tsD-k*tsD*.9;
+    ctx.globalAlpha=1-Math.max(0,k-.6)/.4;
+    ctx.font='700 '+Math.round(tsD*.4)+'px '+FONT_D;ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.lineWidth=Math.max(2,tsD*.08);ctx.strokeStyle='rgba(5,7,10,.85)';ctx.strokeText(p.text,X,Y);
+    ctx.fillStyle=p.col;ctx.fillText(p.text,X,Y);
+  }
+  ctx.globalAlpha=1;
 }
 // Snap lights, one per Space+direction, drawn from Iso to the tile it reached for.
 const snaps=[],SNAP_MS=280;
+
+/* ---------- score ---------- */
+// Points are a layer over the game: the rules never read them. A pellet taken within COMBO_TICKS of
+// the last one raises the combo, and each pellet pays PTS.pellet times the combo.
+const PTS={pellet:100,red:50,fission:500,kill:250,clear:1000},COMBO_TICKS=16,PAR_SECS=600;
+let score=0,combo=0,comboTick=-99;
+const pops=[],POP_MS=900; // floating "+100 ×3" labels
+function award(n,x,y,label,col){score+=n;pops.push({x:x,y:y,text:(label?label+' ':'')+'+'+fmtN(n),col:col,t:performance.now()});}
+function fmtN(n){return Math.round(n).toLocaleString('en-US');}
+function timeBonus(secs){return Math.max(0,PAR_SECS-Math.round(secs))*5;}
+// Reads this tick's pickups and marks off the game and turns them into points.
+function scoreTick(g,got0,red0){
+  if(g.state!=='play'&&g.state!=='won') return;
+  if(g.got>got0){
+    combo=g.tick-comboTick<=COMBO_TICKS?combo+1:1;comboTick=g.tick;
+    for(let i=got0;i<g.got;i++) award(PTS.pellet*combo,g.m.x,g.m.y,combo>1?'×'+combo:'','#b4ff8c');
+    SFX.combo(combo);
+  }
+  if(g.red>red0) award(PTS.red,g.m.x,g.m.y,'','#ff9a8c');
+  for(const mk of g.marks){
+    if(mk.k==='fission') award(PTS.fission,mk.x,mk.y,'FISSION','#9fdcff');
+    else if(mk.k==='kill') award(PTS.kill,mk.x,mk.y,'','#efc4ff');
+  }
+}
 // Mushroom clouds outlive the explosion cells under them, so they are tracked here, not in the game.
 const blasts=[],BLAST_MS=1100;
 let eatT=-1e9; // when Iso last ate a Pellet, for its radiation flash
@@ -4136,6 +4193,10 @@ function hud(){
   setText(sNeed,'need',left===0?'REACTOR READY':pad3(left));
   sNeed.classList.toggle('open',left===0);
   setText(sRed,'red',String(game.red));
+  redStat.hidden=!(game.hasRed||game.red>0); // most levels have no red canisters; keep the bar short
+  if(hudCache.score!==score){hudCache.score=score;sScore.firstChild.nodeValue=fmtN(score);}
+  const cb=combo>1?'×'+combo:'';
+  if(hudCache.combo!==cb){hudCache.combo=cb;sCombo.hidden=!cb;if(cb){sCombo.textContent=cb;sCombo.style.animation='none';void sCombo.offsetWidth;sCombo.style.animation='';}}
   setText(sTime,'time',fmt((game.state==='play'?game.tick:game.endTick)*TICK/1000));
   setText(lvlName,'lvl',levelLabel(cur));
   gravStat.hidden=!game.usesGrav;
@@ -4186,12 +4247,13 @@ function needLabel(lv){
 function levelGrid(levels){
   const p=prog();
   return '<div class="levels'+(levels.length>20?' dense':'')+'">'+levels.map(function(lv,i){
-    const best=p.best[i];
+    const best=p.best[i],sc=p.score[i];
     return '<button type="button" class="lv'+(p.done[i]?' cleared':'')+'" data-act="lv" data-lv="'+i+'" title="'+esc(lv.name)+'">'+
       '<span class="num">'+pad3(i+1)+'</span><span class="name">'+esc(lv.name)+'</span>'+
-      '<span class="meta">'+(p.done[i]?'Cleared'+(best!=null?' in '+fmt(best):''):needLabel(lv))+'</span></button>';
+      '<span class="meta">'+(p.done[i]?(best!=null?fmt(best):'Cleared')+(sc!=null?' · <b>'+fmtN(sc)+'</b>':''):needLabel(lv))+'</span></button>';
   }).join('')+'</div>';
 }
+function totalScore(){const s=prog().score;let t=0;for(const k in s) t+=s[k];return t;}
 function showMenu(){
   if(screen==='play') clearInput();
   screen='menu';
@@ -4211,6 +4273,7 @@ function showMenu(){
     body=(set==='original'?'<div class="setbar"><span>'+esc(datName)+' · '+datLevels.length+' levels · '+cleared+' cleared'+(datKept?'':' · too large to remember, load it again next visit')+'</span>'+
         '<button type="button" class="linkbtn" data-act="pick">Use a different file</button><button type="button" class="linkbtn" data-act="forget">Forget this file</button></div>'+
         (datError?'<span class="err">'+esc(datError)+'</span>':''):'')+
+      '<div class="total">Total score <b>'+fmtN(totalScore())+'</b> · your best on every level, added up</div>'+
       levelGrid(levels);
   }
   ov.innerHTML='<div class="panel">'+
@@ -4232,7 +4295,7 @@ function dialog(title,body,buttons){
 }
 function startLevel(i){
   const levels=L();
-  cur=i;game=createGame(levels[i]);game.levelSet=set;acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;eatT=-1e9;heat=null;
+  cur=i;game=createGame(levels[i]);game.levelSet=set;game.hasRed=game.cells.some(function(c){return c.t===RED;});acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;pops.length=0;eatT=-1e9;heat=null;score=0;combo=0;comboTick=-99;
   screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();
   const hint=levels[i].hint||('Collect '+game.need+' Pellet'+(game.need===1?'':'s')+', then reach the Reactor.'+(game.grav?' Gravity is on.':''));
   toast(hint,7000);
@@ -4253,9 +4316,17 @@ function showWon(){
   const secs=game.endTick*TICK/1000,p=prog();
   p.done[cur]=true;
   if(p.best[cur]==null||secs<p.best[cur]) p.best[cur]=Math.round(secs);
-  persist();
+  const bonus=timeBonus(secs),total=score+PTS.clear+bonus,newBest=p.score[cur]==null||total>p.score[cur];
+  if(newBest) p.score[cur]=total;
+  persist();SFX.bonus();
   const last=cur===L().length-1;
-  dialog(last?'All levels cleared':(set==='original'?'Classic ':'Level ')+pad3(cur+1)+' complete','Finished in '+fmt(secs)+' with '+game.got+' Pellets.'+(last?' That was the last level.':''),
+  const tally='<span class="tally">'+
+    '<span>Pellets and bonuses</span><b>'+fmtN(score)+'</b>'+
+    '<span>Reactor started</span><b>'+fmtN(PTS.clear)+'</b>'+
+    '<span>Time bonus · '+fmt(secs)+'</span><b>'+fmtN(bonus)+'</b>'+
+    '<span class="sum">Score</span><b class="sum">'+fmtN(total)+'</b>'+
+    '<span class="'+(newBest?'new':'')+'">'+(newBest?'New best':'Best '+fmtN(p.score[cur]))+'</span><b>'+(newBest?'★':'')+'</b></span>';
+  dialog(last?'All levels cleared':(set==='original'?'Classic ':'Level ')+pad3(cur+1)+' complete',tally+(last?'<br>That was the last level.':''),
     last?[['levels','Levels'],['retry','Play again']]:[['next','Next level (Enter)'],['retry','Play again'],['levels','Levels']]);
 }
 
@@ -4333,10 +4404,12 @@ bAct.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();t
 function doStep(){
   const live=screen==='play'&&game.state==='play';
   const inp=live?sample():{dir:-1,act:false};
-  const got=game.got;
+  const got=game.got,red=game.red;
   step(game,inp);
   noteBlasts(game);
   noteHeat(game);
+  scoreTick(game,got,red);
+  if(combo&&game.tick-comboTick>COMBO_TICKS) combo=0;
   if(game.got>got) eatT=performance.now();
   if(game.m.snapTick===game.tick&&game.state==='play'){snaps.push({x:game.m.x,y:game.m.y,d:game.m.snapDir,t:performance.now()});SFX.zap();}
   const seen={};
