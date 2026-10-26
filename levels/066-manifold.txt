@@ -1,0 +1,28 @@
+name: Manifold
+need: 56
+hint: A grid of corridors with airlocks at the crossings. Gammas cannot pass an airlock. The Neutron farm in the corner tops up the count.
+---
+############################################################
+#@  *   *    *    **   d*        **    *   **   S*S  **    #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+#   * + **    d   **   *    **    *   ** +  * +S d +Sd*    #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+#        *   ** + *    *    * S+ **    *   ** + *  + *     #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR   #
+#   * + ** +    S *  +  * S    +  * + *d      .............#
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR.............#
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR...O.........#
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR.............#
+# S*     * + *    **        *    *  +  * +Sd  ..R RRRR.*...#
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR..R    R.....#
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR..R  e R..*..#
+# RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR RRRR..RRRRRR.....#
+#                      S                      .............#
+#                                             ........*..X.#
+############################################################

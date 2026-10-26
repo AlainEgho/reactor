@@ -1,0 +1,13 @@
+name: Neutron Harvest
+need: 8
+hint: Stand beside the Graphite under a Lead ball and snap it (Space + arrow), then step back. A Lead ball dropped on a Neutron turns it into Pellets.
+---
+##########################
+#@.....*..........*.....X#
+#........................#
+#...O..........O.........#
+#........................#
+#RRR RRRRRRRRRR RRRRRRRRR#
+#RRR    RRRRRRR    RRRRRR#
+#RRR  e RRRRRRR  e RRRRRR#
+##########################

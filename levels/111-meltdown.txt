@@ -1,0 +1,28 @@
+name: Meltdown
+need: 101
+hint: Three rings of Casks round the Reactor. The gates in the innermost ring only open inward, so collect what you need before you go through.
+---
+############################################################
+#@......***...............*........*.........**....**......#
+#.................*.*.*..*.*.*......**.........*..*...*....#
+#..RRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR..#
+#..R....O...OO...oO**O.Oo..O.O.O.......O.O.o.OO*o....Oo*R.*#
+#..R.O.O..o*..O.O.Oo*..O..*O*....O....*o.O.o.O.Oo.*Oo...R..#
+#..R..OO.RRRRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRRR..O..R**#
+#*.RoO..ORo....O.O....O.O........*...O.*O..O..oO.OR..O..R..#
+#..R.**..RO...dO.O..........Oo.O*OOOoo.O...*......R*.O..-..#
+#.*R....OR...do..RRRRRRRRvRRRRRRRRRRRRRRRRR.....*.R.....R..#
+#..RoOo.oR..O*O..R........................R.*.*.o.-...*oR..#
+#..R.OO.OR*OO.O..>........................R....O*.R..OO.R**#
+#*.-..O*.R.O..O..R............X...........<.Oo**.*R....OR.*#
+#..R.....R.O..*o*R....*....*.....*....*...R.*...**R..*..R..#
+#.*R.o.O.-...o*.*RRRRRRRRRRRRRRRRRR^RRRRRRR.OO.O..R*..O.R.*#
+#..R**.O.R.Ooo......*..O..*OO..*......Oo.*O..Oo.O.R.*..OR.*#
+#..R....*R...*.O.**..........O..*.o..**.O.o....*..R.....R..#
+#.*R**O.*RRRRRRRRRRR|RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRO*.OoR..#
+#..R...O........O.....*..*OOO.*...o*..O.O...O...O.O....*R..#
+#..RO.oo*.*.O.....*oO.*..OO.....O...*...O.OO.......**.*.R..#
+#..RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR|RRRRRRRRRRR..#
+#.*.....*.....*..*............*..*.........*....*..........#
+#..***.....*..*....*..*.....*..***......*..*....*.*........#
+############################################################

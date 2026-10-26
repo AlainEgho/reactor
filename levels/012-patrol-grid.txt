@@ -1,0 +1,28 @@
+name: Patrol Grid
+need: 14
+hint: Gammas circle the blocks. Each block has a door on both sides, so cross a corridor in one step and duck inside.
+---
+############################################################
+#.......                                           ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#....... R.*.R R...R R.*.R R.*.R R...R R.*.R R.*.R ........#
+#....... ..... ..... ..... ..... ..... ..... ..... ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#.......      S                                    ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#....... R...R R.*.R R.*.R R...R R.*.R R.*.R R...R ........#
+#....... ..... ..... ..... ..... ..... ..... ..... ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#.@.....                        S                  .....X..#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#....... R.*.R R.*.R R...R R.*.R R.*.R R...R R.*.R ........#
+#....... ..... ..... ..... ..... ..... ..... ..... ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#.......                                    S      ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#....... R.*.R R...R R.*.R R.*.R R...R R.*.R R.*.R ........#
+#....... ..... ..... ..... ..... ..... ..... ..... ........#
+#....... RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR ........#
+#.......                  S                        ........#
+#.......RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR........#
+############################################################

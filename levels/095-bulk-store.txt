@@ -1,0 +1,28 @@
+name: Bulk Store
+need: 114
+hint: Seven Cask racks and an open loading bay along the bottom. Whatever you free in an aisle ends up in the bay.
+---
+############################################################
+#@.......O.O....*...*....O.O.........O.O.*.O....*.*..O...O.#
+#.....O.....O..O.O..O*..O*.*.*..*..*.....O*O.*.....O....O.*#
+#.....RRO.O..RR*...ORR...**RR.....RRO.*..RR..*.*RR*.....*..#
+#.....RR....*RRO..**RR..*.ORR*..*ORRO.*.*RR...*.RR*OO.OO.*.#
+#.....RRO....RR.....RR..O..RR.....RR...OORRO...ORR....*..O.#
+#..OO.RR*...ORR.....RR.**.*RR.O...RR.O...RR*....RR*..*.***.#
+#....*RR...*.RR..*.*RR.....RROO..*RR.*.*ORR.*...RR.*..O...O#
+#O..**RRO**..RR*....RR.O*.ORR*....RR.*.O.RR...*.RR***..O.O.#
+#....ORROOO..RRO.O..RR..O..RR.*O.ORR.OO..RRO....RRO.*.O**..#
+#...O.RR..OO.RRO....RR.O...RR..*..RR.....RR*....RR.OO.*...*#
+#OO...RRO..OORR.*...RR.*.O.RR.OOOORR*O...RRO*OOORR.O.*.*..O#
+#.*..ORR*..*.RR.O.**RR..O*.RR....*RR*..O*RR.O..*RR.........#
+#.....RR*...*RR*.*..RR*...*RR.....RR.OOO*RR...O.RR..*.*...O#
+#.*..*RRO....RR.....RR.O...RR.O..ORRO.OOORROO..ORR....O*..*#
+#.*O..RRO.*O.RR.*OOORR.....RROO...RR*....RRO.*O.RR..O..O...#
+#..O.*RR.....RR*.O*.RR.O..ORRO....RR.....RR..O.*RR..*O.**.*#
+#.*.**RR.*..ORR.**..RR..O.*RR*..**RR*...ORRO....RR.*....O..#
+#.....RRO.O.ORR..*.*RRO.O..RR..**ORRO*...RR.O.O.RR*O..OO.O.#
+#........................................................OO#
+#                                                      ....#
+#..........................................................#
+#..O..O.O...O...........O.........O...OO.O......*..*..O..X.#
+############################################################

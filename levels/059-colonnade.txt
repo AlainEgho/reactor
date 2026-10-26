@@ -1,0 +1,28 @@
+name: Colonnade
+need: 60
+hint: Cask columns hold up a heavy roof of Lead balls. Every column you dig beside is a channel for them to come down.
+---
+############################################################
+#@........O*.O..*..OO...O...O.OO..OO..*OOO.OO..O....*...O..#
+#....O.O.......O...O.......O..O....*......O........O..O..O.#
+#.....R......OO...R.O...O.....RO..O.O.O..OR.OO..OOO...R...O#
+#.....RO...ORO*...R..O..R.O*..R*..O.R*..O.ROO*..RO....R....#
+#O....R.*...R..*O.R*OO..R.O...R.....R..O.*R.*O..RO*...RO.*.#
+#*..*.ROO.*.R...O.R.O.O.R.....R.....R.OOOOROO.O.RO*...R....#
+#...OOR..OO.R*.O..R...O.RO.O.OR.O*..R..O..R.*.O.R.OO..R....#
+#.....ROOOO.R.....RO.*..R*.*.OR.*.O.RO...OROO...R.O..OR*...#
+#OO...R.OOO.R....OR.*..*RO....R..O..RO...OR..O.*R...O.RO*..#
+#*.O.OR..*..RO....RO.O*ORO..*OR*.O.OR..O..R.*OO.R....ORO.O.#
+#.*OOOROO..OR.....R..OOOR.....R.O.*OR.....R..O*.RO.OOOR....#
+#O..O.R.O*..R...OORO..O.R.....R....OR.....RO.*O.R.....R..*O#
+#O...ORO...OR..O*.R..O..R...*OR...O.R....OR....*RO....RO.O.#
+#**O..R*..O.R...O.R.....R..O..R.O.O.R...O.R.O..OR..OO.R.O..#
+#.....RO....R..OO.RO.O.ORO.OO.RO....RO.O*.R...O.RO.OO.RO...#
+#.....R...*.R....ORO.O..R..*..RO....R*..O.R.*...RO.*..R..OO#
+#..O..R...O.R....OR.....R...*ORO..O.R.O.O.R.O...RO....R.*O.#
+#O....R....OR.O...RO..O.RO..OORO....R.*.O.R...OOR.....R....#
+#.*.*ORO...OR.....R.....R.....RO...OR..OOOR...O.R.O.O.R*...#
+#..*.O..O...R..O.O.O.O..RO..O.OO.O..R......OO...R.O*O.O....#
+#..............*.......*...O*OO.OOO.......O*...**..O.**....#
+#..*..OO.OO.O........O....O..O.O..O*..OOO...O......O..O..X.#
+############################################################

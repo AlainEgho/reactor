@@ -1,0 +1,28 @@
+name: Powder Keg
+need: 40
+hint: The lane walls are seeded with Yellow canisters. An Initiator blows them all, and anything orange nearby goes too.
+---
+############################################################
+#@......oo.......*....o...oo...oo.oo...o..o...oo.*o....o...#
+#........o..o*.....ooo...o..o...*........o..o..o.*.*oooo...#
+#...*....*.o.oo.o...o.oo..o..oo.....oo.*o...o......o.....o.#
+#.T.....o..oo..o..*o.o.o..o..o..oo..*..oo....o...ooo..*....#
+#.......o..o...o......o..**ooooo..oo..oo..oo.o.o...........#
+#..........................................................#
+#RRRRRRRRRRRyRR|RRRRRRRRRRRRRRyRRRR|RRRRRRRRRRRRRR|RRRRRRRR#
+#..   S           S         S        S  S            S   ..#
+#RRRRRRRyRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRyRRRR|RRRRRRRR#
+#..........................................................#
+#..oooo.*.*.*..o..o.o.....o......ooooo.....o.o.*.....oo.oTo#
+#**..*o...o.o.*...o..o.oo.*.o...o*o*.*.o...o..ooo.o.....o..#
+#..........................................................#
+#RRRRRRRRRRRRRR|RRRRyRRRRRRRRRRRRRR|RRRRRRRRRRRRRR|RyRRRRRR#
+#..      S            S        S            S          S ..#
+#RRRRRRRRRRRRRR|RRRRRRRRRyRRRRRRRRR|RRRRyRRRRRRRRR|RRRRRRRR#
+#..........................................................#
+#*..o...o.....o..*oo*o.o.*...*oo....o*..o.oo*..oo.o.o.*oooo#
+#*T......o...ooo.oo*.*..o..**...o.o..ooo.o...o...**........#
+#.o..oo.o........*oo.o...ooo..oo.....*...o....ooo..oo......#
+#ooo......o....*...o.*..*.o...oo.oo.o..ooo.o*........o...T.#
+#.*..o...o*o..o.o.o..oo.o......*o..o*.o*...o.oo.*..o..*..X*#
+############################################################

@@ -1,0 +1,12 @@
+name: Demolition Bay
+need: 4
+hint: Walk over Red canisters to pick them up. Hold Space to drop one as a bomb, then get at least two tiles away.
+---
+########################
+#@..d....R....*....R...#
+#.......dR.........R.*.#
+#........R...*.....R...#
+#........R.........RRRR#
+#..*.....R....*....R..X#
+#........R.........R...#
+########################

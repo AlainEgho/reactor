@@ -1,0 +1,29 @@
+name: Swarm
+need: 14
+hint: Each lane is full of Gammas. Airlocks let you hop across in one step. Somewhere at the bottom is an airlock that stops them all.
+special: 40,21 gravity off freeze-enemies
+---
+############################################################
+#@...........d.d............*.......d......................#
+#...........*..............................................#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#..     S                S                  S            ..#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#.......*....*.......................d.....*......d........#
+#...................................d..................*...#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#..            S                 S              S      S ..#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#.......*..................................*...............#
+#....*..............................................*......#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#..   S               S               S              S   ..#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#..........................................................#
+#..........................*.*.*...........................#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#..         S               S                 S          ..#
+#RRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRRRRRRRRRRRRR|RRRRRRRR#
+#.......................................>........*.........#
+#..............................*.......*............*....X*#
+############################################################

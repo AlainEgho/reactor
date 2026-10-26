@@ -1,0 +1,28 @@
+name: Fuel Store
+need: 84
+hint: Ten fuel stores, each opened through an airlock in its roof. The three Neutron farms are part of the count.
+---
+############################################################
+#@...O..*....O*..........*.......O..*........O*..*.d.......#
+#........OO*.....O.....O.o.......OOO*............dS  S   ..#
+#..RRRR|RRRR...RRRR|RRRR...RRRR|RRRR...RRRR|RRRR..      S.*#
+#..R.O...O.R.O.R.O...O.R.O.R.O...O.Ro..R.O...O.RO.........O#
+#..R.......R...R.......R*O*R.......R.O.R.......R..*......*O#
+#..R.*.*.*.R...R.*.*.*.R.O.R.*.*.*.R...R.*.*.*.R....O......#
+#..RRRRRRRRR...RRRRRRRRR...RRRRRRRRR...RRRRRRRRR...O.O....O#
+#.....O..............O.....O..*...O*.....d..*..............#
+#....................O.O..*......*...........OO.....O......#
+#..RRRR|RRRR.*.RRRR|RRRRO*.RRRR|RRRR...RRRR|RRRR.*.........#
+#..R.O...O.R..oR.O...O.R..*R.O...O.R..OR.O...O.R...R RRRR..#
+#..R.......R...R.......R...R.......R..OR.......R.*.R    R..#
+#o.R.*.*.*.R...R.*.*.*.R*..R.*.*.*.ROO*R.*.*.*.R.O.R  e R..#
+#.ORRRRRRRRRO..RRRRRRRRR...RRRRRRRRR.o.RRRRRRRRR...RRRRRR..#
+#............O*........O*O.*O......d.......................#
+#.*..O.....Oo....O......O.O.O....***..OO........o...*..O.**#
+#..........O.O..........O..RRRR|RRRRO.*RRRR|RRRR........*..#
+#.O.R RRRR...*..R RRRR.....R.O...O.R...R.O...O.R.S S   ....#
+#o..R    R......R    R..*.OR.......R.**R.......R.     S..O.#
+#.*.R  e R...O..R  e R.....R.*.*.*.RO..R.*.*.*.R...........#
+#O..RRRRRR.O..O.RRRRRR...O.RRRRRRRRR..ORRRRRRRRR..O........#
+#............*O.................O.*..O.......*..O.d..O...X.#
+############################################################

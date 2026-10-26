@@ -1,0 +1,28 @@
+name: Overhang
+need: 76
+hint: Cask slabs carry the Lead balls above them. Lead balls roll off the ends of a slab, so tunnel under the middle.
+---
+############################################################
+#@......*.O......O...O...O..OO..O.....O.O...O.*...O*.....*.#
+#......*...*..*..O..*.O.....O....O...OO....O......O..O..O..#
+#......O..O....*...OOO*..OO....O............***.O..O......O#
+#........O..O.*......OOOO....*...OOO..*...OOO..O.O*O.*.OOO.#
+#..RRRRRRRR*..O.RRRRRRRR.....RRRRRRRR.....RRRRRRRR*..O*..O*#
+#....O.O*OOOOO.*...O..O...OO.*O..O.O.OO.O*O..O.O....O......#
+#OO...OO.O.O.O..O.O*.......O...O.OOO.....OO..*OO.....O.O*..#
+#.O.....*......*........O...OO...O.O.......O..O....*O.O....#
+#...O....RRRRRRRR.....RRRRRRRR.O.O.RRRRRRRR..*OORRRRRRRROO.#
+#.O......*..OO..O*....O.O..O.*.O.O*O..O...*..*..*.......O..#
+#...O..OO*.O.O..OO...O.*..O....OO.O*.O...OO.O...OO....O..O.#
+#.*O.O....OO*.......O*.O*.*OOO*............OO..O*OO.*..O.O.#
+#..RRRRRRRROO.OORRRRRRRR.....RRRRRRRR.....RRRRRRRR.......O.#
+#..O..OOO...OO..O.O..O...O..*O..O*O*..O......O......OOO*O.O#
+#.O*....O.O..O...OO........O.O*O.O**.........O..*....O**O.O#
+#....*.O.OO...O..O...*.........O..O.OO....O....O.O**...*O..#
+#OOO*...ORRRRRRRRO...ORRRRRRRR...O*RRRRRRRR.O...RRRRRRRROO.#
+#...O......O.*......O..O...O*O.....*O.OO......*.O...**...O.#
+#O...OO.....OOO..OO*....O..........OO.....O...*....OO.....O#
+#OO*..O....**O.O.*OO...O..O..*.....*...**....OO.O.OO.......#
+#OORRRRRRRR..O..RRRRRRRR.*.OORRRRRRRRO.O..RRRRRRRR*.O......#
+#..O.OO..**....O....OO....*.O..OO.O.*.....*.O............X.#
+############################################################

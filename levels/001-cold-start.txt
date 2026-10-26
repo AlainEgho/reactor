@@ -1,0 +1,12 @@
+name: Cold Start
+need: 7
+hint: Eat through the Graphite, collect 7 Pellets, then walk into the Reactor.
+---
+######################
+#@.......*.....R.....#
+#.R.RRR..R.*...R..*..#
+#.R...*..R.....RRR...#
+#.RRR.R..RRRR........#
+#...*.R.....*..R.*...#
+#.....R..RRRRR.R....X#
+######################

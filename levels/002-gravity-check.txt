@@ -1,0 +1,13 @@
+name: Gravity Check
+need: 7
+hint: Lead balls fall when nothing holds them up, and roll off Casks and other round things. Never step under a falling one.
+---
+########################
+#@...O..O....O....R....#
+#....*..*....*....R.O..#
+#.RR.......RRRR...R.*..#
+#..O.R..O.......O......#
+#..*.R..R..*...R*R..O..#
+#........RR....RRR..*..#
+#R..*..........O......X#
+########################

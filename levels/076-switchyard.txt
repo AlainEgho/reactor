@@ -1,0 +1,30 @@
+name: Switchyard
+need: 126
+hint: Five Cask rails with airlock gates all along them. The gate in the middle of the third rail freezes every Lead ball; the one below it lets them go.
+special: 30,12 gravity off freeze-zonks
+special: 30,16 gravity off
+---
+############################################################
+#@....*.O..*o**....*.O.*O......Oo..O.O...OO..*O.o..*O.OO*..#
+#.......*O....*..O.***oo....*OO****.O.....*.....*.*...O.o..#
+#....**............*.....*.....*....*.....*O...o.*...O***.*#
+#RR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRRRR#
+#....*.....*O......*...OOO....*..........o.O....*......Oo..#
+#..*O........*.*O.O.O....o....*O.*.Oo*....OO..*...*.OO.**.O#
+#..**.....*...O*O....O....*............*....***...O......**#
+#RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRR#
+#..........................................................#
+#..  S          S          S          S           S      .*#
+#o........................................................O#
+#RR|RRRRR|RRRRR|RRRRR|RRRRR|RR|RR|RRRRR|RRRRR|RRRRR|RRRRRRR#
+#*.........*o....*O*...OOO...........*...*.....O.....*..*O.#
+#.*....O*O..****o.*.*.*.*.....o**O**.O*o.*O*.*....*...*.O..#
+#O.......O....**o...**....*O....*.....OO....o.*..........OO#
+#RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RORRR|RRRR#
+#*O.....*.....***...*.....*O......*.........O.............*#
+#*O.......**..*O.o*....O...**.O.O.*o*oo..oO......R RRRR....#
+#O....*..........*.....*.*....o*...*.O.....*...*.R    R.*.o#
+#RR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRRR|RRRR  e RRRRR#
+#*...O.O...........*...O.............O...*.*.....RRRRRR....#
+#.*.*.*.**...*O.*O.OO..o...**..*....OOOO.O*.*.*..........X.#
+############################################################

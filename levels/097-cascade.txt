@@ -1,0 +1,30 @@
+name: Cascade
+need: 42
+hint: A staircase of ledges in open air. The first airlock turns gravity on, so you only go down: take what you can from each ledge before you drop.
+special: 7,2 gravity on
+special: 55,22 gravity off
+---
+############################################################
+#@.....#                                                   #
+#..*.*.>                                                   #
+#.*.*.*#o****                                              #
+##############                                             #
+#            o****O                                        #
+#            ######                                        #
+#                 o****                                    #
+#                 ######                                   #
+#                      o****O                              #
+#                      ######                              #
+#                           o****                          #
+#                           ######                         #
+#                                o****O                    #
+#                                ######                    #
+#                                     o****                #
+#                                     ######               #
+#                                          o****O          #
+#                                          ######      #...#
+#                                               o****  #...#
+#                                               ###### #...#
+#                                                      #...#
+#         *  *  *  *S *  *  *  *  *  *S *  *  *        >.X.#
+############################################################

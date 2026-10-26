@@ -1,0 +1,28 @@
+name: Blast Furnace
+need: 49
+hint: Four Cask furnaces with double walls; a red canister only gets you halfway in. The loose Pellets are enough if you are careful.
+---
+############################################################
+#@......*dO..O........O.........*..O..O..d....*...S S   ...#
+#.......O.....O..O.....O......O...................   S S...#
+#................O*..O.o.........*..RRRRRRRRRRR...........O#
+#...RRRRRRRRRRR...*.dO..O....Od...*.RRRRRRRRRRR........O...#
+#...RRRRRRRRRRR.......O...........*.RR.......RR.O..........#
+#O..RR.......RR......*.........*....RR...*...RR..O*..O.O*.O#
+#O*yRR...*...RRy.OO..*o..O...OO...O.RR*******RR......OO**..#
+#oO.RR*******RR..*.O.O.....**.......RRRRRRRRRRR..*...OOOO..#
+#...RRRRRRRRRRR.....*.......O...O...RRRRRRRRRRR.d....O...O.#
+#...RRRRRRRRRRR.*......O.....*....................O..O.O...#
+#...............................*...d..OO...O*...o.O*......#
+#.O..OO*.o....*.....RRRRRRRRRRR.*O.O....O..O...............#
+#............O......RRRRRRRRRRR...*O..o.O...O.RRRRRRRRRRR..#
+#...***.....*.......RR.......RR...*.*.........RRRRRRRRRRR..#
+#....O.O..*.O.O.....RR...*...RR....O*..d...OO.RR.......RR..#
+#*.*....*......*.O..RR*******RR......O...**.*.RR...*...RR..#
+#OO....O*.......O...RRRRRRRRRRR.oO...O........RR*******RR.*#
+#.......O....d......RRRRRRRRRRR.d...O.O..O.O..RRRRRRRRRRR..#
+#.O...*..o.........................oOO...*O...RRRRRRRRRRR..#
+#d.................*...o..d......O.........................#
+#...Oo*O..Od.*.O.O...**.....o.....O..........O...*.........#
+#*............O........O..*od.T........d.....O..OO.*.....X.#
+############################################################

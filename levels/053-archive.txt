@@ -1,0 +1,28 @@
+name: Archive
+need: 17
+hint: Every cubicle has one door and a Lead ball or two on its top shelf. Step in, and whatever is above you drops the moment you step out.
+---
+############################################################
+#@....O...*.O.O...O.......O.OO....O..O...O........O.O...O.O#
+#..RRRRR.RRRRR.RRRRR.RRRRR.RRRRR.RRRRR.RRRRR.RRRRR.RRRRRO.O#
+#..ROOOR.RO..R.ROO.R.RO..R.ROOOR.ROO.R.ROOOR.ROO.R.ROOOR.O.#
+#..R.*..O...*R...*.R.R*..R.....R.R..*R...O.RO..O.ROR.*.....#
+#..RRRRR.RRRRR.RRRRR.RR.RR.RRRRR.RR.RRORRRRR.RRRRR.RRRRRO..#
+#O...O.....*.........O.........O...OO.O...O.....O..O...O.OO#
+#..RRRRR.RRRRR.RRRRRORRRRR.RRRRRORRRRRORRRRR.RRRRR.RRRRR.OO#
+#..RO..R.R.OOR.RO.OR.RO.OR.RO.OR.ROOOR.RO..R.RO.OR.R..OR...#
+#O.R..*R.R.*.-.RO.......*R.R.*..OR..*R...*.R.R...R*R*.....O#
+#O.RR.RR.RRRRR.RRRRR.RRRRRORRRRR.RR.RR.RRRRR.RR.RR.RRRRR..O#
+#....O.............O..........O............O........O....O.#
+#O.RRRRR.RRRRR.RRRRR.RRRRR.RRRRR.RRRRRORRRRR.RRRRR.RRRRR..O#
+#..R...R.ROOOR.ROO.R.ROOOR.R...R.R.O.R.R.OOR.ROO.R.R...R...#
+#.ORO........R.R...R.R*..R...*.R.R..*R....*ROR.O...R*..-.OO#
+#..RRRRR.RRRRR.RR.RR.RR.RR.RRRRR.RR.RR.RRRRR.RRRRR.RRRRR...#
+#...O..O....O.......OO.O.O.O...*....O..O..O.......O......O.#
+#.ORRRRR.RRRRR.RRRRRORRRRR.RRRRR.RRRRR.RRRRR.RRRRR.RRRRR...#
+#..ROOOR.ROOOR.RO.OR.ROO.R.R.OOR.RO.OR.RO.ORORO.OR.R.O.R..O#
+#.*R..*R.R*..R.R..*R.R..*RO....R.R.*.-.R.O...R...ROR*..R...#
+#..RR.RR.RR.RR.RR.RR.RR.RR.RRRRR.RRRRR.RRRRR.RR.RRORR|RR...#
+#........O...*..............O.....O..............O.........#
+#.......O............O.O....O...O..........OO............X.#
+############################################################
