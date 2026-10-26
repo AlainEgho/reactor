@@ -3579,7 +3579,7 @@ const STORE='fission-v1',DAT_STORE='fission-dat';
 const OLD_STORE='supaplex-remake-v1',OLD_DAT_STORE='supaplex-remake-dat';
 const reduceMotion=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let save={sound:true,set:'remake',sets:{remake:{done:{},best:{},score:{},stars:{}},original:{done:{},best:{},score:{},stars:{}}}};
+let save={sound:true,set:'remake',streak:0,bestStreak:0,sets:{remake:{done:{},best:{},score:{},stars:{}},original:{done:{},best:{},score:{},stars:{}}}};
 // Progress lives in a cookie, packed small enough for one: v2~sound~set~fission~classic, where each
 // set is its cleared levels as index.bestSeconds.bestScore.stars (base 36; stars is the bit mask
 // 1 cleared, 2 fast, 4 chain) joined by _. localStorage keeps a copy, because browsers drop cookies
@@ -3588,7 +3588,7 @@ const COOKIE='fission_progress',COOKIE_DAYS=400;
 function packSave(s){
   const b36=function(n){return n!=null?n.toString(36):'';};
   const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k])+'.'+b36(p.stars[k]);}).join('_');};
-  return ['v2',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original)].join('~');
+  return ['v2',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0)].join('~');
 }
 function unpackSave(str){
   const a=str.split('~'),v=a[0];
@@ -3603,7 +3603,8 @@ function unpackSave(str){
     });
     return p;
   };
-  return {sound:a[1]!=='0',set:a[2]==='o'?'original':'remake',sets:{remake:set(a[3]),original:set(a[4])}};
+  const st=(a[5]||'').split('.'); // streak field: current.best (v2 only, optional)
+  return {sound:a[1]!=='0',set:a[2]==='o'?'original':'remake',sets:{remake:set(a[3]),original:set(a[4])},streak:num(st[0])||0,bestStreak:num(st[1])||0};
 }
 function readCookie(){
   try{const m=document.cookie.match(/(?:^|;\s*)fission_progress=([^;]*)/);return m?unpackSave(decodeURIComponent(m[1])):null;}catch(e){return null;}
@@ -3618,6 +3619,7 @@ else try{
     else{save.sound=s.sound!==false;save.sets.remake.done=s.done||{};save.sets.remake.best=s.best||{};}
   }
 }catch(e){}
+if(!(save.streak>=0)) save.streak=0;if(!(save.bestStreak>=0)) save.bestStreak=0;
 for(const k in save.sets){ // saves from before scoring and stars
   const p=save.sets[k];
   if(!p.score) p.score={};
@@ -3720,7 +3722,8 @@ const SFX={
   zap:function(){tone(1900,700,0.09,'triangle',0.035);},
   // A pellet in a combo: the same chime, a semitone higher for every step of the combo.
   combo:function(n){const f=880*Math.pow(2,Math.min(n-1,12)/12);tone(f,f*1.5,0.08,'square',0.045);},
-  bonus:function(){[660,880,1320].forEach(function(f,i){tone(f,f,0.1,'square',0.04,i*0.07);});}
+  bonus:function(){[660,880,1320].forEach(function(f,i){tone(f,f,0.1,'square',0.04,i*0.07);});},
+  tick:function(){tone(1500,1500,0.02,'square',0.02);}
 };
 
 /* ---------- drawing (unit square: 0..1) ---------- */
@@ -4090,6 +4093,9 @@ function render(now){
   const ty=g.H<=vh?(g.H-vh)/2:clamp(my+.5-vh/2,0,g.H-vh);
   if(!cam.set||reduceMotion){cam.x=tx;cam.y=ty;cam.set=true;}
   else{const k=Math.min(1,dt*9);cam.x+=(tx-cam.x)*k;cam.y+=(ty-cam.y)*k;}
+  let jx=0,jy=0; // camera shake, in tiles, taken back off at the end of the frame
+  if(shake>0){const left=shakeEnd-now;if(left<=0) shake=0;else{const a=shake*Math.min(1,left/350);jx=(Math.random()*2-1)*a;jy=(Math.random()*2-1)*a;}}
+  cam.x+=jx;cam.y+=jy;
   const x0=Math.max(0,Math.floor(cam.x)-1),y0=Math.max(0,Math.floor(cam.y)-1);
   const x1=Math.min(g.W-1,Math.ceil(cam.x+vw)+1),y1=Math.min(g.H-1,Math.ceil(cam.y+vh)+1);
   const PX=function(x){return Math.round((x-cam.x)*tsD);},PY=function(y){return Math.round((y-cam.y)*tsD);};
@@ -4152,7 +4158,17 @@ function render(now){
     ctx.lineWidth=Math.max(2,tsD*.08);ctx.strokeStyle='rgba(5,7,10,.85)';ctx.strokeText(p.text,X,Y);
     ctx.fillStyle=p.col;ctx.fillText(p.text,X,Y);
   }
+  for(let i=bursts.length-1;i>=0;i--){
+    const b=bursts[i],k=(now-b.t)/BURST_MS;
+    if(k>=1){bursts.splice(i,1);continue;}
+    const X=(b.x+.5-cam.x)*tsD,Y=(b.y+.5-cam.y)*tsD,r=tsD*(.15+.55*Math.sin(k*Math.PI/2));
+    ctx.globalAlpha=1-k;ctx.fillStyle=b.col;
+    for(let j=0;j<6;j++){const a=j*Math.PI/3+(b.t%7)/7;ctx.beginPath();ctx.arc(X+Math.cos(a)*r,Y+Math.sin(a)*r,tsD*.06*(1-k)+1,0,Math.PI*2);ctx.fill();}
+  }
+  const fk=(now-flashT)/320;
+  if(fk<1&&flashCol){ctx.globalAlpha=1-fk;ctx.fillStyle=flashCol;ctx.fillRect(0,0,cv.width,cv.height);}
   ctx.globalAlpha=1;
+  cam.x-=jx;cam.y-=jy;
 }
 // Snap lights, one per Space+direction, drawn from Iso to the tile it reached for.
 const snaps=[],SNAP_MS=280;
@@ -4181,11 +4197,34 @@ function scoreTick(g,got0,red0){
     for(let i=got0;i<g.got;i++) award(PTS.pellet*combo,g.m.x,g.m.y,combo>1?'×'+combo:'','#b4ff8c');
     SFX.combo(combo);
   }
+  if(g.got>got0) burst(g.m.x,g.m.y,'#b4ff8c');
   if(g.red>red0) award(PTS.red,g.m.x,g.m.y,'','#ff9a8c');
   for(const mk of g.marks){
-    if(mk.k==='fission') award(PTS.fission,mk.x,mk.y,'FISSION','#9fdcff');
-    else if(mk.k==='kill') award(PTS.kill,mk.x,mk.y,'','#efc4ff');
+    if(mk.k==='fission'){award(PTS.fission,mk.x,mk.y,'FISSION','#9fdcff');burst(mk.x,mk.y,'#9fdcff');jolt(.2,300);}
+    else if(mk.k==='kill'){award(PTS.kill,mk.x,mk.y,'','#efc4ff');burst(mk.x,mk.y,'#efc4ff');}
   }
+}
+
+/* ---------- juice ---------- */
+// Camera shake, a short freeze of the clock on a blast or a death, a colour flash, and particle
+// bursts. None of it runs when the player asked for reduced motion.
+let shake=0,shakeEnd=0,freezeUntil=0,flashCol='',flashT=-1e9;
+const bursts=[],BURST_MS=450;
+function jolt(amount,ms){if(reduceMotion) return;shake=Math.max(shake,amount);shakeEnd=Math.max(shakeEnd,performance.now()+ms);}
+function freeze(ms){if(!reduceMotion) freezeUntil=Math.max(freezeUntil,performance.now()+ms);}
+function flash(col){flashCol=col;flashT=performance.now();}
+function burst(x,y,col){if(!reduceMotion) bursts.push({x:x,y:y,col:col,t:performance.now()});}
+// Counts the win tally's numbers up from zero, ticking, then plays the fanfare.
+function countUp(){
+  const els=Array.prototype.slice.call(ov.querySelectorAll('.tally b[data-n]'));
+  if(!els.length||reduceMotion){els.forEach(function(e){e.textContent=fmtN(+e.dataset.n);});SFX.bonus();return;}
+  const t0=performance.now(),dur=700;let lastTick=0;
+  (function run(now){
+    const k=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-k,3);
+    els.forEach(function(el){el.textContent=fmtN(+el.dataset.n*e);});
+    if(k<1){if(now-lastTick>55){lastTick=now;SFX.tick();}requestAnimationFrame(run);}
+    else SFX.bonus();
+  })(t0);
 }
 // Mushroom clouds outlive the explosion cells under them, so they are tracked here, not in the game.
 const blasts=[],BLAST_MS=1100;
@@ -4300,7 +4339,7 @@ function showMenu(){
       levelGrid(levels);
   }
   ov.innerHTML='<div class="panel">'+
-    '<div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>Fuel the core. Don\'t go critical. · '+(set==='remake'?LEVELS.length+' levels · '+cleared+' cleared':'classic level set')+'</small></div>'+
+    '<div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>Fuel the core. Don\'t go critical. · '+(set==='remake'?LEVELS.length+' levels · '+cleared+' cleared':'classic level set')+(save.bestStreak>=2?' · best streak '+save.bestStreak:'')+'</small></div>'+
     '<p>Guide Iso through the plant. Dig through the Graphite, collect enough fuel Pellets to start the Reactor, and keep out from under falling Lead.</p>'+
     tabs+body+
     '<div class="legend">'+legendHTML()+'</div>'+
@@ -4332,7 +4371,8 @@ function pause(){
 function resume(){screen='play';ov.hidden=true;}
 function showDead(){
   screen='over';
-  dialog('Iso was destroyed',esc(levelLabel(cur))+'. '+(game.got)+' of '+game.need+' Pellets collected.',[['retry','Try again (R)'],['levels','Levels']]);
+  const ended=save.streak;save.streak=0;persist();
+  dialog('Iso was destroyed',esc(levelLabel(cur))+'. '+(game.got)+' of '+game.need+' Pellets collected.'+(ended>=2?' Streak ended at '+ended+'.':''),[['retry','Try again (R)'],['levels','Levels']]);
 }
 function showWon(){
   screen='over';
@@ -4343,18 +4383,21 @@ function showWon(){
   if(newBest) p.score[cur]=total;
   const got=starsFor(game,secs),had=p.stars[cur]||0;
   p.stars[cur]=had|got;
-  persist();SFX.bonus();
+  save.streak++;if(save.streak>save.bestStreak) save.bestStreak=save.streak;
+  persist();
   const last=cur===L().length-1;
   const star=function(bit,label){const on=got&bit,kept=had&bit;return '<span class="'+(on&&!kept?'new':'')+'">'+label+'</span><b class="'+(on?'on':'off')+'">'+(on?'★':'☆')+'</b>';};
   const tally='<span class="tally">'+
-    '<span>Pellets and bonuses</span><b>'+fmtN(score)+'</b>'+
-    '<span>Reactor started</span><b>'+fmtN(PTS.clear)+'</b>'+
-    '<span>Time bonus · '+fmt(secs)+'</span><b>'+fmtN(bonus)+'</b>'+
-    '<span class="sum">Score</span><b class="sum">'+fmtN(total)+'</b>'+
+    '<span>Pellets and bonuses</span><b data-n="'+score+'">0</b>'+
+    '<span>Reactor started</span><b data-n="'+PTS.clear+'">0</b>'+
+    '<span>Time bonus · '+fmt(secs)+'</span><b data-n="'+bonus+'">0</b>'+
+    '<span class="sum">Score</span><b class="sum" data-n="'+total+'">0</b>'+
     '<span class="'+(newBest?'new':'')+'">'+(newBest?'New best score':'Best '+fmtN(p.score[cur]))+'</span><b></b>'+
-    star(1,'Cleared')+star(STAR_FAST,'Fast · under '+fmt(parSecs(game)))+star(STAR_CHAIN,'Chain · combo ×'+chainGoal(game))+'</span>';
+    star(1,'Cleared')+star(STAR_FAST,'Fast · under '+fmt(parSecs(game)))+star(STAR_CHAIN,'Chain · combo ×'+chainGoal(game))+
+    (save.streak>=2?'<span class="new">Streak · levels without dying</span><b class="on">×'+save.streak+'</b>':'')+'</span>';
   dialog(last?'All levels cleared':(set==='original'?'Classic ':'Level ')+pad3(cur+1)+' complete',tally+(last?'<br>That was the last level.':''),
     last?[['levels','Levels'],['retry','Play again']]:[['next','Next level (Enter)'],['retry','Play again'],['levels','Levels']]);
+  countUp();
 }
 
 ov.addEventListener('click',function(e){
@@ -4445,6 +4488,10 @@ function doStep(){
     if(ev==='locked'){if(game.tick-lastLocked<4) continue;lastLocked=game.tick;toast('The Reactor starts after '+game.need+' Pellets. '+Math.max(0,game.need-game.got)+' to go.',2500);}
     if(ev==='exitlost') toast('The Reactor was destroyed. Press R to restart.',6000);
     if(ev==='gravon'||ev==='gravoff') toast(ev==='gravon'?'Gravity on':'Gravity off',1800);
+    if(ev==='boom'){jolt(.3,450);freeze(70);}
+    if(ev==='thud') jolt(.07,160);
+    if(ev==='die'){jolt(.6,700);freeze(240);flash('rgba(229,64,47,.45)');}
+    if(ev==='win') flash('rgba(79,184,255,.35)');
     if(SFX[ev]) SFX[ev]();
   }
   if(game.state==='dead'&&game.tick-game.endTick===12&&screen==='play') showDead();
@@ -4454,7 +4501,7 @@ function doStep(){
 function frame(now){
   requestAnimationFrame(frame);
   dt=Math.min(.25,(now-(last||now))/1000);last=now;
-  if(game&&(screen==='play'||screen==='over')){
+  if(game&&(screen==='play'||screen==='over')&&now>=freezeUntil){ // hit-stop: the clock waits, the picture does not
     acc+=dt*1000;
     let n=0;
     while(acc>=TICK&&n<4){acc-=TICK;doStep();n++;}
