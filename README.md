@@ -46,9 +46,19 @@ special: 30,6 gravity on         (optional, repeatable; must sit on an airlock)
 | `X` | Reactor (the exit) | `> < ^ v` | one-way airlocks |
 | | | `-` `\|` / `+` | two-way / four-way airlocks |
 
+## Arcade layer
+
+The rules are the classic ones; everything below sits on top and never changes how a level plays.
+
+- **Score.** A Pellet pays 100 × the combo; a Pellet taken within 2 s of the last one raises the combo. Red canister 50, a Neutron split 500, a destroyed Gamma 250, starting the Reactor 1,000, plus a time bonus of 5 points per second under 10 minutes. Best score per level in the grid, the total on the menu.
+- **Stars.** Three per level: cleared; fast (under par: 30 s + 2 s per Pellet needed, +60 s on a full-size board); chain (a combo of ×5, or ×need on a tiny level). The win tally names the par and the chain goal.
+- **Streak.** Levels cleared without dying, shown on the win tally and the menu; a death ends it.
+- **Meltdown.** One run on floors made up as you go: 60 s on the clock, +2 s per Pellet, +10 s per floor finished; floors get bigger and add Hot spots (round 3), Gammas in sealed pockets (round 5) and orange canisters (round 7). At zero the core blows at Iso's feet. Best score and round are kept.
+- **Juice.** Camera shake and a short freeze on blasts and deaths, flashes, particle bursts, a counting tally. All motion effects respect `prefers-reduced-motion`.
+
 ## Saved progress
 
-Cleared levels, best times, the sound setting and the chosen set are saved in a `fission_progress` cookie that lasts 400 days and is renewed on every save. The format is compact (`v1~sound~set~fission~classic`, each set as `level.bestSeconds` joined by `_`), so even both full sets fit well under a cookie's 4 KB.
+Cleared levels, best times, best scores, stars, the streak, the best Meltdown run, the sound setting and the chosen set are saved in a `fission_progress` cookie that lasts 400 days and is renewed on every save. The format is compact (`v2~sound~set~fission~classic~streak.best~meltScore.meltRound`, each set as `level.bestSeconds.bestScore.stars` in base 36 joined by `_`), so even both full sets fit well under a cookie's 4 KB. A `v1` cookie from before scoring is still read.
 
 Browsers ignore cookies on a page opened straight from disk (`file://`), so the same progress is also kept in `localStorage`. The cookie wins when both exist. A loaded `LEVELS.DAT` is too big for a cookie and stays in `localStorage` only.
 

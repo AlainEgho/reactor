@@ -61,6 +61,10 @@ body{background:var(--bg);color:var(--fg);font-family:var(--mono);font-size:14px
 .stars i.on{color:var(--hero)}
 #sNeed{color:var(--fuel)}
 #sNeed.open{color:var(--core)}
+#sTime.low{color:var(--alarm);animation:blink .6s steps(2) infinite}
+@keyframes blink{to{opacity:.35}}
+.meltcard h3{font-family:var(--display);font-size:20px;letter-spacing:.08em;margin:0;color:var(--alarm)}
+.meltcard p b{color:var(--fg)}
 .tools{display:flex;gap:8px;flex-wrap:wrap}
 button{font:inherit;color:inherit}
 .btn{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;border-radius:6px;border:1px solid var(--line);background:var(--panel);color:var(--fg);cursor:pointer}
@@ -3579,7 +3583,7 @@ const STORE='fission-v1',DAT_STORE='fission-dat';
 const OLD_STORE='supaplex-remake-v1',OLD_DAT_STORE='supaplex-remake-dat';
 const reduceMotion=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-let save={sound:true,set:'remake',streak:0,bestStreak:0,sets:{remake:{done:{},best:{},score:{},stars:{}},original:{done:{},best:{},score:{},stars:{}}}};
+let save={sound:true,set:'remake',streak:0,bestStreak:0,meltScore:0,meltRound:0,sets:{remake:{done:{},best:{},score:{},stars:{}},original:{done:{},best:{},score:{},stars:{}}}};
 // Progress lives in a cookie, packed small enough for one: v2~sound~set~fission~classic, where each
 // set is its cleared levels as index.bestSeconds.bestScore.stars (base 36; stars is the bit mask
 // 1 cleared, 2 fast, 4 chain) joined by _. localStorage keeps a copy, because browsers drop cookies
@@ -3588,7 +3592,7 @@ const COOKIE='fission_progress',COOKIE_DAYS=400;
 function packSave(s){
   const b36=function(n){return n!=null?n.toString(36):'';};
   const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k])+'.'+b36(p.stars[k]);}).join('_');};
-  return ['v2',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0)].join('~');
+  return ['v2',s.sound?1:0,s.set==='original'?'o':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0),b36(s.meltScore||0)+'.'+b36(s.meltRound||0)].join('~');
 }
 function unpackSave(str){
   const a=str.split('~'),v=a[0];
@@ -3603,8 +3607,8 @@ function unpackSave(str){
     });
     return p;
   };
-  const st=(a[5]||'').split('.'); // streak field: current.best (v2 only, optional)
-  return {sound:a[1]!=='0',set:a[2]==='o'?'original':'remake',sets:{remake:set(a[3]),original:set(a[4])},streak:num(st[0])||0,bestStreak:num(st[1])||0};
+  const st=(a[5]||'').split('.'),mb=(a[6]||'').split('.'); // streak current.best and meltdown bestScore.bestRound (v2 only, optional)
+  return {sound:a[1]!=='0',set:a[2]==='o'?'original':'remake',sets:{remake:set(a[3]),original:set(a[4])},streak:num(st[0])||0,bestStreak:num(st[1])||0,meltScore:num(mb[0])||0,meltRound:num(mb[1])||0};
 }
 function readCookie(){
   try{const m=document.cookie.match(/(?:^|;\s*)fission_progress=([^;]*)/);return m?unpackSave(decodeURIComponent(m[1])):null;}catch(e){return null;}
@@ -3620,6 +3624,7 @@ else try{
   }
 }catch(e){}
 if(!(save.streak>=0)) save.streak=0;if(!(save.bestStreak>=0)) save.bestStreak=0;
+if(!(save.meltScore>=0)) save.meltScore=0;if(!(save.meltRound>=0)) save.meltRound=0;
 for(const k in save.sets){ // saves from before scoring and stars
   const p=save.sets[k];
   if(!p.score) p.score={};
@@ -4226,6 +4231,88 @@ function countUp(){
     else SFX.bonus();
   })(t0);
 }
+
+/* ---------- meltdown mode ---------- */
+// One run against the clock on floors made up as you go. The clock is in ticks (8 per second):
+// MELT_START to begin, MELT_PELLET back for every pellet, MELT_CLEAR for every floor finished. At zero
+// the core blows at Iso's feet. Score carries across floors; the combo starts over on each.
+const MELT_START=480,MELT_PELLET=16,MELT_CLEAR=80;
+let mode='levels',menuView='levels',melt={round:0,left:0,seed:0,score:0};
+function rng(seed){let a=seed>>>0;return function(){a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296;};}
+// Draws floor `round`: all Graphite inside a Concrete border, Iso top-left, the Reactor bottom-right,
+// and more of everything as the rounds go up. Gammas sleep in sealed four-cell pockets. Nothing that
+// falls is ever placed over open space or over a Gamma, so the floor is still when it starts.
+function genMeltdown(round,seed){
+  const r=rng(seed),size=round<3?[24,11]:round<6?[32,14]:round<10?[44,18]:[60,24],W=size[0],H=size[1];
+  const g=[];for(let y=0;y<H;y++){g.push([]);for(let x=0;x<W;x++) g[y].push(x===0||y===0||x===W-1||y===H-1?'#':'.');}
+  const area=(W-2)*(H-2),n=function(f){return Math.round(area*f);},k=Math.min(round,12);
+  const want={'*':n(.10+.008*k),'O':n(.06+.012*k),'B':round>=3?n(.015+.005*k):0,'S':round>=5?Math.min(8,1+Math.floor((round-5)/2)):0,'o':round>=7?Math.min(14,2+(round-7)):0};
+  const ok=function(x,y){return g[y][x]==='.'&&(x>3||y>3)&&!(x>=W-3&&y>=H-3);};
+  const place=function(ch,count){
+    let placed=0;
+    for(let t=0;t<count*60&&placed<count;t++){
+      const x=1+Math.floor(r()*(W-2)),y=1+Math.floor(r()*(H-2));
+      if(!ok(x,y)) continue;
+      if(ch==='S'){
+        if(x+4>=W-1) continue;
+        let free=true;for(let i=0;i<4;i++) if(!ok(x+i,y)||g[y-1][x+i]!=='.'||g[y+1][x+i]!=='.') free=false;
+        if(!free) continue;
+        for(let i=1;i<4;i++) g[y][x+i]=' ';
+        g[y][x]='S';placed++;continue;
+      }
+      if('O*o'.indexOf(ch)>=0&&(g[y+1][x]===' '||g[y+1][x]==='S')) continue; // a Gamma's cell empties on its first step
+      g[y][x]=ch;placed++;
+    }
+    return placed;
+  };
+  place('S',want.S);place('O',want.O);place('o',want.o);place('B',want.B);
+  const pellets=place('*',want['*']);
+  g[1][1]='@';g[H-2][W-2]='X';
+  return {name:'Round '+round,need:Math.max(1,Math.ceil(pellets*.6)),hint:'',map:g.map(function(row){return row.join('');})};
+}
+function startMeltdown(){
+  mode='meltdown';melt={round:0,left:MELT_START,seed:(Math.random()*1e9)>>>0,score:0};
+  nextRound();
+  toast('Meltdown. '+(MELT_START/8)+' seconds on the clock: every Pellet adds '+(MELT_PELLET/8)+', every floor you finish adds '+(MELT_CLEAR/8)+'.',6000);
+}
+function nextRound(){
+  melt.round++;
+  game=createGame(genMeltdown(melt.round,melt.seed+melt.round*7919));game.levelSet='meltdown';game.hasRed=false;
+  acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;pops.length=0;eatT=-1e9;heat=null;combo=0;comboTick=-99;maxCombo=0;
+  score=melt.score;
+  screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();
+  if(melt.round>1) toast('Round '+melt.round+' · +'+(MELT_CLEAR/8)+' s',2500);
+  try{cv.focus({preventScroll:true});}catch(e){}
+}
+// The clock for one tick of play: counts down, pays for pellets, and blows the core at zero.
+function meltTick(g,got0){
+  if(g.got>got0){melt.left+=MELT_PELLET*(g.got-got0);pops.push({x:g.m.x,y:g.m.y-.7,text:'+'+(MELT_PELLET/8)+' s',col:'#9fdcff',t:performance.now()});}
+  if(g.state!=='play') return;
+  if(--melt.left<=0){melt.left=0;explode(g,g.m.x,g.m.y,false);toast('The core went critical.',4000);}
+}
+function meltRoundClear(){
+  melt.left+=MELT_CLEAR;melt.score=score+500*melt.round;
+  nextRound();
+}
+function showMeltdownOver(){
+  screen='over';
+  const total=score,best=save.meltScore,newBest=total>best;
+  if(newBest) save.meltScore=total;
+  if(melt.round>save.meltRound) save.meltRound=melt.round;
+  persist();
+  const tally='<span class="tally"><span>Floors reached</span><b>'+melt.round+'</b>'+
+    '<span class="sum">Score</span><b class="sum" data-n="'+total+'">0</b>'+
+    '<span class="'+(newBest?'new':'')+'">'+(newBest?'New best':'Best '+fmtN(best)+' · round '+save.meltRound)+'</span><b></b></span>';
+  dialog('Meltdown',tally,[['meltdown','Run again (R)'],['levels','Levels']]);
+  countUp();
+}
+function meltdownCard(){
+  return '<div class="loadcard meltcard"><h3>MELTDOWN</h3>'+
+    '<p>The core is overheating. <b>'+(MELT_START/8)+' seconds</b> on the clock; every Pellet adds <b>'+(MELT_PELLET/8)+' s</b>, every floor you finish adds <b>'+(MELT_CLEAR/8)+' s</b> and the next floor is bigger and nastier. One run, one score.</p>'+
+    '<p class="fine">'+(save.meltScore?'Best run: <b>'+fmtN(save.meltScore)+'</b> · round '+save.meltRound:'No run yet.')+'</p>'+
+    '<button type="button" class="btn primary" data-act="meltdown">Start meltdown (Enter)</button></div>';
+}
+function restart(){if(mode==='meltdown') startMeltdown();else startLevel(cur);}
 // Mushroom clouds outlive the explosion cells under them, so they are tracked here, not in the game.
 const blasts=[],BLAST_MS=1100;
 let eatT=-1e9; // when Iso last ate a Pellet, for its radiation flash
@@ -4257,12 +4344,13 @@ function hud(){
   if(hudCache.score!==score){hudCache.score=score;sScore.firstChild.nodeValue=fmtN(score);}
   const cb=combo>1?'×'+combo:'';
   if(hudCache.combo!==cb){hudCache.combo=cb;sCombo.hidden=!cb;if(cb){sCombo.textContent=cb;sCombo.style.animation='none';void sCombo.offsetWidth;sCombo.style.animation='';}}
-  setText(sTime,'time',fmt((game.state==='play'?game.tick:game.endTick)*TICK/1000));
+  if(mode==='meltdown'){setText(sTime,'time',fmt(melt.left*TICK/1000));sTime.classList.toggle('low',melt.left<80);}
+  else{setText(sTime,'time',fmt((game.state==='play'?game.tick:game.endTick)*TICK/1000));sTime.classList.remove('low');}
   setText(lvlName,'lvl',levelLabel(cur));
   gravStat.hidden=!game.usesGrav;
   setText(sGrav,'grav',game.grav?'On':'Off');
 }
-function levelLabel(i){return (set==='original'?'Classic ':'Level ')+pad3(i+1)+' · '+L()[i].name;}
+function levelLabel(i){return mode==='meltdown'?'Meltdown · Round '+melt.round:(set==='original'?'Classic ':'Level ')+pad3(i+1)+' · '+L()[i].name;}
 let toastTimer=0;
 function toast(msg,ms){
   toastEl.textContent=msg;toastEl.classList.remove('gone');
@@ -4318,14 +4406,17 @@ function totalScore(){const s=prog().score;let t=0;for(const k in s) t+=s[k];ret
 function totalStars(){const s=prog().stars;let t=0;for(const k in s) t+=countBits(s[k]);return t;}
 function showMenu(){
   if(screen==='play') clearInput();
-  screen='menu';
+  screen='menu';mode='levels';
   const levels=L();
   const cleared=levels?levels.filter(function(_,i){return prog().done[i];}).length:0;
   const tabs='<div class="tabs" role="tablist">'+
-    '<button type="button" class="tab" role="tab" data-act="set" data-set="remake" aria-selected="'+(set==='remake')+'">Fission · '+LEVELS.length+'</button>'+
-    '<button type="button" class="tab" role="tab" data-act="set" data-set="original" aria-selected="'+(set==='original')+'">Classic'+(datLevels?' · '+datLevels.length:'')+'</button></div>';
+    '<button type="button" class="tab" role="tab" data-act="set" data-set="remake" aria-selected="'+(menuView==='levels'&&set==='remake')+'">Fission · '+LEVELS.length+'</button>'+
+    '<button type="button" class="tab" role="tab" data-act="set" data-set="original" aria-selected="'+(menuView==='levels'&&set==='original')+'">Classic'+(datLevels?' · '+datLevels.length:'')+'</button>'+
+    '<button type="button" class="tab" role="tab" data-act="view" data-view="meltdown" aria-selected="'+(menuView==='meltdown')+'">Meltdown'+(save.meltScore?' · '+fmtN(save.meltScore):'')+'</button></div>';
   let body;
-  if(set==='original'&&!datLevels){
+  if(menuView==='meltdown'){
+    body=meltdownCard();
+  }else if(set==='original'&&!datLevels){
     body='<div class="loadcard" id="dropZone">'+
       '<p>Play classic levels from a <code>LEVELS.DAT</code> file you own. Choose the file, or drop it here. It stays in this browser and is never uploaded.</p>'+
       '<p class="fine">Reads level files made for Supaplex. Fission is an independent game and is not affiliated with it.</p>'+
@@ -4357,7 +4448,7 @@ function dialog(title,body,buttons){
 }
 function startLevel(i){
   const levels=L();
-  cur=i;game=createGame(levels[i]);game.levelSet=set;game.hasRed=game.cells.some(function(c){return c.t===RED;});acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;pops.length=0;eatT=-1e9;heat=null;score=0;combo=0;comboTick=-99;maxCombo=0;
+  mode='levels';cur=i;game=createGame(levels[i]);game.levelSet=set;game.hasRed=game.cells.some(function(c){return c.t===RED;});acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;pops.length=0;eatT=-1e9;heat=null;score=0;combo=0;comboTick=-99;maxCombo=0;
   screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();
   const hint=levels[i].hint||('Collect '+game.need+' Pellet'+(game.need===1?'':'s')+', then reach the Reactor.'+(game.grav?' Gravity is on.':''));
   toast(hint,7000);
@@ -4370,6 +4461,7 @@ function pause(){
 }
 function resume(){screen='play';ov.hidden=true;}
 function showDead(){
+  if(mode==='meltdown'){showMeltdownOver();return;}
   screen='over';
   const ended=save.streak;save.streak=0;persist();
   dialog('Iso was destroyed',esc(levelLabel(cur))+'. '+(game.got)+' of '+game.need+' Pellets collected.'+(ended>=2?' Streak ended at '+ended+'.':''),[['retry','Try again (R)'],['levels','Levels']]);
@@ -4405,11 +4497,13 @@ ov.addEventListener('click',function(e){
   audioInit();
   switch(b.dataset.act){
     case 'lv':startLevel(+b.dataset.lv);break;
-    case 'retry':startLevel(cur);break;
+    case 'retry':restart();break;
     case 'next':startLevel(Math.min(L().length-1,cur+1));break;
     case 'levels':showMenu();break;
     case 'resume':resume();break;
-    case 'set':set=b.dataset.set;save.set=set;datError='';persist();cur=0;showMenu();break;
+    case 'set':set=b.dataset.set;save.set=set;datError='';persist();cur=0;menuView='levels';showMenu();break;
+    case 'view':menuView=b.dataset.view;showMenu();break;
+    case 'meltdown':startMeltdown();break;
     case 'pick':datFile.value='';datFile.click();break;
     case 'forget':forgetDat();break;
   }
@@ -4427,7 +4521,7 @@ addEventListener('drop',function(e){
   loadDat(e.dataTransfer.files[0]);
 });
 $('bLevels').addEventListener('click',function(){audioInit();if(screen==='play'&&game&&game.state==='play'){clearInput();}showMenu();});
-$('bRestart').addEventListener('click',function(){audioInit();startLevel(cur);});
+$('bRestart').addEventListener('click',function(){audioInit();restart();});
 function soundLabel(){bSound.textContent=save.sound?'Sound on':'Sound off';bSound.setAttribute('aria-pressed',String(save.sound));}
 bSound.addEventListener('click',function(){save.sound=!save.sound;persist();soundLabel();if(save.sound) audioInit();});
 
@@ -4439,16 +4533,17 @@ addEventListener('keydown',function(e){
   if(screen==='play'){
     if(d!==undefined){press(d);e.preventDefault();return;}
     if(e.code==='Space'){act=true;actTap=true;e.preventDefault();return;}
-    if(e.code==='KeyR'){startLevel(cur);return;}
+    if(e.code==='KeyR'){restart();return;}
     if(e.code==='KeyP'||e.code==='Escape'){pause();e.preventDefault();return;}
   }else if(screen==='paused'){
     if(e.code==='KeyP'||e.code==='Escape'){resume();e.preventDefault();}
-    else if(e.code==='KeyR') startLevel(cur);
+    else if(e.code==='KeyR') restart();
   }else if(screen==='over'){
-    if(e.code==='KeyR') startLevel(cur);
+    if(e.code==='KeyR') restart();
+    else if(e.code==='Enter'&&!onButton&&mode==='meltdown') startMeltdown();
     else if(e.code==='Enter'&&!onButton&&game.state==='won'&&cur<L().length-1) startLevel(cur+1);
   }else if(screen==='menu'){
-    if(e.code==='Enter'&&!onButton&&L()) startLevel(firstOpen());
+    if(e.code==='Enter'&&!onButton){if(menuView==='meltdown') startMeltdown();else if(L()) startLevel(firstOpen());}
   }
 });
 addEventListener('keyup',function(e){
@@ -4479,6 +4574,7 @@ function doStep(){
   noteBlasts(game);
   noteHeat(game);
   scoreTick(game,got,red);
+  if(mode==='meltdown'&&live) meltTick(game,got);
   if(combo&&game.tick-comboTick>COMBO_TICKS) combo=0;
   if(game.got>got) eatT=performance.now();
   if(game.m.snapTick===game.tick&&game.state==='play'){snaps.push({x:game.m.x,y:game.m.y,d:game.m.snapDir,t:performance.now()});SFX.zap();}
@@ -4495,7 +4591,7 @@ function doStep(){
     if(SFX[ev]) SFX[ev]();
   }
   if(game.state==='dead'&&game.tick-game.endTick===12&&screen==='play') showDead();
-  if(game.state==='won'&&game.tick-game.endTick===6&&screen==='play') showWon();
+  if(game.state==='won'&&game.tick-game.endTick===6&&screen==='play'){if(mode==='meltdown') meltRoundClear();else showWon();}
   hud();
 }
 function frame(now){
