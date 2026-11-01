@@ -1,5 +1,5 @@
 name: Red Line
-need: 80
+need: 84
 hint: Enough loose Pellets, just. Four sealed rooms and twelve red canisters are your margin, and a Yellow canister waits beside the first room.
 ---
 ############################################################

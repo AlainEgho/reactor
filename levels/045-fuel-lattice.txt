@@ -1,5 +1,5 @@
 name: Fuel Lattice
-need: 100
+need: 133
 hint: A lattice of Graphite blocks with Gammas running the gaps. Eat across a block, not along a gap.
 ---
 ############################################################

@@ -1,0 +1,12 @@
+name: Vacuum
+need: 6
+hint: This section is in vacuum: Iso has twenty seconds of air, and every Air tank adds thirty. Plan the route by the tanks.
+air: 20
+---
+##############################
+#@...........................#
+#.##########################.#
+#...*....t....*....t....*....#
+#.##########################.#
+#....*....t....*....t....*..X#
+##############################

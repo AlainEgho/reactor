@@ -4,6 +4,7 @@
 import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { NEEDS } from './needs.mjs';
 
 const out = join(dirname(fileURLToPath(import.meta.url)), '..', 'levels');
 
@@ -24,6 +25,7 @@ class Board {
   pts(list, ch) { for (const [x, y] of list) this.set(x, y, ch); return this; }
   head(line) { this.header.push(line); return this; }
   save() {
+    if (NEEDS[this.num] !== undefined) this.need = NEEDS[this.num];
     const slug = this.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
     const file = join(out, `${String(this.num).padStart(3, '0')}-${slug}.txt`);
     const text = [`name: ${this.name}`, `need: ${this.need}`, `hint: ${this.hint}`, ...this.header, '---', ...this.g.map(r => r.join(''))].join('\n') + '\n';

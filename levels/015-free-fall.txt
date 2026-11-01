@@ -1,5 +1,5 @@
 name: Free Fall
-need: 13
+need: 15
 hint: Gravity is on. You drop into empty space and can only climb by eating Graphite, so think before you step into a cave.
 gravity: on
 ---

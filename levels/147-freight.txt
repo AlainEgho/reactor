@@ -1,0 +1,13 @@
+name: Freight
+need: 5
+hint: A crate pushes in all four directions and never falls. A laser lights the column at the middle of the hall; park the crate in the beam and walk under it in its shadow.
+---
+##########################
+#@.......................#
+#.######################.#
+#.#         i           .#
+#.########## ###########.#
+#..  c                 #.#
+#.#                    #.#
+#.#*   *   *   *   *   #X#
+##########################

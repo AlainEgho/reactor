@@ -1,5 +1,5 @@
 name: Long Haul
-need: 28
+need: 32
 hint: A long dig across six rooms. Take Pellets that carry a Lead ball from below or from the side.
 ---
 ############################################################

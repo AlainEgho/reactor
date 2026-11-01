@@ -1,0 +1,30 @@
+name: Terminal Phase
+need: 69
+hint: The penultimate floor. Dark, sixty seconds of air, Gammas, Drones and Alphas, acid below and fallout above. Take the Lamps, take the tanks, take the Shield; take nothing for granted.
+dark: on
+air: 60
+---
+############################################################
+#@.........................................................#
+#.rr*r*rrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrr.#
+#.rrrrrrrrrrrr*rrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrr*rrrr.#
+#.rrr*rrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr**r.#
+#*..L....*.*..........O*.....*L.*..........*..O*.......L...#
+#..*......*O.....O.*p........*.....*p.*...*O....... G ....*#
+#..........................................................#
+#..A                                                     ..#
+#..........................................................#
+#....*...............**..*.......O......*..*...............#
+#.*........ S ..*O..........****O..**......*... S .......*.#
+#.....*...t............*.....O......O...t..........*....O..#
+#*O........................................................#
+#..A                                                     ..#
+#.*........................................................#
+#.........................*.........*...O..*...............#
+#.*......................*... S .....*.O...................#
+#.*. G ....O...*.........t..........O...*O...O.*.*O....O...#
+#.............*....**.............*.........*.**.****...H*.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.#
+#........................................................X.#
+############################################################

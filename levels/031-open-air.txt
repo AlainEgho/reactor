@@ -1,5 +1,5 @@
 name: Open Air
-need: 90
+need: 138
 hint: Open space and concrete ledges. Three Gammas crawl along the ledges, so pick your moment.
 ---
 ############################################################

@@ -1,5 +1,5 @@
 name: Pump Station
-need: 42
+need: 43
 hint: Six Gamma shafts cut the board from top to bottom. Cross each one through its airlocks, and only when the shaft is clear.
 ---
 ############################################################

@@ -1,5 +1,5 @@
 name: Bunker
-need: 12
+need: 19
 hint: Packed Casks with a few veins of Graphite. Each Pellet sits in its own bunker two steps off a vein: drop a red canister beside it and back off up the vein.
 ---
 ############################################################

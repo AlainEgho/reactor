@@ -1,5 +1,5 @@
 name: Yellow Line
-need: 16
+need: 26
 hint: Line the Yellow canisters up against the vault walls first. The Initiator fires all of them at once.
 ---
 ############################################################

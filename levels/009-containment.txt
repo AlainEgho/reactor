@@ -1,5 +1,5 @@
 name: Containment
-need: 10
+need: 12
 hint: Hot spots look like Graphite but flare without warning. Cross them fast or dig around them.
 ---
 ##############################

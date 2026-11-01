@@ -1,5 +1,5 @@
 name: Sarcophagus
-need: 55
+need: 67
 hint: The Reactor lies sealed in the sarcophagus at the centre. Its one airlock only lets you in, so collect every Pellet you need before you enter.
 ---
 ############################################################

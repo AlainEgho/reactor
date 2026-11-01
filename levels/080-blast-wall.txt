@@ -1,5 +1,5 @@
 name: Blast Wall
-need: 61
+need: 67
 hint: Three walls of orange canisters, with airlocks set into them. If one canister in a wall goes, the whole wall can go with it.
 ---
 ############################################################

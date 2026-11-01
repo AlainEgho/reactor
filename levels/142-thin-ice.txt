@@ -1,0 +1,13 @@
+name: Thin Ice
+need: 6
+hint: Ice. Step on it and Iso slides until he leaves it or something stops him; nothing you press counts until then. Pellets lying on the ice are taken in passing.
+---
+##############################
+#@..IIIIIIII*IIII...........*#
+#...#........................#
+#...IIIII.....*..IIIIIIIIIII.#
+#...I...I.....#..I.........I.#
+#...I.*.I........I..*..*...I.#
+#...IIIII........IIIIIIIIIII.#
+#...........................X#
+##############################

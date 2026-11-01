@@ -1,0 +1,12 @@
+name: Blackout
+need: 4
+hint: The lights are out. Iso sees a few cells around him; every Lamp he picks up pushes the dark further back.
+dark: on
+---
+##########################
+#@...L...................#
+#.######################.#
+#.....*......L......*....#
+#.######################.#
+#..*....L......*........X#
+##########################

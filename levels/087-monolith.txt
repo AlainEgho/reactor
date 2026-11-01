@@ -1,5 +1,5 @@
 name: Monolith
-need: 51
+need: 57
 hint: Six Cask monoliths with Lead balls heaped round them. Lead balls roll off Casks, so a monolith is a slope, not a wall.
 ---
 ############################################################

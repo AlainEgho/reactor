@@ -1,5 +1,5 @@
 name: Hot Field
-need: 105
+need: 111
 hint: Orange canisters are mixed in with the Lead balls. Never eat the Graphite under one unless you want it gone.
 ---
 ############################################################

@@ -1,5 +1,5 @@
 name: Breakers
-need: 53
+need: 58
 hint: A city of concrete blocks. Some blocks have one-way tunnels through them; the plazas are Gamma territory.
 ---
 ############################################################

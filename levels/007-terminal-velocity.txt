@@ -1,5 +1,5 @@
 name: Terminal Velocity
-need: 8
+need: 12
 hint: Push the Yellow canister against the vault, then touch the Initiator. Every Yellow canister on the board explodes.
 ---
 ########################

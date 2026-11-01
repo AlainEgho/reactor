@@ -1,0 +1,11 @@
+name: Heavy Fuel
+need: 12
+hint: Fuel rods are worth three Pellets and fall like Lead. Dig beside a Cask, step clear, and let the rod roll down to you.
+---
+##########################
+#....U.......U.......U...#
+#....R.......R.......R...#
+#@.......................#
+#..*.......*.......*.....#
+#.......................X#
+##########################

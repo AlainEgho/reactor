@@ -1,0 +1,11 @@
+name: Half-Life
+need: 20
+hint: Isotope pellets are worth two, but they decay: fifty seconds after the start they are gone. The ring on each one shows the time left. Take them first.
+---
+##############################
+#@...h.........h.........h...#
+#.##########################.#
+#.h....*....h....*....h......#
+#.##########################.#
+#...*....h....*....h....*...X#
+##############################

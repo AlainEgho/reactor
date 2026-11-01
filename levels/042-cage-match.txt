@@ -1,5 +1,5 @@
 name: Cage Match
-need: 11
+need: 12
 hint: The arena gates are airlocks, so nothing inside can follow you out. Go in, grab, get out.
 ---
 ############################################################

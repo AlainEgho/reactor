@@ -1,0 +1,28 @@
+name: Flooded Section
+need: 14
+hint: The section is flooded with acid and the belts are the only road. They run both ways on different levels; where a belt ends over acid, you had better have stepped off.
+---
+############################################################
+#@.........................................................#
+#..........................................................#
+#............*......*........**.........**..aaaaaaaaaaaaaa.#
+#...........................................aaaaaaaaaaaaaa.#
+#.                    ..                    aaaaaaaaaaaaaa.#
+#.]]]]]]]]]]]]]]]]]]]]aa[[[[[[[[[[[[[[[[[[[[aaaaaaaaaaaaaa.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.#
+#.aaaaaaaa*....*..*........*..aaaa....*..*.*...*......aaaa.#
+#.aaaaaaaa....................aaaa....................aaaa.#
+#.aaaaaaaa                    aaaa          ..        aaaa.#
+#.aaaaaaaa]]]]]]]]]]]]]]]]]]]]aaaa[[[[[[[[[[[[[[[[[[[[aaaa.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.#
+#.......*..*........**............aa.**.*.............*..a.#
+#.................................aa.....................a.#
+#.                            ....aa                   ..a.#
+#.]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]aaaa[[[[[[[[[[[[[[[[[[[..a.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa..a.#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.........#
+#.aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.........#
+#........................................................X.#
+############################################################

@@ -1,0 +1,13 @@
+name: Slow Burn
+need: 2
+hint: A fuse burns from any blast that touches it and sets off every canister it passes. Light it with the red canister from the far end, or eat through it to cut it short.
+---
+######################
+#@d..................#
+#.##################.#
+#..,,,,,,,,,,,,,,,,#.#
+#.#..oR*R...R*Ro...#.#
+#.#...RRR...RRR....#.#
+#.##################.#
+#...................X#
+######################

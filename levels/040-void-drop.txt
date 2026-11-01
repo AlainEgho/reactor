@@ -1,5 +1,5 @@
 name: Void Drop
-need: 70
+need: 120
 hint: Everything rests on concrete ledges in open space. A Lead ball or canister you push off a ledge drops onto whatever is below.
 ---
 ############################################################

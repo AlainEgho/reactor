@@ -1,5 +1,5 @@
 name: Orange Grove
-need: 65
+need: 73
 hint: No Lead balls today, only orange canisters. Anything you dig out from under one will drop and blow.
 ---
 ############################################################

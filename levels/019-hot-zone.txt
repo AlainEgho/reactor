@@ -1,5 +1,5 @@
 name: Hot Zone
-need: 16
+need: 21
 hint: The Pellets sit inside Hot spot patches. Watch a patch flare once, then cross it right after.
 ---
 ############################################################

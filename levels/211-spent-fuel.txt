@@ -1,0 +1,28 @@
+name: Spent Fuel
+need: 70
+hint: Spent fuel: the isotopes lie in the fallout they made. Each run into the field costs dose and the isotopes cost time; the Iodine is at the ends of the field.
+---
+############################################################
+#@........*...........................................*....#
+#............*.............................................#
+#................*...................*.*...*...............#
+#.p.............*..........*.............*...............p.#
+#..*................................*..*...........*.......#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrhrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrhrrrrrrrrrrrrrrrrrrrrhrrrrrrrrhrrrrrrrr.#
+#.rrrrrrrrrrrhrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrhrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrhrrrrrrrrrrhrhrrrrrr.#
+#.rrrrhrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrhrrhrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrhrrrrrrrrrrhrhhrrrrrrrrrrrrrrrrrrrrrrrrrrrrrhrrrrrrrrr.#
+#.rrrhrhrrrrrrrrrrrrrrrrrhrrrrrhrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrhrrrrrrrrrrrrrrrhrrrrrrrrrrrrrrrrrrhrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#..........................................................#
+#......*......*........................*...................#
+#.p..............*..................*....................p.#
+#.................*..............*........*................#
+#.......................*...........*............*.......X.#
+############################################################

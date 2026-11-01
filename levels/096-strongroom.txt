@@ -1,5 +1,5 @@
 name: Strongroom
-need: 44
+need: 59
 hint: Six Cask vaults of ten Pellets each, and twenty-three red canisters. The loose Pellets will just about do; the vaults are the safe way.
 ---
 ############################################################

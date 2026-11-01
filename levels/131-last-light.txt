@@ -1,5 +1,5 @@
 name: Last Light
-need: 95
+need: 97
 hint: The last light in the plant. Two Neutron farms, Gammas asleep in the Graphite, Lead everywhere and a few orange canisters. Bring the core up one last time.
 ---
 ############################################################

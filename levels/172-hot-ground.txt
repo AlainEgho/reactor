@@ -1,0 +1,12 @@
+name: Hot Ground
+need: 3
+hint: Fallout. The dose climbs every tick Iso stands on it and kills at full; it drains again on clean floor. An Iodine pill clears the dose and blocks it for ten seconds.
+---
+##########################
+#@p......................#
+#.rrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrprrrrrrrrrr.#
+#.rrrr*rrrrrr*rrrrrr*rrr.#
+#.rrrrrrrrrrrrrrrrrrrrrr.#
+#........p..............X#
+##########################

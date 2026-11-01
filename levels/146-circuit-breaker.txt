@@ -1,0 +1,11 @@
+name: Circuit Breaker
+need: 3
+hint: A switch flips every gate on the floor: open ones close, closed ones open. Walking into it throws it; so does Lead landing on it. Iso steps through an open gate to the cell beyond.
+---
+########################
+#@.q........g...*....g.#
+#.####s###############.#
+#..O   .....g*.....g*..#
+#q#### #################
+#X####s#################
+########################

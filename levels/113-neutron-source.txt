@@ -1,5 +1,5 @@
 name: Neutron Source
-need: 38
+need: 50
 hint: Five Neutron farms in a row. Snap each plug from its left, step back, and the blast fills the chamber with Pellets.
 ---
 ############################################################

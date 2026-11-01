@@ -1,5 +1,5 @@
 name: Patrol Grid
-need: 14
+need: 19
 hint: Gammas circle the blocks. Each block has a door on both sides, so cross a corridor in one step and duck inside.
 ---
 ############################################################

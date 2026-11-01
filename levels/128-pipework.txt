@@ -1,5 +1,5 @@
 name: Pipework
-need: 65
+need: 78
 hint: Three coolant pipes cross the plant. Drop in through an airlock in the roof and walk the pipe; each one has a way back out every twenty steps.
 ---
 ############################################################

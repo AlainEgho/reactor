@@ -1,5 +1,5 @@
 name: Bedrock
-need: 120
+need: 130
 hint: Nothing but Lead balls and Pellets, and you need nearly all of them. Work from the bottom up.
 ---
 ############################################################

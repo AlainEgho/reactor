@@ -1,0 +1,13 @@
+name: Light Show
+need: 4
+hint: Lasers pulse. Watch the lenses charge, cross while they are dark, and remember that anything solid stops a beam.
+---
+##########################
+#@........i.......i......#
+#..                    #.#
+#.#                    #.#
+#l         *           #.#
+#.#    *   # *    *    ..#
+#.######################.#
+#.......*...............X#
+##########################

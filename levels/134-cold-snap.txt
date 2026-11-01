@@ -1,0 +1,12 @@
+name: Cold Snap
+need: 5
+hint: A Gamma spins at the mouth of the hall. Stasis (Shift) holds everything that moves for 5 seconds: get in, grab, get out.
+---
+##########################
+#@.Z....Z................#
+#.######################.#
+#..   S                #.#
+#.#      *     *    *  #.#
+#.######################.#
+#......*.........*......X#
+##########################

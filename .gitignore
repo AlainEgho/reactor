@@ -1,0 +1,11 @@
+# Nothing here is built; the game is index.html. These are local leftovers only.
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+# Screenshots the browser smoke test writes when run without a target folder.
+tests/*.png
+# Never ship anyone's classic level files or exports of them.
+*.DAT
+*.dat
+dat-export/

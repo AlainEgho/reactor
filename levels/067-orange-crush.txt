@@ -1,5 +1,5 @@
 name: Orange Crush
-need: 130
+need: 138
 hint: A rich seam with orange canisters all through it. Every orange you drop takes the Pellets beside it.
 ---
 ############################################################

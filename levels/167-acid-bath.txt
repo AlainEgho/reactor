@@ -1,0 +1,13 @@
+name: Acid Bath
+need: 2
+hint: Acid dissolves whatever falls in, Iso included, and never fills up. Each Lead ball sits beside a hole in the floor; push it over and the acid takes it.
+---
+####################
+#@.................#
+#.################.#
+#..O  *  O  *  O  .#
+#.## ##### ##### #.#
+#.#aaaaaaaaaaaaaaa.#
+#.################.#
+#.................X#
+####################

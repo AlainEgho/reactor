@@ -1,0 +1,11 @@
+name: Halo
+need: 4
+hint: A Shield takes one hit for you, and whatever hit you is destroyed. Two Shields, two Gammas in dead-end halls.
+---
+##########################
+#@.......................#
+#H######################H#
+#..    S   .*#*.   S   ..#
+#.######################.#
+#.......*.......*.......X#
+##########################

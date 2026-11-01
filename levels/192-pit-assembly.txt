@@ -1,0 +1,13 @@
+name: Pit Assembly
+need: 5
+hint: Plutonium falls and rolls like Lead, but two spheres at rest side by side go critical: a fission blast that leaves Pellets. Push the top one off its ledge so it lands beside the other.
+---
+####################
+#@.................#
+#..###############.#
+#..P             ..#
+#.##### ##########.#
+#.#     P         .#
+#.################.#
+#.................X#
+####################

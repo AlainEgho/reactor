@@ -1,5 +1,5 @@
 name: Fallout Shelter
-need: 50
+need: 60
 hint: Six shelters in a hot field. Each has one airlock door on its west side; the Pellets inside are safe, the Hot spots outside are not.
 ---
 ############################################################

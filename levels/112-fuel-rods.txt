@@ -1,5 +1,5 @@
 name: Fuel Rods
-need: 60
+need: 76
 hint: Eight fuel rods stand in the Graphite, each capped with Lead. Take a rod from the side and the rest of it drops into the gap, so keep your head out from under it.
 ---
 ############################################################

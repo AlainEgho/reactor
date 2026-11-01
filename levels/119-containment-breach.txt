@@ -1,5 +1,5 @@
 name: Containment Breach
-need: 40
+need: 50
 hint: The east wing has lost containment: every airlock in the middle wall turns gravity on. Clear the west first, then work down the east ledges to the Reactor.
 special: 30,5 gravity on
 special: 30,12 gravity on

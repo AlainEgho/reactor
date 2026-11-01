@@ -1,0 +1,28 @@
+name: Skating Rink
+need: 50
+hint: Four rinks. A slide carries Iso clear across one and takes every Pellet in its path; Lead sits on the floor between them, so look where a slide ends.
+---
+############################################################
+#@...............................O..............O..........#
+#......*....................*............*...O....*........#
+#...IIIIIIIIIII*IIIIIIII...*......II*IIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIIIIIIIIIIIIII.........OIIIIIIII*II*IIIIIIIIII...#
+#.OO*IIIIIIIIIIIIII*IIII........O.IIIIIIIIIIIIIIIIIIIIII...#
+#...II*IIIIIIIIIIIIIIIII.*........IIIIIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIIIIIIIIIIIIII..........III*IIIIIIIIIIIIIIIIII...#
+#.*.IIII**IIIIIIIIIIIIII..........*II*IIIIII*IIIIIIIIIII...#
+#...IIIIIII*I*IIIIIIIIII..........IIIIIII*IIIIIIIIIIIIII..O#
+#......O.......O.O.........................................#
+#..O..O....................O.............*.................#
+#............O.O....O..........O..*........................#
+#O*................................O.....*.*...O...........#
+#...IIIIIIIIIII*IIIIIIIIII...*....IIIIIIIIII*IIIIIIIII.....#
+#*..II*IIIIIIIIIIIIIIIIIII........IIIIIIIIIIIIIIIIIIII.....#
+#..OIIIIIIIIIIIIIIIIIIIIII.......**IIIIIIIIIIIIIIIIII*.....#
+#...IIIIIIIIIIIIIII*IIIIII....*.O.IIIIIIII*IIIIIIIIIII.....#
+#...IIIIIIIIII*IIIIIIIIII*....O...IIIIIIIIIIIIIIIIIII*.....#
+#...III*IIIIIII*IIIIII*III........IIIIIIIIIII**IIIIIII...*.#
+#...IIIIIIIIIIIIIIIIIIIIII......O.IIIIIII*IIIIIIIIIIII.....#
+#........*.......................................O.........#
+#....*.......O....O.............*....................OO..X.#
+############################################################

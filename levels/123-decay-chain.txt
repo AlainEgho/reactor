@@ -1,5 +1,5 @@
 name: Decay Chain
-need: 55
+need: 67
 hint: One long chain of tunnels through the concrete. Some of the Graphite along the way is a Hot spot, and in a tunnel there is no way round it: wait for it to flare, then go.
 ---
 ############################################################

@@ -1,0 +1,12 @@
+name: Belt Line
+need: 4
+hint: Conveyor belts carry whatever rests on them, Iso included. This one delivers its Lead down a shaft onto an orange canister; ride it yourself once the dust settles.
+---
+####################
+#@..   O           #
+####]]]]]]]]]]] ####
+#.*.........*.#o#..#
+#.............#.#..#
+#..*......*........#
+#.................X#
+####################

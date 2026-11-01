@@ -1,0 +1,28 @@
+name: Shaft Drop
+need: 54
+hint: A Neutron runs up and down each Cask shaft and a Lead ball waits at every mouth. Drop it while the Neutron is near the top and the blast reaches you; drop it while it is low and the Pellets pile up at the bottom.
+---
+############################################################
+#@.........................................................#
+#.....O.....O.....O.....O.....O.....O.....O.....O.....O....#
+#..........................................................#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRReRRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRReRRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRReRRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRReRRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRReRRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRReRRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRReRR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRReRRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRReRRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RRRRR RR..#
+#..RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR..#
+#......................O.......................O...........#
+#.......O.................................OO.....OO.O....X.#
+############################################################

@@ -1,5 +1,5 @@
 name: Moderator
-need: 70
+need: 81
 hint: The moderator is running hot: Hot spots everywhere in the Graphite. Watch each one flare before you cross it.
 ---
 ############################################################

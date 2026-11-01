@@ -1,5 +1,5 @@
 name: Orange Alert
-need: 5
+need: 6
 hint: Push an Orange canister into a shaft. It explodes where it lands and breaks the Casks around it.
 ---
 ######################

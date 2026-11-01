@@ -1,5 +1,5 @@
 name: Neutron Mine
-need: 50
+need: 85
 hint: Ten Neutron farms. Snap the plug beside each Lead ball, step back, and collect what falls out.
 ---
 ############################################################

@@ -1,5 +1,5 @@
 name: Fault Line
-need: 78
+need: 86
 hint: A crack runs down the middle and Gammas live in it. Three airlocks bridge it. The Initiator opens both vaults.
 ---
 ############################################################

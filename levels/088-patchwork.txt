@@ -1,5 +1,5 @@
 name: Patchwork
-need: 45
+need: 51
 hint: Fifteen patches stitched together with airlocks. Each patch has its own trouble.
 ---
 ############################################################

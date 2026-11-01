@@ -1,0 +1,13 @@
+name: Reflection
+need: 3
+hint: A mirror turns a laser beam through a right angle, and mirrors can be pushed any way. This beam is bent down a shaft that the Gamma's corridor crosses; wait for the light to find it.
+---
+##########################
+#@.......................#
+#.###########.##########.#
+#.#l        \           .#
+#.########## ########## .#
+#.#S                    .#
+#.################ # # #.#
+#.################*#*#*#X#
+##########################

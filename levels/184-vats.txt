@@ -1,0 +1,28 @@
+name: Vats
+need: 34
+hint: The Pellets sit on islands in the acid. Crates never fall, so a crate pushed to the rim is a pier; push one too far and the acid takes it, and the next one is further away.
+---
+############################################################
+#@......*...............*.............................O....#
+#................*.....................*..O................#
+#.......................O..............................*...#
+#...aaaaaaaaaaaa........aaaaaaaaaaaa.....*..aaaaaaaaaaaa.*.#
+#...aaaaaaaaaaaa....*...aaaaaaaaaaaa.......*aaaaaaaaaaaa...#
+#..caaaaa**aaaaa*......caaaaa**aaaaa.......caaaaa**aaaaa...#
+#...aaaaa**aaaaac.......aaaaa**aaaaac.......aaaaa**aaaaac..#
+#...aaaaaaaaaaaa.......*aaaaaaaaaaaa........aaaaaaaaaaaa...#
+#...aaaaaaaaaaaa.O......aaaaaaaaaaaa...*.*..aaaaaaaaaaaa...#
+#..............................................*...........#
+#...........*......O.*........*......*.....................#
+#.............*.......*..*....................*.......*....#
+#.............aaaaaaaaaaaa...*....aaaaaaaaaaaa......*......#
+#.............aaaaaaaaaaaa........aaaaaaaaaaaa.............#
+#...O......O*caaaaa**aaaaa.......caaaaa**aaaaa.............#
+#.............aaaaa**aaaaac.......aaaaa**aaaaac............#
+#.........*...aaaaaaaaaaaa........aaaaaaaaaaaa.............#
+#.............aaaaaaaaaaaa........aaaaaaaaaaaa.............#
+#...............*..................*.....................O.#
+#...............*..........................*.........O.....#
+#...............*...........*................*.....O.......#
+#*.......................................................X.#
+############################################################

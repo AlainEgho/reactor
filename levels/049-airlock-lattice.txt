@@ -1,5 +1,5 @@
 name: Airlock Lattice
-need: 24
+need: 25
 hint: Gravity is on and the floors float in open space. Stacks of up-airlocks are ladders: go up through them one at a time.
 gravity: on
 ---

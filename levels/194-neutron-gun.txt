@@ -1,0 +1,13 @@
+name: Neutron Gun
+need: 6
+hint: The Neutron gun (Shift + arrow) fires down the line to the first thing it meets: it kills a Gamma, breaks a Cask, and splits a Neutron into Pellets. Three shots; make them count.
+---
+########################
+#@N....................#
+#.#.##################.#
+#.#      S    R      #.#
+#.############R  e   #.#
+#.############R      #.#
+#.####################.#
+#.....................X#
+########################

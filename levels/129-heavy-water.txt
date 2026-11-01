@@ -1,5 +1,5 @@
 name: Heavy Water
-need: 55
+need: 67
 hint: Gravity is on from the start. The Graphite holds you up and the caves do not, so look down before every step.
 gravity: on
 ---

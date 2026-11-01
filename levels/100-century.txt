@@ -1,5 +1,5 @@
 name: Century
-need: 162
+need: 181
 hint: Level one hundred wants a hundred and sixty-two Pellets. Concrete shelves hold up parts of the field, and the Yellow canisters clear jams when the Initiator fires.
 ---
 ############################################################

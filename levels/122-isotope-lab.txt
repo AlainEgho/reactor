@@ -1,5 +1,5 @@
 name: Isotope Lab
-need: 45
+need: 62
 hint: Six labs, six samples: Lead, Hot spots, a Neutron farm, sleeping Gammas, orange canisters, and the Reactor room. Work through them in any order.
 ---
 ############################################################

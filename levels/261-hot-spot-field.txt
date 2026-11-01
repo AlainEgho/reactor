@@ -1,0 +1,28 @@
+name: Hot Spot Field
+need: 38
+hint: Three bands of Hot spots with Pellets buried in them. Each spot flares on its own beat; step on one while it glows and it goes off under you. Watch the band, then cross on the cold ones.
+---
+############################################################
+#@...........................................*......O......#
+#.........................O.....................O..........#
+#..........................................................#
+#BBBBBBBBBBBBBB**BBBBBBBB*BBBBBBBBBB*BBBBBBBBBBBBBBBBBBBBBB#
+#BBBBBBBB*BBBBBBBBBBBBBB*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB#
+#BBBBBBBBBBBBBBB*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB#
+#BBBBBBBBB*BBBBBBBBBB*BBBBB*B*BBBBBBBBBB*BBBBBBBBBBBBBBBBBB#
+#.....................*..........O....................O....#
+#.......................*..................................#
+#..........................................................#
+#BBBBBBBB*BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB#
+#BBB*BBBBBBBBBBBB*BBBBBBBB*BBBBBBBBBBBBBBBBBBBBBBBB*BBBBB*B#
+#BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*BBBBBBBBBBBBB*BBBBBBBBBBBB#
+#BB*BBBBBBBBBBBBBB*BBBBBBBBBBBBBBBBBB*BBBBBBBBBBBBBBBB*BBBB#
+#............................................O.............#
+#.........................................O..........O.....#
+#..........O.........O.....................................#
+#BBB*BBBBBBBBBBBBBBBBBBBBBBBBBBBBB*BBBBB*BB*BBBBBBBBBB*BBBB#
+#BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB*BBBBBBBBBB*BBBBBBB*BBBBBBB#
+#BBBB*BBBBB*BBBBBBBBBBBBBB*BBBBBBBBBBBBBBBBBBBBBBBBB*BBBBBB#
+#........................................O.................#
+#*...........................O...........................X.#
+############################################################

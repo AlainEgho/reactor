@@ -1,0 +1,13 @@
+name: Sodium Spill
+need: 5
+hint: Liquid coolant creeps into any open space beside it and swallows what falls in; only a blast clears it. Two Pellets lie under the pool: open the plug, drop the red canister right in the mouth, and be quick.
+---
+######################
+#@........d..........#
+#.####.#############.#
+#.#~~..#  *   *   *..#
+#.#~~###############.#
+#.#**###############.#
+#.##################.#
+#...................X#
+######################

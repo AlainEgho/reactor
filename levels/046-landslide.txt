@@ -1,5 +1,5 @@
 name: Landslide
-need: 30
+need: 33
 hint: The whole hill is loose. Every Pellet you take can start a slide, so dig from below.
 ---
 ############################################################

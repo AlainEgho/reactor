@@ -1,5 +1,5 @@
 name: Rotor
-need: 60
+need: 72
 hint: A turbine rotor: eight concrete blades round a hub. The Pellets lie between the blades, so go round the hub, not through it.
 ---
 ############################################################

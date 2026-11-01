@@ -1,5 +1,5 @@
 name: Centrifuge
-need: 50
+need: 59
 hint: Three centrifuges spin behind Cask walls. The walls only break if something blows beside them, so keep the orange canisters away from the rings.
 ---
 ############################################################

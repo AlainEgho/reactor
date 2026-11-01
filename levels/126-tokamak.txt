@@ -1,5 +1,5 @@
 name: Tokamak
-need: 57
+need: 65
 hint: A tokamak: the fuel runs in a ring round the concrete core, and a ring of Lead hangs outside it. Take the ring from the inside edge.
 ---
 ############################################################

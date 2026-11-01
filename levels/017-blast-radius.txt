@@ -1,5 +1,5 @@
 name: Blast Radius
-need: 16
+need: 19
 hint: Orange canisters blow where they land. Red canisters blow where you leave them. Keep one red canister for the Reactor.
 ---
 ############################################################

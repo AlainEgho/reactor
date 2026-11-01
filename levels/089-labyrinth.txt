@@ -1,5 +1,5 @@
 name: Labyrinth
-need: 31
+need: 36
 hint: A maze with loops. Some dead ends are hollow and hold Gammas; break into one and they come out after you.
 ---
 ############################################################

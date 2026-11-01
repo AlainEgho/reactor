@@ -1,0 +1,28 @@
+name: Cold Fusion
+need: 48
+hint: Plutonium on an ice floor. Iso slides, the spheres do not; a sphere pushed off the ice meets its neighbour at rest, and that is a fission blast beside you. Pair them from a distance.
+---
+############################################################
+#@...........*.....................*............*...*......#
+#..............................*..........*.......*........#
+#..................*..*....*........*....*.................#
+#...IIIIIIIIIIIIII*IIIIIIIIIIIIIIIIPIIIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIII*IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII*IIIIIII...#
+#...IIIIIIIIIIIIIIIIIIIIIIPIIIIIIIII*IIIIIIIIIIIIIIII*II...#
+#...IIIIIIIIIIIIIIPIIIIIIIIIIIIIII*IIIII*IIIIIIIIIIIIIII...#
+#...IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIPI*IIIIIIIIIIIII...#
+#...IIIIIIIPIIIII*IIIIIIIIIIPIIIIIIIIIIIIIIIIIIIIIIIIIII...#
+#.*.IIPI*IIIIIIIIIIIIIIIIIIIIIIIIPI*IIIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIIIIII*IIIIIIIIIIII*IPIIIIIIIIIIIIIIIIIIIIIIII...#
+#...*IIIIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIIIIIIIIIIIIIIIIII...#
+#...*IIIIIIIIIIIIIII*IIIII*IIIII*I*III*IIIIIIIIIIII*III*...#
+#...IIIIIIIIIIIIIIIIIIIIIIIPIIIIIIIIIIIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIIIIIIIII*IIIIIIIIIIIIIIIIIIIIIIIIIIIIIPIIIIII...#
+#...IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII*IIIII*IIIIIIIIII...#
+#...III*IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIIIIIIIIIIIIIIIIP**I*IIIIIIIIIIIIIIIIIIIIIIIII...#
+#...IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII.*.#
+#..........................................................#
+#.........*...............................*.......*...*....#
+#.........................*..............*...............X.#
+############################################################

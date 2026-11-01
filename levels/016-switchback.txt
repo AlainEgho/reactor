@@ -1,5 +1,5 @@
 name: Switchback
-need: 14
+need: 16
 hint: One of the airlocks in the middle wall changes the rules on the other side. Come back through the lower airlock.
 special: 30,6 gravity on
 special: 30,18 gravity off

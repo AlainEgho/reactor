@@ -1,5 +1,5 @@
 name: One Way Street
-need: 24
+need: 28
 hint: The airlocks run in one big loop. Miss a Pellet and you can go round again.
 ---
 ############################################################

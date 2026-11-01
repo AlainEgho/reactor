@@ -1,5 +1,5 @@
 name: Crumble
-need: 15
+need: 19
 hint: Lead balls above, orange canisters between. Dig slowly, and leave yourself a way back.
 ---
 ############################################################

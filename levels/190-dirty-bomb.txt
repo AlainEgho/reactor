@@ -1,0 +1,28 @@
+name: Dirty Bomb
+need: 45
+hint: The floor is fallout with clean paths dug through it, and the paths do not reach the Pellets. Three red canisters: a blast turns fallout into clean floor, so bomb yourself a way in.
+---
+############################################################
+#@.........................................................#
+#.........d..................p.............................#
+#..rrrrrrrrrrrrrrrrr.rrrrrrrrrrrrrrrrr.rrrrrrrrrrrr*rr*rr..#
+#..rrrrrrrrrrrrrrr**.rrrrrrrrrrrrrrrrr.r*rrr*rrrrrrrr*rrr..#
+#..rrrrrrrrrrrrrr*r*.rrrrrrrr*rrr*rrrr.rrrrrrrrrrrrrrrrrr..#
+#..rrrrrrrrrrrrrrrrr.rrrrr*rrrrrrrr*rr.rrrrrrrrrrrrr*rrrr..#
+#..*rrrrrrrrrrrrrrrr.rrrrrrrrrr*rr*rrr.rrrrrrrrrrr*rrrrrr..#
+#.............................d................p...........#
+#..rrrrrrrrrrrr*rrrr.rrrrrrrrrrrrrrrrr.rrrrrrrrrrrrrrrrrr..#
+#..rrrrrrrrrrrrr*rrr.rrrrrrrr*rrrrrrrr.rr*r**rrrrrrrrrrrr..#
+#..rr*rrrrrrrr*rrrrr.rrrrrr*rrrrrrrrrr.rrrrr*rrrrr*rrrrrr..#
+#..rrrrrrrrrrrrrr*rr.r*rrrrrrrrrrrrrrr.rrrrrrrrrrrrrrrrrr..#
+#..rr*rrrrrrrrrrrrrr.rrrr*rrrrrr*rrrrr.rrrrrrrrrr*rrrrrrr..#
+#..........p....................................d..........#
+#..rr*rrrrrrrrrrr*rr.rrrrrrrrrrrr*rrrr.rrrrrrrrrrrrrrrrrr..#
+#..rrrrrrrrrrrrrrrrr.rrrrrrrrrrrrrrrrr.rrrrrrrrrrrrrr*r*r..#
+#..rrrrrrrrrrrrrrrrr.rrrrrrrrrrrrrr*rr.rrrrrrrrrrrrrrr*rr..#
+#..*rrrr**rrrrrr*rrr.rrrrrrr*rr*r*rrrr.rrr*r**rrrrrrrrrrr..#
+#..r**rrrrrrrrrrrrrr.rrrrrrrrrr*rrrrrr.rrrrrrrrrrrrrrr*rr..#
+#...........d.......................................d......#
+#..r*rrrrrrrrrrrrrrr.rrrr*rrrrrrrrr*rr.rrrrrrrrrrrrrrr*rr..#
+#........................................................X.#
+############################################################

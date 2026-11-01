@@ -1,5 +1,5 @@
 name: Airlock Authority
-need: 8
+need: 9
 hint: Airlocks only let you through in the direction of their arrows. Some doors do not open twice.
 ---
 ########################

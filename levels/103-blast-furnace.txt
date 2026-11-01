@@ -1,5 +1,5 @@
 name: Blast Furnace
-need: 49
+need: 56
 hint: Four Cask furnaces with double walls; a red canister only gets you halfway in. The loose Pellets are enough if you are careful.
 ---
 ############################################################

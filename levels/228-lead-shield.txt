@@ -1,0 +1,28 @@
+name: Lead Shield
+need: 52
+hint: A fallout floor under a roof of Lead. Every ball you drop into the fallout is a clean cell to stand on. The Iodine is on the roof.
+---
+############################################################
+#@......................*.*...........*...........*....*...#
+#............................................*....*........#
+#........*..........*.....................*.*..............#
+#.........p...................p...................p........#
+#..................*.......................................#
+#..................................*.......*...............#
+#.....*.............p...................p...*..............#
+#.........*.*.....................*.................*......#
+#..O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O.O...#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrr*rrrrrr*rrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrr*rrrrr*rrrrrrrrrrrrrrrrrr*r*rrrrrrr*rrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*r.#
+#.rrrrrrrrr*rrr*rrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrr**rrrrrrrrrrr*rrrrrrrrrrrrrrr*rrrr*rr*rrrrr.#
+#.rrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrr*rrrr*r*rr*rrrrrrrrrrrrr.#
+#.rrrrrrr*rrrrrrr**rrrrrrrrrrrrrrr*rrrrrr**rrrrrrrrrrr*rrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrr*rrrr*rrrrrrr**r*rrr*rrrr*rrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrr.#
+#........................................................X.#
+############################################################

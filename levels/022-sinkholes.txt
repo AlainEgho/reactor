@@ -1,5 +1,5 @@
 name: Sinkholes
-need: 40
+need: 41
 hint: Gravity is on. The shafts are quick ways down; the way back up is through Graphite.
 gravity: on
 ---

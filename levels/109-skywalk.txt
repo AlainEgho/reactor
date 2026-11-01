@@ -1,5 +1,5 @@
 name: Skywalk
-need: 10
+need: 12
 hint: A lattice of concrete cells hanging in open air, joined by airlocks. Before you step through, look to see what is waiting on the other side.
 ---
 ############################################################

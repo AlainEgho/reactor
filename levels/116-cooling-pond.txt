@@ -1,5 +1,5 @@
 name: Cooling Pond
-need: 30
+need: 50
 hint: A quiet pond after the last few floors. Walk across the open water and pick the Pellets off the concrete islands.
 ---
 ############################################################

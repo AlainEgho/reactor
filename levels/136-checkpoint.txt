@@ -1,0 +1,11 @@
+name: Checkpoint
+need: 3
+hint: Keycards open blast doors, one card per door. Three cards, four doors: choose.
+---
+##########################
+#@..K.....K..............#
+#.######################.#
+#...................K....#
+#.#D#.#D#.#D#.#D#........#
+#.#*#.#*#.#*#.#*#.......X#
+##########################

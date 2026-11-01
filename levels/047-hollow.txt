@@ -1,5 +1,5 @@
 name: Hollow
-need: 35
+need: 48
 hint: The hill is hollow and the caves are full of Gammas. Airlocks in the cave walls let you through without opening a path for them.
 ---
 ############################################################

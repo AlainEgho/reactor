@@ -1,5 +1,5 @@
 name: Gamma Alley
-need: 6
+need: 8
 hint: A Gamma patrols the corridor. Cross behind it. It will follow any tunnel you open into the corridor.
 ---
 ########################

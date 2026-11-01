@@ -1,0 +1,17 @@
+name: Field Lines
+need: 4
+hint: A magnet draws Lead towards it through open space, six cells out. Nudge each ball into the field and the magnet drags it over the drop onto the canister below.
+---
+########################
+#@.....................#
+#.#.##################.#
+#.# O      M      O  #.#
+#.# ### ####### ###  #.#
+#.#   R R     R R    #.#
+#.#   RoR     RoR    #.#
+#.#   RRR     RRR    #.#
+#.#   R*R     R*R    #.#
+#.#   RRR     RRR    #.#
+#.#....*........*....#.#
+#.....................X#
+########################

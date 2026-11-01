@@ -1,0 +1,28 @@
+name: Fallout Zone
+need: 60
+hint: Three bands of fallout cross the floor. Each one is narrow enough to walk straight over on a clean dose; the Pellets inside the bands are another matter, so keep the Iodine for those.
+---
+############################################################
+#@...*O**O..**O**OO.****.******O*.**O*..******O*.**.**O*O**#
+#..........................................................#
+#.............................p............................#
+#..........................................................#
+#*rrr*rrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr**rrrrrrrrrrrr.#
+#.rrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*#
+#.rrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrO#
+#..........................................................#
+#.........p.............................p..................#
+#..........................................................#
+#OrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrO#
+#*rrrrrrrrrrrrrrrrrrrrrrr**r*rrrrrr*rrrrrrrrrr*rrrr*rrrrrr*#
+#*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*#
+#..........................................................#
+#...................p.............................p........#
+#..........................................................#
+#*rrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrO#
+#*rrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrr*#
+#*rrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrO#
+#..........................................................#
+#.......p..................................................#
+#........................................................X.#
+############################################################

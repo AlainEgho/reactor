@@ -1,5 +1,5 @@
 name: Fallout Field
-need: 128
+need: 130
 hint: The Graphite is crawling with Hot spots, and the loose Pellets alone will not do. Snap the two Neutron farms too, and the vault opens with the Initiator.
 ---
 ############################################################

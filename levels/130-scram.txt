@@ -1,5 +1,5 @@
 name: Scram
-need: 65
+need: 81
 hint: Emergency shutdown: orange canisters are packed in among the Lead. Every one you drop is a blast, so dig so they fall where nothing you need is lying.
 ---
 ############################################################

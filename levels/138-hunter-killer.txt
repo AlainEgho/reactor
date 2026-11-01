@@ -1,0 +1,14 @@
+name: Hunter Killer
+need: 4
+hint: Drones hunt through open space but cannot dig. Let them come to you: the laser over the mouth of the hall does the rest. Stasis holds them if they get close.
+---
+##########################
+#@.#.....................#
+#Z#i####################.#
+#Z#         G          #.#
+#.#                    #.#
+#.#    G               ..#
+#..  *      *     *    #.#
+#.######################.#
+#.......*...............X#
+##########################

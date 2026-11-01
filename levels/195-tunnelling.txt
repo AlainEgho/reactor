@@ -1,0 +1,12 @@
+name: Tunnelling
+need: 3
+hint: The Quantum tunnel (Shift + arrow) takes Iso through one solid cell when the cell beyond is open. Three charges a pickup; count the walls before you spend them.
+---
+########################
+#@Q....................#
+#.#.##################.#
+#.# # # # # # #       .#
+#.###*#Q#*###*########.#
+#.####################.#
+#.....................X#
+########################

@@ -1,5 +1,5 @@
 name: Swarm
-need: 14
+need: 18
 hint: Each lane is full of Gammas. Airlocks let you hop across in one step. Somewhere at the bottom is an airlock that stops them all.
 special: 40,21 gravity off freeze-enemies
 ---

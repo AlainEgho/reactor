@@ -1,5 +1,5 @@
 name: Control Rods
-need: 43
+need: 65
 hint: Twenty-one concrete rooms joined by airlocks. The loose Pellets fall just short; the five Neutron farms close the gap.
 ---
 ############################################################

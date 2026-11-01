@@ -1,5 +1,5 @@
 name: Switchyard
-need: 126
+need: 127
 hint: Five Cask rails with airlock gates all along them. The gate in the middle of the third rail freezes every Lead ball; the one below it lets them go.
 special: 30,12 gravity off freeze-zonks
 special: 30,16 gravity off

@@ -1,0 +1,11 @@
+name: Antimatter
+need: 14
+hint: Antipellets are violet and marked with a minus: each one you take cancels a Pellet you have. Fifteen real Pellets lie here among them. Snap what you want and leave the rest.
+---
+######################
+#@...................#
+#.*!.*!.*!.*!.*!.*!..#
+#.##################.#
+#.!*!*!*!*!*!*!*!*!..#
+#...................X#
+######################

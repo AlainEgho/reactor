@@ -17,7 +17,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = dirname(fileURLToPath(import.meta.url));
-const TILES = new Set(' .#RO*@XSeBoydT><^v-|+');
+const TILES = new Set(' .#RO*@XSeBoydT><^v-|+J%ZWDKliGUH' + 'I[]M/\\sgqcAVa,~F!rpPhNQtL');
 const PORTS = new Set('><^v-|+');
 
 function parseLevel(file, text) {
@@ -33,6 +33,8 @@ function parseLevel(file, text) {
     else if (k === 'hint') lv.hint = v.trim();
     else if (k === 'gravity') lv.grav = v.trim() === 'on';
     else if (k === 'freeze-zonks') lv.freezeZ = v.trim() === 'on';
+    else if (k === 'air') { lv.air = +v; if (!(lv.air > 0)) throw new Error(`${file}: air must be a number of seconds`); }
+    else if (k === 'dark') lv.dark = v.trim() === 'on';
     else if (k === 'special') {
       const s = v.match(/^(\d+),(\d+)\s+gravity\s+(on|off)((?:\s+freeze-(?:zonks|enemies))*)\s*$/);
       if (!s) throw new Error(`${file}: cannot read special "${v}"`);
@@ -49,10 +51,17 @@ function parseLevel(file, text) {
   for (const ch of flat) if (!TILES.has(ch)) { bad.push(`unknown tile "${ch}"`); break; }
   if ((flat.match(/@/g) || []).length !== 1) bad.push('needs exactly one @');
   if (!flat.includes('X')) bad.push('needs an Exit (X)');
-  const supply = (flat.match(/\*/g) || []).length + 9 * (flat.match(/e/g) || []).length;
+  const n = re => (flat.match(re) || []).length;
+  // Isotope pellets count two; a pair of Plutonium spheres going critical leaves at least nine Pellets.
+  const supply = n(/\*/g) + 9 * n(/e/g) + 3 * n(/U/g) + 2 * n(/h/g) + (n(/P/g) >= 2 ? 9 : 0);
   if (!lv.name) bad.push('missing name');
   if (!(lv.need >= 0)) bad.push('missing need');
   if (lv.need > supply) bad.push(`need ${lv.need} but at most ${supply} Infotrons exist`);
+  if (n(/W/g) === 1) bad.push('a single teleport pad leads nowhere; use two or more');
+  if (n(/[gq]/g) && !n(/s/g)) bad.push('gates without a switch never move');
+  if (n(/s/g) && !n(/[gq]/g)) bad.push('a switch with no gates does nothing');
+  if (n(/t/g) && !lv.air) bad.push('air tanks on a level without an air: header are pointless');
+  if (n(/L/g) && !lv.dark) bad.push('lamps on a level without dark: on are pointless');
   for (const s of lv.specials) if (!PORTS.has((lv.map[s.y] || '')[s.x])) bad.push(`special at ${s.x},${s.y} is not on a port`);
   if (bad.length) throw new Error(`${file}: ${bad.join('; ')}`);
   return lv;
@@ -62,6 +71,7 @@ function render(levels) {
   const q = s => JSON.stringify(s);
   const out = levels.map(lv => {
     const extra = (lv.grav ? ',grav:true' : '') + (lv.freezeZ ? ',freezeZ:true' : '') +
+      (lv.air ? ',air:' + lv.air : '') + (lv.dark ? ',dark:true' : '') +
       (lv.specials.length ? ',specials:' + JSON.stringify(lv.specials) : '');
     return `  {name:${q(lv.name)},need:${lv.need},hint:${q(lv.hint || '')}${extra},map:[\n` +
       lv.map.map(r => '    ' + q(r)).join(',\n') + ']}';

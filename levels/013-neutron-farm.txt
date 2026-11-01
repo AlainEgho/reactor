@@ -1,5 +1,5 @@
 name: Neutron Farm
-need: 18
+need: 32
 hint: You need two Neutron harvests. Stand left of a plug, snap it with Space + Right, then back away before the blast.
 ---
 ############################################################

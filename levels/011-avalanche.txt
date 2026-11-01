@@ -1,5 +1,5 @@
 name: Avalanche
-need: 13
+need: 16
 hint: Every column of Lead balls sits on Graphite. Dig under one and it comes down after you, so come at the Pellets from below.
 ---
 ############################################################

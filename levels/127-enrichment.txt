@@ -1,5 +1,5 @@
 name: Enrichment
-need: 28
+need: 33
 hint: An enrichment cascade: row after row of concrete pegs, a Pellet on each. Every fourth peg holds Lead instead, so look up before you take one.
 ---
 ############################################################

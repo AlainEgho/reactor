@@ -1,0 +1,29 @@
+name: Snowblind
+need: 53
+hint: Dark and ice. A slide in the dark ends wherever it ends; the Alphas run their lanes whether you see them or not. Lamps on the near side, Pellets on the far.
+dark: on
+---
+############################################################
+#@.........................................................#
+#...................V.........V.........V...........**....*#
+#..L......IIIIIIIIII *IIIII*II II*IIIIII IIIII*III....**...#
+#.........IIIIIIIIII IIIIIIIII IIIIIIIII IIIIIIIII.........#
+#.........IIIII*IIII IIIIIIIII II*IIIIII IIIIIIIII.........#
+#.........I**IIIIIII IIIIIIIII II*IIIIII IIIIIIIII..*......#
+#.........IIII*IIIII I*IIIII*I IIIIIII*I I*IIIIIII.....*...#
+#.........IIIIIIIIII IIIIIIIII III*IIIII IIIII*III.........#
+#.........IIIIIIIIII *II*IIIII IIIIII*II *IIIIIIII.........#
+#....L....IIIIIIIIII IIIIIIIII IIIIIIIII IIIII*III.........#
+#.........II*IIIIIII IIIIII**I IIII*IIII IIIIIIIII...**....#
+#.........IIIIIIIIII IIII*IIII IIIII*III IIIIIIIII.........#
+#.........IIIIII*III IIIIIIIII I**IIIIII IIIIIIIII..**.....#
+#.........IIII*IIIII IIIIIIIII IIIIIIIII IIIIIIIII.........#
+#.........II*IIIIIII IIIIII*II IIIIIIIII IIIIIIIII.........#
+#.........IIIIIIIIII IIIIIIIII IIII*IIII IIII*IIII......*.*#
+#.........IIIIIIIIII IIIIIIIII IIIIIIIII IIIIIIIII.....*...#
+#..L......*IIIIIIIII II*IIIIII IIIII*III IIIIIIIII..*......#
+#.........IIIIIIIIII IIIIIIIII IIIIIIIII IIIIIII*I.........#
+#.........IIIIIIIIII IIIIIIIII IIIIIIIII IIIIIIII*.........#
+#................... ......... ......... ..................#
+#........................................................X.#
+############################################################

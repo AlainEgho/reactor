@@ -1,5 +1,5 @@
 name: Decay Hall
-need: 24
+need: 28
 hint: Ten Gammas circle the pillars. Each pillar hides a Pellet. Dig in from the side away from them.
 ---
 ############################################################

@@ -1,0 +1,16 @@
+name: Alpha Decay
+need: 3
+hint: Alpha particles fly straight and bounce back off whatever they hit. Three run up and down the shafts your path crosses; step across the instant one has passed.
+---
+##########################
+#@.......................#
+#.######################.#
+#.####V#####V#####V#####.#
+#.#### ##### ##### #####.#
+#..... ..*.. ..*.. ..*.#.#
+#.#### ##### ##### #####.#
+#.#### ##### ##### A    .#
+#.#### ##### ##### #####.#
+#.######################.#
+#.......................X#
+##########################

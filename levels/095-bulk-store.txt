@@ -1,5 +1,5 @@
 name: Bulk Store
-need: 114
+need: 124
 hint: Seven Cask racks and an open loading bay along the bottom. Whatever you free in an aisle ends up in the bay.
 ---
 ############################################################

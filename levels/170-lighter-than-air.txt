@@ -1,0 +1,13 @@
+name: Lighter Than Air
+need: 3
+hint: A hydrogen cell rises through open space and bursts where it stops. Each one rests under a low ceiling; push it sideways into a shaft and it blows the cask store open above.
+---
+####################
+#@.................#
+#.########.#######.#
+#.#R*R #R*R #R*R #.#
+#.#RRR #RRR #RRR #.#
+#.#### #### #### #.#
+#.F    F    F    ..#
+#.................X#
+####################

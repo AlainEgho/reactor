@@ -1,0 +1,28 @@
+name: Core Sample
+need: 25
+hint: Plutonium set round four magnets on a fallout floor. Open any line and the field draws the spheres in; where two arrive, nine Pellets. The dose is the clock.
+---
+############################################################
+#@.........................................................#
+#.prrrrrrrrrrrrP*rrrrrrrrrrrrrrrrrrrrrrrrrrrrPrrrrrrrrrrrp.#
+#.rrrrrrrrrrrrr.rrrrrrrrrrrrrrrrrrrrrrrrrr*rr.rrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*.#
+#.rrrrrrrrP.rrrMrrr.PrrrrrrrrrrrrrrrrrrrP.rrrMrrr.Prrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrr.#
+#.rrrrrrrrrrrrr.rrrrrrrrrrrrrrrrrrrrrrrrrrrrr.rrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrPrrrrrrrrrrrrrrrr*rrrrrrrrrrrrPrrrrrr*rrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrprrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrr*rrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrPrrrrrr*rr*rrrrrrrrrrrrrrrrrrrPrr*r*rrrrrrr.#
+#.rrrrrrrrr*rrr.rrrrrrrrrrrrrrrrrrrrrrrrrrrrr.rrrrrrrrrrrr.#
+#.rrrrrrr*rrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrr.#
+#.rrrrrrrrP.rrrMrrr.Prrrrrrrrr*rrrr*rrrrP.rrrMrrr.Prr*rrrr.#
+#.rrr*rrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrr.#
+#.rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr.#
+#.*rrrrrrrrrrrr.rrrrrrrrrrrrrrrrrrrrrrrrrrrrr.rr*rrrrrrrrr.#
+#.prrrrrrrrrrrrPrrrrrrrrrrrrrrrrrrrrrr*rrrrrrPrrrrrrrrrrrp.#
+#........................................................X.#
+############################################################

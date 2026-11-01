@@ -1,5 +1,5 @@
 name: Tightrope
-need: 12
+need: 14
 hint: Gravity is on and the rails hang in open air. Walk each rail to its end and drop to the next; push the orange canister off first, and stand back. A strip of Graphite bridges each gap, once.
 gravity: on
 special: 52,22 gravity off

@@ -1,0 +1,28 @@
+name: Silos
+need: 25
+hint: Five silos packed with Lead, with Pellets packed in among it. Eat the Graphite under a silo and it pours out. Stand under it and it pours onto you; take the floor from the side and step clear.
+---
+############################################################
+#@.........................................................#
+#..........................................................#
+#.ROOOOOOOOR.ROOO*OOOOOR.RO*OOO*OOR.ROO*OOOOOOR.ROOOOOOO*R.#
+#.ROOOOOOOOR.RO*OOOOOOOR.ROO**OOOOR.ROOOOOOOOOR.ROOO*OOOOR.#
+#.ROOOOOOOOR.R*OOOOOOOOR.ROOO*OOOOR.ROOOOOOOO*R.ROOO*OO**R.#
+#.R**OOOOOOR.ROOOOO*OOOR.ROO*OOOOOR.ROOOOO*OOOR.RO*OOOOOOR.#
+#.ROO*O*OOOR.ROOOOOOOO*R.ROOOO*OOOR.ROOOOO**OOR.R*OOOOOOOR.#
+#.ROO*OOOOOR.ROOO*OOOOOR.ROOOOO*OOR.RO*OOOOOOOR.ROO*OOOOOR.#
+#.ROOOOO*OOR.ROOOO*O**OR.RO*OOOOOOR.ROOOOO*OOOR.ROOOOOO*OR.#
+#.R*O*OOO*OR.ROOOOOOOOOR.ROOOOOOOOR.ROOOOO*O*OR.ROOOOOOOOR.#
+#.R........R.R.........R.R........R.R.........R.R........R.#
+#..........................................................#
+#..........................................................#
+#...........................................*..............#
+#....................O.....................................#
+#..O......O..................O.O...........................#
+#*..O....................O............*.....*..............#
+#........................O.................................#
+#.*..........................................O..*..........#
+#..........................................................#
+#..........................O...............................#
+#........................................................X.#
+############################################################

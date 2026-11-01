@@ -1,0 +1,28 @@
+name: Supercooled
+need: 51
+hint: Sodium pools sit in the Graphite round the rink. Dig beside one and it wakes and creeps out over the ice after you; a blast clears a pool, and there are two red canisters for that.
+---
+############################################################
+#@.........................................................#
+#..........................*.~..*..........................#
+#..d..............*..*.....................................#
+#.....IIIIIIIIIIII*IIIIIIIIIIIIIIIIIIIIIIII*IIIIIIIIII.....#
+#..~..IIIIIIIIIIIIIIII*IIIIIIIIIIII**IIIIIIIIIIIIII*II.*~..#
+#.....IIIIIIIIIIIIIIIIIIIII*IIIIIIII*I*II*IIIIIIIIIIII.....#
+#...*.IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII*IIIIIIII.....#
+#.....IIIIIII*III*IIIIIIIIIIIIIII*IIIIIIIIIIIIIIIIIIII.....#
+#.....IIII*II*IIIIIIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIIIII.....#
+#.....II*IIIIIIIIIIIIIIIIII*IIIII*IIIIII*IIIIIIII*IIII.....#
+#....*IIIIIIIIIIIIIIIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIIII.....#
+#..**.IIIIIIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIIIIIIIIIIIII.....#
+#.....I*IIIIIIIIIIIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIII*II*....#
+#.....IIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIII*III*III*II*II.....#
+#.....IIIIIIIIIIIIIIIIIIIIIIIIII*IIIIIIIIIIIIIIIIIIIII.....#
+#..~..IIIII*IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII*IIIIII..~..#
+#.....IIIIIIIIIIIIIIIIIIIIIIIIIIIIIII*IIIIIII*IIIIIIII.....#
+#.....IIII*II*III*IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII...*.#
+#....**............*...................*....*..............#
+#.....................................................*.d..#
+#............................~...............*.............#
+#............*...............................*...........X.#
+############################################################
