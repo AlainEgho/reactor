@@ -335,7 +335,7 @@ body.xmas .logo::after,body.xmas .mark span::after{content:'\1F384';font-size:.8
     <div class="stats">
       <div class="stat"><canvas class="ico" data-legend="pellet" width="40" height="40"></canvas><span class="k" id="kNeed">Pellets needed</span><span class="v" id="sNeed">000</span></div>
       <div class="stat"><span class="k">Score</span><span class="v" id="sScore">0<b class="combo" id="sCombo" hidden>×2</b></span></div>
-      <div class="stat" id="redStat" hidden><canvas class="ico" data-legend="red" width="40" height="40"></canvas><span class="k">Red canisters</span><span class="v" id="sRed">0</span></div>
+      <div class="stat" id="redStat" hidden><canvas class="ico" data-legend="red" width="40" height="40"></canvas><span class="k" id="kRed">Red canisters</span><span class="v" id="sRed">0</span></div>
       <div class="stat" id="gadStat" hidden><canvas class="ico" id="gadIco" data-legend="thruster" width="40" height="40"></canvas><span class="k">Gadget · Shift</span><span class="v" id="sGad">&mdash;</span></div>
       <div class="stat" id="keyStat" hidden><canvas class="ico" data-legend="keycard" width="40" height="40"></canvas><span class="k">Keycards</span><span class="v" id="sKeys">0</span></div>
       <div class="stat" id="shieldStat" hidden><canvas class="ico" data-legend="shield" width="40" height="40"></canvas><span class="k">Shield</span><span class="v" id="sShield">Off</span></div>
@@ -14467,12 +14467,12 @@ const BONUS_COL='#d8d8e6';
 let theme=THEMES[0],themeBase=THEMES[0];
 // Christmas mode: Santa-bot digs through snow for gifts and lights the tree. Kept in this browser.
 let xmas=false;try{xmas=localStorage.getItem('fission_xmas')==='on';}catch(e){}
-// The snowy version of a theme: night sky, cookies for the floor, packed snow for the walls. The category
+// The snowy version of a theme: night sky, pine foliage for the floor, packed snow for the walls. The category
 // colour (fl[3]) is kept, so menus and the intro strip still tell the categories apart.
 const xmasThemes=new Map();
 function xmasOf(t){
   let x=xmasThemes.get(t);
-  if(!x){x={vd:'#060a1c',pad:'#0d1430',fl:['#5a3516','#8a5a2e','#b4733a',t.fl[3]],wl:['#dfe9f6','#f7faff','#a9bfd8','#ffffff','#c9d9ec']};xmasThemes.set(t,x);}
+  if(!x){x={vd:'#04071a',pad:'#0a1030',fl:['#0f3d1e','#1d6b32','#4cc268',t.fl[3]],wl:['#c9d8ea','#f2f7fd','#8ea7c6','#ffffff','#b4c9e2']};xmasThemes.set(t,x);}
   return x;
 }
 // The Fission levels by category, as the menu shows them: four sectors of the main plant, then the wings.
@@ -14500,7 +14500,7 @@ const CATS=[
 // The category a Fission level (0-based) is in.
 function catOf(i){let k=0;while(k<CATS.length-1&&i+1>CATS[k].to) k++;return k;}
 // What the categories are called in Christmas mode, in CATS order; a category past the list keeps its name.
-const XMAS_CATS=['Cookie Kitchen','Toy Workshop','Frozen Lake',"Santa's Vault",'Elf Laboratory','Ice Palace','Candy Factory','Northern Lights','The North Pole','Snowflake Storm',"Grandma's Attic",'Head Elf','Reindeer Run','Christmas Eve','Jack Frost','Snow Giants'];
+const XMAS_CATS=['Pine Forest','Toy Workshop','Frozen Lake',"Santa's Vault",'Elf Laboratory','Ice Palace','Candy Factory','Northern Lights','The North Pole','Snowflake Storm',"Grandma's Attic",'Head Elf','Reindeer Run','Christmas Eve','Jack Frost','Snow Giants'];
 function catName(k){return xmas&&XMAS_CATS[k]?XMAS_CATS[k]:CATS[k].name;}
 // Fission levels wear their category's theme; Classic files and Meltdown rounds take the themes in turn.
 function themeFor(lvSet,i){
@@ -15175,22 +15175,27 @@ function star5(c,x,y,r,col){
 }
 // Christmas looks for the pieces every floor is made of. Each stands in for the plant's drawer of the
 // same name while Christmas mode is on; everything else keeps its look on the snowy palette.
+// Gift wrappings: box dark, box light, box edge, lid. Every gift wears the first (red); the others are
+// kept so a mix of wrappings can come back by indexing with the cell's q again.
+const GIFT_WRAPS=[['#8f0d18','#d9202f','#5f0810','#e8384a'],['#176b2f','#34b857','#145c28','#46d06a'],['#1b4f9c','#3c8be6','#163f80','#5aa3f5'],['#5a1f7a','#9b4fd1','#4a1a66','#b56ee6']];
 const Dx={
-  // Cookies: what Santa eats his way through. A slab of gingerbread filling the whole cell, as Graphite
-  // does, with icing and chocolate chips; v (0..3) moves the chips about so a tray does not repeat.
+  // Pine: what Santa digs through, the tree's own foliage filling the whole cell as Graphite does.
+  // Three level fronds of needles, the same in every cell so a thicket is calm to look at; only a
+  // berry and a little snow move about with v (0..3).
   graphite:function(c,v){
-    c.fillStyle='#6e3f17';c.fillRect(0,0,1,1);
-    const g=c.createRadialGradient(.4,.38,.05,.5,.5,.75);
-    g.addColorStop(0,'#d9a066');g.addColorStop(.6,'#b4733a');g.addColorStop(1,'#8a5424');
-    c.fillStyle=g;c.fillRect(.03,.03,.94,.94);
-    c.strokeStyle='rgba(255,220,170,.25)';c.lineWidth=.02;c.strokeRect(.04,.04,.92,.92);
-    c.strokeStyle='rgba(255,250,240,.85)';c.lineWidth=.045;c.lineCap='round';c.lineJoin='round';c.beginPath();
-    for(let i=0;i<=8;i++){const x=.1+i*.1,y=.38+(i&1?.06:-.06);if(i) c.lineTo(x,y);else c.moveTo(x,y);}
-    c.stroke();
-    c.fillStyle='#3b1f0c';
-    for(let k=0;k<4;k++){circ(c,.14+rnd(v*7+k*3)*.72,.54+rnd(v*5+k*9)*.32,.035+rnd(v+k)*.02);c.fill();}
-    c.fillStyle='rgba(255,255,255,.7)';
-    for(let k=0;k<3;k++){circ(c,.1+rnd(v*13+k*5)*.8,.1+rnd(v*11+k*7)*.8,.014);c.fill();}
+    c.fillStyle='#0f3d1e';c.fillRect(0,0,1,1);
+    c.fillStyle='#1d6b32';c.fillRect(.03,.03,.94,.94);
+    c.lineCap='round';
+    for(let s=0;s<3;s++){
+      const y0=.2+s*.3;
+      c.strokeStyle='#2f8a3a';c.lineWidth=.025;c.beginPath();c.moveTo(-.05,y0);c.lineTo(1.05,y0);c.stroke();
+      c.strokeStyle=s&1?'#3fb55a':'#5ad072';c.lineWidth=.02;c.beginPath();
+      for(let i=0;i<10;i++){const x=.08+i*.1;c.moveTo(x,y0);c.lineTo(x-.06,y0-.09);c.moveTo(x,y0);c.lineTo(x-.06,y0+.09);}
+      c.stroke();
+    }
+    c.fillStyle='#e03a46';circ(c,.2+rnd(v*7+3)*.6,.35+rnd(v*3+5)*.3,.03);c.fill();
+    c.fillStyle='rgba(255,255,255,.55)';
+    for(let k=0;k<3;k++){circ(c,.08+rnd(v*13+k)*.84,.08+rnd(v*17+k*3)*.84,.013);c.fill();}
   },
   // Snow wall: a packed block of snow with a blue shadow side and a cap of fresh powder. Solid.
   concrete:function(c){
@@ -15203,17 +15208,26 @@ const Dx={
     c.strokeStyle='rgba(255,255,255,.9)';c.lineWidth=.02;
     for(let k=0;k<2;k++){const x=.2+rnd(k*5+2)*.6,y=.35+rnd(k*9+1)*.45;c.beginPath();c.moveTo(x-.04,y);c.lineTo(x+.04,y);c.moveTo(x,y-.04);c.lineTo(x,y+.04);c.stroke();}
   },
-  // Peppermint: the Cask, a round red-and-white candy in a twisted wrapper, as solid as it was.
+  // Log pile: the Cask, three pine logs stacked to fill the cell, bark along them and a sawn end
+  // showing its rings, with snow settled on top. As solid as the Cask was.
   cask:function(c){
-    c.fillStyle=theme.pad;c.fillRect(0,0,1,1);
-    c.fillStyle='rgba(255,255,255,.35)';
-    c.beginPath();c.moveTo(.1,.4);c.lineTo(.02,.3);c.lineTo(.02,.7);c.lineTo(.1,.6);c.closePath();c.fill();
-    c.beginPath();c.moveTo(.9,.4);c.lineTo(.98,.3);c.lineTo(.98,.7);c.lineTo(.9,.6);c.closePath();c.fill();
-    circ(c,.5,.5,.4);c.fillStyle='#f8f8fb';c.fill();
-    c.fillStyle='#d63a44';
-    for(let i=0;i<8;i+=2){c.beginPath();c.moveTo(.5,.5);c.arc(.5,.5,.4,i*Math.PI/4+.2,(i+1)*Math.PI/4+.2);c.closePath();c.fill();}
-    circ(c,.5,.5,.4);c.strokeStyle='rgba(255,255,255,.6)';c.lineWidth=.03;c.stroke();
-    circ(c,.38,.36,.07);c.fillStyle='rgba(255,255,255,.8)';c.fill();
+    c.fillStyle='#2a1a0c';c.fillRect(0,0,1,1);
+    for(let s=0;s<3;s++){
+      const y=.04+s*.32,h=.3,endLeft=s===1;
+      const g=c.createLinearGradient(0,y,0,y+h);
+      g.addColorStop(0,'#9a6a3c');g.addColorStop(.5,'#7a4f27');g.addColorStop(1,'#4e2f14');
+      rr(c,.02,y,.96,h,.1);c.fillStyle=g;c.fill();
+      c.strokeStyle='rgba(60,35,12,.6)';c.lineWidth=.02;c.stroke();
+      c.strokeStyle='rgba(40,22,8,.45)';c.lineWidth=.015;c.beginPath();
+      for(let k=0;k<3;k++){const ly=y+.07+k*.08;c.moveTo(.2,ly);c.lineTo(.9,ly+(k&1?.01:-.01));}
+      c.stroke();
+      const ex=endLeft?.14:.86,ey=y+h/2;
+      circ(c,ex,ey,.12);c.fillStyle='#e2b887';c.fill();
+      c.strokeStyle='#a9793f';c.lineWidth=.015;
+      for(let r=.09;r>.02;r-=.03){circ(c,ex,ey,r);c.stroke();}
+      circ(c,ex,ey,.018);c.fillStyle='#7a4f27';c.fill();
+    }
+    c.fillStyle='#ffffff';c.beginPath();c.moveTo(0,.1);c.quadraticCurveTo(.25,.0,.5,.08);c.quadraticCurveTo(.75,.16,1,.06);c.lineTo(1,0);c.lineTo(0,0);c.closePath();c.fill();
   },
   // Snowball: rolls and falls like Lead. f (0..11) carries a glint round it as it turns.
   lead:function(c,f){
@@ -15231,35 +15245,45 @@ const Dx={
     g.addColorStop(0,'rgba(120,190,255,'+(.35*k)+')');g.addColorStop(1,'rgba(120,190,255,0)');
     circ(c,.5,.5,.5);c.fillStyle=g;c.fill();
   },
-  // Gift: a green present with a gold ribbon and bow; f (0..7) twinkles its sparkle.
-  pellet:function(c,f){
-    f=f||0;
+  // Gift: a wrapped present with a gold ribbon and bow; f (0..7) twinkles its sparkle and q (0..3)
+  // is kept per cell for a mix of wrappings; today every gift is red.
+  pellet:function(c,f,q){
+    f=f||0;const P=GIFT_WRAPS[0];
     const pulse=.5+.5*Math.sin(f/8*Math.PI*2);
     const a=c.createRadialGradient(.5,.55,.05,.5,.55,.46);
     a.addColorStop(0,'rgba(255,215,90,'+(.14+.08*pulse)+')');a.addColorStop(1,'rgba(255,215,90,0)');
     circ(c,.5,.55,.46);c.fillStyle=a;c.fill();
-    const g=c.createLinearGradient(.22,0,.78,0);g.addColorStop(0,'#176b2f');g.addColorStop(.5,'#34b857');g.addColorStop(1,'#145c28');
+    const g=c.createLinearGradient(.22,0,.78,0);g.addColorStop(0,P[0]);g.addColorStop(.5,P[1]);g.addColorStop(1,P[2]);
     rr(c,.22,.4,.56,.44,.05);c.fillStyle=g;c.fill();
-    rr(c,.18,.3,.64,.16,.05);c.fillStyle='#46d06a';c.fill();c.strokeStyle='#145c28';c.lineWidth=.015;c.stroke();
-    c.fillStyle='#ffd34d';c.fillRect(.45,.3,.1,.54);c.fillRect(.22,.52,.56,.09);
+    rr(c,.18,.3,.64,.16,.05);c.fillStyle=P[3];c.fill();c.strokeStyle=P[2];c.lineWidth=.015;c.stroke();
+    c.fillStyle='#ffd34d';c.fillRect(.44,.3,.12,.54);c.fillRect(.22,.51,.56,.11);
     c.strokeStyle='#ffd34d';c.lineWidth=.05;c.lineCap='round';
     c.beginPath();c.ellipse(.4,.24,.1,.06,-.4,0,Math.PI*2);c.stroke();
     c.beginPath();c.ellipse(.6,.24,.1,.06,.4,0,Math.PI*2);c.stroke();
     circ(c,.5,.26,.04);c.fillStyle='#ffe28a';c.fill();
     star5(c,.78,.3,.05+.04*pulse,'rgba(255,255,255,'+(.4+.6*pulse)+')');
   },
-  // Cracker: a paper tube pinched and twisted at both ends, in the canister's colour, so the three
-  // kinds still tell apart.
+  // Grump: a grumpy green furry creature with yellow eyes and a sly grin, in a hat of the canister's
+  // colour, so orange, yellow and red still tell apart. It goes off just as the canister did.
   canister:function(c,col){
-    c.fillStyle=col[0];c.strokeStyle=col[1];c.lineWidth=.03;c.lineJoin='round';
-    rr(c,.26,.3,.48,.4,.08);c.fill();c.stroke();
-    [[.26,-1],[.74,1]].forEach(function(e){
-      c.beginPath();c.moveTo(e[0],.36);c.lineTo(e[0]+e[1]*.09,.42);c.lineTo(e[0]+e[1]*.2,.3);c.lineTo(e[0]+e[1]*.2,.7);c.lineTo(e[0]+e[1]*.09,.58);c.lineTo(e[0],.64);c.closePath();c.fill();c.stroke();
+    const g=c.createRadialGradient(.4,.46,.04,.5,.58,.42);
+    g.addColorStop(0,'#9ae882');g.addColorStop(.55,'#4fb046');g.addColorStop(1,'#1f5e1f');
+    c.beginPath();
+    for(let i=0;i<22;i++){const a=i/22*Math.PI*2,r=i&1?.4:.34;c.lineTo(.5+Math.cos(a)*r,.58+Math.sin(a)*r*.95);}
+    c.closePath();c.fillStyle=g;c.fill();c.strokeStyle='#0f3a12';c.lineWidth=.022;c.lineJoin='round';c.stroke();
+    c.fillStyle=col[0];c.beginPath();c.moveTo(.18,.34);c.quadraticCurveTo(.3,.0,.74,.08);c.quadraticCurveTo(.6,.14,.82,.34);c.closePath();c.fill();
+    c.strokeStyle=col[1];c.lineWidth=.02;c.stroke();
+    rr(c,.14,.29,.72,.1,.05);c.fillStyle='#ffffff';c.fill();
+    circ(c,.76,.08,.06);c.fillStyle='#ffffff';c.fill();
+    [[.4,.52],[.6,.52]].forEach(function(e){
+      c.beginPath();c.ellipse(e[0],e[1],.075,.055,0,0,Math.PI*2);c.fillStyle='#f5e04a';c.fill();
+      circ(c,e[0]+(e[0]<.5?.02:-.02),e[1]+.01,.025);c.fillStyle='#1a1a1a';c.fill();
     });
-    c.strokeStyle='#fff6e0';c.lineWidth=.035;c.beginPath();
-    for(let i=0;i<=6;i++){const x=.3+i*.0667,y=.5+(i&1?.07:-.07);if(i) c.lineTo(x,y);else c.moveTo(x,y);}
+    c.strokeStyle='#1c4d1a';c.lineWidth=.04;c.lineCap='round';c.beginPath();c.moveTo(.29,.41);c.lineTo(.46,.47);c.moveTo(.71,.41);c.lineTo(.54,.47);c.stroke();
+    c.strokeStyle='#14240f';c.lineWidth=.03;c.beginPath();c.moveTo(.32,.68);c.quadraticCurveTo(.5,.8,.7,.63);c.stroke();
+    c.strokeStyle='#2f7a2c';c.lineWidth=.02;c.beginPath();
+    for(let i=0;i<4;i++){const x=.36+i*.09;c.moveTo(x,.9);c.lineTo(x-.03,.98);}
     c.stroke();
-    star5(c,.5,.5,.1,'#ffffff');
   },
   // The Christmas tree: three snowy tiers in a pot. Dark until the gifts are in; then every bauble
   // lights up and the star on top turns gold.
@@ -15268,7 +15292,7 @@ const Dx={
     c.fillStyle='#8a4b22';c.beginPath();c.moveTo(.36,.8);c.lineTo(.64,.8);c.lineTo(.6,.96);c.lineTo(.4,.96);c.closePath();c.fill();
     c.fillStyle='#6b3717';c.fillRect(.34,.78,.32,.05);
     [[.08,.4,.22],[.24,.58,.3],[.4,.78,.38]].forEach(function(t,i){
-      c.fillStyle=i%2?'#1f8a3a':'#167a30';
+      c.fillStyle=i%2?'#2a9a46':'#1f8a3a';
       c.beginPath();c.moveTo(.5,t[0]);c.lineTo(.5+t[2],t[1]);c.lineTo(.5-t[2],t[1]);c.closePath();c.fill();
       c.strokeStyle='rgba(255,255,255,.85)';c.lineWidth=.03;c.lineCap='round';c.beginPath();c.moveTo(.5-t[2]+.03,t[1]-.012);c.lineTo(.5+t[2]-.03,t[1]-.012);c.stroke();
     });
@@ -15297,8 +15321,8 @@ const Dx={
     }
     if(burst>0){circ(c,.5,.56,.42+(1-burst)*.5);c.strokeStyle='rgba(255,230,150,'+(burst*.85)+')';c.lineWidth=.03+.05*burst;c.stroke();}
     const g=c.createRadialGradient(.38,.4,.04,.5,.56,.44);
-    g.addColorStop(0,'#ff8a8f');g.addColorStop(.45,'#dc2f3c');g.addColorStop(1,'#5e0b12');
-    circ(c,.5,.56,.39);c.fillStyle=g;c.fill();
+    g.addColorStop(0,'#ffb0a0');g.addColorStop(.45,'#f0453a');g.addColorStop(1,'#8a1410');
+    circ(c,.5,.56,.39);c.fillStyle=g;c.fill();c.strokeStyle='#2a0a0a';c.lineWidth=.028;c.stroke();
     c.fillStyle='#f7f7fb';c.beginPath();c.moveTo(.22,.6);c.quadraticCurveTo(.5,.92,.78,.6);c.quadraticCurveTo(.5,.68,.22,.6);c.fill();
     c.fillStyle='#1b1410';c.fillRect(.14,.77,.72,.09);
     rr(c,.44,.75,.12,.13,.02);c.fillStyle=busy&&Math.floor(now/80)%2?'#fff3b0':'#ffd34d';c.fill();
@@ -15350,9 +15374,9 @@ const Dx={
   gamma:function(c,dir,now){
     c.save();c.translate(.5,.5);c.rotate(dir*Math.PI/2+now/300);
     const glow=c.createRadialGradient(0,0,0,0,0,.46);
-    glow.addColorStop(0,'rgba(160,220,255,.22)');glow.addColorStop(1,'rgba(120,190,255,0)');
+    glow.addColorStop(0,'rgba(120,215,255,.28)');glow.addColorStop(1,'rgba(80,180,255,0)');
     c.fillStyle=glow;circ(c,0,0,.46);c.fill();
-    c.strokeStyle='#dff3ff';c.lineWidth=.045;c.lineCap='round';c.lineJoin='round';
+    c.strokeStyle='#a8e6ff';c.lineWidth=.05;c.lineCap='round';c.lineJoin='round';
     for(let i=0;i<6;i++){c.rotate(Math.PI/3);c.beginPath();c.moveTo(0,0);c.lineTo(0,-.4);c.moveTo(-.09,-.28);c.lineTo(0,-.2);c.lineTo(.09,-.28);c.moveTo(-.07,-.14);c.lineTo(0,-.08);c.lineTo(.07,-.14);c.stroke();}
     c.restore();
     circ(c,.5,.5,.11);c.fillStyle='#eaf6ff';c.fill();
@@ -15391,12 +15415,12 @@ function snowfall(now){
   ctx.globalAlpha=1;
 }
 // The words of the plant, said the Christmas way, in everything the player reads.
-const XW=[[/\bfuel Pellets\b/g,'Gifts'],[/\bfalling Lead\b/g,'falling snowballs'],[/Reactor started/g,'Tree lit'],
-  [/\bpushes Lead\b/g,'pushes snowballs'],[/\blike Lead\b/g,'like a snowball'],[/\bunder Lead\b/g,'under snowballs'],[/\bLead balls\b/g,'snowballs'],[/\bLead ball\b/g,'snowball'],[/\bCask\b/g,'Peppermint'],[/\bCasks\b/g,'Peppermints'],
-  [/\bPellets\b/g,'Gifts'],[/\bPellet\b/g,'Gift'],[/\bpellets\b/g,'gifts'],[/\bpellet\b/g,'gift'],[/\bGraphite\b/g,'Cookies'],[/\bConcrete\b/g,'Snow wall'],
+const XW=[[/A spent-fuel cask: a wall a blast can break\. It is round,/g,'A stack of pine logs: a wall a blast can break. The logs are round,'],[/\bfuel Pellets\b/g,'Gifts'],[/\bfalling Lead\b/g,'falling snowballs'],[/Reactor started/g,'Tree lit'],
+  [/\bpushes Lead\b/g,'pushes snowballs'],[/\blike Lead\b/g,'like a snowball'],[/\bunder Lead\b/g,'under snowballs'],[/\bLead balls\b/g,'snowballs'],[/\bLead ball\b/g,'snowball'],[/\bCask\b/g,'Log pile'],[/\bCasks\b/g,'Log piles'],
+  [/\bPellets\b/g,'Gifts'],[/\bPellet\b/g,'Gift'],[/\bpellets\b/g,'gifts'],[/\bpellet\b/g,'gift'],[/\bGraphite\b/g,'Pine'],[/\bConcrete\b/g,'Snow wall'],
   [/\bReactor\b/g,'Tree'],[/\bthe core\b/g,'the Tree'],[/\bLead\b/g,'Snowball'],[/\bGammas\b/g,'Snowflakes'],[/\bGamma\b/g,'Snowflake'],
-  [/\bNeutrons\b/g,'Sparks'],[/\bNeutron\b/g,'Spark'],[/\bcanisters\b/g,'crackers'],[/\bcanister\b/g,'cracker'],[/\bCanisters\b/g,'Crackers'],
-  [/\bCanister\b/g,'Cracker'],[/\bIso\b/g,'Santa'],[/\bthe plant\b/g,'the North Pole']];
+  [/\bNeutrons\b/g,'Sparks'],[/\bNeutron\b/g,'Spark'],[/\bcanisters\b/g,'Grumps'],[/\bcanister\b/g,'Grump'],[/\bCanisters\b/g,'Grumps'],
+  [/\bCanister\b/g,'Grump'],[/\bIso\b/g,'Santa'],[/\bthe plant\b/g,'the North Pole']];
 function xw(s){if(!xmas||!s) return s;s=String(s);for(const r of XW) s=s.replace(r[0],r[1]);return s;}
 function spr(key,fn){
   let s=sprites.get(key);
@@ -15414,7 +15438,7 @@ function tileSprite(c,x,y,now){
     case HARD:{const v=c.v;return v?spr('concrete'+v,function(k){D.concreteDeco(k,v);}):spr('concrete',D.concrete);}
     case RAM:{const v=c.v;return v?spr('cask'+v,function(k){D.caskHalf(k,v);}):spr('cask',D.cask);}
     case ZONK:{const f=reduceMotion?0:(Math.floor(now/90)+x*5+y*3)%12;return spr('lead'+f,function(k){D.lead(k,f);});}
-    case INFO:{const f=reduceMotion?0:(Math.floor(now/110)+x*3+y*5)%8;return spr('pellet'+f,function(k){D.pellet(k,f);});}
+    case INFO:{const f=reduceMotion?0:(Math.floor(now/110)+x*3+y*5)%8;if(c.uq===undefined) c.uq=(x*7+y*3)&3;const q=xmas?c.uq:0;return spr('pellet'+f+'_'+q,function(k){D.pellet(k,f,q);});}
     case ORANGE:return spr('orange',function(k){D.canister(k,CANISTER.orange);});
     case YELLOW:return spr('yellow',function(k){D.canister(k,CANISTER.yellow);});
     case RED:return spr('red',function(k){D.canister(k,CANISTER.red);});
@@ -16442,11 +16466,11 @@ function showMenu(slide){
   }
   ov.innerHTML='<div class="panel'+(slide?' '+slide:'')+'">'+
     (canResume()?'<button type="button" class="btn backbar" data-act="back">← Back to game · '+esc(game.label||'')+'</button>':'')+
-    '<div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>'+(xmas?'Ho ho ho! Eat the cookies, find the gifts, light the tree. · ':'Fuel the core. Don\'t go critical. · ')+(set!=='original'?LEVELS.length+' levels · '+cleared+' cleared':'classic level set')+(save.bestStreak>=2?' · best streak '+save.bestStreak:'')+'</small><small class="who">Signed in as <b>'+esc(save.name)+'</b> · <button type="button" class="linkbtn" data-act="signout">Sign out</button></small></div>'+
-    (xmas?'<p class="about">Help Santa-bot munch through the cookies, gather the gifts and light the Christmas tree. Mind the snowballs!</p>':'<p class="about">Guide Iso through the plant. Dig through the Graphite, collect enough fuel Pellets to start the Reactor, and keep out from under falling Lead.</p>')+
-    (menuView==='levels'&&menuCat<0&&set==='remake'?'<button type="button" class="xmasbar'+(xmas?' on':'')+'" data-act="xmas"><span class="tree">\uD83C\uDF84</span><b>'+(xmas?'Christmas mode is on':'Christmas mode')+'</b><small>'+(xmas?'Santa-bot is on the job. Tap to go back to the plant.':'Santa-bot, cookies, gifts and a tree to light. Tap to switch it on!')+'</small></button>':'')+
+    '<div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>'+(xmas?'Ho ho ho! Dig through the pine, find the gifts, light the tree. · ':'Fuel the core. Don\'t go critical. · ')+(set!=='original'?LEVELS.length+' levels · '+cleared+' cleared':'classic level set')+(save.bestStreak>=2?' · best streak '+save.bestStreak:'')+'</small><small class="who">Signed in as <b>'+esc(save.name)+'</b> · <button type="button" class="linkbtn" data-act="signout">Sign out</button></small></div>'+
+    (xmas?'<p class="about">Help Santa-bot dig through the pine branches, gather the gifts and light the Christmas tree. Mind the snowballs!</p>':'<p class="about">Guide Iso through the plant. Dig through the Graphite, collect enough fuel Pellets to start the Reactor, and keep out from under falling Lead.</p>')+
+    (menuView==='levels'&&menuCat<0&&set==='remake'?'<button type="button" class="xmasbar'+(xmas?' on':'')+'" data-act="xmas"><span class="tree">\uD83C\uDF84</span><b>'+(xmas?'Christmas mode is on':'Christmas mode')+'</b><small>'+(xmas?'Santa-bot is on the job. Tap to go back to the plant.':'Santa-bot, pine, gifts and a tree to light. Tap to switch it on!')+'</small></button>':'')+
     tabs+body+
-    '<p class="keys"><kbd>Arrows</kbd> or <kbd>WASD</kbd> move · <kbd>Space</kbd> + direction snaps · hold <kbd>Space</kbd> to drop a red canister · <kbd>Shift</kbd> + direction uses the gadget · <kbd>Enter</kbd> plays the next uncleared level</p>'+
+    xw('<p class="keys"><kbd>Arrows</kbd> or <kbd>WASD</kbd> move · <kbd>Space</kbd> + direction snaps · hold <kbd>Space</kbd> to drop a red canister · <kbd>Shift</kbd> + direction uses the gadget · <kbd>Enter</kbd> plays the next uncleared level</p>')+
     '</div>';
   ov.hidden=false;drawLegend();
   // The level behind the scrim: a preview of the set's next level, unless a game is still going on.
@@ -16664,6 +16688,7 @@ function setXmas(on){
   document.body.classList.toggle('xmas',xmas);
   setTheme(themeBase);minis=null;flakes.length=0;
   $('kNeed').textContent=xmas?'Gifts needed':'Pellets needed';
+  $('kRed').textContent=xmas?'Red Grumps':'Red canisters';
   Music.festive(xmas);xmasLabel();
   drawLegend(document.querySelector('.bar'));
   if(game) hud();
@@ -16671,7 +16696,7 @@ function setXmas(on){
 }
 bXmas.addEventListener('click',function(){audioInit();setXmas(!xmas);SFX.ui();});
 document.body.classList.toggle('xmas',xmas);xmasLabel();
-if(xmas){theme=xmasOf(THEMES[0]);$('kNeed').textContent='Gifts needed';Music.festive(true);}
+if(xmas){theme=xmasOf(THEMES[0]);$('kNeed').textContent='Gifts needed';$('kRed').textContent='Red Grumps';Music.festive(true);}
 
 /* ---------- keyboard ---------- */
 addEventListener('keydown',function(e){
