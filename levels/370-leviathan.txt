@@ -1,13 +1,12 @@
 name: Leviathan
 need: 74
-hint: Six rooms in two rows: a laser sweeps a lane with Pellets lying in it; hot spots flare in the Graphite round the Pellets; a magnet waits behind Graphite plugs with Lead at the end of each spoke; Gammas circle Pellets on their posts; a sealed vault waits for the Quantum tunnel beside it; and isotopes decay while you work. The lights are out, 126 seconds of air, Gammas sleep in every room.
+hint: Six rooms in two rows: a laser sweeps a lane with Pellets lying in it; hot spots flare in the Graphite round the Pellets; a magnet waits behind Graphite plugs with Lead at the end of each spoke; Gammas circle Pellets on their posts; a sealed vault waits for the Quantum tunnel beside it; and isotopes decay while you work. 126 seconds of air, Gammas sleep in every room.
 air: 126
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
-#........*OO*..*.**.#.............t....#.*.........L...O*..#
-#....L**.*...O*..*..#.BB*BBB*BB*BBB*B*.#...O. S .......O*..#
+#........*OO*..*.**.#.............t....#.*.............O*..#
+#.....**.*...O*..*..#.BB*BBB*BB*BBB*B*.#...O. S .......O*..#
 #......O..*OOO...*..#.BBBBBBB*B*B*BBBB.#...*.....**..*.O*..#
 #.....................BBBBB*B*BBBBBBBB.#...................#
 #.l  *   *   *   * .#.BBBBBBBB*BBBBBBB......O  . M .  O.*..#
@@ -16,7 +15,7 @@ dark: on
 #.....*..***........#..................#.......**..........#
 #...................#..................#...................#
 ##########.###################.#################.###########
-#...............L...#..................#...................#
+#...................#..................#...................#
 #..   .*..   ...**O.#..######...O......#......*.hO.h....*..#
 #.. * .... * ..O.*..#..#    #.*.....**.#...*....**.O.h.*...#
 #.. #S.... #S...O*O.#..#    #.Q........#.O.....h.....*.....#

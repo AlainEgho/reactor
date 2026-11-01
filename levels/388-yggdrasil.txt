@@ -1,8 +1,7 @@
 name: Yggdrasil
 need: 92
-hint: Six rooms in two rows: hot spots flare in the Graphite round the Pellets; Gammas sleep in the walls; a sealed vault waits for the Quantum tunnel beside it; Plutonium sits on posts under hanging Lead; Neutron farms wait for their Lead; and a laser sweeps a lane with Pellets lying in it. The lights are out, 108 seconds of air, Gammas sleep in every room.
+hint: Six rooms in two rows: hot spots flare in the Graphite round the Pellets; Gammas sleep in the walls; a sealed vault waits for the Quantum tunnel beside it; Plutonium sits on posts under hanging Lead; Neutron farms wait for their Lead; and a laser sweeps a lane with Pellets lying in it. 108 seconds of air, Gammas sleep in every room.
 air: 108
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
@@ -13,7 +12,7 @@ dark: on
 #.BBBBB*BBBBBBBBBBB.#..*O......*..**......######....O. S ..#
 #.BBBBBBBB*BBBBBBBB.#..*.t....*..O**...#.......t..*.O......#
 #.*BBBB*BBBBBBBBBB*.#....**.O..........#..*.*.*...***.O**..#
-#...................#.....*.... S L*...#...**O.*O.......*..#
+#...................#.....*.... S .*...#...**O.*O.......*..#
 #...................#..................#...................#
 ##########.###################.#################.###########
 #...................#..................#...................#
@@ -23,8 +22,8 @@ dark: on
 #...O..*..O.....O.....R    R.*.R    R..#........t..........#
 #......O.....O......#.R  e R.*.R  e R....l  *   *   *   *..#
 #... ..*.. ..*.. ...#.RRRRRR.*.RRRRRR..#...................#
-#...P..*..PL.*..P...#........*.........#...O.*..OO. S .....#
+#...P..*..P..*..P...#........*.........#...O.*..OO. S .....#
 #...#..O..#..*..#...#.****************.#...***.O...........#
 #...................#..................#...................#
-#.......L...........#..................#.................X.#
+#...................#..................#.................X.#
 ############################################################

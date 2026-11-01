@@ -1,5 +1,5 @@
 name: Topaz
-need: 47
+need: 36
 hint: Two long galleries: hot spots flare in the Graphite round the Pellets; and Pellets wait in Cask cages, one plug in the roof of each. The lights are out, gravity is on.
 dark: on
 gravity: on

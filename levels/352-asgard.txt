@@ -1,8 +1,7 @@
 name: Asgard
 need: 56
-hint: Six rooms in two rows: isotopes decay while you work; Antipellets lie shoulder to shoulder with the Pellets; hot spots flare in the Graphite round the Pellets; liquid sodium hangs over the dig; Gammas sleep in the walls; and acid pools wait under the Pellets. The lights are out, 144 seconds of air.
+hint: Six rooms in two rows: isotopes decay while you work; Antipellets lie shoulder to shoulder with the Pellets; hot spots flare in the Graphite round the Pellets; liquid sodium hangs over the dig; Gammas sleep in the walls; and acid pools wait under the Pellets. 144 seconds of air.
 air: 144
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
@@ -12,7 +11,7 @@ dark: on
 #.....h....*.*..h......!...*...*...!...#.BBBBBBBBBBBBBBBB..#
 #...*O.h.*..O.......#.*...!...*...!......BBB*BBBBB*BBBB*B..#
 #.*.*h.*..........O.#....!...*...*...!.#.BB*BBBBBBBBBBBBB..#
-#.t.....L.....h.....#...*.t.!...*...!..#.BBBBBBBBBB**B*BB..#
+#.t...........h.....#...*.t.!...*...!..#.BBBBBBBBBB**B*BB..#
 #......*..*......*..#..*...!...*...*...#...................#
 #...................#..................#...................#
 ##########.###################.#################.###########
@@ -24,7 +23,7 @@ dark: on
 #......*.*...t*.....#........*...*..*................*..*..#
 #.*.O*..*..O*.....*.#...O*...*..*....*.#..***.*..***.......#
 #....*....OO..**....#...*..........*O..#..aaa.*..aaa.......#
-#.......*.*...*.....#...*...... S .....#..aaa.L*.aaa.......#
-#...................#..L...............#...................#
+#.......*.*...*.....#...*...... S .....#..aaa..*.aaa.......#
+#...................#..................#...................#
 #...................#..................#.................X.#
 ############################################################

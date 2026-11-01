@@ -1,5 +1,5 @@
 name: Gold Standard
-need: 57
+need: 65
 hint: Two long galleries: a magnet waits behind Graphite plugs with Lead at the end of each spoke; and hydrogen cells sit under their stores. Gravity is on.
 gravity: on
 ---

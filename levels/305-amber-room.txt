@@ -1,5 +1,5 @@
 name: Amber Room
-need: 49
+need: 60
 hint: One open floor in four quarters: Pellets wait in Cask cages, one plug in the roof of each; and Gammas circle Pellets on their posts.
 ---
 ############################################################

@@ -1,8 +1,7 @@
 name: Ragnarok
 need: 97
-hint: One open floor in four quarters: an ice floor carries you past its Pellets; Antipellets lie shoulder to shoulder with the Pellets; a laser sweeps a lane with Pellets lying in it; and liquid sodium hangs over the dig. The lights are out, 103 seconds of air, Gammas sleep in every room.
+hint: One open floor in four quarters: an ice floor carries you past its Pellets; Antipellets lie shoulder to shoulder with the Pellets; a laser sweeps a lane with Pellets lying in it; and liquid sodium hangs over the dig. 103 seconds of air, Gammas sleep in every room.
 air: 103
-dark: on
 ---
 ############################################################
 #@.........................................................#
@@ -14,17 +13,17 @@ dark: on
 #.IIIIIII*IIIIIIIIIIIIIIIII*.....*...!...*...!...*...*.....#
 #.*IIII*IIIIII*III*I**I*IIII....*...!...*...*t..!...*...!..#
 #..............................*...*...!...*...!...*...*...#
-#...........L..............................................#
+#..........................................................#
 #..........................................................#
 #..........................................................#
 #.*..O..*.******.O.O*.*.O.......~~~~~~~~~~~~~~~~~~~~~~~~...#
-#..*.....**.**..*......*O.**L...~~~~~~~~~~~~~~~~~~~~~~~~...#
+#..*.....**.**..*......*O.**....~~~~~~~~~~~~~~~~~~~~~~~~...#
 #...*.*..*...**... S .OO*..O...............................#
 #...........t.....................*OO.*..**O*.******.. S ..#
 #.l  *   *   *   *   *   *  .....*....**....*.....*O.......#
 #..............................***.*....*......***.O...O...#
 #...*.O..**...**..*...O*.......O*.*.**....*.O*.....*O*tO*..#
 #.***.O.*O..OO..**..***.O......*O.O.*O.....O*.**.O.**.*....#
-#.......L..................................................#
+#..........................................................#
 #........................................................X.#
 ############################################################

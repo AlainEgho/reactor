@@ -1,12 +1,11 @@
 name: Pandora
 need: 86
-hint: Six rooms in two rows: Neutron farms wait for their Lead; hot spots flare in the Graphite round the Pellets; Plutonium sits on posts under hanging Lead; Antipellets lie shoulder to shoulder with the Pellets; a laser sweeps a lane with Pellets lying in it; and hydrogen cells sit under their stores. The lights are out, 114 seconds of air, Gammas sleep in every room.
+hint: Six rooms in two rows: Neutron farms wait for their Lead; hot spots flare in the Graphite round the Pellets; Plutonium sits on posts under hanging Lead; Antipellets lie shoulder to shoulder with the Pellets; a laser sweeps a lane with Pellets lying in it; and hydrogen cells sit under their stores. 114 seconds of air, Gammas sleep in every room.
 air: 114
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
-#..o........O.....*.#L.................#.O***O**.....**O*..#
+#..o........O.....*.#..................#.O***O**.....**O*..#
 #....... S .......O.#.BB*BBBBBBB*BBBBB.#.***.O.*. S .*.*O..#
 #.R RRRR.t.R RRRR.*.#.*BB*B*BBBBBBBBBB.#..........t........#
 #.R    R.*.R    R.O...BBBB**B*BBBB*BBB.#...O..*..O..*..O...#
@@ -16,13 +15,13 @@ dark: on
 #.*******O***O***O*.#...............t..#...#..*..#..*..#...#
 #...................#..................#...................#
 ##########.###################.#################.###########
-#...................#..................#.............L.....#
+#...................#..................#...................#
 #..!...*...!...*....#..*.*.*.....*O....#.************......#
 #.!...*...*...!...*.#.O.*.....t......*.#.............. S ..#
 #....!...*...!...*..#..*..*..*. S .**..#.....#......#......#
 #...!...*...*...!......................#..R*R t..R*R ..**..#
 #..*...!...*...!....#.l  *   *   *   *....RRR ...RRR ..**..#
-#.*...!...*...*..L!.#..................#..### #..### #.**..#
+#.*...!...*...*...!.#..................#..### #..### #.**..#
 #....*...!...*...!..#.O**........*O..*.#..F   ...F   ..**..#
 #...*t..!...*...*...#.O.*O*.*.O..*O*.*.#...................#
 #...................#..................#...................#

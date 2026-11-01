@@ -1,5 +1,5 @@
 name: Trefoil
-need: 60
+need: 80
 hint: The floor is the sign on the door: three blades of Cask packed with Pellets, each opened only at its tip, and a hub where the Gammas run round the Reactor. Fuel the core from the outside in.
 ---
 ############################################################

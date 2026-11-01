@@ -26,11 +26,12 @@ if (want(266)) {
   b.v(29, 1, 22, '#').h(1, 11, 58, '#');
   b.rect(24, 8, 11, 7, '#').rect(25, 9, 9, 5, '.').set(29, 11, 'X');
   // q stands open now and g shut; every throw swaps the lot.
-  b.set(29, 4, 'q').set(8, 11, 'g').set(50, 11, 'g').set(29, 18, 'q').set(34, 13, 'g');
+  // the core has two doors: from the south-east on one throw, from the north-west on the other
+  b.set(29, 4, 'q').set(8, 11, 'g').set(50, 11, 'g').set(29, 18, 'q').set(34, 13, 'g').set(24, 9, 'q');
   // each room's switch stands by the cross, so a tour is a few steps a throw, not a walk round the room
   const switches = [[26, 7], [32, 7], [26, 15], [36, 18]];
   b.pts(switches, 's');
-  const gates = [[29, 4], [8, 11], [50, 11], [29, 18], [34, 13]];
+  const gates = [[29, 4], [8, 11], [50, 11], [29, 18], [34, 13], [24, 9]];
   const rings = [orbit(b, 15, 4), orbit(b, 43, 4), orbit(b, 15, 15), orbit(b, 43, 16)];
   const keep = both(away(1, 1, 3), outside([24, 8, 11, 7], ...rings), ...gates.map(([x, y]) => away(x, y, 1)),
     ...switches.map(([x, y]) => (xx, yy) => Math.abs(xx - x) > 1 || yy > y)); // no Lead over a switch plate
@@ -103,13 +104,13 @@ if (want(268)) {
 
 // 269 Long Night: a maze in the dark on two minutes of air.
 if (want(269)) {
-  const b = new Board(269, 'Long Night', 60, 'A maze in the dark on three minutes of air. Every tank buys thirty seconds and every Lamp two more cells of sight, and the maze will not tell you which turn is right. Lead hangs over the corridors.', { fill: '#' });
-  b.head('air: 200').head('dark: on');
+  const b = new Board(269, 'Long Night', 60, 'A maze in the dark on four minutes of air. Every tank buys thirty seconds and every Lamp two more cells of sight, and the maze will not tell you which turn is right. Lead hangs over the corridors.', { fill: '#' });
+  b.head('air: 240').head('dark: on');
   b.maze('.');
   // a few walls knocked through, so the maze has loops and a wrong turn is not always the whole way back
   for (let n = 0; n < 70; n++) { const x = 2 + b.int(56), y = 2 + b.int(20); if (b.get(x, y) === '#' && ((b.get(x - 1, y) === '.' && b.get(x + 1, y) === '.') || (b.get(x, y - 1) === '.' && b.get(x, y + 1) === '.'))) b.set(x, y, '.'); }
   const ok = both(away(1, 1, 2), away(57, 21, 2));
-  b.scatter('t', 9, { on: '.', ok }).scatter('L', 3, { on: '.', ok });
+  b.scatter('t', 14, { on: '.', ok }).scatter('L', 3, { on: '.', ok });
   b.scatter('*', 95, { on: '.', ok }).scatter('O', 30, { on: '.', ok: both(ok, (x, y) => b.get(x, y + 1) !== ' ') });
   place(b, 1, 1, 57, 21);
   b.fit(0.8).save();

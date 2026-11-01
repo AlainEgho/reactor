@@ -1,12 +1,11 @@
 name: Sphinx
 need: 70
-hint: Three halls side by side: a magnet waits behind Graphite plugs with Lead at the end of each spoke; Pellets wait in Cask cages, one plug in the roof of each; and isotopes decay while you work. The lights are out, 130 seconds of air, Gammas sleep in every room.
+hint: Three halls side by side: a magnet waits behind Graphite plugs with Lead at the end of each spoke; Pellets wait in Cask cages, one plug in the roof of each; and isotopes decay while you work. 130 seconds of air, Gammas sleep in every room.
 air: 130
-dark: on
 ---
 ############################################################
-#@..................#..................#.................L.#
-#.....*.............#..............L...#.........*..hh.*...#
+#@..................#..................#...................#
+#.....*.............#..................#.........*..hh.*...#
 #.....*..**.*OOO.**.#..R.R..R.R..R.R.*.#...................#
 #..............*..*.#..R*R..R*R..R*R.*.#.***...O..O........#
 #.. S ..O.*......O..#..RRR..RRR..RRR.*.#..O*..Oh*...h..hh..#
@@ -21,7 +20,7 @@ dark: on
 #..*..*.......*...*.#.. S .*O*.OO..*.O.#....*...........*..#
 #.......O...........#.......*.......O..#.O*......*..*..O...#
 #.....*..*O.....*...#..........*.....O.#..........*...*....#
-#.O..O...*.....*...........*.....*.*.L....**.O.t.O.........#
+#.O..O...*.....*...........*.....*.*......**.O.t.O.........#
 #..*.*....*.........#.........t..O.*...#...Oh.h......*h....#
 #.O........*........#...*..........**..#.........h.h...*...#
 #..O.......*..tO....#.*.......**.*.O...#..*h.....*..*......#

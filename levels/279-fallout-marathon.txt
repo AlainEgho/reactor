@@ -1,5 +1,5 @@
 name: Fallout Marathon
-need: 15
+need: 73
 hint: The whole floor is fallout but for a scatter of Graphite islands, and only a few islands hold Iodine. Run from island to island, take what lies between, and let the dose drain before the next run.
 ---
 ############################################################

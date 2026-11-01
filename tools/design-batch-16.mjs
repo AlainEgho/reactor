@@ -1,7 +1,7 @@
 // Scaffolding that draws Legendary, levels 346-395, and writes them to levels/*.txt: the hardest floors in
 // the plant. It composes from the same proven set pieces as Prestige (design-batch-15), but every region
-// gets one, a six-room layout joins the five, Gammas sleep in every region from the eleventh floor on, the
-// dark and the air are the rule rather than the exception, and the Lead is denser. Re-running overwrites
+// gets one, a six-room layout joins the five, Gammas sleep in every region from the eleventh floor on,
+// limited air is the rule rather than the exception, and the Lead is denser. Only three floors are dark. Re-running overwrites
 // the files.
 // Usage: node tools/design-batch-16.mjs [first] [last]
 import { Board, rng } from './board.mjs';
@@ -38,7 +38,7 @@ for (let k = 0; k < 50; k++) {
   const num = 346 + k;
   if (num < FIRST || num > LAST) continue;
   const r = rng(num * 15485863), key = ORDER[k % ORDER.length], lay = ALL[key];
-  const dark = k % 2 === 0 || k >= 30;
+  const dark = [44, 45, 46].includes(k); // only the underworld, Styx, Hades and Tartarus, is dark
   const air = k % 3 !== 1 ? Math.max(100, 150 - k) : 0;
   const grav = key === 'bands' && k % 12 === 4;
   const used = new Set(), picks = [];

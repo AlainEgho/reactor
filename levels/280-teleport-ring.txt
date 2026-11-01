@@ -1,5 +1,5 @@
 name: Teleport Ring
-need: 70
+need: 88
 hint: Twelve sealed chambers and a pad in each. A pad sends you to the next pad in reading order, round the floor chamber by chamber, and the Reactor waits in the last chamber of all. Every chamber has its own trap.
 ---
 ############################################################

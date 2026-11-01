@@ -1,5 +1,5 @@
 name: The Hive
-need: 80
+need: 124
 hint: A honeycomb of Cask cells, each joined to its neighbours by one plug of Graphite. Most hold Pellets, some under hanging Lead; the dead ends hold Gammas going round and round. Open only the plugs you need.
 ---
 ############################################################

@@ -1,22 +1,21 @@
 name: Eternity
 need: 99
-hint: Four rooms: acid pools wait under the Pellets; a line of orange canisters stands shoulder to shoulder over caged Pellets; Plutonium sits on posts under hanging Lead; and a laser sweeps a lane with Pellets lying in it. The lights are out, Gammas sleep in every room.
-dark: on
+hint: Four rooms: acid pools wait under the Pellets; a line of orange canisters stands shoulder to shoulder over caged Pellets; Plutonium sits on posts under hanging Lead; and a laser sweeps a lane with Pellets lying in it. Gammas sleep in every room.
 ---
 ############################################################
-#@...........................#.....L.......................#
+#@...........................#.............................#
 #....**.O..O...**.O..*.***.*.#.d...........................#
 #....**.***O...*.*....O*O....#..oooooooooooooooooooooooo...#
 #..........*..****.*.*OO..*O.#..RRRRRRRRRRRRRRRRRRRRRRRR...#
 #.**.*. S ...*..**O...*...*....R*R*R*R*R*R*R*R*R*R*R*R*RR..#
 #.............OO.....*.......#.RRRRRRRRRRRRRRRRRRRRRRRRRR..#
-#..***....***.OO.***....***..#...L.........................#
+#..***....***.OO.***....***..#.............................#
 #..aaa..*.aaa..*.aaa.**.aaa..#.****************. S .*****..#
 #..aaa.*O.aaa.**.aaa.*..aaa..#.****************.....*****..#
 #............................#.............................#
 ##############.#############################.###############
 #............................#.............................#
-#..**O***.**..*O.O*.....*O*O.#.****.*O.O.*..***..*LO.***...#
+#..**O***.**..*O.O*.....*O*O.#.****.*O.O.*..***..*.O.***...#
 #.*..*.O***O.*.O.O*. S .*O**.#..*....**.......*.......OO*..#
 #......O.................*.*.#.*...OO.....**.*.*. S .*.O...#
 #...O.....O.....O..*..O..O**.#.............................#

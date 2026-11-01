@@ -1,5 +1,5 @@
 name: Quantum Vault
-need: 40
+need: 42
 hint: Eight Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out, and they are not worth the same. Count your charges, and the Pellets in each vault, before you spend the first.
 ---
 ############################################################

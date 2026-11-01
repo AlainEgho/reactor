@@ -1,8 +1,7 @@
 name: Excalibur
 need: 50
-hint: Six rooms in two rows: a line of orange canisters stands shoulder to shoulder over caged Pellets; liquid sodium hangs over the dig; hydrogen cells sit under their stores; an ice floor carries you past its Pellets; acid pools wait under the Pellets; and Antipellets lie shoulder to shoulder with the Pellets. The lights are out, 150 seconds of air.
+hint: Six rooms in two rows: a line of orange canisters stands shoulder to shoulder over caged Pellets; liquid sodium hangs over the dig; hydrogen cells sit under their stores; an ice floor carries you past its Pellets; acid pools wait under the Pellets; and Antipellets lie shoulder to shoulder with the Pellets. 150 seconds of air.
 air: 150
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
@@ -14,13 +13,13 @@ dark: on
 #..........t........#......**..*O.*....#..### #t.### #.....#
 #.**..***.*OO..O..O.#............*..*..#..F   ...F   ......#
 #.*O...*******..*...#.......*..O....**.#...............**..#
-#.................L.#..................#......L............#
+#...................#..................#...................#
 ##########.###################.#################.###########
 #...................#..................#...................#
 #......t............#...t..O....*......#...!...*...!...*...#
 #.IIIIIII**IIIIIIII.#.....*..*.........#..!...*...*...!....#
 #.II*II*II*IIIIIII*.#....*..*..*O..*...#.*...!...*...!.....#
-#.IIIIIIIIIIIIIIIII.........O....OL....#....!...*...*...!..#
+#.IIIIIIIIIIIIIIIII.........O....O.....#....!...*...*...!..#
 #.I*IIII**I*IIIII*I.#......*......*O.*.....*...!...*...!...#
 #.IIII*IIIIIII*IIII.#..***....***.*..*.#..*...!.t.*...*....#
 #.IIIII*IIIIIIIIIII.#..aaa....aaa..*...#.*...*...!...*.....#

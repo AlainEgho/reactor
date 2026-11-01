@@ -1,8 +1,7 @@
 name: Nirvana
 need: 98
-hint: Six rooms in two rows: isotopes decay while you work; Plutonium sits on posts under hanging Lead; liquid sodium hangs over the dig; acid pools wait under the Pellets; hydrogen cells sit under their stores; and a belt runs the length of the room. The lights are out, 102 seconds of air, Gammas sleep in every room.
+hint: Six rooms in two rows: isotopes decay while you work; Plutonium sits on posts under hanging Lead; liquid sodium hangs over the dig; acid pools wait under the Pellets; hydrogen cells sit under their stores; and a belt runs the length of the room. 102 seconds of air, Gammas sleep in every room.
 air: 102
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
@@ -18,10 +17,10 @@ dark: on
 ##########.###################.#################.###########
 #...................#..................#...................#
 #..*.*....*.*O......#.****************.#.*O.**......****...#
-#..**.O*O...*L.****.#...............**.#.***.*O. S ..O*OO..#
+#..**.O*O...*..****.#...............**.#.***.*O. S ..O*OO..#
 #...........*...*.O.#.t...#......#..**.#...*.O*.....**O**..#
-#...*O. S .OO...*......R*R ...R*R ..**.#.O***...***..*O.*.L#
-#....L........O*....#..RRR ...RRR ......................t..#
+#...*O. S .OO...*......R*R ...R*R ..**.#.O***...***..*O.*..#
+#.............O*....#..RRR ...RRR ......................t..#
 #..***.*..***....*..#..### #..### # S .#..              ...#
 #..aaa....aaa.**O**.#..F   ...F   .....#..]]]]]]]]]]]]]]...#
 #..aaa..*.aaa.***Ot.#...............**.#...................#

@@ -1,10 +1,9 @@
 name: Gilgamesh
 need: 87
-hint: Four rooms: isotopes decay while you work; hot spots flare in the Graphite round the Pellets; Gammas circle Pellets on their posts; and a laser sweeps a lane with Pellets lying in it. The lights are out, Gammas sleep in every room.
-dark: on
+hint: Four rooms: isotopes decay while you work; hot spots flare in the Graphite round the Pellets; Gammas circle Pellets on their posts; and a laser sweeps a lane with Pellets lying in it. Gammas sleep in every room.
 ---
 ############################################################
-#@...........................#............L................#
+#@...........................#.............................#
 #......*O.*.*...*h.h.........#.............................#
 #....*.*....hO..h....h**O.O..#.BBBBBB*BBBBB**BBBB*BBBBBBB..#
 #....Oh*O....Oh.....*****..*.#.BB*BBBBBBBBBBBBBB**BBBB*BB..#
@@ -18,10 +17,10 @@ dark: on
 #............................#.............................#
 #..   ....   ..*.   ....   ..#.....*.*....O*.*..*....*O....#
 #.. * .*.. * ..*. * .*.. * ..#......O..........***.*.*.**..#
-#.L #S.*O. #S.... #S..*. #S..#...*.*.*..**. S .O..**.**O...#
+#.. #S.*O. #S.... #S..*. #S..#...*.*.*..**. S .O..**.**O...#
 #..   ....   ..*.   .*..   ..#.............................#
 #....................O*........l  *   *   *   *   *   *  ..#
-#.*...**......O*.*OO...*.***L#.............................#
+#.*...**......O*.*OO...*.***.#.............................#
 #..**.***. S .O.****.........#.O..*.OO...*..*.*..O*..O*.*..#
 #.*O.**OO......OO*.*..*O.*.*.#.......*....*.**.*.O.O..*....#
 #............................#.............................#

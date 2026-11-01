@@ -1,5 +1,5 @@
 name: Laurel
-need: 40
+need: 55
 hint: Four rooms: Gammas circle Pellets on their posts; and a magnet waits behind Graphite plugs with Lead at the end of each spoke.
 ---
 ############################################################

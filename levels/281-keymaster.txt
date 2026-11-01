@@ -1,5 +1,5 @@
 name: Keymaster
-need: 40
+need: 24
 hint: Seven blast doors and five keycards, and the last door is the Reactor's. The vaults are not worth the same: look through the slits before you spend a card, and never spend the fifth.
 ---
 ############################################################

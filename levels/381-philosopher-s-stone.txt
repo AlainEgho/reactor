@@ -1,8 +1,7 @@
 name: Philosopher's Stone
 need: 85
-hint: One open floor in four quarters: a sealed vault waits for the Quantum tunnel beside it; Pellets wait in Cask cages, one plug in the roof of each; a belt runs the length of the room; and liquid sodium hangs over the dig. The lights are out, 115 seconds of air, Gammas sleep in every room.
+hint: One open floor in four quarters: a sealed vault waits for the Quantum tunnel beside it; Pellets wait in Cask cages, one plug in the roof of each; a belt runs the length of the room; and liquid sodium hangs over the dig. 115 seconds of air, Gammas sleep in every room.
 air: 115
-dark: on
 ---
 ############################################################
 #@.........................................................#
@@ -21,10 +20,10 @@ dark: on
 #.**...O**O**.O. S .*O*..O**....~~~~~~~~~~~~~~~~~~~~~~~~...#
 #.*........O*.......*..*.***...............................#
 #..*..O.O.*.**O***...O..O..*...*.O.O........OOO*..**...*O..#
-#L.............................*..*.*...*.*..t**O.OOO*..*..#
+#..............................*..*.*...*.*..t**O.OOO*..*..#
 #..                        ......**O*.*................*...#
 #..[[[[[[[[[[[[[[[[[[[[[[[[....*......***.... S ..*..*O.*..#
 #..............t.................*.**.*..***........*......#
-#...................................L......L...............#
+#..........................................................#
 #........................................................X.#
 ############################################################
