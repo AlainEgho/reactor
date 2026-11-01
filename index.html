@@ -33,7 +33,7 @@
 [hidden]{display:none!important}
 html,body{height:100%;margin:0}
 body{background:var(--bg);color:var(--fg);font-family:var(--mono);font-size:14px;overflow:hidden;-webkit-tap-highlight-color:transparent}
-.app{height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:10px;padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.app{height:100%;max-width:1320px;margin:0 auto;display:flex;flex-direction:column;gap:10px;padding-top:max(12px,env(safe-area-inset-top,0px));padding-bottom:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 24px;padding-bottom:10px;border-bottom:2px solid var(--wing,var(--line));transition:border-color .4s}
 .brand{display:flex;align-items:baseline;gap:14px;min-width:0}
 .brand .catname{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wing,var(--muted));white-space:nowrap}
@@ -256,7 +256,7 @@ body.xmas #bAct::before{font-size:22px}
   .pad.free.arrange [data-place].dragging{outline-style:solid;cursor:grabbing}
   .overlay{z-index:5}
 }
-.arrangebar{position:fixed;left:0;right:0;top:0;z-index:6;display:flex;gap:8px;align-items:center;padding:10px max(12px,env(safe-area-inset-right,0px)) 10px max(12px,env(safe-area-inset-left,0px));background:var(--panel);border-bottom:1px solid var(--line);font-size:12px;line-height:1.35}
+.arrangebar{position:fixed;left:0;right:0;top:0;z-index:6;display:flex;gap:8px;align-items:center;padding:max(10px,env(safe-area-inset-top,0px)) max(12px,env(safe-area-inset-right,0px)) 10px max(12px,env(safe-area-inset-left,0px));background:var(--panel);border-bottom:1px solid var(--line);font-size:12px;line-height:1.35}
 .arrangebar span{flex:1 1 auto}
 .arrangebar .btn{padding:8px 10px;flex:0 0 auto}
 .dpad button,.act{transition:transform .08s,background .08s}
@@ -277,7 +277,7 @@ body.xmas #bAct::before{font-size:22px}
   .overlay{position:fixed;inset:0;padding:0;z-index:5} /* above the pad and the header */
   .overlay:has(.panel:not(.small)){place-items:start stretch}
   .menubar .btn:not(.primary){display:none} /* the Components tab is right above */
-  .panel:not(.small){max-width:none;min-height:100%;border:0;border-radius:0;box-shadow:none;padding:12px 14px calc(16px + env(safe-area-inset-bottom,0px));gap:12px}
+  .panel:not(.small){max-width:none;min-height:100%;border:0;border-radius:0;box-shadow:none;padding:max(12px,env(safe-area-inset-top,0px)) 14px calc(16px + env(safe-area-inset-bottom,0px));gap:12px}
   .panel.small{width:auto;margin:16px;max-width:calc(100% - 32px)}
   .mark span{font-size:26px}
   .mark small{font-size:10px}
@@ -14241,6 +14241,7 @@ function sample(){
   return {dir:dir,act:a,gad:gd};
 }
 function clearInput(){held.length=0;tapDir=-1;act=false;actTap=false;gad=false;gadTap=false;
+  document.querySelectorAll('.dpad button,.act').forEach(function(b){if(b._glow) keyGlow(b,false);});
   document.querySelectorAll('.on').forEach(function(b){b.classList.remove('on');});}
 
 /* ---------- audio ---------- */
@@ -16896,17 +16897,38 @@ addEventListener('blur',function(){clearInput();pause();});
 document.addEventListener('visibilitychange',function(){if(document.hidden){clearInput();pause();}});
 
 /* ---------- touch pad ---------- */
+// A held key glows, running red, green, blue round its rim, and the glow fades out when the finger
+// lifts. The pad only shows on touch screens, so this is phones and tablets only. The fade starts
+// from whatever colour the glow had reached; reduced motion keeps one still colour and a short fade.
+const KEY_RGB=['#ff2d55','#ffd52d','#2dff6e','#2de6ff','#2d6bff','#c42dff'];
+function keyGlowFrame(c){return {borderColor:c,color:c,boxShadow:'0 0 18px 5px '+c+', inset 0 0 14px '+c+'80'};}
+function keyGlow(b,on){
+  b.classList.toggle('on',on);
+  if(!b.animate) return;
+  if(on){
+    if(b._fade){b._fade.cancel();b._fade=null;}
+    if(b._glow) return;
+    const kf=reduceMotion?[keyGlowFrame(KEY_RGB[4]),keyGlowFrame(KEY_RGB[4])]:KEY_RGB.concat(KEY_RGB[0]).map(keyGlowFrame);
+    b._glow=b.animate(kf,{duration:1500,iterations:Infinity});
+  }else if(b._glow){
+    const cs=getComputedStyle(b),from={borderColor:cs.borderColor,color:cs.color,boxShadow:cs.boxShadow};
+    b._glow.cancel();b._glow=null;
+    const to={borderColor:cs.borderColor,color:cs.color,boxShadow:'0 0 0 0 transparent, inset 0 0 0 transparent'};
+    b._fade=b.animate([from,to],{duration:reduceMotion?150:650,easing:'ease-out'});
+    b._fade.onfinish=function(){b._fade=null;};
+  }
+}
 document.querySelectorAll('.dpad button').forEach(function(b){
   const d=+b.dataset.dir;
-  b.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();try{b.setPointerCapture(e.pointerId);}catch(err){}press(d);b.classList.add('on');});
-  const up=function(){release(d);b.classList.remove('on');};
+  b.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();try{b.setPointerCapture(e.pointerId);}catch(err){}press(d);keyGlow(b,true);});
+  const up=function(){release(d);keyGlow(b,false);};
   b.addEventListener('pointerup',up);b.addEventListener('pointercancel',up);b.addEventListener('lostpointercapture',up);
 });
 const bAct=$('bAct');
-bAct.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();try{bAct.setPointerCapture(e.pointerId);}catch(err){}act=true;actTap=true;bAct.classList.add('on');});
-['pointerup','pointercancel','lostpointercapture'].forEach(function(ev){bAct.addEventListener(ev,function(){act=false;bAct.classList.remove('on');});});
-bGad.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();try{bGad.setPointerCapture(e.pointerId);}catch(err){}gad=true;gadTap=true;bGad.classList.add('on');});
-['pointerup','pointercancel','lostpointercapture'].forEach(function(ev){bGad.addEventListener(ev,function(){gad=false;bGad.classList.remove('on');});});
+bAct.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();try{bAct.setPointerCapture(e.pointerId);}catch(err){}act=true;actTap=true;keyGlow(bAct,true);});
+['pointerup','pointercancel','lostpointercapture'].forEach(function(ev){bAct.addEventListener(ev,function(){act=false;keyGlow(bAct,false);});});
+bGad.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();try{bGad.setPointerCapture(e.pointerId);}catch(err){}gad=true;gadTap=true;keyGlow(bGad,true);});
+['pointerup','pointercancel','lostpointercapture'].forEach(function(ev){bGad.addEventListener(ev,function(){gad=false;keyGlow(bGad,false);});});
 // Swipe on the board: drag a finger (or the mouse) 24 px and Iso walks that way until it lifts, turning
 // as the drag turns; a quick tap on one of his four neighbours snaps at it.
 (function(){
