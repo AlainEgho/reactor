@@ -187,7 +187,7 @@ button{font:inherit;color:inherit}
 .pad{padding-bottom:calc(env(safe-area-inset-bottom,0px) + var(--lift,0px));opacity:var(--op,1)}
 .pad.lefty{flex-direction:row-reverse}
 .acts.swap{flex-direction:row-reverse}
-.dpad{--k:60px;display:grid;grid-template-columns:repeat(3,calc(var(--k)*var(--as,1)));grid-template-rows:repeat(3,calc(var(--k)*var(--as,1)));gap:var(--gap,6px)}
+.dpad{--k:60px;display:grid;grid-template-columns:repeat(3,calc(var(--k)*var(--as,1)));grid-template-rows:repeat(2,calc(var(--k)*var(--as,1)));gap:var(--gap,6px)}
 .dpad button{border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-size:calc(20px*var(--as,1));touch-action:none;user-select:none;-webkit-user-select:none}
 /* Controls: the settings sheet covers the board only, so the controls below stay live to try. */
 .padsheet{position:absolute;inset:0;z-index:4;overflow:auto;background:var(--scrim);display:grid;place-items:start center;padding:12px}
@@ -205,7 +205,12 @@ button{font:inherit;color:inherit}
 .pbtns{display:flex;gap:8px;justify-content:flex-end}
 /* Christmas mode: a candy-stripe rule under the header, a tree by the name, and the banner that switches it. */
 body.xmas .bar{border-image:repeating-linear-gradient(90deg,#d63a44 0 14px,#f6f6f6 14px 28px,#1f8a3a 28px 42px) 1}
-body.xmas .logo::after,body.xmas .mark span::after{content:'\1F384';font-size:.85em;margin-left:.1em}
+body.xmas .mark span::after{content:'\1F384';font-size:.85em;margin-left:.1em}
+body.xmas .logo .tre,body.xmas .mark .tre,body.xmas #bAct .tre{display:none}
+body.xmas .logo::before,body.xmas .mark span::before,body.xmas #bAct::before{content:'\1F36A';line-height:1}
+body.xmas .logo::before{font-size:.9em}
+body.xmas .mark span::before{font-size:.8em;display:inline-block;animation:tre-spin 30s linear infinite}
+body.xmas #bAct::before{font-size:22px}
 .xmasbar{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:center;text-align:left;padding:12px 14px;border-radius:12px;border:1px solid #2d5a3a;background:linear-gradient(135deg,#143d25,#0f1d2e);color:var(--fg);cursor:pointer;font-family:var(--mono)}
 .xmasbar .tree{grid-row:1/span 2;font-size:30px;line-height:1}
 .xmasbar b{font-family:var(--display);font-size:16px;letter-spacing:.06em}
@@ -233,7 +238,7 @@ body.xmas .logo::after,body.xmas .mark span::after{content:'\1F384';font-size:.8
 .dpad button.on,.act.on{background:var(--line);transform:scale(.94)}
 .act{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
 .act .tre{width:22px;height:22px}
-.dpad .u{grid-column:2;grid-row:1}.dpad .l{grid-column:1;grid-row:2}.dpad .r{grid-column:3;grid-row:2}.dpad .d{grid-column:2;grid-row:3}
+.dpad .u{grid-column:2;grid-row:1}.dpad .l{grid-column:1;grid-row:2}.dpad .r{grid-column:3;grid-row:2}.dpad .d{grid-column:2;grid-row:2}
 .act{--ka:86px;width:calc(var(--ka)*var(--bs,1));height:calc(var(--ka)*var(--bs,1));border-radius:50%;border:2px solid var(--hero);background:var(--hero-soft);color:var(--fg);font-size:11px;letter-spacing:.1em;text-transform:uppercase;touch-action:none;user-select:none;-webkit-user-select:none}
 .acts{display:flex;gap:14px;align-items:flex-end}
 .act.boost{--ka:68px;border-color:var(--core);background:rgba(79,184,255,.14)}
@@ -15180,21 +15185,29 @@ function star5(c,x,y,r,col){
 const GIFT_WRAPS=[['#8f0d18','#d9202f','#5f0810','#e8384a'],['#176b2f','#34b857','#145c28','#46d06a'],['#1b4f9c','#3c8be6','#163f80','#5aa3f5'],['#5a1f7a','#9b4fd1','#4a1a66','#b56ee6']];
 const Dx={
   // Pine: what Santa digs through, the tree's own foliage filling the whole cell as Graphite does.
-  // Three level fronds of needles, the same in every cell so a thicket is calm to look at; only a
-  // berry and a little snow move about with v (0..3).
+  // Three level fronds, the same in every cell so a thicket is calm to look at: each has a shadow
+  // under it, a lit stem and curved needles lighter above than below, so the boughs have depth. Only
+  // a berry and a little snow move about with v (0..3).
   graphite:function(c,v){
     c.fillStyle='#0f3d1e';c.fillRect(0,0,1,1);
-    c.fillStyle='#1d6b32';c.fillRect(.03,.03,.94,.94);
+    const bg=c.createLinearGradient(0,0,0,1);bg.addColorStop(0,'#237a3a');bg.addColorStop(1,'#185a2a');
+    c.fillStyle=bg;c.fillRect(.03,.03,.94,.94);
     c.lineCap='round';
     for(let s=0;s<3;s++){
       const y0=.2+s*.3;
-      c.strokeStyle='#2f8a3a';c.lineWidth=.025;c.beginPath();c.moveTo(-.05,y0);c.lineTo(1.05,y0);c.stroke();
-      c.strokeStyle=s&1?'#3fb55a':'#5ad072';c.lineWidth=.02;c.beginPath();
-      for(let i=0;i<10;i++){const x=.08+i*.1;c.moveTo(x,y0);c.lineTo(x-.06,y0-.09);c.moveTo(x,y0);c.lineTo(x-.06,y0+.09);}
-      c.stroke();
+      c.strokeStyle='rgba(6,30,12,.4)';c.lineWidth=.06;c.beginPath();c.moveTo(-.05,y0+.035);c.lineTo(1.05,y0+.035);c.stroke();
+      c.lineWidth=.022;
+      for(let side=-1;side<=1;side+=2){
+        c.strokeStyle=side<0?'#6fdc84':'#2e9a45';c.beginPath();
+        for(let i=0;i<10;i++){const x=.08+i*.1;c.moveTo(x,y0);c.quadraticCurveTo(x-.045,y0+side*.05,x-.075,y0+side*.1);}
+        c.stroke();
+      }
+      c.strokeStyle='#2f8a3a';c.lineWidth=.03;c.beginPath();c.moveTo(-.05,y0);c.lineTo(1.05,y0);c.stroke();
+      c.strokeStyle='rgba(190,255,200,.45)';c.lineWidth=.01;c.beginPath();c.moveTo(-.05,y0-.008);c.lineTo(1.05,y0-.008);c.stroke();
     }
-    c.fillStyle='#e03a46';circ(c,.2+rnd(v*7+3)*.6,.35+rnd(v*3+5)*.3,.03);c.fill();
-    c.fillStyle='rgba(255,255,255,.55)';
+    const bx=.2+rnd(v*7+3)*.6,by=.35+rnd(v*3+5)*.3;
+    circ(c,bx,by,.032);c.fillStyle='#e03a46';c.fill();circ(c,bx-.01,by-.012,.01);c.fillStyle='rgba(255,255,255,.8)';c.fill();
+    c.fillStyle='rgba(255,255,255,.6)';
     for(let k=0;k<3;k++){circ(c,.08+rnd(v*13+k)*.84,.08+rnd(v*17+k*3)*.84,.013);c.fill();}
   },
   // Snow wall: a packed block of snow with a blue shadow side and a cap of fresh powder. Solid.
@@ -15263,27 +15276,27 @@ const Dx={
     circ(c,.5,.26,.04);c.fillStyle='#ffe28a';c.fill();
     star5(c,.78,.3,.05+.04*pulse,'rgba(255,255,255,'+(.4+.6*pulse)+')');
   },
-  // Grump: a grumpy green furry creature with yellow eyes and a sly grin, in a hat of the canister's
-  // colour, so orange, yellow and red still tell apart. It goes off just as the canister did.
+  // Naughty letter: a cross envelope with angry eyes and a frown, sealed with wax in the canister's
+  // colour so orange, yellow and red still tell apart, and a fizzing fuse on its corner. It goes off
+  // just as the canister did.
   canister:function(c,col){
-    const g=c.createRadialGradient(.4,.46,.04,.5,.58,.42);
-    g.addColorStop(0,'#9ae882');g.addColorStop(.55,'#4fb046');g.addColorStop(1,'#1f5e1f');
-    c.beginPath();
-    for(let i=0;i<22;i++){const a=i/22*Math.PI*2,r=i&1?.4:.34;c.lineTo(.5+Math.cos(a)*r,.58+Math.sin(a)*r*.95);}
-    c.closePath();c.fillStyle=g;c.fill();c.strokeStyle='#0f3a12';c.lineWidth=.022;c.lineJoin='round';c.stroke();
-    c.fillStyle=col[0];c.beginPath();c.moveTo(.18,.34);c.quadraticCurveTo(.3,.0,.74,.08);c.quadraticCurveTo(.6,.14,.82,.34);c.closePath();c.fill();
-    c.strokeStyle=col[1];c.lineWidth=.02;c.stroke();
-    rr(c,.14,.29,.72,.1,.05);c.fillStyle='#ffffff';c.fill();
-    circ(c,.76,.08,.06);c.fillStyle='#ffffff';c.fill();
-    [[.4,.52],[.6,.52]].forEach(function(e){
-      c.beginPath();c.ellipse(e[0],e[1],.075,.055,0,0,Math.PI*2);c.fillStyle='#f5e04a';c.fill();
-      circ(c,e[0]+(e[0]<.5?.02:-.02),e[1]+.01,.025);c.fillStyle='#1a1a1a';c.fill();
+    c.strokeStyle='#5a4a2a';c.lineWidth=.025;c.lineCap='round';
+    c.beginPath();c.moveTo(.8,.26);c.quadraticCurveTo(.92,.14,.84,.06);c.stroke();
+    star5(c,.84,.06,.06,'#ffd34d');circ(c,.84,.06,.022);c.fillStyle='#fff6c8';c.fill();
+    rr(c,.1,.26,.8,.58,.05);c.fillStyle='#f6ecd6';c.fill();c.strokeStyle='#3a2a14';c.lineWidth=.025;c.stroke();
+    c.fillStyle='#e6d6b4';c.beginPath();c.moveTo(.1,.84);c.lineTo(.5,.56);c.lineTo(.9,.84);c.closePath();c.fill();
+    c.strokeStyle='#8a7550';c.lineWidth=.02;c.lineJoin='round';
+    c.beginPath();c.moveTo(.12,.28);c.lineTo(.5,.6);c.lineTo(.88,.28);c.stroke();
+    c.beginPath();c.moveTo(.12,.82);c.lineTo(.4,.62);c.moveTo(.88,.82);c.lineTo(.6,.62);c.stroke();
+    [[.33,.42],[.67,.42]].forEach(function(e){
+      c.beginPath();c.ellipse(e[0],e[1],.055,.045,0,0,Math.PI*2);c.fillStyle='#ffffff';c.fill();c.strokeStyle='#1a1208';c.lineWidth=.012;c.stroke();
+      circ(c,e[0]+(e[0]<.5?.015:-.015),e[1]+.008,.022);c.fillStyle='#111';c.fill();
     });
-    c.strokeStyle='#1c4d1a';c.lineWidth=.04;c.lineCap='round';c.beginPath();c.moveTo(.29,.41);c.lineTo(.46,.47);c.moveTo(.71,.41);c.lineTo(.54,.47);c.stroke();
-    c.strokeStyle='#14240f';c.lineWidth=.03;c.beginPath();c.moveTo(.32,.68);c.quadraticCurveTo(.5,.8,.7,.63);c.stroke();
-    c.strokeStyle='#2f7a2c';c.lineWidth=.02;c.beginPath();
-    for(let i=0;i<4;i++){const x=.36+i*.09;c.moveTo(x,.9);c.lineTo(x-.03,.98);}
-    c.stroke();
+    c.strokeStyle='#1a1208';c.lineWidth=.04;c.lineCap='round';
+    c.beginPath();c.moveTo(.24,.33);c.lineTo(.41,.39);c.moveTo(.76,.33);c.lineTo(.59,.39);c.stroke();
+    circ(c,.5,.62,.1);c.fillStyle=col[0];c.fill();c.strokeStyle=col[1];c.lineWidth=.02;c.stroke();
+    c.strokeStyle='rgba(0,0,0,.45)';c.lineWidth=.02;c.beginPath();c.arc(.5,.67,.045,Math.PI*1.15,Math.PI*1.85);c.stroke();
+    circ(c,.47,.59,.018);c.fillStyle='rgba(255,255,255,.55)';c.fill();
   },
   // The Christmas tree: three snowy tiers in a pot. Dark until the gifts are in; then every bauble
   // lights up and the star on top turns gold.
@@ -15370,6 +15383,52 @@ const Dx={
     for(let i=0;i<10;i++){const a=i/10*Math.PI*2+.3,d=.3+2*ease;circ(c,Math.cos(a)*d,Math.sin(a)*d*.7+1.6*ease*ease,.07+.05*cold);c.fill();}
     c.globalAlpha=1;
   },
+  // Reindeer: the Alpha, a brown head with antlers, a red nose and a bell on its collar, facing the
+  // way it bounces (head first, like the Alpha).
+  alpha:function(c,dir,now){
+    c.save();c.translate(.5,.5);c.rotate(dir*Math.PI/2);
+    const glow=c.createRadialGradient(0,.1,0,0,.1,.42);glow.addColorStop(0,'rgba(255,120,90,.18)');glow.addColorStop(1,'rgba(255,80,60,0)');
+    c.fillStyle=glow;circ(c,0,.1,.42);c.fill();
+    c.strokeStyle='#6b4423';c.lineWidth=.035;c.lineCap='round';c.lineJoin='round';
+    [[-1],[1]].forEach(function(s){const x=s[0];c.beginPath();c.moveTo(x*.1,-.16);c.lineTo(x*.18,-.34);c.lineTo(x*.3,-.4);c.moveTo(x*.16,-.3);c.lineTo(x*.07,-.4);c.moveTo(x*.2,-.36);c.lineTo(x*.24,-.46);c.stroke();});
+    const g=c.createRadialGradient(-.06,-.06,.02,0,.02,.3);g.addColorStop(0,'#b98551');g.addColorStop(.6,'#8a5a2e');g.addColorStop(1,'#5a3516');
+    c.beginPath();c.ellipse(0,.02,.21,.25,0,0,Math.PI*2);c.fillStyle=g;c.fill();c.strokeStyle='#3a2108';c.lineWidth=.02;c.stroke();
+    c.fillStyle='#8a5a2e';c.beginPath();c.ellipse(-.23,-.08,.07,.045,-.5,0,Math.PI*2);c.fill();c.beginPath();c.ellipse(.23,-.08,.07,.045,.5,0,Math.PI*2);c.fill();
+    c.fillStyle='#c99b6a';c.beginPath();c.ellipse(0,.14,.14,.1,0,0,Math.PI*2);c.fill();
+    [[-.08,-.06],[.08,-.06]].forEach(function(e){circ(c,e[0],e[1],.04);c.fillStyle='#ffffff';c.fill();circ(c,e[0],e[1]+.008,.02);c.fillStyle='#111';c.fill();});
+    const nose=c.createRadialGradient(-.02,.1,.005,0,.12,.065);nose.addColorStop(0,'#ff8a80');nose.addColorStop(.5,'#e5302f');nose.addColorStop(1,'#8a1410');
+    circ(c,0,.12,.065);c.fillStyle=nose;c.fill();
+    c.fillStyle='#d63a44';c.fillRect(-.2,.24,.4,.06);
+    circ(c,0,.3,.04);c.fillStyle='#ffd34d';c.fill();c.strokeStyle='#8a6a10';c.lineWidth=.012;c.stroke();
+    c.restore();
+  },
+  // Chimney: the Airlock, a brick stack with a snowy cap. The arrows still say which way Santa may pass.
+  airlock:function(c,mask){
+    c.fillStyle=theme.pad;c.fillRect(0,0,1,1);
+    rr(c,.12,.2,.76,.78,.04);c.fillStyle='#8c3b2e';c.fill();
+    c.strokeStyle='#5a2218';c.lineWidth=.018;c.beginPath();
+    for(let r=0;r<6;r++){const y=.3+r*.12;c.moveTo(.12,y);c.lineTo(.88,y);for(let k=0;k<3;k++){const x=.12+(k+(r&1?.5:0))*.253+.126;if(x<.88){c.moveTo(x,y);c.lineTo(x,y+.12);}}}
+    c.stroke();
+    rr(c,.06,.14,.88,.1,.03);c.fillStyle='#3a3a44';c.fill();
+    rr(c,.36,.08,.28,.08,.02);c.fillStyle='#111318';c.fill();
+    c.fillStyle='#ffffff';c.beginPath();c.moveTo(.04,.16);c.quadraticCurveTo(.25,.02,.5,.1);c.quadraticCurveTo(.75,.18,.96,.08);c.lineTo(.96,.15);c.lineTo(.04,.15);c.closePath();c.fill();
+    const single=(mask&(mask-1))===0;
+    c.fillStyle='#ffffff';c.strokeStyle='#2a0d08';c.lineWidth=.015;c.lineJoin='round';
+    for(let d=0;d<4;d++){
+      if(!(mask&(1<<d))) continue;
+      c.save();c.translate(.5,.58);c.rotate(d*Math.PI/2);
+      c.beginPath();c.moveTo(0,-.34);c.lineTo(.14,-.17);c.lineTo(-.14,-.17);c.closePath();c.fill();c.stroke();
+      if(single){c.fillRect(-.05,-.18,.1,.4);c.strokeRect(-.05,-.18,.1,.4);}
+      c.restore();
+    }
+  },
+  // After Santa comes through a chimney: a puff of smoke rising from it instead of a wheel turning.
+  // a runs 0..pi over the moment.
+  wheel:function(c,a){
+    const t=Math.min(1,Math.max(0,a/Math.PI));
+    c.fillStyle='rgba(230,235,245,'+(.7*(1-t))+')';
+    [[.5,.14,.08],[.42,.08,.06],[.58,.06,.07]].forEach(function(p){circ(c,p[0],p[1]-t*.3,p[2]+t*.08);c.fill();});
+  },
   // Snowflake: the Gamma, a six-armed flake that turns as it goes, with a cross little face.
   gamma:function(c,dir,now){
     c.save();c.translate(.5,.5);c.rotate(dir*Math.PI/2+now/300);
@@ -15419,8 +15478,8 @@ const XW=[[/A spent-fuel cask: a wall a blast can break\. It is round,/g,'A stac
   [/\bpushes Lead\b/g,'pushes snowballs'],[/\blike Lead\b/g,'like a snowball'],[/\bunder Lead\b/g,'under snowballs'],[/\bLead balls\b/g,'snowballs'],[/\bLead ball\b/g,'snowball'],[/\bCask\b/g,'Log pile'],[/\bCasks\b/g,'Log piles'],
   [/\bPellets\b/g,'Gifts'],[/\bPellet\b/g,'Gift'],[/\bpellets\b/g,'gifts'],[/\bpellet\b/g,'gift'],[/\bGraphite\b/g,'Pine'],[/\bConcrete\b/g,'Snow wall'],
   [/\bReactor\b/g,'Tree'],[/\bthe core\b/g,'the Tree'],[/\bLead\b/g,'Snowball'],[/\bGammas\b/g,'Snowflakes'],[/\bGamma\b/g,'Snowflake'],
-  [/\bNeutrons\b/g,'Sparks'],[/\bNeutron\b/g,'Spark'],[/\bcanisters\b/g,'Grumps'],[/\bcanister\b/g,'Grump'],[/\bCanisters\b/g,'Grumps'],
-  [/\bCanister\b/g,'Grump'],[/\bIso\b/g,'Santa'],[/\bthe plant\b/g,'the North Pole']];
+  [/\bNeutrons\b/g,'Sparks'],[/\bNeutron\b/g,'Spark'],[/\bAirlocks\b/g,'Chimneys'],[/\bairlocks\b/g,'chimneys'],[/\bAirlock\b/g,'Chimney'],[/\bairlock\b/g,'chimney'],[/\bAlpha particles\b/g,'Reindeer'],[/\bAlpha particle\b/g,'Reindeer'],[/\bAlphas\b/g,'Reindeer'],[/\bAlpha\b/g,'Reindeer'],[/\bcanisters\b/g,'naughty letters'],[/\bcanister\b/g,'naughty letter'],[/\bCanisters\b/g,'Naughty letters'],
+  [/\bCanister\b/g,'Naughty letter'],[/\bIso\b/g,'Santa'],[/\bthe plant\b/g,'the North Pole']];
 function xw(s){if(!xmas||!s) return s;s=String(s);for(const r of XW) s=s.replace(r[0],r[1]);return s;}
 function spr(key,fn){
   let s=sprites.get(key);
@@ -16688,7 +16747,7 @@ function setXmas(on){
   document.body.classList.toggle('xmas',xmas);
   setTheme(themeBase);minis=null;flakes.length=0;
   $('kNeed').textContent=xmas?'Gifts needed':'Pellets needed';
-  $('kRed').textContent=xmas?'Red Grumps':'Red canisters';
+  $('kRed').textContent=xmas?'Red letters':'Red canisters';
   Music.festive(xmas);xmasLabel();
   drawLegend(document.querySelector('.bar'));
   if(game) hud();
@@ -16696,7 +16755,7 @@ function setXmas(on){
 }
 bXmas.addEventListener('click',function(){audioInit();setXmas(!xmas);SFX.ui();});
 document.body.classList.toggle('xmas',xmas);xmasLabel();
-if(xmas){theme=xmasOf(THEMES[0]);$('kNeed').textContent='Gifts needed';$('kRed').textContent='Red Grumps';Music.festive(true);}
+if(xmas){theme=xmasOf(THEMES[0]);$('kNeed').textContent='Gifts needed';$('kRed').textContent='Red letters';Music.festive(true);}
 
 /* ---------- keyboard ---------- */
 addEventListener('keydown',function(e){
@@ -16790,11 +16849,12 @@ bGad.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();t
 // browser only. Layout 'strip' keeps the keys in a band under the board; 'free' floats them over the
 // board where the player dragged them, a position per key (its centre, as a fraction of the screen)
 // kept apart for portrait and landscape.
-var PAD_DEF={layout:'strip',side:'left',as:100,gap:6,bs:100,snapOut:true,lift:0,op:100,pad:true,swipe:true,buzz:true};
+var PAD_DEF={layout:'free',side:'left',as:100,gap:6,bs:100,snapOut:true,lift:0,op:100,pad:true,swipe:true,buzz:true};
 // The keys the player places: the four arrows, Gadget and Snap. 'dpad' is where an older save put the
 // whole arrow pad; its arrows start in a cross around it until each is moved.
 const PAD_KEYS=['u','l','r','d','gad','act','dpad'];
-const PAD_ARROW={u:[0,-1],l:[-1,0],r:[1,0],d:[0,1]};
+// The arrows stand in a T: Down at the centre with Left and Right beside it, Up right above Down.
+const PAD_ARROW={u:[0,-1],l:[-1,0],d:[0,0],r:[1,0]};
 // Where the keys float until the player moves them, for the arrows on the left (mirrored for the right).
 const PAD_SPOTS={portrait:{dpad:{x:.25,y:.84},gad:{x:.66,y:.88},act:{x:.84,y:.78}},landscape:{dpad:{x:.14,y:.74},gad:{x:.76,y:.82},act:{x:.9,y:.64}}};
 function padFresh(){const d=Object.assign({},PAD_DEF);d.pos={portrait:{},landscape:{}};return d;}
