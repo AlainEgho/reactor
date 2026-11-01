@@ -1,0 +1,17 @@
+{
+  "appId": "io.github.alainegho.fission",
+  "appName": "Fission",
+  "webDir": "www",
+  "backgroundColor": "#0a0d12",
+  "android": {
+    "allowMixedContent": false
+  },
+  "ios": {
+    "contentInset": "never"
+  },
+  "plugins": {
+    "SystemBars": {
+      "style": "DARK"
+    }
+  }
+}

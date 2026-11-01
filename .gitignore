@@ -9,3 +9,5 @@ tests/*.png
 *.DAT
 *.dat
 dat-export/
+# Capacitor copies index.html and gamedata.txt here (node tools/www.mjs); never edit it.
+www/
