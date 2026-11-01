@@ -7087,10 +7087,11 @@ function useDat(bytes,name){
   datLevels=parsed;mirrorLevels=mirrorDat(parsed);datName=name;datError='';
   try{localStorage.setItem(DAT_STORE,JSON.stringify({name:name,data:toB64(bytes)}));datKept=true;}catch(e){datKept=false;}
 }
-// The level file served next to the game (LEVELS.DAT, or levels.dat). Resolves true once one is in use;
-// false when there is none, or the page was opened from disk, where a browser will not fetch files.
+// The classic level file served next to the game, as gamedata.txt (the bytes of a LEVELS.DAT). Resolves
+// true once it is in use; false when there is none, or the page was opened from disk, where a browser will
+// not fetch files.
 function fetchDat(){
-  const names=['LEVELS.DAT','levels.dat'];let i=0;
+  const names=['gamedata.txt'];let i=0;
   if(location.protocol==='file:') return Promise.resolve(false);
   return new Promise(function(done){
     (function next(){
@@ -7098,7 +7099,7 @@ function fetchDat(){
       const n=names[i++];
       try{
         fetch(n,{cache:'no-cache'}).then(function(r){if(!r.ok) throw new Error(r.status);return r.arrayBuffer();})
-          .then(function(b){useDat(new Uint8Array(b),n);done(true);}).catch(next);
+          .then(function(b){useDat(new Uint8Array(b),'Classic set');done(true);}).catch(next);
       }catch(e){next();}
     })();
   });
@@ -8936,7 +8937,7 @@ function mirrorCatOf(i){for(let k=0;k<CATS.length;k++) if(i<bonusRange(k)[1]) re
 function bonusSection(k){
   if(!mirrorLevels) return '';
   const r=bonusRange(k),p=save.sets.mirror;let done=0;for(let i=r[0];i<r[1];i++) if(p.done[i]) done++;
-  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' classic floors from '+esc(datName)+', flipped left to right · tighter par · '+done+'/'+(r[1]-r[0])+' cleared'+(isUnlocked('mirror',r[0])?'':' · they open once this category is cleared')+'</span></div>'+
+  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' classic floors, flipped left to right · tighter par · '+done+'/'+(r[1]-r[0])+' cleared'+(isUnlocked('mirror',r[0])?'':' · they open once this category is cleared')+'</span></div>'+
     levelGrid(mirrorLevels,r[0],r[1],'mirror');
 }
 // Levels open one at a time. A category's first level is always open, so any category can be started;
