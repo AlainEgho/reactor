@@ -95,9 +95,6 @@ button{font:inherit;color:inherit}
 .lv:hover{border-color:var(--hero)}
 .lv{border-left:3px solid var(--wing,var(--line))}
 .lv{transition:transform .16s ease,border-color .16s ease,box-shadow .16s ease}
-.lv .thumbwrap{grid-column:1/-1;position:relative;margin-top:6px}
-.lv .thumb{display:block;width:100%;height:auto;border-radius:4px;border:1px solid var(--line);background:var(--void)}
-.lv .thumbwrap .stars{position:absolute;right:5px;bottom:4px;font-size:10px;padding:0 4px;border-radius:3px;background:rgba(5,7,10,.75)}
 .lv:hover,.lv:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.35)}
 .mark .tre{animation:tre-spin 30s linear infinite}
 .panel{box-shadow:0 24px 60px rgba(0,0,0,.55)}
@@ -123,6 +120,23 @@ button{font:inherit;color:inherit}
 @media (prefers-reduced-motion:reduce){.mark .tre{animation:none}.lv,.lv:hover,.cat,.cat:hover{transition:none;transform:none}}
 .lv .num{grid-row:span 2;font-family:var(--display);font-size:24px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums}
 .lv.cleared .num{color:var(--go)}
+.lv.locked{opacity:.42;cursor:not-allowed;border-left-color:var(--line)}
+.lv.locked:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.lock{display:inline-block;position:relative;width:8px;height:7px;margin:0 6px 0 1px;top:1px;border-radius:1px;background:currentColor}
+.lock::before{content:'';position:absolute;left:1px;top:-5px;width:6px;height:6px;box-sizing:border-box;border:1.5px solid currentColor;border-bottom:0;border-radius:3px 3px 0 0}
+.code{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.code input{flex:0 1 220px;min-width:0;font-family:var(--mono);font-size:13px;letter-spacing:.08em;padding:7px 10px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.code input:focus{outline:none;border-color:var(--hero)}
+.code.done{color:var(--go);margin:0}
+.mark small.who{letter-spacing:.06em;text-transform:none;font-size:12px}
+.mark small.who b{color:var(--fg)}
+.login{gap:18px}
+.login .mark span{font-size:clamp(30px,8vw,44px)}
+.loginform{display:flex;flex-direction:column;gap:10px;width:100%;text-align:left}
+.loginform label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.loginform input{font-family:var(--mono);font-size:16px;padding:11px 12px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--fg)}
+.loginform input:focus{outline:none;border-color:var(--hero)}
+.loginform .btn{padding:12px;font-size:13px}
 .lv .name{font-size:14px;font-weight:600;min-width:0}
 .lv .meta{font-size:11px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .levels.dense{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
@@ -212,6 +226,7 @@ button{font:inherit;color:inherit}
   .lv .num,.levels.dense .num{font-size:17px}
   .lv .name,.levels.dense .name{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
   .lv .meta{font-size:10px}
+  .code input{font-size:16px;flex:1 1 auto} /* 16px keeps a phone from zooming in on focus */
   .part{padding:8px 10px;gap:10px}
   .part canvas{width:44px;height:44px}
   /* One line: the trefoil, the level number, the counters, and icon buttons. */
@@ -6994,7 +7009,7 @@ function packSave(s){
   const b36=function(n){return n!=null?n.toString(36):'';};
   const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k])+'.'+b36(p.stars[k]);}).join('_');};
   // The Mirror Plant's progress rides at the end, where readers of the older shape ignore it.
-  return ['v2',s.sound?1:0,s.set==='original'?'o':s.set==='mirror'?'m':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0),b36(s.meltScore||0)+'.'+b36(s.meltRound||0),list(s.sets.mirror||{done:{}})].join('~');
+  return ['v2',s.sound?1:0,s.set==='original'?'o':s.set==='mirror'?'m':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0),b36(s.meltScore||0)+'.'+b36(s.meltRound||0),list(s.sets.mirror||{done:{}}),s.unlocked?1:'',s.name||''].join('~');
 }
 function unpackSave(str){
   const a=str.split('~'),v=a[0];
@@ -7010,7 +7025,7 @@ function unpackSave(str){
     return p;
   };
   const st=(a[5]||'').split('.'),mb=(a[6]||'').split('.'); // streak current.best and meltdown bestScore.bestRound (v2 only, optional)
-  return {sound:a[1]!=='0',set:a[2]==='o'?'original':a[2]==='m'?'mirror':'remake',sets:{remake:set(a[3]),original:set(a[4]),mirror:set(a[7])},streak:num(st[0])||0,bestStreak:num(st[1])||0,meltScore:num(mb[0])||0,meltRound:num(mb[1])||0};
+  return {sound:a[1]!=='0',set:a[2]==='o'?'original':a[2]==='m'?'mirror':'remake',sets:{remake:set(a[3]),original:set(a[4]),mirror:set(a[7])},streak:num(st[0])||0,bestStreak:num(st[1])||0,meltScore:num(mb[0])||0,meltRound:num(mb[1])||0,unlocked:a[8]==='1',name:a[9]||''};
 }
 function readCookie(){
   try{const m=document.cookie.match(/(?:^|;\s*)fission_progress=([^;]*)/);return m?unpackSave(decodeURIComponent(m[1])):null;}catch(e){return null;}
@@ -7064,17 +7079,35 @@ let mirrorLevels=datLevels?mirrorDat(datLevels):null;
 let set=save.set==='original'&&datLevels?'original':save.set==='mirror'&&datLevels?'mirror':'remake';
 function L(){return set==='original'?datLevels:set==='mirror'?mirrorLevels:LEVELS;}
 function prog(){return save.sets[set];}
+// Takes a level file's bytes as the Classic set and its bonus floors, and keeps them in this browser.
+// Throws when the bytes are not a level file.
+function useDat(bytes,name){
+  const parsed=parseDat(bytes);
+  parsed.forEach(function(lv){createGame(lv);});
+  datLevels=parsed;mirrorLevels=mirrorDat(parsed);datName=name;datError='';
+  try{localStorage.setItem(DAT_STORE,JSON.stringify({name:name,data:toB64(bytes)}));datKept=true;}catch(e){datKept=false;}
+}
+// The level file served next to the game (LEVELS.DAT, or levels.dat). Resolves true once one is in use;
+// false when there is none, or the page was opened from disk, where a browser will not fetch files.
+function fetchDat(){
+  const names=['LEVELS.DAT','levels.dat'];let i=0;
+  if(location.protocol==='file:') return Promise.resolve(false);
+  return new Promise(function(done){
+    (function next(){
+      if(i>=names.length){done(false);return;}
+      const n=names[i++];
+      try{
+        fetch(n,{cache:'no-cache'}).then(function(r){if(!r.ok) throw new Error(r.status);return r.arrayBuffer();})
+          .then(function(b){useDat(new Uint8Array(b),n);done(true);}).catch(next);
+      }catch(e){next();}
+    })();
+  });
+}
 function loadDat(file){
   const reader=new FileReader();
   reader.onload=function(){
-    try{
-      const bytes=new Uint8Array(reader.result);
-      const parsed=parseDat(bytes);
-      parsed.forEach(function(lv){createGame(lv);});
-      datLevels=parsed;mirrorLevels=mirrorDat(parsed);datName=file.name;datError='';
-      try{localStorage.setItem(DAT_STORE,JSON.stringify({name:file.name,data:toB64(bytes)}));datKept=true;}catch(e){datKept=false;}
-      set='original';save.set=set;persist();
-    }catch(e){datError=file.name+' could not be read. '+e.message;}
+    try{useDat(new Uint8Array(reader.result),file.name);set='original';save.set=set;persist();}
+    catch(e){datError=file.name+' could not be read. '+e.message;}
     showMenu();
   };
   reader.onerror=function(){datError=file.name+' could not be read.';showMenu();};
@@ -7083,7 +7116,7 @@ function loadDat(file){
 function forgetDat(){
   try{localStorage.removeItem(DAT_STORE);localStorage.removeItem(OLD_DAT_STORE);}catch(e){}
   datLevels=null;mirrorLevels=null;datName='';datKept=false;set='remake';save.set=set;persist();
-  cur=0;game=null;thumbCache.clear();showMenu();
+  cur=0;game=null;showMenu();
 }
 
 let game=null,cur=0,screen='menu',acc=0,last=0,dt=0,lastLocked=-99;
@@ -8903,9 +8936,25 @@ function mirrorCatOf(i){for(let k=0;k<CATS.length;k++) if(i<bonusRange(k)[1]) re
 function bonusSection(k){
   if(!mirrorLevels) return '';
   const r=bonusRange(k),p=save.sets.mirror;let done=0;for(let i=r[0];i<r[1];i++) if(p.done[i]) done++;
-  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' classic floors from '+esc(datName)+', flipped left to right · tighter par · '+done+'/'+(r[1]-r[0])+' cleared</span></div>'+
+  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' classic floors from '+esc(datName)+', flipped left to right · tighter par · '+done+'/'+(r[1]-r[0])+' cleared'+(isUnlocked('mirror',r[0])?'':' · they open once this category is cleared')+'</span></div>'+
     levelGrid(mirrorLevels,r[0],r[1],'mirror');
 }
+// Levels open one at a time. A category's first level is always open, so any category can be started;
+// each level after it opens once the one before it is cleared. A category's bonus floors open one by
+// one after all its own levels are cleared. A classic file opens from its first level on. The access
+// code opens everything.
+function isUnlocked(which,i){
+  const p=save.sets[which];
+  if(save.unlocked||p.done[i]) return true;
+  if(which==='remake'){const k=catOf(i);return i===CATS[k].from-1||!!p.done[i-1];}
+  if(which==='mirror'){
+    const k=mirrorCatOf(i),c=CATS[k],r=bonusRange(k);
+    for(let j=c.from-1;j<Math.min(c.to,LEVELS.length);j++) if(!save.sets.remake.done[j]) return false;
+    return i===r[0]||!!p.done[i-1];
+  }
+  return i===0||!!p.done[i-1];
+}
+const ACCESS_CODE='chernobyl';
 // The next level to play in a category: its first uncleared level, then its first uncleared bonus floor.
 function nextIn(k){
   const i=firstOpenIn(k);
@@ -8985,52 +9034,11 @@ function levelGrid(levels,from,to,which){
   return '<div class="levels'+(to-from>20?' dense':'')+'">'+levels.slice(from,to).map(function(lv,j){
     const i=from+j,best=p.best[i],sc=p.score[i];
     const tip=esc(lv.name)+(p.done[i]?' · best '+(best!=null?fmt(best):'')+' · stars: cleared, fast, chain':'');
-    return '<button type="button" class="lv'+(p.done[i]?' cleared':'')+(bonus?' bonus':'')+'" data-act="lv" data-lv="'+i+'" data-set="'+which+'" style="--wing:'+themeFor(which,i).fl[3]+'" title="'+tip+'">'+
+    const open=isUnlocked(which,i);
+    return '<button type="button" class="lv'+(p.done[i]?' cleared':'')+(bonus?' bonus':'')+(open?'':' locked')+'" data-act="lv" data-lv="'+i+'" data-set="'+which+'" style="--wing:'+themeFor(which,i).fl[3]+'" title="'+(open?tip:esc(lv.name)+' · locked: clear the level before it')+'"'+(open?'':' disabled')+'>'+
       '<span class="num">'+pad3(i+1)+'</span><span class="name">'+esc(lv.name)+'</span>'+
-      '<span class="meta">'+(p.done[i]?(sc!=null?'<b>'+fmtN(sc)+'</b>':best!=null?fmt(best):''):needLabel(lv))+'</span>'+
-      '<span class="thumbwrap"><canvas class="thumb" data-thumb="'+i+'" data-set="'+which+'" width="120" height="48"></canvas>'+(p.done[i]?starsHTML(p.stars[i]||1):'')+'</span></button>';
+      '<span class="meta">'+(!open?'<i class="lock" aria-hidden="true"></i>Locked':p.done[i]?starsHTML(p.stars[i]||1)+(sc!=null?' <b>'+fmtN(sc)+'</b>':best!=null?' '+fmt(best):''):needLabel(lv))+'</span></button>';
   }).join('')+'</div>';
-}
-// Level thumbnails: the whole map as one block of colour per cell, drawn when the card scrolls into
-// view and kept, so a second visit is a copy.
-const thumbCache=new Map();let thumbIO=null;
-function thumbColor(t,th){
-  switch(t){
-    case BASE:case FUSE:case BUG:return th.fl[1];
-    case HARD:return th.wl[0];
-    case RAM:case DOOR:case LASER:case SWITCH:case MAGNET:case CONV:case MIRROR:case CRATE:case GATE:return th.wl[3];
-    case INFO:case ROD:case ISO:return '#86f06a';
-    case ZONK:case PLUT:return '#8b94a5';
-    case SNIK:case ELEC:case DRONE:case ALPHA:return '#c77dff';
-    case EXIT:return '#4fb8ff';
-    case MURPHY:return '#f5c518';
-    case ORANGE:return CANISTER.orange[0];case YELLOW:return CANISTER.yellow[0];case RED:return CANISTER.red[0];
-    default:return th.wl[1];
-  }
-}
-function drawThumb(el){
-  const which=el.dataset.set||set,i=+el.dataset.thumb,key=which+':'+(which!=='remake'?datName+':':'')+i;
-  let img=thumbCache.get(key);
-  if(!img){
-    img=document.createElement('canvas');img.width=el.width;img.height=el.height;
-    const k=img.getContext('2d'),th=themeFor(which,i),src=which==='mirror'?mirrorLevels:which==='original'?datLevels:LEVELS;
-    k.fillStyle=th.vd;k.fillRect(0,0,img.width,img.height);
-    let g=null;try{g=createGame(src[i]);}catch(e){}
-    if(g){
-      const s=Math.min(img.width/g.W,img.height/g.H),ox=(img.width-g.W*s)/2,oy=(img.height-g.H*s)/2,d=Math.ceil(s);
-      for(let y=0;y<g.H;y++) for(let x=0;x<g.W;x++){
-        const t=g.cells[y*g.W+x].t;if(t===EMPTY||t===INVIS) continue;
-        k.fillStyle=thumbColor(t,th);k.fillRect(ox+x*s,oy+y*s,d,d);
-      }
-    }
-    thumbCache.set(key,img);
-  }
-  el.getContext('2d').drawImage(img,0,0);el.dataset.done='1';
-}
-function watchThumbs(){
-  if(!thumbIO&&'IntersectionObserver' in window) thumbIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){drawThumb(e.target);thumbIO.unobserve(e.target);}});},{root:ov,rootMargin:'200px'});
-  if(thumbIO) thumbIO.disconnect();
-  ov.querySelectorAll('canvas.thumb').forEach(function(el){if(thumbIO) thumbIO.observe(el);else drawThumb(el);});
 }
 // The Fission entrance: one card per category in its own colour, with a miniature of one of its
 // levels, the components it brings in, and its progress.
@@ -9067,6 +9075,7 @@ function totalScore(){const s=prog().score;let t=0;for(const k in s) t+=s[k];ret
 function totalStars(){const s=prog().stars;let t=0;for(const k in s) t+=countBits(s[k]);return t;}
 // slide is how the panel arrives: 'slide-l' going into a category, 'slide-r' coming back out.
 function showMenu(slide){
+  if(!save.name){showLogin();return;}
   if(screen==='play') clearInput();
   screen='menu';mode='levels';
   cv.classList.remove('dead','paused');introT=-1e9;introEl.hidden=true;
@@ -9097,7 +9106,7 @@ function showMenu(slide){
     body='<div class="menubar"><div class="total">Total score <b>'+fmtN(totalScore())+'</b> · <b>'+totalStars()+'</b>/'+(levels.length*3)+' <span class="stars"><i class="on">★</i></span></div>'+
       '<span class="row"><button type="button" class="btn" data-act="view" data-view="parts">Components</button>'+
       '<button type="button" class="btn primary" data-act="continue">Continue · level '+pad3(next+1)+' (Enter)</button></span></div>'+
-      catCards();
+      catCards()+codeField();
   }else{
     body=(set==='original'?'<div class="setbar"><span>'+esc(datName)+' · '+datLevels.length+' levels · '+cleared+' cleared'+(datKept?'':' · too large to remember, load it again next visit')+'</span>'+
         '<button type="button" class="linkbtn" data-act="pick">Use a different file</button><button type="button" class="linkbtn" data-act="forget">Forget this file</button></div>'+
@@ -9107,12 +9116,12 @@ function showMenu(slide){
   }
   ov.innerHTML='<div class="panel'+(slide?' '+slide:'')+'">'+
     (canResume()?'<button type="button" class="btn backbar" data-act="back">← Back to game · '+esc(game.label||'')+'</button>':'')+
-    '<div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>Fuel the core. Don\'t go critical. · '+(set!=='original'?LEVELS.length+' levels · '+cleared+' cleared':'classic level set')+(save.bestStreak>=2?' · best streak '+save.bestStreak:'')+'</small></div>'+
+    '<div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>Fuel the core. Don\'t go critical. · '+(set!=='original'?LEVELS.length+' levels · '+cleared+' cleared':'classic level set')+(save.bestStreak>=2?' · best streak '+save.bestStreak:'')+'</small><small class="who">Signed in as <b>'+esc(save.name)+'</b> · <button type="button" class="linkbtn" data-act="signout">Sign out</button></small></div>'+
     '<p class="about">Guide Iso through the plant. Dig through the Graphite, collect enough fuel Pellets to start the Reactor, and keep out from under falling Lead.</p>'+
     tabs+body+
     '<p class="keys"><kbd>Arrows</kbd> or <kbd>WASD</kbd> move · <kbd>Space</kbd> + direction snaps · hold <kbd>Space</kbd> to drop a red canister · <kbd>Shift</kbd> + direction uses the gadget · <kbd>Enter</kbd> plays the next uncleared level</p>'+
     '</div>';
-  ov.hidden=false;drawLegend();watchThumbs();
+  ov.hidden=false;drawLegend();
   // The level behind the scrim: a preview of the set's next level, unless a game is still going on.
   if(levels&&(!game||(game.levelSet!==set&&!canResume()))){cur=Math.min(cur,levels.length-1);cur=firstOpen();setTheme(themeFor(set,cur));game=createGame(levels[cur]);game.levelSet=set;cam.set=false;hud();}
 }
@@ -9180,6 +9189,8 @@ function noteFeatures(g){
 }
 function startLevel(i){
   const levels=L();
+  // A locked level is never started: the menu opens on its category instead.
+  if(!isUnlocked(set,i)){menuView='levels';menuCat=set==='remake'?catOf(i):set==='mirror'?mirrorCatOf(i):-1;showMenu();return;}
   mode='levels';cur=i;if(set==='remake') menuCat=catOf(i);else if(set==='mirror') menuCat=mirrorCatOf(i);setTheme(themeFor(set,i));game=createGame(levels[i]);game.levelSet=set;noteFeatures(game);acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;shots.length=0;pops.length=0;eatT=-1e9;shieldLostT=-1e9;heat=null;score=0;combo=0;comboTick=-99;maxCombo=0;
   screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();cv.classList.remove('dead','paused');
   game.hard=set==='mirror';game.label=levelLabel(i);
@@ -9213,7 +9224,7 @@ function showWon(){
   p.stars[cur]=had|got;
   save.streak++;if(save.streak>save.bestStreak) save.bestStreak=save.streak;
   persist();
-  const last=cur===L().length-1;
+  const last=cur===L().length-1,nextOpen=!last&&isUnlocked(set,cur+1);
   const star=function(bit,label){const on=got&bit,kept=had&bit;return '<span class="'+(on&&!kept?'new':'')+'">'+label+'</span><b class="'+(on?'on':'off')+'">'+(on?'★':'☆')+'</b>';};
   const tally='<span class="tally">'+
     '<span>Pellets and bonuses</span><b data-n="'+score+'">0</b>'+
@@ -9224,12 +9235,46 @@ function showWon(){
     star(1,'Cleared')+star(STAR_FAST,'Fast · under '+fmt(parSecs(game)))+star(STAR_CHAIN,'Chain · combo ×'+chainGoal(game))+
     (save.streak>=2?'<span class="new">Streak · levels without dying</span><b class="on">×'+save.streak+'</b>':'')+'</span>';
   dialog(last?'All levels cleared':setWord()+pad3(cur+1)+' complete',tally+(last?'<br>That was the last level.':''),
-    last?[['levels','Levels'],['retry','Play again']]:[['next','Next level (Enter)'],['retry','Play again'],['levels','Levels']],'rise');
+    !nextOpen?[['levels','Levels'],['retry','Play again']]:[['next','Next level (Enter)'],['retry','Play again'],['levels','Levels']],'rise');
   countUp();
   // A chime for each star as it pops in, timed to the rows above it arriving.
   if(!reduceMotion) [1,STAR_FAST,STAR_CHAIN].forEach(function(bit,j){if(got&bit) SFX.star(j,(5+j)*.06+.3);});
 }
 
+/* ---------- sign-in ---------- */
+// A name is all it takes: it is kept with the progress in this browser and shown on the menu. Signing in
+// also loads the level file served next to the game, so the Classic set and the bonus floors are there.
+function showLogin(msg){
+  screen='login';clearInput();
+  ov.innerHTML='<div class="panel small login"><div class="mark"><span><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg>FISSION</span><small>Fuel the core. Don\'t go critical.</small></div>'+
+    '<form class="loginform" id="loginForm" autocomplete="off"><label for="nameIn">Your name</label>'+
+    '<input id="nameIn" maxlength="24" spellcheck="false" autocapitalize="words" value="'+esc(save.name||'')+'">'+
+    '<button type="submit" class="btn primary">Sign in</button></form>'+
+    (msg?'<p class="err">'+esc(msg)+'</p>':'')+'</div>';
+  ov.hidden=false;
+  const f=$('nameIn');if(f) try{f.focus({preventScroll:true});}catch(e){}
+}
+ov.addEventListener('submit',function(e){
+  if(e.target.id!=='loginForm') return;
+  e.preventDefault();
+  const name=$('nameIn').value.replace(/[~<>]/g,'').trim().slice(0,24);
+  if(!name){showLogin('Enter a name to sign in.');return;}
+  save.name=name;persist();audioInit();
+  const b=e.target.querySelector('button');b.disabled=true;b.textContent='Loading levels…';
+  fetchDat().then(function(){showMenu();});
+});
+// The access code opens every level. It is checked as it is typed; nothing is sent anywhere.
+function codeField(){
+  if(save.unlocked) return '<p class="code done">Access code accepted · every level is open</p>';
+  return '<label class="code">Access code<input id="codeIn" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="enter a code"></label>';
+}
+ov.addEventListener('input',function(e){
+  if(e.target.id!=='codeIn') return;
+  if(e.target.value.trim().toLowerCase()!==ACCESS_CODE) return;
+  save.unlocked=true;persist();
+  audioInit();sfxPan=0;SFX.online();
+  showMenu();
+});
 ov.addEventListener('click',function(e){
   const b=e.target.closest('[data-act]');if(!b) return;
   audioInit();sfxPan=0;SFX.ui();
@@ -9241,6 +9286,7 @@ ov.addEventListener('click',function(e){
     case 'levels':showMenu();break;
     case 'resume':resume();break;
     case 'back':resumeGame();break;
+    case 'signout':save.name='';persist();showLogin();break;
     case 'set':set=b.dataset.set;save.set=set;datError='';persist();cur=0;menuView='levels';menuCat=-1;showMenu();break;
     case 'cat':menuCat=+b.dataset.cat;showMenu('slide-l');ov.scrollTop=0;break;
     case 'cats':menuCat=-1;if(set==='mirror'){set='remake';save.set=set;persist();}showMenu('slide-r');ov.scrollTop=0;break;
@@ -9278,6 +9324,7 @@ musicLabel();
 /* ---------- keyboard ---------- */
 addEventListener('keydown',function(e){
   audioInit();
+  if(e.target&&e.target.tagName==='INPUT') return; // typing in the code field
   const d=KEYMAP[e.code];
   const onButton=e.target&&e.target.tagName==='BUTTON';
   if(e.code==='KeyM'&&!e.repeat){toggleMusic();return;}
@@ -9296,7 +9343,7 @@ addEventListener('keydown',function(e){
   }else if(screen==='over'){
     if(e.code==='KeyR') restart();
     else if(e.code==='Enter'&&!onButton&&mode==='meltdown') startMeltdown();
-    else if(e.code==='Enter'&&!onButton&&game.state==='won'&&cur<L().length-1) startLevel(cur+1);
+    else if(e.code==='Enter'&&!onButton&&game.state==='won'&&cur<L().length-1&&isUnlocked(set,cur+1)) startLevel(cur+1);
   }else if(screen==='menu'){
     const inCat=menuView==='levels'&&set!=='original'&&menuCat>=0;
     if(e.code==='Enter'&&!onButton){if(menuView==='meltdown') startMeltdown();else if(inCat){const nx=nextIn(menuCat);if(nx.set!==set){set=nx.set;save.set=set;persist();}startLevel(nx.i);}else if(L()) startLevel(firstOpen());}
@@ -9445,6 +9492,7 @@ function boot(data){
   else addEventListener('resize',resize);
   drawLegend(document.querySelector('.bar'));
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){sprites.clear();if(screen==='menu') drawLegend();drawLegend(document.querySelector('.bar'));});
+  if(save.name&&!datLevels) fetchDat().then(function(ok){if(ok&&screen==='menu') showMenu();});
   if(data&&data.set&&(data.set==='remake'||datLevels)) set=data.set;
   if(data&&typeof data.level==='number'&&L()&&data.level>=0&&data.level<L().length&&data.screen==='play') startLevel(data.level);
   else showMenu();

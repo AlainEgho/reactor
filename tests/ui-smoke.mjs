@@ -32,19 +32,32 @@ const openLevel = async lv => {
 
 // The entrance shows one card per category; a category lists only its own levels.
 await page.goto(pathToFileURL(join(here, '..', 'index.html')).href);
+// The game opens on a sign-in screen; a name is all it asks for.
+await page.locator('#nameIn').waitFor();
+check(await page.locator('.cat').count() === 0, 'the game opens on a sign-in screen');
+await page.locator('#loginForm button').click();
+check(/Enter a name/.test(await page.locator('.login .err').textContent()), 'signing in without a name is refused');
+await page.locator('#nameIn').fill('Tester');
+await page.locator('#loginForm button').click();
 await page.locator('.cat').first().waitFor();
+check(/Signed in as Tester/.test(await page.locator('.mark .who').textContent()), 'the menu greets the signed-in player');
 check(await page.locator('.cat').count() === 11, 'the entrance shows eleven categories');
 await page.screenshot({ path: join(shots, 'ui-menu.png') });
 await page.locator('.cat[data-cat="5"]').click();
 check(await page.locator('.lv').count() === 25 && /Physics Wing/.test(await page.locator('.cathead h3').textContent()), 'the Physics Wing opens on its 25 levels');
-await page.waitForTimeout(400);
-const thumbs = await page.locator('canvas.thumb[data-done="1"]').count();
-check(thumbs >= 10, `the level cards in view carry map thumbnails (${thumbs})`);
+// Levels open one at a time: a category's first level is open, the rest wait their turn.
+check(await page.locator('.lv[data-lv="141"]:not(.locked)').count() === 1 && await page.locator('.lv.locked[disabled]').count() === 24, 'only the first Physics level is open; the other 24 are locked');
 await page.screenshot({ path: join(shots, 'ui-category.png') });
 await page.keyboard.press('Escape');
 check(await page.locator('.cat').count() === 11, 'Escape goes back to the categories');
 const minis = await page.$$eval('.cat img.mini', els => els.filter(e => e.complete && e.naturalWidth > 0).length);
 check(minis === 11, `every category card shows a miniature (${minis})`);
+// The access code opens everything (the rest of this test visits levels all over the game).
+await page.locator('#codeIn').fill('chernobyl');
+await page.locator('.code.done').waitFor();
+await page.locator('.cat[data-cat="5"]').click();
+check(await page.locator('.lv.locked').count() === 0, 'the access code chernobyl opens every level');
+await page.keyboard.press('Escape');
 
 await page.locator('.cat').first().click();
 await page.locator('.lv').first().click();
