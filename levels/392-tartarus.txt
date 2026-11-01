@@ -1,0 +1,29 @@
+name: Tartarus
+need: 96
+hint: Two long galleries: fallout covers the floor, with Iodine at its corners; and a belt runs the length of the room. The lights are out, Gammas sleep in every room.
+dark: on
+---
+############################################################
+#@.........................................................#
+#.pr*rrrrrrrrrrr*rr*rrrrrrrr*rrr*rr*r*rrrrrrrrrrrrrrr*rrr..#
+#.rr*rrrrrrrrrr*rrrrrrr*rrr*rrrrrrr*rrrrr*rrrrrrrrrrrrrrr..#
+#.r*rrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrr*rrrr*rrrr*rrrrrrrrr..#
+#.rrrr*rr*rrrrrrrrrrrrrrr*rrrr*rrrrrrrrrrrrrr*rrrrrrrrrrr..#
+#.rrrrr*rrrrrr*rrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrr..#
+#.rrrrrrrrrrr*rrrrrrrrrr*r*rrrr*rrrrrrr*rr*rrrrrrrrrrrrrr..#
+#.rrr*rrrrrrrrrr*rrrrrrrr*rrrr*rrrrrrrr*r*rrrrrrrrrr*rrrr..#
+#.r*rrrrrrrrrr**rrrrr*rrrrrrrrrrrrrrr*rrrrr*r*rr*rrrrrrrp..#
+#..........................................................#
+##########.###################.###################.#########
+#.....................................................L....#
+#..*..*.**..**....*O.*.*.O.*O*....*........O***O.O*.*......#
+#..O.*.*.****OL***.****..*...*.OO...*.........O...*.*O*....#
+#.*..*.*O**.*O*OOO*..O.****O*....***.. S ...O*O*..O*.***...#
+#.*..OO*..O****O.**..O..O******O.*O**.....**..****.**..**..#
+#..........................................................#
+#..                                                     ...#
+#..[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[...#
+#..........................................................#
+#..........................................................#
+#...................................L....................X.#
+############################################################

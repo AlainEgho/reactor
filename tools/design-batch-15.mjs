@@ -3,15 +3,17 @@
 // condition that covers the whole floor (the dark, a tank of air, gravity). It climbs from two set pieces
 // on a calm floor to five under the worst conditions. Re-running overwrites the files.
 // Usage: node tools/design-batch-15.mjs [first] [last]
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 import { Board, rng } from './board.mjs';
 
 const [FIRST, LAST] = [+(process.argv[2] || 296), +(process.argv[3] || 345)];
-const inR = ([x, y, w, h]) => (xx, yy) => xx >= x && xx < x + w && yy >= y && yy < y + h;
-const outside = (...rs) => (x, y) => !rs.some(([rx, ry, w, h]) => x >= rx - 1 && x <= rx + w && y >= ry - 1 && y <= ry + h);
-const away = (sx, sy, r) => (x, y) => Math.abs(x - sx) > r || Math.abs(y - sy) > r;
+export const inR = ([x, y, w, h]) => (xx, yy) => xx >= x && xx < x + w && yy >= y && yy < y + h;
+export const outside = (...rs) => (x, y) => !rs.some(([rx, ry, w, h]) => x >= rx - 1 && x <= rx + w && y >= ry - 1 && y <= ry + h);
+export const away = (sx, sy, r) => (x, y) => Math.abs(x - sx) > r || Math.abs(y - sy) > r;
 
 // Layouts: walls (with gaps of Graphite) and the regions the set pieces fill.
-const LAYOUTS = {
+export const LAYOUTS = {
   quad: { say: 'Four rooms', draw: b => b.v(29, 1, 22, '#').h(1, 11, 58, '#').pts([[29, 5], [29, 17], [14, 11], [44, 11]], '.'),
     regions: [[2, 2, 26, 8], [31, 2, 26, 8], [2, 13, 26, 8], [31, 13, 26, 8]] },
   strips: { say: 'Three halls side by side', draw: b => b.v(20, 1, 22, '#').v(39, 1, 22, '#').pts([[20, 6], [20, 17], [39, 6], [39, 17]], '.'),
@@ -27,7 +29,7 @@ const ORDER = ['quad', 'strips', 'bands', 'ring', 'open'];
 
 // Set pieces. Each draws inside its region [x, y, w, h] and returns the rects it wants kept clear of the
 // general scatter. need: the smallest region it fits.
-const PIECES = {
+export const PIECES = {
   orbits: { need: [9, 5], say: 'Gammas circle Pellets on their posts', draw: (b, [x, y, w]) => {
     const out = [];
     for (let px = x + 2; px + 1 < x + w; px += 7) { b.rect(px - 1, y, 3, 4, ' ').set(px, y + 1, '*').set(px, y + 2, '#').set(px + 1, y + 2, 'S'); out.push([px - 1, y, 3, 4]); }
@@ -118,7 +120,9 @@ const NAMES = ['Laurel', 'Medallion', 'Honour Guard', 'Silver Lining', 'Gilded',
   'Maestro', 'Grandmaster', 'Paragon', 'Hall of Fame', 'Pantheon', 'Colosseum', 'Olympus', 'Valhalla', 'Elysium', 'Legend',
   'Myth', 'Immortal', 'Summit', 'Pinnacle', 'Zenith', 'Apex', 'Ascension', 'Apotheosis', 'Masterwork', 'Prestige'];
 
-for (let k = 0; k < 50; k++) {
+// Run directly, it draws Prestige; imported (by the Legendary script) it only lends its pieces.
+const main = !!process.argv[1] && resolve(process.argv[1]).toLowerCase() === fileURLToPath(import.meta.url).toLowerCase();
+for (let k = 0; main && k < 50; k++) {
   const num = 296 + k;
   if (num < FIRST || num > LAST) continue;
   const r = rng(num * 104729), lay = LAYOUTS[ORDER[k % ORDER.length]];

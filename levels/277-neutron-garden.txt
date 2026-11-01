@@ -1,5 +1,5 @@
 name: Neutron Garden
-need: 90
+need: 75
 hint: Twelve Neutron farms planted in two rows. Each has a Lead ball or an orange canister waiting over its plug: stand beside the plug, snap it, and the drop splits the Neutron into nine Pellets. The Gammas between the rows are awake.
 ---
 ############################################################

@@ -1,5 +1,5 @@
 name: Pyramid
-need: 45
+need: 42
 hint: Gravity is on and the Reactor sits on the apex of a pyramid of Lead, with Pellets packed in among the stones. The Graphite round it is all that holds it up; take it in the wrong order and the pyramid comes down.
 gravity: on
 ---

@@ -1,0 +1,30 @@
+name: Icarus
+need: 78
+hint: Two long galleries: hot spots flare in the Graphite round the Pellets; and Pellets wait in Cask cages, one plug in the roof of each. The lights are out, gravity is on, Gammas sleep in every room.
+dark: on
+gravity: on
+---
+############################################################
+#@.........................................................#
+#..........................................................#
+#.*BBBBBBBBBBBBBBBBBBBBBBBBB*BBBBBBBBBBB*BBBBBBBBBBBBB*BB..#
+#.B**BBBBBBB*B**BBBBB*BBBB*BBBBBBBBBBB*BB*BB*BBBBBBBBBBBB..#
+#.BB*BBBBBBBBBBBB**BB**BBBBBBBBB*BBBBBBBBBBB*BB*BBB*BBBB*..#
+#.B**BBBBBB*BBBBBB*BBBBBBBBBBBBBBB**BB*BBBBB*BBBB*BBBBBBB..#
+#.BBBBBBBBBBBBBBBBBBBBBBBBB*BBBB*BBBBBBBBBBBBBBBBB*B*B*BB..#
+#.BBBBBBBBBBBBBBB*B*BBBBBBBB*BBBBBBBB**BBBBBBBBBBBBB*BBBB..#
+#......................L...................................#
+#..........................................................#
+##########.###################.###################.#########
+#..........................................................#
+#.................L........................................#
+#..R.R..R.R..R.R..R.R..R.R..R.R..R.R..R.R..R.R..R.R..R.R...#
+#..R*R..R*R..R*R..R*R..R*R..R*R..R*R..R*R..R*R..R*R..R*R...#
+#..RRR..RRR..RRR..RRR..RRR..RRR..RRR..RRR..RRR..RRR..RRR...#
+#..........................................................#
+#.*..**. S ...O.**.*..*O...***.*.*.*..*..*O.O*..O.O*.*.*O..#
+#..O.O*......OO.***.......O*O**OO*****...**.*..**.O.**..O..#
+#..L*O.*..**.*...*OO********..****O.***.*.OO.*.****..*.....#
+#..........................................................#
+#........................................................X.#
+############################################################

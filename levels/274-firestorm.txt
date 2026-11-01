@@ -1,5 +1,5 @@
 name: Firestorm
-need: 72
+need: 35
 hint: A bolt of fuse runs the length of the floor, wired to every sealed Neutron and Plutonium sphere it passes. Two red canisters, one spark: light it and run. Every cell of fuse you eat on the way cuts the bolt there.
 ---
 ############################################################

@@ -1,0 +1,30 @@
+name: Bifrost
+need: 58
+hint: Three halls side by side: acid pools wait under the Pellets; fallout covers the floor, with Iodine at its corners; and Pellets wait in Cask cages, one plug in the roof of each. The lights are out, 142 seconds of air.
+air: 142
+dark: on
+---
+############################################################
+#@..................#..................#...................#
+#.........*....*....#.prrrrrrrrrrr**r*.#................*..#
+#.....*.....L.......#.rrrrrrr*rrrrrrrr.#..R.R..R.R..R.R....#
+#.............*.....#.rrrrrrrrrrrrrrrr.#..R*R..R*R..R*R....#
+#.O.O......*.*.*.O*.#.rrrrrr*rrrrrrrrr.#..RRR..RRR..RRR....#
+#..O...*.....*...*O...r*rrrrrrr*rrrrrr.....................#
+#...O.......**......#.*rr*rrrrrrrrrrrr.#..*.*....**.....O..#
+#....*....*.*..*....#.rrrrrrrrr*rrrrrr.#..**...*.O.........#
+#.....*....*.....O..#.rrrrrrrrrrrrrrrr.#......*............#
+#...*..........*....#.rrr*rrrrrrrr*rrr.#.*.......*..*...t..#
+#...............*...#.rr*rrrrrrrrrrrrr.#.O...*.**..*..*....#
+#.*......*....*...*.#.rrrrrrrrrrrrrrrr.#....*........*.....#
+#..**.O.*.....*O....#.rrrrr*rrrr*rrrrr.#.......*...........#
+#...........*.......#.rrr*rrrrrr**r*rr.#.OL.*O.*.......O...#
+#.*.*......O...*....#.**r*rrrrr*rrrrrr.#..O*...*....O......#
+#......O............#.rrrr*rr*rr*rrrr*.#...O.......O...*O..#
+#.......*.............r*r*rrrrrrrrrrrr.........**.*........#
+#..***....***...tO..#.rrrrrr*rrrrrrrr*.#.....*O............#
+#..aaa....aaa...O**.#.rrrrrrrrrrrrrrrr.#....*.*..*.........#
+#..aaa....aaa..*..*.#.rrrr**rrrrr*rrrp.#...*..O...***......#
+#...................#..................#...................#
+#...................#..................#.........L.......X.#
+############################################################

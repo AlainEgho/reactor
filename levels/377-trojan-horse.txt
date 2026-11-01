@@ -1,0 +1,29 @@
+name: Trojan Horse
+need: 81
+hint: Four rooms: hot spots flare in the Graphite round the Pellets; hydrogen cells sit under their stores; an ice floor carries you past its Pellets; and Pellets wait in Cask cages, one plug in the roof of each. The lights are out, Gammas sleep in every room.
+dark: on
+---
+############################################################
+#@...........................#.............................#
+#............................#..*O******.O**O**O.*******...#
+#.*BBBB*B*BBBBBBBBBBBBBBB*B*.#......................*OO*O..#
+#.BBBBBBBB*BBBBBBBBBBB*BBBBB.#.....#......#......#..****...#
+#.BBBBBBBBBBBBBBBBBBBBB*BB*B....R*R ...R*R ...R*R ..***.O..#
+#.B*B*BBBBBBBBB*BBBBBBBBBBBB.#..RRR ...RRR ...RRR ..*L.....#
+#.BBBBB*BBBB*BBBBBB*B*BBBBBB.#..### #..### #..### #.O. S ..#
+#.BBBBBBB*B*B*BBB*BB*BBBBBBB.#..F   ...F   ...F   ..O......#
+#............................#.........L............*O***..#
+#............................#.............................#
+##############.#############################.###############
+#............................#.............................#
+#............................#..........................*L.#
+#.IIIIIIIIIIIIIIIIIIII*IIIII.#..R.R..R.R..R.R..R.R..R.R.*..#
+#.IIIIII**IIIIIIIIII*IIIII*I.#..R*R..R*R..R*R..R*R..R*R.*..#
+#.*IIII*IIIIIIIIIIIIIII*IIII.#..RRR..RRR..RRR..RRR..RRR....#
+#.II*I*I*IIIIIIIII*IIIIIIIII............................*..#
+#.IIII*II*III*III***IIIIIIII.#.**.....**..*...**O.**O*O....#
+#.IIIIII*IIIIII*IIIII*IIIIII.#..*. S .**..**.*******....*..#
+#............................#.O*......*OOO..O.*O*O.*.O....#
+#............................#.............................#
+#............................#...........................X.#
+############################################################

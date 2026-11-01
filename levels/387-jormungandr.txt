@@ -1,0 +1,30 @@
+name: Jormungandr
+need: 87
+hint: One open floor in four quarters: an ice floor carries you past its Pellets; hot spots flare in the Graphite round the Pellets; Antipellets lie shoulder to shoulder with the Pellets; and Gammas sleep in the walls. The lights are out, 109 seconds of air, Gammas sleep in every room.
+air: 109
+dark: on
+---
+############################################################
+#@.........................................................#
+#..........................................................#
+#.IIII*IIIIIIIIIIIIIIIIIIIII...*BBBBBBB***B*BBB*BBBBBBBBB..#
+#.III*IIIII*III**IIIII**III*...BBBBB*BBBBBBB**BBBBBBBBB*B..#
+#.II*IIIIIIIIIIIIII*IIIIIIII...BBBBBBBBBBBBBB*BBBBBBBBB**..#
+#.IIIIII*IIIII*IIIIIIII*III*...BBBB*BBBBBBBBBBBBBBBBBBBBB..#
+#.IIIIIII*IIIIIIIIIII*IIIII*...BBB*BB*BBBBB*BBBBBBBBBB*BB.L#
+#.*IIIIIIIIIIIIIII*IIII*I*II...BB*BBBBBBBBBBBBBBBBBB*BBB*..#
+#...............t...............................t......L...#
+#..........................................................#
+#..........................................................#
+#..........................................................#
+#..!...*...!...*...*...!...*.... S ..........**. S ...*.*..#
+#.!...*...*...!...*...!...*.........*....*...**.....*...*..#
+#....!...*...!.t.*...*...!.........O.*.....*.........*.*...#
+#...!...*...*...!...*...!......*.*.**...L..O....*...O*.*...#
+#..*...!...*...!...*...*...!...OO.*O*.. S .*.**O...*.......#
+#.*...!...*...*...!...*...!.....*..........*.....*..*.O....#
+#....*...!...*...!...*...*......*.....*.....*.O*...........#
+#...*...!...*...*...!...*......OtO...O.. S .....**O........#
+#..........................................................#
+#........................................................X.#
+############################################################

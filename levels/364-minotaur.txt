@@ -1,0 +1,30 @@
+name: Minotaur
+need: 68
+hint: Six rooms in two rows: a belt runs the length of the room; Alphas run the lanes; hot spots flare in the Graphite round the Pellets; an ice floor carries you past its Pellets; a line of orange canisters stands shoulder to shoulder over caged Pellets; and hydrogen cells sit under their stores. The lights are out, 132 seconds of air, Gammas sleep in every room.
+air: 132
+dark: on
+---
+############################################################
+#@..................#..................#...................#
+#.....*.*****..O*OO.#........t.........#...........t.......#
+#....*O*.**.......*.#.A               .#.BBBBB*B*BBBBBBBB..#
+#....*.***.*. S ..O.#...........L......#.B*BBB*BB*BB*BBBB..#
+#......O.........t*...**. S .*****O***.#.B*BBBBBB*BBBBBBB..#
+#...................#.**.....***OOO**O..LBBBBBBBB*BBBB*BB..#
+#..               ..#..................#.BBBB*BBBBBBBBBBB..#
+#..[[[[[[[[[[[[[[[..#.A               .#.BBBB*B*BBBBBBBBB..#
+#...................#..................#...................#
+#...................#..................#...................#
+##########.###################.#################.###########
+#...................#..................#...................#
+#...................#.d.t..............#.*OO*********......#
+#.IIIIIIIIIII*II*II.#..oooooooooooooo..#.............. S ..#
+#.IIIIIIIIIIII*I*I*.#..RRRRRRRRRRRRRR..#.....#......#......#
+#.I*IIII*IIII*IIIII...R*R*R*R*R*R*R*RR.#..R*R ...R*R ..**..#
+#.*IIIIIIII*IIIIIII.#.RRRRRRRRRRRRRRRR....RRR ...RRR ..*O..#
+#.IIIIIII*IIIII*III.#..................#..### #..### #.**..#
+#.IIIIII*III*IIIIII.#.**O. S .**OO****.#..F   ...F   ..**..#
+#...t...............#.***.....*****O*O.#.........t.........#
+#...................#..............L...#...................#
+#...................#..................#.................X.#
+############################################################

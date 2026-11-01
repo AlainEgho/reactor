@@ -1,0 +1,30 @@
+name: Titan
+need: 76
+hint: Three halls side by side: an ice floor carries you past its Pellets; Pellets wait in Cask cages, one plug in the roof of each; and Alphas run the lanes. The lights are out, 124 seconds of air, Gammas sleep in every room.
+air: 124
+dark: on
+---
+############################################################
+#@..................#..................#...................#
+#................t..#................O.#...................#
+#.I*IIIIIIIIIIIIIII.#..R.R..RtR..RLR...#.A               ..#
+#.IIIIIIIIIII*IIIII.#..R*R..R*R..R*R.O.#...................#
+#.IIIIIIIIIIIIIIIII.#..RRR..RRR..RRR...#.*O**.*O.*O*..*....#
+#.III*IIIIII*II*III..................O...............O.....#
+#.III*I*IIII*IIIIII.#.*.....*.......**.#..O..*.....*.......#
+#.*IIII*IIII*IIIIII.#...........**O.*..#.*...........O.....#
+#.IIIII*I*IIIIIIII*.#...O....L*.*....*.#...O. S ...*...O...#
+#.I*IIIIII*IIIIIIII.#.L*......*...*....#........t*..*...*..#
+#.IIIII*IIIIIIIIIII.#....O..**.....O.O.#..O*.*.*.....**....#
+#.III*IIIIIIIIIII*I.#...*****...*....*.#.*O.........*.*....#
+#.*IIIIIIIIII*IIIII.#.*.........O......#......*O..*..*.*...#
+#.IIIII*II*IIIIIIII.#.....O.........**.#.*......**.O...O...#
+#.III*IIIIII*IIIIII.#........ S .*.O*..#.*..**..O.O..*.....#
+#.IIIIIIII*III**III.#.*....*......**...#.*.*.**O.....*..*..#
+#.IIIIIIII*III*IIII....*.O..*.*.*........**..*..*......*...#
+#.IIIIIIIII*IIIIIII.#.O...*....*.**....#...................#
+#.IIII*IIIIIIIIIIII.#..O...*.......O...#.A               ..#
+#...................#.*.**.O......*....#...................#
+#...................#..................#...................#
+#...................#..................#.................X.#
+############################################################

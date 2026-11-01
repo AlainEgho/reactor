@@ -19,7 +19,10 @@ function cap(text) {
 }
 
 const table = Object.assign({}, NEEDS);
-const log = process.argv[2];
+// --lower: a won probe sets the need to what it proved, down as well as up (for new levels, whose drawn
+// needs are only guesses). Without it a need is never lowered.
+const lower = process.argv.includes('--lower');
+const log = process.argv.slice(2).find(a => a !== '--lower');
 if (log) {
   for (const line of readFileSync(log, 'utf8').split('\n')) {
     const m = line.match(/^most (\d{3}) .* need (\d+) took (\d+) (won|stuck)/);
@@ -28,8 +31,8 @@ if (log) {
     if (need === 0) continue; // a no-Pellet level stays one
     // Proven: leave one Pellet in twenty spare. Not proven to the Reactor: go half way, the re-prove decides.
     const target = m[4] === 'won' ? took - Math.floor(took / 20) : need + Math.floor((took - need) / 2);
-    const next = Math.min(cap(readFileSync(join(LEVELS_DIR, byNum.get(num)), 'utf8')), Math.max(need, target));
-    if (next > need) table[num] = next;
+    const next = Math.min(cap(readFileSync(join(LEVELS_DIR, byNum.get(num)), 'utf8')), lower && m[4] === 'won' ? Math.max(1, target) : Math.max(need, target));
+    if (next !== need) table[num] = next;
   }
 }
 
