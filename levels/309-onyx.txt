@@ -1,5 +1,5 @@
 name: Onyx
-need: 53
+need: 97
 hint: A core walled in the middle and four galleries round it: Pellets wait in Cask cages, one plug in the roof of each; isotopes decay while you work; and Antipellets lie shoulder to shoulder with the Pellets. The lights are out.
 dark: on
 ---

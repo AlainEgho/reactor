@@ -1,5 +1,5 @@
 name: The Ninth Circle
-need: 50
+need: 70
 hint: Nine rooms, one after another, in the dark and on air: Lead, Gammas, fallout, Alphas, hot spots, acid, Plutonium, lasers, and the last is all of them. One tank in each room. The airlocks go one way, down into the next circle.
 air: 90
 dark: on

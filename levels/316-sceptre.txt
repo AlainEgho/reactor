@@ -1,5 +1,5 @@
 name: Sceptre
-need: 60
+need: 73
 hint: Four rooms: a magnet waits behind Graphite plugs with Lead at the end of each spoke; hot spots flare in the Graphite round the Pellets; and a sealed vault waits for the Quantum tunnel beside it.
 ---
 ############################################################

@@ -1,28 +1,28 @@
 name: The Hive
-need: 55
+need: 80
 hint: A honeycomb of Cask cells, each joined to its neighbours by one plug of Graphite. Most hold Pellets, some under hanging Lead; the dead ends hold Gammas going round and round. Open only the plugs you need.
 ---
 ############################################################
 #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR#
-#R@..R.O.R...R...R.O.R...R...R.O.R...R...R.O.R...R...R   RR#
+#R@..R...R...R.O.R...R...R...R...R...R...R...R...R...R   RR#
 #R...R.*...**R.*..**...*...**..*..**...*...**..*..**.R  SRR#
 #RRR.RRR.RRR.RRRRRRR.RRR.RRRRR.RRRRRRR.RRRRRRRRRRRRR.R.RRRR#
-#RRR...R...R.O.R...R...R.O.R...R...R.O.R...R...R.O.R...RRRR#
+#RRR...R...R...R...R...R...R...R...R...R...R...R...R...RRRR#
 #RRR.**..*.R**...*...**R.*.R**...*.R.**R.*..**...*.R.**RRRR#
 #RRRRRRRRRRR.RRRRRRR.RRR.R.RRRRRRR.RRRRR.RRRRRRR.RRR.RRRRRR#
-#R...R.O.R...R...R.O.R...R...R   R...R...R.O.R...R...R   RR#
+#R...R...R...R...R...R...R...R   R...R...R...R...R...R   RR#
 #R.*..**...*.R.**..*.R**...*.R  SR.*..**.R.*...**R.*.R  SRR#
 #RRR.RRRRR.RRR.RRRRRRR.RRRRRRRRR.RRRRRRR.RRR.RRRRR.RRR.RRRR#
-#RRR...R...R.O.R   R...R.O.R...R...R.O.R...R...R.O.R...RRRR#
+#RRR...R...R...R   R...R...R...R...R...R...R...R...R...RRRR#
 #RRR.*.R.**R.*.R  S..*...**R.*..**...*...**R.*.R**...*.RRRR#
 #RRRRR.RRR.RRR.RRRRRRRRRRR.R.RRRRRRRRRRRRR.RRR.RRRRRRRRRRRR#
-#R...R.O.R...R...R.O.R...R...R.O.R...R   R.O.R...R...R.O.RR#
+#R...R...R...R...R...R...R...R...R...R   R...R...R...R...RR#
 #R.**..*.R**.R.*...**..*.R**.R.*...**R  S.**.R.*...**..*.RR#
 #RRR.RRRRR.RRR.RRRRRRR.RRRRRRR.RRR.RRRRRRR.R.RRRRRRRRR.RRRR#
-#RRR...R...R.O.R...R...R.O.R...R...R.O.R...R...R   R...RRRR#
+#RRR...R...R...R...R...R...R...R...R...R...R...R   R...RRRR#
 #RRR**.R.*...**..*.R**...*...**R.*.R**.R.*.R.**.  SR**.RRRR#
 #RRR.RRRRRRRRRRR.R.RRR.RRR.RRRRR.RRR.R.R.R.RRRRRRRRRRR.RRRR#
-#R...R.O.R...R...R.O.R...R...R.O.R...R...R.O.R...R...R...RR#
+#R...R...R...R...R...R...R...R...R...R...R...R...R...R...RR#
 #R.*...**..*..**.R.*...**..*..**...*.R.**R.*..**...*....XRR#
 #RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR#
 ############################################################

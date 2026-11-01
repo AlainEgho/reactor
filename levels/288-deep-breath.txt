@@ -1,5 +1,5 @@
 name: Deep Breath
-need: 45
+need: 60
 hint: Fifty seconds of air and a long way down. Each ice chute is the fastest way across the floor and ends at a tank; miss the tank, or stop to dig for Pellets on the way, and the suit runs dry.
 air: 50
 ---

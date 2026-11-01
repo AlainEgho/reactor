@@ -1,5 +1,5 @@
 name: Enlightenment
-need: 66
+need: 79
 hint: The last floor. Four quarters, one discipline each: ice and Alphas, light and mirrors, the hive, the fallout. The Reactor is sealed in the centre behind a gate, and the switch is as far from it as the plant allows. Everything the Guru taught, at once.
 ---
 ############################################################

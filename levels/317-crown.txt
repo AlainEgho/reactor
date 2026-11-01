@@ -1,5 +1,5 @@
 name: Crown
-need: 61
+need: 144
 hint: Three halls side by side: isotopes decay while you work; acid pools wait under the Pellets; and a laser sweeps a lane with Pellets lying in it.
 ---
 ############################################################

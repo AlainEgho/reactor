@@ -1,5 +1,5 @@
 name: Regalia
-need: 59
+need: 87
 hint: One open floor in four quarters: Neutron farms wait for their Lead; hydrogen cells sit under their stores; and a sealed vault waits for the Quantum tunnel beside it. The lights are out.
 dark: on
 ---

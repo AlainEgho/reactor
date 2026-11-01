@@ -1,5 +1,5 @@
 name: Obsidian
-need: 54
+need: 97
 hint: One open floor in four quarters: Antipellets lie shoulder to shoulder with the Pellets; acid pools wait under the Pellets; and Alphas run the lanes. 146 seconds of air.
 air: 146
 ---

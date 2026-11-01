@@ -1,5 +1,5 @@
 name: Throne Room
-need: 62
+need: 54
 hint: Two long galleries: hot spots flare in the Graphite round the Pellets; and liquid sodium hangs over the dig. The lights are out, 138 seconds of air.
 air: 138
 dark: on

@@ -1,5 +1,5 @@
 name: Coronation
-need: 63
+need: 116
 hint: A core walled in the middle and four galleries round it: Antipellets lie shoulder to shoulder with the Pellets; isotopes decay while you work; and a belt runs the length of the room.
 ---
 ############################################################

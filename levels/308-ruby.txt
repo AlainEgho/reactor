@@ -1,5 +1,5 @@
 name: Ruby
-need: 52
+need: 144
 hint: Two long galleries: Plutonium sits on posts under hanging Lead; and fallout covers the floor, with Iodine at its corners.
 ---
 ############################################################

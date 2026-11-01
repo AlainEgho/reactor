@@ -1,5 +1,5 @@
 name: Ivory Tower
-need: 58
+need: 114
 hint: A core walled in the middle and four galleries round it: a laser sweeps a lane with Pellets lying in it; Antipellets lie shoulder to shoulder with the Pellets; and isotopes decay while you work. 142 seconds of air.
 air: 142
 ---

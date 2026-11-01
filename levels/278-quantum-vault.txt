@@ -1,6 +1,6 @@
 name: Quantum Vault
 need: 40
-hint: Nine Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out. One vault holds the Reactor. Count your charges before you spend the first.
+hint: Eight Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out, and they are not worth the same. Count your charges, and the Pellets in each vault, before you spend the first.
 ---
 ############################################################
 #@........*....Q....O..........O...........................#
@@ -13,7 +13,7 @@ hint: Nine Concrete vaults, no doors, and tunnel charges for barely half of them
 #.....########..*.########....########....########..########
 #...................................................#.....##
 #..QO.*....................Q............*...........#.....##
-#....................*...............*.....*........#..X..##
+#....................*...............*.....*........>..X..##
 #...................................................#.....##
 #O....########....########.O..########....########..########
 #.....#      #....#      #....#......#....#      #.........#

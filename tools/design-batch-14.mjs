@@ -259,7 +259,7 @@ if (want(276)) {
     if (i === 0 || i === last) return;
     b.set(x + 1, y + 1, '*');
     if (i % 2 === 0) b.set(x + (i % 4 === 0 ? 0 : 2), y + 1, '*');
-    if (i % 3 === 1) b.set(x + 1, y, 'O');
+    if (deg[i] === 1 && i % 2 === 1) b.set(x + 1, y, 'O'); // Lead only in dead ends, where a fallen ball blocks nothing
   });
   place(b, 2, 2, cells[last].x0 + 3, cells[last].y0 + 2);
   b.fit(0.85).save();
@@ -278,7 +278,7 @@ if (want(277)) {
 
 // 278 Quantum Vault: nine sealed vaults, tunnel charges for barely half of them, and the Reactor is in one.
 if (want(278)) {
-  const b = new Board(278, 'Quantum Vault', 40, 'Nine Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out. One vault holds the Reactor. Count your charges before you spend the first.');
+  const b = new Board(278, 'Quantum Vault', 40, 'Eight Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out, and they are not worth the same. Count your charges, and the Pellets in each vault, before you spend the first.');
   const vaults = [[6, 3], [18, 3], [30, 3], [42, 3], [6, 13], [18, 13], [30, 13], [42, 13]];
   vaults.forEach(([x, y], i) => {
     b.box(x, y, 8, 6, '#');
@@ -286,7 +286,7 @@ if (want(278)) {
     else if (i % 4 === 2) { b.rect(x + 1, y + 1, 6, 4, '.'); b.h(x + 1, y + 4, 6, '*').h(x + 2, y + 2, 4, 'O'); b.set(x + 1, y + 3, '*').set(x + 6, y + 3, '*'); }
     else b.rect(x + 1, y + 1, 6, 4, ' ').h(x + 2, y + 4, 4 + (i & 1) * 0, '*');
   });
-  b.box(52, 8, 7, 6, '#').rect(53, 9, 5, 4, '.').set(55, 11, 'X');
+  b.box(52, 8, 7, 6, '#').rect(53, 9, 5, 4, '.').set(55, 11, 'X').set(52, 11, '>'); // the Reactor's room has an airlock in
   b.pts([[3, 10], [27, 10], [40, 21], [15, 1]], 'Q');
   const ok = both(away(1, 1, 3), outside(...vaults.map(([x, y]) => [x, y, 8, 6]), [52, 8, 7, 6]));
   b.spread('*', 16, { ok }).spread('O', 20, { ok });
@@ -299,8 +299,9 @@ if (want(279)) {
   const b = new Board(279, 'Fallout Marathon', 50, 'The whole floor is fallout but for a scatter of Graphite islands, and only a few islands hold Iodine. Run from island to island, take what lies between, and let the dose drain before the next run.');
   b.fallout(1, 2, 58, 21);
   const isles = [];
-  for (let n = 0; n < 15; n++) { const x = 3 + b.int(50), y = 4 + b.int(15); b.rect(x, y, 3 + b.int(3), 2, '.'); isles.push([x, y]); }
-  isles.filter((_, i) => i % 3 === 0).forEach(([x, y]) => b.set(x + 1, y, 'p'));
+  for (let n = 0; n < 24; n++) { const x = 3 + b.int(50), y = 3 + b.int(16); b.rect(x, y, 3 + b.int(3), 2, '.'); isles.push([x, y]); }
+  isles.filter((_, i) => i % 2 === 0).forEach(([x, y]) => b.set(x + 1, y, 'p'));
+  b.rect(53, 20, 5, 2, '.'); // the last island, by the Reactor
   b.scatter('*', 70, { on: 'r', ok: away(57, 22, 2) }).scatter('O', 22, { on: 'r', ok: both(away(1, 1, 2), away(57, 22, 2)) });
   b.spread('*', 6, { ok: away(1, 1, 2) });
   place(b, 1, 1, 57, 22);
@@ -309,7 +310,7 @@ if (want(279)) {
 
 // 280 Teleport Ring: twelve sealed chambers you can only reach by teleport, one after the next.
 if (want(280)) {
-  const b = new Board(280, 'Teleport Ring', 50, 'Twelve sealed chambers and a pad in each. A pad sends you to the next pad in reading order, and the last sends you home: a ring you must go all the way round. Every chamber has its own trap.');
+  const b = new Board(280, 'Teleport Ring', 50, 'Twelve sealed chambers and a pad in each. A pad sends you to the next pad in reading order, round the floor chamber by chamber, and the Reactor waits in the last chamber of all. Every chamber has its own trap.');
   b.v(14, 1, 22, '#');
   b.set(8, 4, 'W');
   const traps = ['O', 'S', 'A', 'r', 'B', 'O', 'S', 'r', 'A', 'B', 'O', 'S'];
@@ -327,8 +328,8 @@ if (want(280)) {
     if (b.get(px - 1, py) !== '.') b.set(px - 1, py, '.');
     if (b.get(px + 1, py) !== '.') b.set(px + 1, py, '.');
   }
-  b.spread('*', 8, { x1: 13, ok: both(away(1, 1, 2), away(8, 4, 1), away(2, 21, 1)) }).spread('O', 6, { x1: 13, ok: both(away(1, 1, 2), away(8, 4, 1), away(2, 21, 2)) });
-  place(b, 1, 1, 2, 21);
+  b.spread('*', 8, { x1: 13, ok: both(away(1, 1, 2), away(8, 4, 1)) }).spread('O', 6, { x1: 13, ok: both(away(1, 1, 2), away(8, 4, 1)) });
+  place(b, 1, 1, 56, 19); // in the last chamber
   b.save();
 }
 

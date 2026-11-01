@@ -1,5 +1,5 @@
 name: Diamond Cut
-need: 56
+need: 101
 hint: Three halls side by side: Neutron farms wait for their Lead; Pellets wait in Cask cages, one plug in the roof of each; and Gammas circle Pellets on their posts. The lights are out.
 dark: on
 ---

@@ -1,5 +1,5 @@
 name: Platinum
-need: 55
+need: 85
 hint: Four rooms: Gammas sleep in the walls; a sealed vault waits for the Quantum tunnel beside it; and Pellets wait in Cask cages, one plug in the roof of each.
 ---
 ############################################################

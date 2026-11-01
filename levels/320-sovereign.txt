@@ -1,5 +1,5 @@
 name: Sovereign
-need: 64
+need: 109
 hint: One open floor in four quarters: Plutonium sits on posts under hanging Lead; a laser sweeps a lane with Pellets lying in it; and acid pools wait under the Pellets.
 ---
 ############################################################

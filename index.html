@@ -6691,28 +6691,28 @@ const LEVELS=[
     "#.*........O.................O....*...................*....#",
     "#..*............OO....*......O...***.*...................X.#",
     "############################################################"]},
-  {name:"The Hive",need:55,hint:"A honeycomb of Cask cells, each joined to its neighbours by one plug of Graphite. Most hold Pellets, some under hanging Lead; the dead ends hold Gammas going round and round. Open only the plugs you need.",map:[
+  {name:"The Hive",need:80,hint:"A honeycomb of Cask cells, each joined to its neighbours by one plug of Graphite. Most hold Pellets, some under hanging Lead; the dead ends hold Gammas going round and round. Open only the plugs you need.",map:[
     "############################################################",
     "#RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR#",
-    "#R@..R.O.R...R...R.O.R...R...R.O.R...R...R.O.R...R...R   RR#",
+    "#R@..R...R...R.O.R...R...R...R...R...R...R...R...R...R   RR#",
     "#R...R.*...**R.*..**...*...**..*..**...*...**..*..**.R  SRR#",
     "#RRR.RRR.RRR.RRRRRRR.RRR.RRRRR.RRRRRRR.RRRRRRRRRRRRR.R.RRRR#",
-    "#RRR...R...R.O.R...R...R.O.R...R...R.O.R...R...R.O.R...RRRR#",
+    "#RRR...R...R...R...R...R...R...R...R...R...R...R...R...RRRR#",
     "#RRR.**..*.R**...*...**R.*.R**...*.R.**R.*..**...*.R.**RRRR#",
     "#RRRRRRRRRRR.RRRRRRR.RRR.R.RRRRRRR.RRRRR.RRRRRRR.RRR.RRRRRR#",
-    "#R...R.O.R...R...R.O.R...R...R   R...R...R.O.R...R...R   RR#",
+    "#R...R...R...R...R...R...R...R   R...R...R...R...R...R   RR#",
     "#R.*..**...*.R.**..*.R**...*.R  SR.*..**.R.*...**R.*.R  SRR#",
     "#RRR.RRRRR.RRR.RRRRRRR.RRRRRRRRR.RRRRRRR.RRR.RRRRR.RRR.RRRR#",
-    "#RRR...R...R.O.R   R...R.O.R...R...R.O.R...R...R.O.R...RRRR#",
+    "#RRR...R...R...R   R...R...R...R...R...R...R...R...R...RRRR#",
     "#RRR.*.R.**R.*.R  S..*...**R.*..**...*...**R.*.R**...*.RRRR#",
     "#RRRRR.RRR.RRR.RRRRRRRRRRR.R.RRRRRRRRRRRRR.RRR.RRRRRRRRRRRR#",
-    "#R...R.O.R...R...R.O.R...R...R.O.R...R   R.O.R...R...R.O.RR#",
+    "#R...R...R...R...R...R...R...R...R...R   R...R...R...R...RR#",
     "#R.**..*.R**.R.*...**..*.R**.R.*...**R  S.**.R.*...**..*.RR#",
     "#RRR.RRRRR.RRR.RRRRRRR.RRRRRRR.RRR.RRRRRRR.R.RRRRRRRRR.RRRR#",
-    "#RRR...R...R.O.R...R...R.O.R...R...R.O.R...R...R   R...RRRR#",
+    "#RRR...R...R...R...R...R...R...R...R...R...R...R   R...RRRR#",
     "#RRR**.R.*...**..*.R**...*...**R.*.R**.R.*.R.**.  SR**.RRRR#",
     "#RRR.RRRRRRRRRRR.R.RRR.RRR.RRRRR.RRR.R.R.R.RRRRRRRRRRR.RRRR#",
-    "#R...R.O.R...R...R.O.R...R...R.O.R...R...R.O.R...R...R...RR#",
+    "#R...R...R...R...R...R...R...R...R...R...R...R...R...R...RR#",
     "#R.*...**..*..**.R.*...**..*..**...*.R.**R.*..**...*....XRR#",
     "#RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR#",
     "############################################################"]},
@@ -6741,7 +6741,7 @@ const LEVELS=[
     "#............................O........*........*......O....#",
     "#...........O..O...*..........O....*..O..................X.#",
     "############################################################"]},
-  {name:"Quantum Vault",need:40,hint:"Nine Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out. One vault holds the Reactor. Count your charges before you spend the first.",map:[
+  {name:"Quantum Vault",need:40,hint:"Eight Concrete vaults, no doors, and tunnel charges for barely half of them; every vault costs one charge in and one out, and they are not worth the same. Count your charges, and the Pellets in each vault, before you spend the first.",map:[
     "############################################################",
     "#@........*....Q....O..........O...........................#",
     "#.....................................................*....#",
@@ -6753,7 +6753,7 @@ const LEVELS=[
     "#.....########..*.########....########....########..########",
     "#...................................................#.....##",
     "#..QO.*....................Q............*...........#.....##",
-    "#....................*...............*.....*........#..X..##",
+    "#....................*...............*.....*........>..X..##",
     "#...................................................#.....##",
     "#O....########....########.O..########....########..########",
     "#.....#      #....#      #....#......#....#      #.........#",
@@ -6766,32 +6766,32 @@ const LEVELS=[
     "#..............*...........O.OO.........Q..................#",
     "#...O.....O.....*......................*................O..#",
     "############################################################"]},
-  {name:"Fallout Marathon",need:50,hint:"The whole floor is fallout but for a scatter of Graphite islands, and only a few islands hold Iodine. Run from island to island, take what lies between, and let the dose drain before the next run.",map:[
+  {name:"Fallout Marathon",need:15,hint:"The whole floor is fallout but for a scatter of Graphite islands, and only a few islands hold Iodine. Run from island to island, take what lies between, and let the dose drain before the next run.",map:[
     "############################################################",
-    "#@.....................*...................................#",
-    "#rrrrrrrOrrrrrrr*rrrrr**rrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrr#",
-    "#rrrrrrrrrOrrrrrrrOrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*#",
-    "#*rrr.p.*.*rrrrrrrrrrr*O*rrrrrrrrrrrrrrrrrrrrr*r*rr*rrrrrrr#",
-    "#r*rr.....rrrrrrrrrrrrOrrrr*rrr*rrrrrrrrrrrrrrrrr*rrrrrrrrr#",
-    "#rrrrrOrrrrrrrrrrrrrrrr*r*rr*rr*r....rOrrrrrrrrrr*rrrrrrrrr#",
-    "#rrrrr*rrrrr*rrrrrrrrOrrrrrrrrrrr....rrrr*rrrrrrrOrrrrrrrrr#",
-    "#rrr*rr.p...rrrr......rrrrrrrrrrrrrr*rrrrr....rrrrrrrrrrrrr#",
-    "#rrrrrr.....rrrr.....*rrrrOrrrrr*rrrrrrrrr....rrrrrrrrrrrrr#",
-    "#rrrrrrrrrrrrrrr....rrrrrrrr**rr...rrr*rrOrrrrrrOrrOrrrrrr*#",
-    "#rrrrrrrrrrrrOrrrrrrr*rrr..*..rr...r*rrrrrrrrrrrrrrrrrrrr*r#",
-    "#rrrrrr*rrrrr*rrrrrrrrrrr.......rrrrrrrrrrrrr*rrrrrrrrrrrrr#",
-    "#rrrrrrrrrrrrrrrrOrrrrrrrrrrr...rrrrrrrrrrrrrrrrrrrrr*rrrrr#",
-    "#rrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrr.p..r.p..rrrrrrrrrrrrr#",
-    "#*rrrr**rr*rrrrrrrrrrrrrrrrrrrrr*rrrr....r....rrrOrrrrrrrrr#",
-    "#rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrr#",
-    "#rrrr*...rr*rrrrrrrrrrrrrrr*rrrrr**rrr*rrr*rr....rrrrrrrrrr#",
-    "#Orrrr.*.rrrrrrrrrrrrr*rOrrrrr.p.*.rrr**rrrrr....rrrrrrrrrr#",
-    "#rrrrrrrrr*rrr**rr*rrrrrrrrrrr.....rrrrrrrrrrrrrrrr*rrrrrrr#",
-    "#rrr*rrrrr*rrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrOrrrrOrrrrrOrrrrr#",
-    "#rrrrrr*rrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrOrrrrrr*rrrrrrrr#",
-    "#*rrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrr*rrrrrrr*rrrrrrrrrrXr#",
+    "#@.........................................................#",
+    "#rr*rrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrOrrrrO#",
+    "#rrrr.p...**rrrr....rO*rrrrrrrrrrrrrrrr*rrrrr*Orrrrrrrrrr*r#",
+    "#rrrr.....rrrrrr....rrrrrrrrr*rrrrrrrrOr*rrrrrrr*rrrrrr*rrr#",
+    "#rrr**rrrrrrrrrrrrrrrrrrrrr*Orrrr....rrrrrrrrrrrrrrrrrrrrrr#",
+    "#rrrrrrrrrrrrrrrrrrrrrrrrrrr*rr*r....rrrrrrrrrrrrrrrrrrrrr*#",
+    "#rrrrrr.....rr.p..p...rr*rrrr*rrrrrrrrrrrr.p..rOrrrrrrrr*rr#",
+    "#rrrrrr.....*r........rrrrrrrrrrrrrrOrrrrr....rrrrrrrrrr*rr#",
+    "#r*rrrrrr*rrrrr*....Orrrrrr*rrrrrrrrrrrr*rrrr*rrrrrr*rrrrr*#",
+    "#rrrrrrrrrrrrrOrrrrrrrrrr.....rr.p.rrrrrrOrrrOr*rrrrrr*rrOr#",
+    "#rr*rr*rrrrrrrrrrrrr*rrr*.....rr...rrrrrrrr*rrrr*rrrrrrrrrr#",
+    "#rr*rrrrrrrrrrrrrrrrrrrrrrrrr*p.rrrrrrr.p..rrrrOrrrrrrrrrrr#",
+    "#*rrrrrrrrrr*rr**rrrrrrrrrrrr...rrrrr...*.*p..rrrrrrr*rrrrr#",
+    "#rrr*rrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrr.........rrrrrr*rrrrrr#",
+    "#rrrrr.....rrrrr*rr*rrrrrrrrOrrrrrrrrr.....rrrrrrrrrr*rrrrr#",
+    "#rrrrr.........rrOrr*r.p.r*r.p.rrrrrrOrrrrrrrrrrrrr*rrrrrrr#",
+    "#rrrrr...rr....rrrOrrr...rrr*..rrrrrrrrrrrrrr.p..r*rrrOr*rr#",
+    "#*rrrr*rrrrrrrrrrrrrrr....rrrr.p...rrrrrrrrrr....r*rrrrrrrr#",
+    "#rrrrrrrrr*rrrrr*rrrrr....rrrr.....rr*rrrrrr*rrrrrrrrrrrrrr#",
+    "#rrrrrrOrrrrrrrrrrrrrrrrr**rrrrOrrrrrrrrrrrrrr**rrrrr.....r#",
+    "#rrrrrrOrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrr..*.*r#",
+    "#rrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrXr#",
     "############################################################"]},
-  {name:"Teleport Ring",need:50,hint:"Twelve sealed chambers and a pad in each. A pad sends you to the next pad in reading order, and the last sends you home: a ring you must go all the way round. Every chamber has its own trap.",map:[
+  {name:"Teleport Ring",need:70,hint:"Twelve sealed chambers and a pad in each. A pad sends you to the next pad in reading order, round the floor chamber by chamber, and the Reactor waits in the last chamber of all. Every chamber has its own trap.",map:[
     "############################################################",
     "#@....*.......#............................................#",
     "#.............#.#########..#########..#########..#########.#",
@@ -6803,7 +6803,7 @@ const LEVELS=[
     "#.............#............................................#",
     "#......*O.....#.#########..#########..#########..#########.#",
     "#.............#.#.......#..#.......#..#S      #..#.......#.#",
-    "#............O#.#...W...#..#...W...#..#...W...#..#...W...#.#",
+    "#.............#.#...W...#..#...W...#..#...W...#..#...W...#.#",
     "#.....O.......#.#.B.B.B.#..#.O...O.#..#.......#..#rrrrrrr#.#",
     "#.............#.#*******#..#*******#..#*******#..#*******#.#",
     "#.............#.#########..#########..#########..#########.#",
@@ -6811,10 +6811,10 @@ const LEVELS=[
     "#....O........#.#########..#########..#########..#########.#",
     "#....*.*......#.#.......#..#.......#..#.......#..#S      #.#",
     "#.............#.#...W...#..#...W...#..#...W...#..#...W...#.#",
-    "#.............#.#A      #..#.B.B.B.#..#.O...O.#..#.......#.#",
+    "#.............#.#A      #..#.B.B.B.#..#.O...O.#..#......X#.#",
     "#....O*.......#.#*******#..#*******#..#*******#..#*******#.#",
-    "#.X........*..#.#########..#########..#########..#########.#",
-    "#...*.........#............................................#",
+    "#..........O..#.#########..#########..#########..#########.#",
+    "#*..*.........#............................................#",
     "############################################################"]},
   {name:"Keymaster",need:40,hint:"Seven blast doors and five keycards, and the last door is the Reactor's. The vaults are not worth the same: look through the slits before you spend a card, and never spend the fifth.",map:[
     "############################################################",
@@ -6991,7 +6991,7 @@ const LEVELS=[
     "#....#..*....#...*...#.......#.......#...O...#.......#.....#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Deep Breath",need:45,hint:"Fifty seconds of air and a long way down. Each ice chute is the fastest way across the floor and ends at a tank; miss the tank, or stop to dig for Pellets on the way, and the suit runs dry.",air:50,map:[
+  {name:"Deep Breath",need:60,hint:"Fifty seconds of air and a long way down. Each ice chute is the fastest way across the floor and ends at a tank; miss the tank, or stop to dig for Pellets on the way, and the suit runs dry.",air:50,map:[
     "############################################################",
     "#@.........*............*...............O............*.O..*#",
     "#..............O*..........................................#",
@@ -7141,7 +7141,7 @@ const LEVELS=[
     "#@..J.....   .......   ...*...   ..*....   .......   ......#",
     "#..........................O.......O.....................*.#",
     "############################################################"]},
-  {name:"The Ninth Circle",need:50,hint:"Nine rooms, one after another, in the dark and on air: Lead, Gammas, fallout, Alphas, hot spots, acid, Plutonium, lasers, and the last is all of them. One tank in each room. The airlocks go one way, down into the next circle.",air:90,dark:true,map:[
+  {name:"The Ninth Circle",need:70,hint:"Nine rooms, one after another, in the dark and on air: Lead, Gammas, fallout, Alphas, hot spots, acid, Plutonium, lasers, and the last is all of them. One tank in each room. The airlocks go one way, down into the next circle.",air:90,dark:true,map:[
     "############################################################",
     "#@.*...*...O.......#...*.....*.....*..#...*.*........*.**###",
     "#.....*......O...O.#.......t..........#..rrrrrrrrrrrrrr..###",
@@ -7166,7 +7166,7 @@ const LEVELS=[
     "############################################################",
     "############################################################",
     "############################################################"]},
-  {name:"Enlightenment",need:66,hint:"The last floor. Four quarters, one discipline each: ice and Alphas, light and mirrors, the hive, the fallout. The Reactor is sealed in the centre behind a gate, and the switch is as far from it as the plant allows. Everything the Guru taught, at once.",map:[
+  {name:"Enlightenment",need:79,hint:"The last floor. Four quarters, one discipline each: ice and Alphas, light and mirrors, the hive, the fallout. The Reactor is sealed in the centre behind a gate, and the switch is as far from it as the plant allows. Everything the Guru taught, at once.",map:[
     "############################################################",
     "#@....*...........*...OO.....#.O..O....*..O...............O#",
     "#..IIII*IIII*I*IIII*I*III*...#.............................#",
@@ -7491,7 +7491,7 @@ const LEVELS=[
     "#...................#..................#...................#",
     "#...................#..................#.................X.#",
     "############################################################"]},
-  {name:"Ruby",need:52,hint:"Two long galleries: Plutonium sits on posts under hanging Lead; and fallout covers the floor, with Iodine at its corners.",map:[
+  {name:"Ruby",need:144,hint:"Two long galleries: Plutonium sits on posts under hanging Lead; and fallout covers the floor, with Iodine at its corners.",map:[
     "############################################################",
     "#@.........................................................#",
     "#....*....*....***..O..*.*O*...*.*..*..*..O*...*....*..**..#",
@@ -7516,7 +7516,7 @@ const LEVELS=[
     "#..........................................................#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Onyx",need:53,hint:"A core walled in the middle and four galleries round it: Pellets wait in Cask cages, one plug in the roof of each; isotopes decay while you work; and Antipellets lie shoulder to shoulder with the Pellets. The lights are out.",dark:true,map:[
+  {name:"Onyx",need:97,hint:"A core walled in the middle and four galleries round it: Pellets wait in Cask cages, one plug in the roof of each; isotopes decay while you work; and Antipellets lie shoulder to shoulder with the Pellets. The lights are out.",dark:true,map:[
     "############################################################",
     "#@.........................................................#",
     "#..........................................................#",
@@ -7541,7 +7541,7 @@ const LEVELS=[
     "#....O...*......h.O..hh..........h....O.....h*.*.*..h......#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Obsidian",need:54,hint:"One open floor in four quarters: Antipellets lie shoulder to shoulder with the Pellets; acid pools wait under the Pellets; and Alphas run the lanes. 146 seconds of air.",air:146,map:[
+  {name:"Obsidian",need:97,hint:"One open floor in four quarters: Antipellets lie shoulder to shoulder with the Pellets; acid pools wait under the Pellets; and Alphas run the lanes. 146 seconds of air.",air:146,map:[
     "############################################################",
     "#@.........................................................#",
     "#.!...*...!...*...*...!...*.....*..*........O...*....*..O..#",
@@ -7566,7 +7566,7 @@ const LEVELS=[
     "#..........................................................#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Platinum",need:55,hint:"Four rooms: Gammas sleep in the walls; a sealed vault waits for the Quantum tunnel beside it; and Pellets wait in Cask cages, one plug in the roof of each.",map:[
+  {name:"Platinum",need:85,hint:"Four rooms: Gammas sleep in the walls; a sealed vault waits for the Quantum tunnel beside it; and Pellets wait in Cask cages, one plug in the roof of each.",map:[
     "############################################################",
     "#@...........................#.............................#",
     "#.. S ...*.*....O.. S .......#..######.O..*.*....OO..*..*..#",
@@ -7591,7 +7591,7 @@ const LEVELS=[
     "#............................#.............................#",
     "#............................#...........................X.#",
     "############################################################"]},
-  {name:"Diamond Cut",need:56,hint:"Three halls side by side: Neutron farms wait for their Lead; Pellets wait in Cask cages, one plug in the roof of each; and Gammas circle Pellets on their posts. The lights are out.",dark:true,map:[
+  {name:"Diamond Cut",need:101,hint:"Three halls side by side: Neutron farms wait for their Lead; Pellets wait in Cask cages, one plug in the roof of each; and Gammas circle Pellets on their posts. The lights are out.",dark:true,map:[
     "############################################################",
     "#@..................#........L.........#...................#",
     "#..o.....O..O.......#................*.#..   ..*.   ..*....#",
@@ -7641,7 +7641,7 @@ const LEVELS=[
     "#..........................................................#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Ivory Tower",need:58,hint:"A core walled in the middle and four galleries round it: a laser sweeps a lane with Pellets lying in it; Antipellets lie shoulder to shoulder with the Pellets; and isotopes decay while you work. 142 seconds of air.",air:142,map:[
+  {name:"Ivory Tower",need:114,hint:"A core walled in the middle and four galleries round it: a laser sweeps a lane with Pellets lying in it; Antipellets lie shoulder to shoulder with the Pellets; and isotopes decay while you work. 142 seconds of air.",air:142,map:[
     "############################################################",
     "#@.........................................................#",
     "#....**.***O***O.O....O**.O*.*.O.**.***.***.O..O.......**..#",
@@ -7666,7 +7666,7 @@ const LEVELS=[
     "#..*...*...!...*...!...*...*...!...*...!...*...*...!...*...#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Regalia",need:59,hint:"One open floor in four quarters: Neutron farms wait for their Lead; hydrogen cells sit under their stores; and a sealed vault waits for the Quantum tunnel beside it. The lights are out.",dark:true,map:[
+  {name:"Regalia",need:87,hint:"One open floor in four quarters: Neutron farms wait for their Lead; hydrogen cells sit under their stores; and a sealed vault waits for the Quantum tunnel beside it. The lights are out.",dark:true,map:[
     "############################################################",
     "#@.........................................................#",
     "#..o.....O..O.....*..o.....*....O..****....*.O.*O*...***...#",
@@ -7691,7 +7691,7 @@ const LEVELS=[
     "#..........................................................#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Sceptre",need:60,hint:"Four rooms: a magnet waits behind Graphite plugs with Lead at the end of each spoke; hot spots flare in the Graphite round the Pellets; and a sealed vault waits for the Quantum tunnel beside it.",map:[
+  {name:"Sceptre",need:73,hint:"Four rooms: a magnet waits behind Graphite plugs with Lead at the end of each spoke; hot spots flare in the Graphite round the Pellets; and a sealed vault waits for the Quantum tunnel beside it.",map:[
     "############################################################",
     "#@...........................#.............................#",
     "#.....*...*..O....*..........#.............................#",
@@ -7716,7 +7716,7 @@ const LEVELS=[
     "#............................#.............................#",
     "#............................#...........................X.#",
     "############################################################"]},
-  {name:"Crown",need:61,hint:"Three halls side by side: isotopes decay while you work; acid pools wait under the Pellets; and a laser sweeps a lane with Pellets lying in it.",map:[
+  {name:"Crown",need:144,hint:"Three halls side by side: isotopes decay while you work; acid pools wait under the Pellets; and a laser sweeps a lane with Pellets lying in it.",map:[
     "############################################################",
     "#@..................#..................#...................#",
     "#......hh.*.........#.............*....#....O....O.*..***..#",
@@ -7741,7 +7741,7 @@ const LEVELS=[
     "#...................#..................#...................#",
     "#...................#..................#.................X.#",
     "############################################################"]},
-  {name:"Throne Room",need:62,hint:"Two long galleries: hot spots flare in the Graphite round the Pellets; and liquid sodium hangs over the dig. The lights are out, 138 seconds of air.",air:138,dark:true,map:[
+  {name:"Throne Room",need:54,hint:"Two long galleries: hot spots flare in the Graphite round the Pellets; and liquid sodium hangs over the dig. The lights are out, 138 seconds of air.",air:138,dark:true,map:[
     "############################################################",
     "#@.........................................................#",
     "#..........................................................#",
@@ -7766,7 +7766,7 @@ const LEVELS=[
     "#..........................................................#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Coronation",need:63,hint:"A core walled in the middle and four galleries round it: Antipellets lie shoulder to shoulder with the Pellets; isotopes decay while you work; and a belt runs the length of the room.",map:[
+  {name:"Coronation",need:116,hint:"A core walled in the middle and four galleries round it: Antipellets lie shoulder to shoulder with the Pellets; isotopes decay while you work; and a belt runs the length of the room.",map:[
     "############################################################",
     "#@.........................................................#",
     "#.!...*...!...*...*...!...*...!...*...*...!...*...!...*....#",
@@ -7791,7 +7791,7 @@ const LEVELS=[
     "#..h.h*...O........h..*....h....O.............*......h.....#",
     "#........................................................X.#",
     "############################################################"]},
-  {name:"Sovereign",need:64,hint:"One open floor in four quarters: Plutonium sits on posts under hanging Lead; a laser sweeps a lane with Pellets lying in it; and acid pools wait under the Pellets.",map:[
+  {name:"Sovereign",need:109,hint:"One open floor in four quarters: Plutonium sits on posts under hanging Lead; a laser sweeps a lane with Pellets lying in it; and acid pools wait under the Pellets.",map:[
     "############################################################",
     "#@.........................................................#",
     "#.....**.....*O.*..*..*..*...........O.*.*.*.*....O....*...#",

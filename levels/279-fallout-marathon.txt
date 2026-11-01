@@ -1,28 +1,28 @@
 name: Fallout Marathon
-need: 50
+need: 15
 hint: The whole floor is fallout but for a scatter of Graphite islands, and only a few islands hold Iodine. Run from island to island, take what lies between, and let the dose drain before the next run.
 ---
 ############################################################
-#@.....................*...................................#
-#rrrrrrrOrrrrrrr*rrrrr**rrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrr#
-#rrrrrrrrrOrrrrrrrOrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*#
-#*rrr.p.*.*rrrrrrrrrrr*O*rrrrrrrrrrrrrrrrrrrrr*r*rr*rrrrrrr#
-#r*rr.....rrrrrrrrrrrrOrrrr*rrr*rrrrrrrrrrrrrrrrr*rrrrrrrrr#
-#rrrrrOrrrrrrrrrrrrrrrr*r*rr*rr*r....rOrrrrrrrrrr*rrrrrrrrr#
-#rrrrr*rrrrr*rrrrrrrrOrrrrrrrrrrr....rrrr*rrrrrrrOrrrrrrrrr#
-#rrr*rr.p...rrrr......rrrrrrrrrrrrrr*rrrrr....rrrrrrrrrrrrr#
-#rrrrrr.....rrrr.....*rrrrOrrrrr*rrrrrrrrr....rrrrrrrrrrrrr#
-#rrrrrrrrrrrrrrr....rrrrrrrr**rr...rrr*rrOrrrrrrOrrOrrrrrr*#
-#rrrrrrrrrrrrOrrrrrrr*rrr..*..rr...r*rrrrrrrrrrrrrrrrrrrr*r#
-#rrrrrr*rrrrr*rrrrrrrrrrr.......rrrrrrrrrrrrr*rrrrrrrrrrrrr#
-#rrrrrrrrrrrrrrrrOrrrrrrrrrrr...rrrrrrrrrrrrrrrrrrrrr*rrrrr#
-#rrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrr.p..r.p..rrrrrrrrrrrrr#
-#*rrrr**rr*rrrrrrrrrrrrrrrrrrrrr*rrrr....r....rrrOrrrrrrrrr#
-#rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrr#
-#rrrr*...rr*rrrrrrrrrrrrrrr*rrrrr**rrr*rrr*rr....rrrrrrrrrr#
-#Orrrr.*.rrrrrrrrrrrrr*rOrrrrr.p.*.rrr**rrrrr....rrrrrrrrrr#
-#rrrrrrrrr*rrr**rr*rrrrrrrrrrr.....rrrrrrrrrrrrrrrr*rrrrrrr#
-#rrr*rrrrr*rrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrOrrrrOrrrrrOrrrrr#
-#rrrrrr*rrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrOrrrrrr*rrrrrrrr#
-#*rrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrr*rrrrrrr*rrrrrrrrrrXr#
+#@.........................................................#
+#rr*rrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrOrrrrO#
+#rrrr.p...**rrrr....rO*rrrrrrrrrrrrrrrr*rrrrr*Orrrrrrrrrr*r#
+#rrrr.....rrrrrr....rrrrrrrrr*rrrrrrrrOr*rrrrrrr*rrrrrr*rrr#
+#rrr**rrrrrrrrrrrrrrrrrrrrr*Orrrr....rrrrrrrrrrrrrrrrrrrrrr#
+#rrrrrrrrrrrrrrrrrrrrrrrrrrr*rr*r....rrrrrrrrrrrrrrrrrrrrr*#
+#rrrrrr.....rr.p..p...rr*rrrr*rrrrrrrrrrrr.p..rOrrrrrrrr*rr#
+#rrrrrr.....*r........rrrrrrrrrrrrrrOrrrrr....rrrrrrrrrr*rr#
+#r*rrrrrr*rrrrr*....Orrrrrr*rrrrrrrrrrrr*rrrr*rrrrrr*rrrrr*#
+#rrrrrrrrrrrrrOrrrrrrrrrr.....rr.p.rrrrrrOrrrOr*rrrrrr*rrOr#
+#rr*rr*rrrrrrrrrrrrr*rrr*.....rr...rrrrrrrr*rrrr*rrrrrrrrrr#
+#rr*rrrrrrrrrrrrrrrrrrrrrrrrr*p.rrrrrrr.p..rrrrOrrrrrrrrrrr#
+#*rrrrrrrrrr*rr**rrrrrrrrrrrr...rrrrr...*.*p..rrrrrrr*rrrrr#
+#rrr*rrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrr.........rrrrrr*rrrrrr#
+#rrrrr.....rrrrr*rr*rrrrrrrrOrrrrrrrrr.....rrrrrrrrrr*rrrrr#
+#rrrrr.........rrOrr*r.p.r*r.p.rrrrrrOrrrrrrrrrrrrr*rrrrrrr#
+#rrrrr...rr....rrrOrrr...rrr*..rrrrrrrrrrrrrr.p..r*rrrOr*rr#
+#*rrrr*rrrrrrrrrrrrrrr....rrrr.p...rrrrrrrrrr....r*rrrrrrrr#
+#rrrrrrrrr*rrrrr*rrrrr....rrrr.....rr*rrrrrr*rrrrrrrrrrrrrr#
+#rrrrrrOrrrrrrrrrrrrrrrrr**rrrrOrrrrrrrrrrrrrr**rrrrr.....r#
+#rrrrrrOrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrr..*.*r#
+#rrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrXr#
 ############################################################
