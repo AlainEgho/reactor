@@ -1,6 +1,6 @@
 // Scaffolding that draws Prestige, levels 296-345, and writes them to levels/*.txt. Every floor is a
 // gauntlet composed from set pieces the earlier wings proved, one to a region, under a layout and often a
-// condition that covers the whole floor (the dark, a tank of air, gravity). It climbs from two set pieces
+// condition that covers the whole floor (a tank of air, gravity, and on three floors the dark). It climbs from two set pieces
 // on a calm floor to five under the worst conditions. Re-running overwrites the files.
 // Usage: node tools/design-batch-15.mjs [first] [last]
 import { fileURLToPath } from 'node:url';
@@ -126,7 +126,7 @@ for (let k = 0; main && k < 50; k++) {
   const num = 296 + k;
   if (num < FIRST || num > LAST) continue;
   const r = rng(num * 104729), lay = LAYOUTS[ORDER[k % ORDER.length]];
-  const dark = (k >= 6 && k % 3 === 1) || (k >= 40 && k % 2 === 0);
+  const dark = [13, 14, 37].includes(k); // only Onyx, Obsidian and Valhalla are dark
   const air = (k >= 10 && k % 4 === 2) || (k >= 35 && k % 3 === 0) ? 160 - k : 0;
   const grav = ORDER[k % ORDER.length] === 'bands' && k % 10 === 7;
   // the pieces: one per region, no repeats, each fitting its region; calm early floors leave a region plain

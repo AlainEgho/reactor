@@ -1,13 +1,12 @@
 name: Laureate
 need: 68
-hint: A core walled in the middle and four galleries round it: acid pools wait under the Pellets; hot spots flare in the Graphite round the Pellets; hydrogen cells sit under their stores; liquid sodium hangs over the dig; and Alphas run the lanes. The lights are out.
-dark: on
+hint: A core walled in the middle and four galleries round it: acid pools wait under the Pellets; hot spots flare in the Graphite round the Pellets; hydrogen cells sit under their stores; liquid sodium hangs over the dig; and Alphas run the lanes.
 ---
 ############################################################
 #@.........................................................#
 #.......*.....**......*.....*.......*.....*O............*..#
 #..***.**.***....***.OO.***..*.***....***.**.***....***....#
-#..aaa..*.aaa..*.aaa....aaa.*..aaa.O..aaa.L..aaa..*.aaa.O..#
+#..aaa..*.aaa..*.aaa....aaa.*..aaa.O..aaa....aaa..*.aaa.O..#
 #..aaa.O..aaa.*..aaa.**.aaa.*..aaa.O*.aaa.*..aaa.*O.aaa.O..#
 #..........................................................#
 #.................###########.############.................#
@@ -18,9 +17,9 @@ dark: on
 #..RRR ...RRR ....#.A                   .#....*..*.........#
 #..### #..### #...#......................#..*..*.*...*.....#
 #..F   ...F   ....#..O....*.*O*...*..O...#..........*.*.*..#
-#.........L.......#......................#...O.........O...#
+#.................#......................#...O.........O...#
 #.................###########.############.................#
-#.............L............................................#
+#..........................................................#
 #..........................................................#
 #.*BB*BBB*BB*BBBBBBB*BBB*BBB*BBBBBBBB***BBBBBBBBBBB*BBBBB..#
 #.BB*BBBBBB*BBBB*BB**BBBBBB*BBBB**BBBBBBBB*BBBBB*BBB*BBBB..#

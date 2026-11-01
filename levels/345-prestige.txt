@@ -1,7 +1,6 @@
 name: Prestige
 need: 89
-hint: One open floor in four quarters: Gammas circle Pellets on their posts; Neutron farms wait for their Lead; hydrogen cells sit under their stores; and a laser sweeps a lane with Pellets lying in it. The lights are out.
-dark: on
+hint: One open floor in four quarters: Gammas circle Pellets on their posts; Neutron farms wait for their Lead; hydrogen cells sit under their stores; and a laser sweeps a lane with Pellets lying in it.
 ---
 ############################################################
 #@.........................................................#
@@ -15,10 +14,10 @@ dark: on
 #.......*...**..O..*...**......*.**.O*O.O***O******O.****..#
 #..........................................................#
 #..........................................................#
-#.....................................................L....#
+#..........................................................#
 #.O.O.****O***.**.*O**O**.*.....O..O....**.*..*O...*.O*....#
-#.......................O.**....OO......OO..*.O...*.L*..O..#
-#.....#......#......#..*.O**.....*....*.*...O..*..*.....L..#
+#.......................O.**....OO......OO..*.O...*..*..O..#
+#.....#......#......#..*.O**.....*....*.*...O..*..*........#
 #..R*R ...R*R ...R*R ......*...............................#
 #..RRR ...RRR ...RRR ..*...O...l  *   *   *   *   *   *  ..#
 #..### #..### #..### #.*..OO...............................#

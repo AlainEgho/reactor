@@ -1,14 +1,13 @@
 name: Myth
 need: 80
-hint: Four rooms: a magnet waits behind Graphite plugs with Lead at the end of each spoke; hydrogen cells sit under their stores; Pellets wait in Cask cages, one plug in the roof of each; and Alphas run the lanes. The lights are out.
-dark: on
+hint: Four rooms: a magnet waits behind Graphite plugs with Lead at the end of each spoke; hydrogen cells sit under their stores; Pellets wait in Cask cages, one plug in the roof of each; and Alphas run the lanes.
 ---
 ############################################################
-#@....................L......#.............................#
+#@...........................#.............................#
 #......O.......*......O......#...***O*..**....**OO*O*.***..#
 #.......*.........*.*.O*.*.*.#......................*...O..#
 #.......*...*O*......*.......#.....#......#......#..**..*..#
-#L*...*.O.......................R*R ...R*R ...R*R .....OO..#
+#.*...*.O.......................R*R ...R*R ...R*R .....OO..#
 #.....*.*.O  . M .  O..O.....#..RRR ...RRR ...RRR ..**..*..#
 #......**...............O....#..### #..### #..### #.O...*..#
 #.*...........*..*...........#..F   ...F   ...F   ..*.*O...#
@@ -21,7 +20,7 @@ dark: on
 #..R*R..R*R..R*R..R*R..R*R.*.#.............................#
 #..RRR..RRR..RRR..RRR..RRR...#.O.*.O**O*.OO**.**O.***O*.O..#
 #...............................***..**.*.*O****....*.*O*..#
-#..*O..*..O..****.*..*....**.#...........L.................#
+#..*O..*..O..****.*..*....**.#.............................#
 #.........O**...O..*****.O...#.A                         ..#
 #.......*.O*O***O*.O......**.#.............................#
 #............................#.............................#

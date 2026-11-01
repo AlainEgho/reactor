@@ -1,11 +1,10 @@
 name: Grandmaster
 need: 71
-hint: Three halls side by side: hydrogen cells sit under their stores; Plutonium sits on posts under hanging Lead; and an ice floor carries you past its Pellets. The lights are out.
-dark: on
+hint: Three halls side by side: hydrogen cells sit under their stores; Plutonium sits on posts under hanging Lead; and an ice floor carries you past its Pellets.
 ---
 ############################################################
 #@..................#..................#...................#
-#.........*......*..#.*..*...*..O.*.*..#....L..............#
+#.........*......*..#.*..*...*..O.*.*..#...................#
 #...........**....*.#...*.....*.O.*.*..#.IIIIIIIII*I*I*II..#
 #......O.......*..*.#.*.O.....*..O.....#.I*IIIIIIIIII*I*I..#
 #.O........*..*.O**.#.......O*..*...*..#.IIIIIIIIII*IIIII..#
@@ -23,7 +22,7 @@ dark: on
 #..RRR ...RRR ...*O......................IIIIIIIIIIIIIIII..#
 #..### #..### #..O..#... ..... ..... ..#.III*IIIIIIIIIIII..#
 #..F   ...F   ..*...#...P.....P.....P..#.IIIIIIIIIIIIIII*..#
-#...............*O..#...#.....#..*L.#..#...................#
-#...................#..................#..........L........#
+#...............*O..#...#.....#..*..#..#...................#
+#...................#..................#...................#
 #...................#..................#.................X.#
 ############################################################

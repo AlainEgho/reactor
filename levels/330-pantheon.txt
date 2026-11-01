@@ -1,19 +1,18 @@
 name: Pantheon
 need: 74
-hint: One open floor in four quarters: Plutonium sits on posts under hanging Lead; Gammas circle Pellets on their posts; an ice floor carries you past its Pellets; and Antipellets lie shoulder to shoulder with the Pellets. The lights are out, 126 seconds of air.
+hint: One open floor in four quarters: Plutonium sits on posts under hanging Lead; Gammas circle Pellets on their posts; an ice floor carries you past its Pellets; and Antipellets lie shoulder to shoulder with the Pellets. 126 seconds of air.
 air: 126
-dark: on
 ---
 ############################################################
 #@.........................................................#
 #.....O.*.**.....*..*...**.*....   .O..   ..O.   .*..   ...#
-#....***.*.**......OO*..O....... * .O*. * .... * .t*. * .L.#
+#....***.*.**......OO*..O....... * .O*. * .... * .t*. * ...#
 #......*.....*.............*.... #S.*.. #S.... #S.*.. #S...#
 #...O.....O..*..O..*..O....*....   ....   ....   .**.   ...#
 #........................*.O........*..............*.......#
-#... ..... ..*.. ...L. ..O.O...**.*.....O...*.**..OO.**....#
+#... ..... ..*.. ..... ..O.O...**.*.....O...*.**..OO.**....#
 #...P.....P.tO..P.....P........*.OO.......**..*...O........#
-#...#..*..#.....#..O..#...........L..*.....*...*...........#
+#...#..*..#.....#..O..#..............*.....*...*...........#
 #..........................................................#
 #..........................................................#
 #..........................................................#

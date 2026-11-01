@@ -1,8 +1,7 @@
 name: Ascension
 need: 86
-hint: Three halls side by side: Neutron farms wait for their Lead; hydrogen cells sit under their stores; and hot spots flare in the Graphite round the Pellets. The lights are out, 114 seconds of air.
+hint: Three halls side by side: Neutron farms wait for their Lead; hydrogen cells sit under their stores; and hot spots flare in the Graphite round the Pellets. 114 seconds of air.
 air: 114
-dark: on
 ---
 ############################################################
 #@..................#..................#...................#
@@ -11,7 +10,7 @@ dark: on
 #.R RRRR...R RRRR...#...........*......#.BBBBBBBBBBB**B*B..#
 #.R    R.O.R    R...#.***...*..*.t.....#.BBBBBB*B*B*BBBBB..#
 #.R  e R...R  e R.*...............*..O...BBBBB*BBBBBB*BBB..#
-#.RRRRRR...RRRRRR...#...L......**..*...#.*BBBBBBB*BBBBBBB..#
+#.RRRRRR...RRRRRR...#..........**..*...#.*BBBBBBB*BBBBBBB..#
 #........*..........#...*.*O.....*.....#.BBBBBB**BBBBBBBB..#
 #.*.*.O.............#....*.*..**..O.**.#.BBBBBBBB*BBBBBBB..#
 #......*..O....*....#..*.OO*..***...**.#.BBBBBBBBBBBBBBBB..#
@@ -23,8 +22,8 @@ dark: on
 #.......*.....tOO...#..R*R ...R*R ..O..#.BBBBBBBBB*BBBBBB..#
 #...........*...O......RRR ...RRR .......BBBBB*BBBBBBBB**..#
 #....*O..*.OOO*.*...#..### #..### #....#.BBBBBBBBBBBBBBBB..#
-#............L......#..F   ...F   .....#.BB*BBBBBBBBBBBBB..#
+#...................#..F   ...F   .....#.BB*BBBBBBBBBBBBB..#
 #...O...*.OO..***.*.#..................#...................#
-#...................#.L................#...................#
+#...................#..................#...................#
 #...................#..................#.................X.#
 ############################################################
