@@ -181,17 +181,48 @@ button{font:inherit;color:inherit}
   .pad{display:flex;align-items:center;justify-content:space-between;gap:16px}
   .app>.keys{display:none}
 }
-.pad{padding-bottom:env(safe-area-inset-bottom,0px)}
-.dpad{display:grid;grid-template-columns:repeat(3,60px);grid-template-rows:repeat(3,60px);gap:6px}
-.dpad button{border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-size:20px;touch-action:none;user-select:none;-webkit-user-select:none}
+/* The player's Controls settings arrive as variables on #pad: --as arrow/wheel scale, --gap arrow
+   spacing, --bs button scale, --lift extra height off the bottom edge, --op opacity. */
+.pad{padding-bottom:calc(env(safe-area-inset-bottom,0px) + var(--lift,0px));opacity:var(--op,1)}
+.pad.lefty{flex-direction:row-reverse}
+.acts.swap{flex-direction:row-reverse}
+.pad.wheelmode .dpad,.pad:not(.wheelmode) .wheelzone{display:none}
+.dpad{--k:60px;display:grid;grid-template-columns:repeat(3,calc(var(--k)*var(--as,1)));grid-template-rows:repeat(3,calc(var(--k)*var(--as,1)));gap:var(--gap,6px)}
+.dpad button{border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-size:calc(20px*var(--as,1));touch-action:none;user-select:none;-webkit-user-select:none}
+/* The wheel: a thumbstick. The zone takes the touch (the whole free width, so a floating wheel can
+   land under the thumb); the base and knob only draw. */
+.wheelzone{--kw:160px;flex:1 1 auto;align-self:stretch;display:flex;align-items:center;min-height:calc(var(--kw)*var(--as,1));touch-action:none;user-select:none;-webkit-user-select:none}
+.pad.lefty .wheelzone{justify-content:flex-end}
+.wheel{position:relative;flex:0 0 auto;width:calc(var(--kw)*var(--as,1));height:calc(var(--kw)*var(--as,1));border-radius:50%;background:rgba(17,22,30,.8);border:2px solid var(--line);box-shadow:inset 0 0 0 calc(12px*var(--as,1)) rgba(255,255,255,.025);pointer-events:none}
+.wheel svg{position:absolute;inset:0;width:100%;height:100%}
+.wheel path{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;transition:stroke .1s}
+.wheel path.arc{stroke:transparent;stroke-width:5}
+.wheel[data-dir="0"] .c0,.wheel[data-dir="1"] .c1,.wheel[data-dir="2"] .c2,.wheel[data-dir="3"] .c3,
+.wheel[data-dir="0"] .a0,.wheel[data-dir="1"] .a1,.wheel[data-dir="2"] .a2,.wheel[data-dir="3"] .a3{stroke:var(--hero)}
+.knob{position:absolute;left:28%;top:28%;width:44%;height:44%;border-radius:50%;background:linear-gradient(#2a3342,#161c26);border:2px solid var(--hero);box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .14s ease-out}
+.wheel.held .knob{transition:none;background:linear-gradient(#3a3420,#1c1a12)}
+/* Controls: the settings sheet covers the board only, so the controls below stay live to try. */
+.padsheet{position:absolute;inset:0;z-index:4;overflow:auto;background:var(--scrim);display:grid;place-items:start center;padding:12px}
+.padset{width:100%;max-width:440px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
+.padset h2{margin:0;font-family:var(--display);font-size:20px;letter-spacing:.06em}
+.padset .note{font-size:11px;color:var(--muted);margin:0;line-height:1.45}
+.prow{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 12px;font-size:12px}
+.prow input[type=range]{grid-column:1/-1;width:100%;margin:0;accent-color:var(--hero)}
+.prow input[type=checkbox]{width:20px;height:20px;margin:0;accent-color:var(--hero)}
+.prow output{font-family:var(--mono);color:var(--muted)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.seg button{font:inherit;font-size:11px;padding:7px 10px;background:none;border:0;color:var(--muted);cursor:pointer}
+.seg button+button{border-left:1px solid var(--line)}
+.seg button[aria-pressed="true"]{background:var(--hero-soft);color:var(--fg)}
+.pbtns{display:flex;gap:8px;justify-content:flex-end}
 .dpad button,.act{transition:transform .08s,background .08s}
 .dpad button.on,.act.on{background:var(--line);transform:scale(.94)}
 .act{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
 .act .tre{width:22px;height:22px}
 .dpad .u{grid-column:2;grid-row:1}.dpad .l{grid-column:1;grid-row:2}.dpad .r{grid-column:3;grid-row:2}.dpad .d{grid-column:2;grid-row:3}
-.act{width:86px;height:86px;border-radius:50%;border:2px solid var(--hero);background:var(--hero-soft);color:var(--fg);font-size:11px;letter-spacing:.1em;text-transform:uppercase;touch-action:none;user-select:none;-webkit-user-select:none}
+.act{--ka:86px;width:calc(var(--ka)*var(--bs,1));height:calc(var(--ka)*var(--bs,1));border-radius:50%;border:2px solid var(--hero);background:var(--hero-soft);color:var(--fg);font-size:11px;letter-spacing:.1em;text-transform:uppercase;touch-action:none;user-select:none;-webkit-user-select:none}
 .acts{display:flex;gap:14px;align-items:flex-end}
-.act.boost{width:68px;height:68px;border-color:var(--core);background:rgba(79,184,255,.14)}
+.act.boost{--ka:68px;border-color:var(--core);background:rgba(79,184,255,.14)}
 .act.boost:disabled{opacity:.35}
 #sGad{color:var(--core)}
 #sShield.on{color:var(--core)}
@@ -247,13 +278,15 @@ button{font:inherit;color:inherit}
   #bRestart::before{content:'\21BB'}
   #bSound::before{content:'\266A'}
   #bMusic::before{content:'\266B'}
+  #bPad::before{content:'\2699'}
   #bSound[aria-pressed="false"]::before,#bMusic[aria-pressed="false"]::before{opacity:.4;text-decoration:line-through}
 }
 /* Narrow phones: the pad shrinks to fit beside both thumbs. */
 @media (max-width:480px){
-  .dpad{grid-template-columns:repeat(3,52px);grid-template-rows:repeat(3,52px)}
-  .act{width:76px;height:76px}
-  .act.boost{width:60px;height:60px}
+  .dpad{--k:52px}
+  .wheelzone{--kw:140px}
+  .act{--ka:76px}
+  .act.boost{--ka:60px}
 }
 /* Moments: the level intro strip, the board's state behind a dialog, and how dialogs arrive. */
 .intro{position:absolute;left:0;right:0;top:22%;display:flex;flex-direction:column;gap:5px;padding:14px 26px;background:rgba(10,13,18,.9);border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-left:6px solid var(--wing,var(--hero));pointer-events:none;animation:intro-in .22s ease-out;transition:opacity .2s}
@@ -302,6 +335,7 @@ button{font:inherit;color:inherit}
       <button class="btn" id="bRestart" type="button">Restart</button>
       <button class="btn" id="bSound" type="button" aria-pressed="true">Sound on</button>
       <button class="btn" id="bMusic" type="button" aria-pressed="true">Music on</button>
+      <button class="btn" id="bPad" type="button" aria-label="Controls" hidden>Controls</button>
     </div>
   </header>
   <main class="stage" id="stage">
@@ -309,9 +343,13 @@ button{font:inherit;color:inherit}
     <div class="toast gone" id="toast"></div>
     <div class="intro" id="intro" hidden><b></b><span></span></div>
     <div class="overlay" id="ov" hidden></div>
+    <div class="padsheet" id="padSheet" hidden></div>
   </main>
   <input type="file" id="datFile" accept=".dat,.DAT,.d00,.sp,.SP" hidden>
   <div class="pad" id="pad">
+    <div class="wheelzone" id="wheelZone">
+      <div class="wheel" id="wheel"><svg viewBox="-50 -50 100 100" aria-hidden="true"><path class="c0" d="M-7,-34L0,-41L7,-34"/><path class="c1" d="M34,-7L41,0L34,7"/><path class="c2" d="M-7,34L0,41L7,34"/><path class="c3" d="M-34,-7L-41,0L-34,7"/><path class="arc a0" d="M-23,-39.8A46,46 0 0 1 23,-39.8"/><path class="arc a1" d="M39.8,-23A46,46 0 0 1 39.8,23"/><path class="arc a2" d="M23,39.8A46,46 0 0 1 -23,39.8"/><path class="arc a3" d="M-39.8,23A46,46 0 0 1 -39.8,-23"/></svg><div class="knob" id="knob"></div></div>
+    </div>
     <div class="dpad">
       <button class="u" type="button" data-dir="0" aria-label="Up">&#9650;</button>
       <button class="l" type="button" data-dir="3" aria-label="Left">&#9664;</button>
@@ -7386,7 +7424,8 @@ function sample(){
   const a=act||actTap,gd=gad||gadTap;tapDir=-1;actTap=false;gadTap=false;
   return {dir:dir,act:a,gad:gd};
 }
-function clearInput(){held.length=0;tapDir=-1;act=false;actTap=false;gad=false;gadTap=false;
+var wheelReset=null; // set by the phone wheel, which lets go of its direction when input is cleared
+function clearInput(){held.length=0;tapDir=-1;act=false;actTap=false;gad=false;gadTap=false;if(wheelReset) wheelReset();
   document.querySelectorAll('.on').forEach(function(b){b.classList.remove('on');});}
 
 /* ---------- audio ---------- */
@@ -8744,7 +8783,7 @@ let dangerLvl=0;  // 0..1, how close the nearest hunter is to Iso this tick
 // Haptics: short pulses on a touch device, throttled for digging, never under reduced motion.
 const coarse=!!(window.matchMedia&&matchMedia('(pointer:coarse)').matches);
 let lastBuzz=0;
-function buzz(p){if(reduceMotion||!coarse||!navigator.vibrate) return;try{navigator.vibrate(p);}catch(e){}}
+function buzz(p){if(reduceMotion||!coarse||!navigator.vibrate||(padPrefs&&!padPrefs.buzz)) return;try{navigator.vibrate(p);}catch(e){}}
 // The HUD's score rolls up to the real score; the rest of the HUD is written per tick in hud().
 function hudTween(){
   if(!game) return;
@@ -9450,7 +9489,7 @@ function startLevel(i){
 function pause(){
   if(screen!=='play'||game.state!=='play') return;
   screen='paused';clearInput();cv.classList.add('paused');
-  dialog('Paused',esc(levelLabel(cur)),[['resume','Resume (P)'],['retry','Restart (R)'],['levels','Levels']],'pop');
+  dialog('Paused',esc(levelLabel(cur)),[['resume','Resume (P)'],['retry','Restart (R)'],['levels','Levels']].concat(coarse?[['controls','Controls']]:[]),'pop');
 }
 function resume(){screen='play';ov.hidden=true;cv.classList.remove('paused');}
 function showDead(){
@@ -9531,6 +9570,7 @@ ov.addEventListener('click',function(e){
     case 'next':startLevel(Math.min(L().length-1,cur+1));break;
     case 'levels':showMenu();break;
     case 'resume':resume();break;
+    case 'controls':openPadSheet('pause');break;
     case 'back':resumeGame();break;
     case 'signout':save.name='';persist();showLogin();break;
     case 'set':set=b.dataset.set;save.set=set;datError='';persist();cur=0;menuView='levels';menuCat=-1;showMenu();break;
@@ -9557,8 +9597,8 @@ addEventListener('drop',function(e){
   if(screen==='play') pause();
   loadDat(e.dataTransfer.files[0]);
 });
-$('bLevels').addEventListener('click',function(){audioInit();if(screen==='play'&&game&&game.state==='play'){clearInput();}showMenu();});
-$('bRestart').addEventListener('click',function(){audioInit();restart();});
+$('bLevels').addEventListener('click',function(){audioInit();hidePadSheet();if(screen==='play'&&game&&game.state==='play'){clearInput();}showMenu();});
+$('bRestart').addEventListener('click',function(){audioInit();hidePadSheet();restart();});
 function soundLabel(){bSound.textContent=save.sound?'Sound on':'Sound off';bSound.setAttribute('aria-pressed',String(save.sound));}
 bSound.addEventListener('click',function(){save.sound=!save.sound;persist();soundLabel();if(save.sound) audioInit();});
 const bMusic=$('bMusic');
@@ -9570,6 +9610,7 @@ musicLabel();
 /* ---------- keyboard ---------- */
 addEventListener('keydown',function(e){
   audioInit();
+  if(!padSheet.hidden){if(e.code==='Escape'){closePadSheet();e.preventDefault();}return;} // Controls is open
   if(e.target&&e.target.tagName==='INPUT') return; // typing in the code field
   const d=KEYMAP[e.code];
   const onButton=e.target&&e.target.tagName==='BUTTON';
@@ -9627,6 +9668,7 @@ bGad.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();t
     if(screen!=='play') return;
     audioInit();if(introT>0) endIntro();
     if(game&&game.state!=='play'){skipEnd();return;}
+    if(coarse&&padPrefs.pad&&!padPrefs.swipe) return; // swiping turned off in Controls
     sw={x:e.clientX,y:e.clientY,t:performance.now(),dir:-1};
     try{cv.setPointerCapture(e.pointerId);}catch(err){}
     e.preventDefault();
@@ -9649,6 +9691,139 @@ bGad.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();t
   };
   cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);cv.addEventListener('lostpointercapture',end);
 })();
+
+/* ---------- phone controls: the wheel and the Controls sheet ---------- */
+// Phones steer with a wheel by default, a thumbstick like a football game's: drag the knob and Iso
+// walks the way it points, four ways, with a dead zone in the middle. The four-arrow pad is the other
+// choice. Side, sizes, spacing, sensitivity, button size and order, height and opacity are set in
+// Controls (the gear in the header, or the pause dialog) and kept in this browser only.
+var PAD_DEF={style:'wheel',side:'left',as:100,gap:6,float:true,dead:25,bs:100,snapOut:true,lift:0,op:100,pad:true,swipe:true,buzz:true};
+var padPrefs=Object.assign({},PAD_DEF);
+try{const s=JSON.parse(localStorage.getItem('fission_pad')||'null');if(s&&typeof s==='object') for(const k in PAD_DEF) if(typeof s[k]===typeof PAD_DEF[k]) padPrefs[k]=s[k];}catch(e){}
+function savePad(){try{localStorage.setItem('fission_pad',JSON.stringify(padPrefs));}catch(e){}}
+const padEl=$('pad'),wheelZone=$('wheelZone'),wheelEl=$('wheel'),knobEl=$('knob'),padSheet=$('padSheet'),bPad=$('bPad');
+function applyPad(){
+  const s=padEl.style,p=padPrefs;
+  s.setProperty('--as',p.as/100);s.setProperty('--gap',p.gap+'px');s.setProperty('--bs',p.bs/100);
+  s.setProperty('--lift',p.lift+'px');s.setProperty('--op',p.op/100);
+  padEl.classList.toggle('lefty',p.side==='right');padEl.classList.toggle('wheelmode',p.style==='wheel');
+  // Snap sits on the outer edge by default, whichever side the buttons are on.
+  padEl.querySelector('.acts').classList.toggle('swap',(p.side==='right')===p.snapOut);
+  padEl.hidden=!p.pad;
+}
+applyPad();
+// The wheel. A floating wheel jumps to where the thumb lands in its zone and goes home on release.
+(function(){
+  let pid=null,cx=0,cy=0,dir=-1;
+  function rest(){wheelEl.style.transform='';knobEl.style.transform='';wheelEl.classList.remove('held');wheelEl.removeAttribute('data-dir');}
+  function setDir(d){
+    if(d===dir) return;
+    if(dir>=0) release(dir);
+    dir=d;
+    if(d>=0){press(d);buzz(8);wheelEl.dataset.dir=d;}else wheelEl.removeAttribute('data-dir');
+  }
+  function move(e){
+    // The knob travels at most .42 of the radius, so it stays inside the base and the lit rim shows.
+    const r=wheelEl.offsetWidth/2,dx=e.clientX-cx,dy=e.clientY-cy,len=Math.hypot(dx,dy),lim=r*.42,k=len>lim?lim/len:1;
+    knobEl.style.transform='translate('+(dx*k).toFixed(1)+'px,'+(dy*k).toFixed(1)+'px)';
+    if(len<r*padPrefs.dead/100){setDir(-1);return;}
+    const ax=Math.abs(dx),ay=Math.abs(dy);
+    let d=ax>ay?(dx>0?1:3):(dy>0?2:0);
+    // A little stickiness, so a thumb near the diagonal does not flicker between two ways.
+    if(dir>=0&&d!==dir){
+      const keep=dir===1?dx>0&&ax*1.3>=ay:dir===3?dx<0&&ax*1.3>=ay:dir===2?dy>0&&ay*1.3>=ax:dy<0&&ay*1.3>=ax;
+      if(keep) d=dir;
+    }
+    setDir(d);
+  }
+  wheelZone.addEventListener('pointerdown',function(e){
+    if(pid!==null) return;
+    e.preventDefault();audioInit();
+    if(screen==='play'&&introT>0) endIntro();
+    pid=e.pointerId;try{wheelZone.setPointerCapture(pid);}catch(err){}
+    const b=wheelEl.getBoundingClientRect(),hx=b.left+b.width/2,hy=b.top+b.height/2,r=b.width/2;
+    if(padPrefs.float){
+      const z=wheelZone.getBoundingClientRect();
+      cx=clamp(e.clientX,z.left+r,Math.max(z.left+r,z.right-r));cy=clamp(e.clientY,z.top+r,Math.max(z.top+r,z.bottom-r));
+      wheelEl.style.transform='translate('+(cx-hx).toFixed(1)+'px,'+(cy-hy).toFixed(1)+'px)';
+    }else{cx=hx;cy=hy;}
+    wheelEl.classList.add('held');move(e);
+  });
+  wheelZone.addEventListener('pointermove',function(e){if(e.pointerId===pid) move(e);});
+  const end=function(e){if(e.pointerId!==pid) return;pid=null;setDir(-1);rest();};
+  ['pointerup','pointercancel','lostpointercapture'].forEach(function(ev){wheelZone.addEventListener(ev,end);});
+  wheelReset=function(){const p=pid;pid=null;dir=-1;rest();if(p!==null){try{wheelZone.releasePointerCapture(p);}catch(err){}}};
+})();
+// The Controls sheet covers the board only, so the controls under it stay live to try while it is open.
+let padFrom='',padOv=false;
+function padSeg(k,label,opts){
+  return '<div class="prow"><span>'+label+'</span><span class="seg">'+opts.map(function(o){
+    return '<button type="button" data-pk="'+k+'" data-pv="'+o[0]+'" aria-pressed="'+(String(padPrefs[k])===String(o[0]))+'">'+o[1]+'</button>';
+  }).join('')+'</span></div>';
+}
+function padRange(k,label,min,max,step,unit){
+  return '<label class="prow"><span>'+label+'</span><output>'+padPrefs[k]+unit+'</output><input type="range" data-pk="'+k+'" data-unit="'+unit+'" min="'+min+'" max="'+max+'" step="'+step+'" value="'+padPrefs[k]+'"></label>';
+}
+function padCheck(k,label,off){
+  return '<label class="prow"><span>'+label+'</span><input type="checkbox" data-pk="'+k+'"'+(padPrefs[k]||off?' checked':'')+(off?' disabled':'')+'></label>';
+}
+function renderPadSheet(){
+  const p=padPrefs,wheel=p.style==='wheel';
+  padSheet.innerHTML='<div class="padset" role="dialog" aria-label="Controls"><h2>Controls</h2>'+
+    '<div class="note">The game is paused. Try the controls below while you change them.</div>'+
+    padSeg('style','Steer with',[['wheel','Wheel'],['dpad','Arrows']])+
+    padSeg('side','Steering on the',[['left','Left'],['right','Right']])+
+    padRange('as',wheel?'Wheel size':'Arrow size',70,150,5,'%')+
+    (wheel?padSeg('float','Wheel',[['true','Follows thumb'],['false','Fixed']])+padRange('dead','Dead zone',10,50,5,'%')
+          :padRange('gap','Arrow spacing',0,24,1,'px'))+
+    padRange('bs','Button size',70,150,5,'%')+
+    padSeg('snapOut','Snap button',[['true','Outer'],['false','Inner']])+
+    padRange('lift','Raise the controls',0,120,4,'px')+
+    padRange('op','Opacity',30,100,5,'%')+
+    padCheck('pad','Show on-screen controls')+
+    padCheck('swipe','Swipe on the board',!p.pad)+
+    padCheck('buzz','Vibration')+
+    '<div class="pbtns"><button type="button" class="btn" data-pa="reset">Reset</button><button type="button" class="btn primary" data-pa="done">Done</button></div></div>';
+}
+function padSet(k,v){
+  const t=typeof PAD_DEF[k];
+  padPrefs[k]=t==='boolean'?(v===true||v==='true'):t==='number'?+v:String(v);
+  applyPad();savePad();
+}
+padSheet.addEventListener('input',function(e){
+  const t=e.target;if(t.type!=='range') return;
+  padSet(t.dataset.pk,t.value);
+  const o=t.parentNode.querySelector('output');if(o) o.textContent=t.value+t.dataset.unit;
+});
+padSheet.addEventListener('change',function(e){
+  const t=e.target;if(t.type!=='checkbox') return;
+  padSet(t.dataset.pk,t.checked);renderPadSheet();
+});
+padSheet.addEventListener('click',function(e){
+  const b=e.target.closest('button');if(!b) return;
+  if(b.dataset.pk){padSet(b.dataset.pk,b.dataset.pv);SFX.ui();renderPadSheet();return;}
+  if(b.dataset.pa==='reset'){padPrefs=Object.assign({},PAD_DEF);applyPad();savePad();renderPadSheet();}
+  else if(b.dataset.pa==='done') closePadSheet();
+});
+// Opened from play it pauses quietly; from the pause dialog it goes back there; over a menu it hides
+// the menu and brings it back.
+function openPadSheet(from){
+  padFrom=from||'';
+  if(screen==='play'&&game&&game.state==='play'){screen='paused';clearInput();cv.classList.add('paused');padFrom='play';}
+  padOv=!ov.hidden&&padFrom!=='pause';ov.hidden=true;
+  renderPadSheet();padSheet.hidden=false;
+  const f=padSheet.querySelector('button');if(f) try{f.focus({preventScroll:true});}catch(e){}
+}
+function hidePadSheet(){padSheet.hidden=true;padFrom='';padOv=false;}
+function closePadSheet(){
+  const from=padFrom,back=padOv;hidePadSheet();clearInput();
+  if(from==='play'&&screen==='paused') resume();
+  else if(from==='pause'&&screen==='paused'&&game&&game.state==='play'){screen='play';pause();}
+  else if(back) ov.hidden=false;
+  try{cv.focus({preventScroll:true});}catch(e){}
+}
+bPad.hidden=!coarse;
+bPad.addEventListener('click',function(){audioInit();if(padSheet.hidden) openPadSheet('');else closePadSheet();});
 
 /* ---------- loop ---------- */
 function doStep(){
