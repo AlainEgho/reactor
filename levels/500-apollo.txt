@@ -7,22 +7,22 @@ hint: 18 Gammas loose in the open, a Neutron or two, red canisters and yellow ca
 #. .<.  # y  ### #  ###    R  vR  R R      R  R R   <^ v^ <#
 # .*.*.   y R.*#  #     #            R          R   ^*.  X^#
 #*.*... # #. .R##  RRR+   R.O.  .R   y  R y   R. R  ...  < #
-#RSRR   ##  #y .#   R+.^  RRR.R. .R .*.R   R*R R   <<^>^<^ #
+#R.RR   ##  #y .#   R+.^  RRR.R. .R .*.R   R*R R   <<^>^<^ #
 #v .*R#  #  yRR # R RR     <.O.R  R ..*.R  .R. R    v^^v ^>#
 #  ..R     T # #         R  R.RR  R  ..R  RR.*. RRR>  v    #
-#R R#dR #   .*.   R R*.R   R..RR   S RR R R ..R     R    R #
+#R R#dR #   .*.   R R*.R   R..RR   . RR R R ..R     R    R #
 #RdR#. # S  .#.S    .dRR  <.OR  .  R.*... .*..*R R  <      #
 # v##R|#RR  ##*. #R R R+.  RRR     R.*RR. .RR.R.S  <R  vRvR#
-# .d#R|R#R R #.. #RR*. R   .RR R . R..@..S.R  .R  R  ^R R  #
+# .d#R|R#R R #.. #RR*. R   .RR R . R..@....R  .R  R  ^R R  #
 #  .R  R R .*R R*. ...  RR .*.R .*....R*RRR . RRRR*.  R  RR#
 #RRR   R  RR.. R.R  R R.*RRROR .R.....<*R. R   R .#.  .R   #
-#R     RR   RR R . R   .*S R*R    ..RRRR. R RS RR #RRR     #
-# R # # R  RRRRR ^    ...R RRR   RRR  RR... .>  R > R.O.v  #
-#  -   .  R   R R     S.R RR   R .*vRS R<.. RR R   RR... e #
-#   S  S>   R     R < .RR.OO.RR <.R.  S^ R .  R  R         #
-#dR #  #  R R  R R R .O...**R    R . R RR.. R   R          #
-# R    R   R    R  R <R| ....R  RRRR RR*.. R  R R  RR      #
-##...#..RO.RRROR R. .O**...R.*>  .*.R S..   . S RR      R R#
-#.#.#.R.O.R dOO.ORSRR*OO****R..RR... R>R**. RR RR   R  R   #
-#**OO.##RORRR..RR.  .OOO*OOOOR S  .    .R>.RR      RR  R  R#
+#R     RR   RR R . R   .*. R*R    ..RRRR. R RS RR #RRR   S #
+# R # # R  RRRRR ^    ...R RRR   RRR  RR... .>  R > R.O.v S#
+#  -   .  R   R R     S.R RR   R .*vR. R<.. RR R   RR... e #
+#   S  S>   R     R < .RR.OO.RR <.R.  .^ R .  R  R    S S S#
+#dR #  #  R R  R R R .O...**R    R . R RR.. R   R      S S #
+# R    R   R    R  R <R| ....R  RRRR RR*.. R  R R  RR   S S#
+##...#..RO.RRROR R. .O**...R.*>  .*.R ...   . S RR      R R#
+#.#.#.R.O.R dOO.OR.RR*OO****R..RR... R>R**. RR RR   R  R   #
+#**OO.##RORRR..RR.  .OOO*OOOOR .  .    .R>.RR      RR  R  R#
 ############################################################

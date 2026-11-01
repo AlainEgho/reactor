@@ -5,6 +5,7 @@
 // the files.
 // Usage: node tools/design-batch-16.mjs [first] [last]
 import { Board, rng } from './board.mjs';
+import { roomy } from './roomy.mjs';
 import { LAYOUTS, PIECES, outside, away } from './design-batch-15.mjs';
 
 const [FIRST, LAST] = [+(process.argv[2] || 346), +(process.argv[3] || 395)];
@@ -68,5 +69,7 @@ for (let k = 0; k < 50; k++) {
   }
   if (dark) some('L', 3, { ok: ends });
   b.set(1, 1, '@').set(57, 22, 'X').set(56, 22, '.').set(57, 21, '.');
-  b.fit(0.8).save();
+  b.fit(0.8);
+  roomy(b.g); // every Gamma and Neutron gets room to be seen, none near the start
+  b.save();
 }

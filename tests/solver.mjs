@@ -252,7 +252,7 @@ export function makeSolver(E) {
       for (const inp of plan) step(n, inp);
       top.banned.add(outcome(n));
       stack.push({ g: n, banned: new Set() });
-      if (n.got > best.got || n.state === 'won') best = n;
+      if (n.got > best.got || n.state === 'won') { best = n; if (opts.onBest) opts.onBest(clone(n)); }
     }
     return { state: best.state, got: best.got, need: best.need, ticks: best.tick, backtracks, x: best.m.x, y: best.m.y, game: best };
   }

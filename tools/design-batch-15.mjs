@@ -6,6 +6,7 @@
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
 import { Board, rng } from './board.mjs';
+import { roomy } from './roomy.mjs';
 
 const [FIRST, LAST] = [+(process.argv[2] || 296), +(process.argv[3] || 345)];
 export const inR = ([x, y, w, h]) => (xx, yy) => xx >= x && xx < x + w && yy >= y && yy < y + h;
@@ -158,5 +159,7 @@ for (let k = 0; main && k < 50; k++) {
   }
   if (dark) b.spread('L', 3, { ok: ends });
   b.set(1, 1, '@').set(57, 22, 'X').set(56, 22, '.').set(57, 21, '.');
-  b.fit(0.8).save();
+  b.fit(0.8);
+  roomy(b.g); // every Gamma and Neutron gets room to be seen, none near the start
+  b.save();
 }

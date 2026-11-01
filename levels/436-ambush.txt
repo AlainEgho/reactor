@@ -5,10 +5,10 @@ hint: Gammas on patrol, airlocks in the walls and Lead everywhere. A long harves
 ############################################################
 #.O**..**.***.O...*ORR*.  R . R ###..o##O.##.O***OO<#OOO*O.#
 #.O*O.OO.*RRO***OOO*.#.#R RR RR # # .##O..O#.#..O.#OOO#O*.O#
-#O.*O*.OROOO**ORO..R#R. S .  R<  .# RR####OO..#.#OO*#.*.*..#
+#O.*O*.OROOO**ORO..R#R. . .  R<  .# RR####OO..#.#OO*#.*.*..#
 #ORRR*...**ROORRO.*RR..#RRRR < R - .O. .*O.###*O#O#O.O#.*OO#
 #*OO|*R RO**.O*.*RO.O*<#   <RS R#. #..*.#.###**OO##....#OO*#
-#R.RORR*.O***O*R*O*O#OR# R R  S . # ..RvO#O*O*O.OO# #.O#*O*#
+#R.RORR*.O***O*R*O*O#OR#SR R  S . # ..RvO#O*O*O.OO# #.O#*O*#
 #OOR.*.**R*#R##*OO***OR#   RRR R# .#R*RR*##*O..*##.#.*.#**O#
 ##*#*#R**OR.R..#.......RRSR< RRR ..#.....O*OO...#.*..#*#.O.#
 ##.##..#.|# # #  v  # R##     ## #^^  . #.##-# .#|## #*#*.##

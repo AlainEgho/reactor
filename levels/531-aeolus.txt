@@ -7,12 +7,12 @@ hint: 18 Gammas loose in the open, yellow canisters and an Initiator, orange can
 #*.R***..R..RROO...OO#o. R R  R.RR...R  R .O...#....OO..Oy.#
 #..R.*o. R.R*RR......#O.   R.R  ..  . .  RR..#..OOO.O...O*T#
 # ....R...**.....O.O...#   .ROOOR*RR.*.  R  #..#OO....OO...#
-#..S ...RR##..#O.....##. RRRoO**OR*OoR.R  R###.#O.O.O.O...O#
-#  ....R.R#S...*.OO*O#..  R.oR*RROOORORR R   .O...OO.RO. .O#
+#. S ...RR##. #O.....##. RRRoO**OR*OoR.R  R###.#O.O.O.O...O#
+#    ..R.R#.  .*.OO*O#..  R.oR*RROOORORR R   .O...OO.RO. .O#
 # ..  R...RO###.O....OO. R R*R**O**OR*R    R##OO.....O....O#
 ##.#.  .#..#..O#O#O...O.   ..R.*O*O*o*R  R RR##..OO.O.*.O..#
-#  .OOO.O.## R....O..#.. R.O.**OOO*OoO*R     R.O...OO.*O...#
-## ^.#.#.. .R.R #.O.O#.#  .*RR@****ORR.. R.# ....O..O.*.OO.#
+#S .OOO.O.## R....O..#.. R.O.**OOO*OoO*R     R.O...OO.*O...#
+##S^.#.#.. .R.R #.O.O#.#  .*RR@****ORR.. R.# ....O..O.*.OO.#
 #    .. ##.  .  .#OO.O.#RRR.ROOO*OO*OR.R  ###..#...........#
 ####    #RRRRRS  #..**O#   .RR*RORoRRoR   #### .*. ##O.O..O#
 #    S#  .  RR #S#X.#.##  RRooORRR*RRo. R  ### .#. ##..#...#
@@ -23,6 +23,6 @@ hint: 18 Gammas loose in the open, yellow canisters and an Initiator, orange can
 # #      R# #R<.O*OOO..#                  ## #  #.*.. ..#..#
 #     # #vRS## .OO.O.#.#                  #    #*#.#   . .O#
 #   #         #....*OO*.                  #    ...###<R..*R#
-#  #   S ##   #.OOO*..<#                  <#S S .#*#   ..S.#
+#  #   S ##   #.OOO*..<#                  <#S S .#*#   ....#
 ##S#    #  . #<O.*OO. .#                  #  # # ...#  . R #
 ############################################################

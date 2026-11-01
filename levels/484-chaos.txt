@@ -3,26 +3,26 @@ need: 42
 hint: 43 Gammas loose in the open and 46 airlocks. Every Pellet counts.
 ---
 ############################################################
-#R .O. R R .R  R RR .ORR.*.. v R <+ + ++  R+.*.S    RX .*. #
-#+ ...O..O.R  RR   ...> RR..>^R  >+    + + +...       R... #
-#    SRRR...  R   R...RRR.R.^^R>v >+ ++  ++  S S  S        #
-#   RRS     R R  R  .R.R.*..Rv R>   + +  RR               S#
-#R.R RR  RR    R RR ...*O.R.      ^<>+  + R      S   S  S  #
-#R . R .  RRR RS    R*....*R#R^  R#  #SRS  R      S     S  #
-# R  RR R.RR RR RRRRR.RRRRR.<## <#S  RRR RRRS S       S    #
+#R .O. R R .R  R RR .ORR.*.. v R <+ + ++  R+.*.S S SRX .*. #
+#+ ...O..O.R  RR   ...> RR..>^R  >+    + + +... S     R... #
+#    SRRR...  R   R...RRR.R.^^R>v >+ ++  ++  S S  S S      #
+#   RRS     R R  R  .R.R.*..Rv R>   + +  RR   S S         S#
+#R.R RR  RR    R RR ...*O.R.      ^<>+  + R    S S   S  S  #
+#R . R .  RRR RS    R*....*R#R^  R#  #SRS  R    S S     S  #
+# R  RR R.RR RR RRRRR.RRRRR.<## <#.  RRR RRRS S       S    #
 #    . R  .. . R  RRRR.R..RR+ RRRR#R## #  #R    S    S     #
-#   R RR*.RR R.R. . R........R*.# .  .***.#   R    R    R R#
+#   R RR*.RR R.R. . R........R*.# .  .*** #   R    R    R R#
 #RR RR ....  R   RR R.RR..*R +R. ##  ...R. RR RRRR  RRRR*. #
-# R   R RR R   R  RR...R..RR.. .. # .S*S##RR  S    R   ..R #
+# R   R RR R   R  RR...R..RR.. .. #  S*.##RR  S    R   ..R #
 # R .R. . RR R R RRR.RR#*.RR# +R# ## ##..+.*OR.O..OR +OOROR#
 #  R   RRRRRR RR R RR.*.O.RR...O##+  #   ....OO*O.*.OOO...O#
 #  RRR R   RR  R   RR.R..R*RR.#..      ##  ...RRO...RORR*R.#
-# R    R  . .    R  ...RR..*.. RO.#.O#..OO##R..*OO.R.....S.#
+# R    R  . .    R  ...RR..*.. RO.#.O#..OO##R..*OO.R.......#
 #.  R R   . R R    R.R.....RO. .#.#..O#O#*#+O...*OR.   .   #
-#  RRR  RR  . ...R. RRR..R.RSR R .# ...##...OO...O*RS  .   #
-#R..*.R.R..RR..R.RRS...RRRR.*...#.. .O#.OS #O## RR.# .*....#
-#RRRR..R.*R.....@.RR.R.*.RR..ROO#S#.#..#.#...#  .##..*..   #
-#*. .R.R..RRRR*RR..O*.R.R.R.OORR... #S.  ###O#   S. ...    #
-#.R..R*....R*.R....SR*.R..*....R...+     S .S.    ..  S    #
-#*........*....R..RS.RRR.RR..RO.#  .            .  .      S#
+#  RRR  RR  . ...R. RRR..R.R.R R .# ...##...OO...O*RS  .   #
+#R..*.R.R..RR..R.RR....RRRR.*...# . .O#.O. #O## RR.#  *....#
+#RRRR..R.*R.....@.RR.R.*.RR..ROO#S#.#..#.# ..#  .##..*..   #
+#*. .R.R..RRRR*RR..O*.R.R.R.OORR.   #S.  ###O#   S. ...    #
+#.R..R*....R*.R.....R*.R..*....R. .+     S .S.    ..  S    #
+#*........*....R..R..RRR.RR..RO.#  .            .  .      S#
 ############################################################

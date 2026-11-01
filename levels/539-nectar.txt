@@ -11,7 +11,7 @@ hint: Gammas on patrol, red canisters, yellow canisters and an Initiator and ora
 # .+O#OO*#..OOO.#O#O.O...........O*.O.O.O.###<#.#@.##  #  ##
 #O#...#.......#O..O.#OO....O...........*...O#+ #y... y ## ##
 #R.   R. R R R..R.*##OO....OO...OO.....O#..### .#... #     #
-#   .RS.RR  R..RRR.O........O*...*..OO...##+     .    ## # #
+#   .R..RR  R..RRR.O........O*...*..OO...##+     .    ## # #
 #R R ...RR RR.R.RRO..O.OOOO...O..OO...O. .. #  ##  # .  # T#
 # R*. .. RRO.. ..R.##O.*O...O....O...O.O.##.   ##.##.## # ##
 #.......#.R.#.#R.o..#O..O....O....O....OO. R#R.#  R    . .##

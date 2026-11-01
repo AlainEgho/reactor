@@ -4,7 +4,7 @@ hint: 30 Gammas loose in the open, orange canisters, airlocks in the walls and w
 ---
 ############################################################
 # S  S....S  .  S  SSS .. #OooOooOoOO.oO..#..OR.O.*#  .# .O#
-# . ..  ..  . .    ....  ...OO....Oo.OOoOo.#...*.... #v.O..#
+#S. ..  ..  . .    ....  ...OO....Oo.OOoOo.#...*.... #v.O..#
 # . .  S.    . . ..     .# ..oOoOo..oo.Oo..o.....O. #R #<. #
 # S.         ..    S    .#..OOoO.O.o.o.oOooo#..O...  ####  #
 #     . .     .  S  .  ..##.Oo.ooO..oOO.o.oo.O.......# Rv  #
@@ -21,8 +21,8 @@ hint: 30 Gammas loose in the open, orange canisters, airlocks in the walls and w
 #    .   .S    .   .    #           R.. R  .##OO##   R. #..#
 # SS            .         <#      .     . .. ..O.S     R   #
 #   .      .  .  .  .   ## .         .. ..R<##O.. <     #  #
-# .  S   ..      .. .    . #        .   .... .## #.R S#    #
-#        .       .  .. .   ####.# ...#.R.R< .# . . RR*.R*..#
+# .  S   ..      .. .    . #        .   .... .## # R S#    #
+#        .       .  .. .   ####.# ...#.R.R< .#     RR*.R*..#
 #X        .     ..   S    .####.###.#R#ooo.R# <#RS#R.*.#R..#
-#.        .  #    #    .#. ###||### ...RoRoo..O.#*# .S.#..@#
+#.        .  #    #    .#. ###||### ...RoRoo..O.#*# ...#..@#
 ############################################################

@@ -9,9 +9,9 @@ hint: Gammas on patrol, 10 red canisters and Cask to blast, yellow canisters and
 ##R..#O###O..Rd..RR.R . R..RO.*R**OR.^.O...R.#R.. R.###R.#.#
 #..O...OO.O.RR.RRRR.R*R+RRRRRRdRO*ORR*.R...#R..#R#.......O.#
 #..y.#..#.#....RRR..+...++R .RROO***...R.R#.R R*+ + ...*#o.#
-#.o#......#...RRRR.R #R# ....*RO****..O.oo.. +.+R R.R..Ro.o#
+#.o#......#...RRRR.R #R# ....*RO****..O.oo.. +.+RSR.R..Ro.o#
 #..............RR*.RRR##R . R.R.*OOOO.#*o#.#R     .v# .....#
-#.y.....#..#.R.d#..#R#RRR R +*.R......S.oo. R .    ....#...#
+#.y.....#..#.R.d#..#R#RRR R +*.R........oo. R .    ....#...#
 #.#....#..#.... #R.R.RR*.R# .+. RRR..O.#.#....R+ R +# .#o###
 ##..#.....#.OR.#Rd*.....RR.+*R R.*O...R###R.  +.  .+..RR.oo#
 #............#...d.. # vR#^R.- >+*v. R...#R#++R*v . ..R ...#
@@ -20,9 +20,9 @@ hint: Gammas on patrol, 10 red canisters and Cask to blast, yellow canisters and
 ###*####.*##R..oO.RR*.### R R..+R. R .#RR##........#...Ro.o#
 ###*.*#*##.*#.#RR.RR.O.. #R*.| .*^*R  ...o.##R... .#R..##oo#
 ##*.*#*.#**#*oR#RROO|##..|R#>.^RRX-..#.Ro#.o...##R......o..#
-#O.OO...*....#RRd#RRR#. #.... #R. # ## >##.ooo.###oo#o...#o#
-#.@......*.O####.R#d.#>.d.R#S..  RR...#R.#oooo.o.o#oooooo#.#
-#**.O*O..OO.*R#..d#.R..*.- #. ..## # #..oooo.#oooo.o#o#oooo#
-#..O.*.OO*O... .      .........oo......Roo#o.##o#o#oooo###.#
+#O.OO...*....#RRd#RRR#. #...  #R. # ## >##.ooo.###oo#o...#o#
+#.@......*.O####.R#d.#>.d.R#S .  RR...#R.#oooo.o.o#oooooo#.#
+#**.O*O..OO.*R#..d#.R..*.- #   .## # #..oooo.#oooo.o#o#oooo#
+#..O.*.OO*O... .      ...... ..oo......Roo#o.##o#o#oooo###.#
 #*O*O.**.O*..  S        .ooooo.oooo.o...oo.#ooooo#oo#oo###.#
 ############################################################

@@ -7,10 +7,10 @@ hint: Gammas on patrol and Lead everywhere. A long harvest.
 #R  R.RRR...*.. .RO...RR*ROR.ROOO..R.ROR..R...O...O..*OOO.@#
 # R    RRR..R*R.ROR..O.*.O.RR.O.O*...**.R..R .R..R.....RR..#
 #  ...RRRRR..OR.R.O*.R...O*RRR.R.*ROO*..*.ROR.O*R ... R R.R#
-# RR  R  .R..*..O.**R.R.O*.R..ROO.*.*.*RR...R.O..*...OR.ORX#
+# RRS R  .R..*..O.**R.R.O*.R..ROO.*.*.*RR...R.O..*...OR.ORX#
 #RR    RR..R..R..*.O.*R..*OO..OOO*RRO**R*R ROR.ROR...R.....#
 #.    R .R..**.RR.R*OR.*RORR.ROOO..R*RROO.R...*RR.RR.O.  . #
-#..SR  RS....ROR*..OR*.O..O....*O.*R*RO*RR R RR. .*ROOR*R .#
+#..SR  R.....ROR*..OR*.O..O....*O.*R*RO*RR R RR. .*ROOR*R .#
 #.SR  R..ORR.R..R.OR*.R.*O*RR.*.O*.O**OR...  ROORRR..*OO.  #
 #    SR RORRO...RO.*.RR.R.ORR.RRORO.*.*OR.ORO.... R..ROR.R #
 #. R . ....R...*.RO*.OR*RO.RR.OO*RR.R.*.*OOROR..   .RO...R #

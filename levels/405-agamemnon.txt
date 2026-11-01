@@ -3,26 +3,26 @@ need: 141
 hint: 57 Gammas loose in the open and Cask packed wall to wall. A long harvest.
 ---
 ############################################################
-#.R......*R.*R.R.RR..R*.RR*..RSRRRSSRRRRRRRRRRRRRRRRRRRRRRR#
-#..R.RR....*.*....R*RR.S..R.*...RRR*RR*.RRRRRRRRRRRRRRRRRRR#
-#...SRS...R*R*R*R..*R.RR.R....SRRR*..R..RRR....RRR.*.R@..S*#
-#.R..RRR*.RRR.R.RR.*..SR...R*.RRRRR.....*.RR.R.RR..RRR.R.R.#
-#*.RS*RRR*.RR*RRRRRR.R.R.*R*.*S..R...RRR...*..*....*...RRR.#
-#.R.RRRS.R.R.RRRR.RR**.R.R.*RR.*RR.R.R..SRSS...R...R.RRR.S*#
-#R*.RRS*RRRR*.RR.....R...*RRRR.RRR**..*SSSRRR.R*...RRRRRS.S#
-#...*RR.......RRR*.R.R..*.R**.*RR**RS*R.RRRRRR.....RRRRRR.S#
-#.RR*...R*.**.**R..RR..R.RR.RR.R*.R..RR..R*.*RRRS.SRR..RSSR#
-#.RR*R.R**RR*RRRR*.R.R**RR..R.....R*RR.....R.*RRR*R.S..SSSR#
-#......*..RR.****R.*.RR..RR..R*RR..RR..R..R.*.R.RRRS.R.SRSS#
+#.R......*R.*R.R.RR..R*.RR*..R.RRR..RRRRRRRRRRRRRRRRRRRRRRR#
+#..R.RR....*.*....R*RR....R.*...RRR*RR*.RRRRRRRRRRRRRRRRRRR#
+#....R....R*R*R*R..*R.RR.R.....RRR*..R..RRR....RRR.*.R@...*#
+#.R..RRR*.RRR.R.RR.*...R...R*.RRRRR.....*.RR.R.RR..RRR.R.R.#
+#*.R.*RRR*.RR*RRRRRR.R.R.*R*.*...R...RRR...*..*....*...RRR.#
+#.R.RRR..R.R.RRRR.RR**.R.R.*RR.*RR.R.R...R.....R  .R.RRR..*#
+#R*.RR.*RRRR*.RR.....R...*RRRR.RRR**..*...RRR.R*. .RRRRR...#
+#...*RR.......RRR*.R.R..*.R**.*RR**R.*R.RRRRRR... .RRRRRR S#
+#.RR*...R*.**.**R..RR..R.RR.RR.R*.R..RR..R*.*RRR. .RR..RSSR#
+#.RR*R.R**RR*RRRR*.R.R**RR..R.....R*RR.....R.*RRR*R....SSSR#
+#......*..RR.****R.*.RR..RR..R*RR..RR..R..R.*.R.RRR..R.SRSS#
 #.R*RRRRR...RRR....RRRRR.R...RRRR..RRRR.R...R.R.RRR.RR.RRSS#
 #.RRR...*.R*RR..R..RRRRR...R......R..R..RRR.R...R...R...RRR#
-#.RR..RR..*.*RRRRR.RRRRRRRR..RR*R.RR*..RRRRRRR..R..RR.R.SRR#
-#.RR.R*..RRRR.R*..RRRRRR.*SS..RRR*R.R.R..RRR.RR.R.RRR.RRSRR#
-#.R.*RR..RRRR**.RR.*...*R.RRRR*RR**..*.*RRRR.RR*R*RR..RR.RS#
-#.RRRR*.RRR..R*RR.*RRR..S.RRRR..*.RR..RRRR...R...RR.*RR.SSS#
-#.RRRRRRR.RR.*.*..RRR.*.RR**RR..R.RRRSR.*R.RRRR..*RR.RRRR.R#
-#..*.RRRR....RRR*RRRRR.R..*.RRRRS.R..SR.R.*R....R.*R.RRRRSR#
-#.....RRRRRRR..*.R.R*..*RRR..RRRSRRR..S*.*RR.R....RR.R..RRR#
-#..RR.RR..RRR*RR*.*RRRR.RR*...*.S*SR.R.R.RRR.R.R*RR.....RRR#
-#RX.RRR.....*.R*....R*S**..*R*.R.RSR*R.....RRRRR..R.*RRRRRR#
+#.RR..RR..*.*RRRRR.RRRRRRRR..RR*R.RR*..RRRRRRR..R..RR.R..RR#
+#.RR.R*..RRRR.R*..RRRRRR.*....RRR*R.R.R..RRR.RR.R.RRR.RR.RR#
+#.R.*RR..RRRR**.RR.*...*R.RRRR*RR**..*.*RRRR.RR*R*RR..RR.R.#
+#.RRRR*.RRR..R*RR.*RRR....RRRR..*.RR..RRRR...R...RR.*RR....#
+#.RRRRRRR.RR.*.*..RRR.*.RR**RR..R.RRR.R.*R.RRRR..*RR.RRRR.R#
+#..*.RRRR....RRR*RRRRR.R..*.RRRR..R...R.R.*R....R.*R.RRRR.R#
+#.....RRRRRRR..*.R.R*..*RRR..RRR.RRR...*.*RR.R....RR.R..RRR#
+#..RR.RR..RRR*RR*.*RRRR.RR*...*..*.R.R.R.RRR.R.R*RR.....RRR#
+#RX.RRR.....*.R*....R*.**..*R*.R.R.R*R.....RRRRR..R.*RRRRRR#
 ############################################################

@@ -20,9 +20,9 @@ hint: Gammas on patrol, orange canisters and Lead everywhere. A long harvest.
 #......R......R.R...OO*.ROOROR.*R.O....R....*.... R.*.O*O.R#
 #...... .......O.O....OO.R*.O.....RRO.. .R.OROOR..*.OORO*R.#
 #...O.. .......O.R.O....RR...R..R*OR.. . .*RRR.*RR..O*O.**.#
-#..O..... .....R.R...O..*.*R.RR..*RRR......R*.*.O.R..ORR..R#
-#..*O.....S...O*.R.O...O.R.R..*RRO. .*.*O. ...O.*O..O...*..#
-#.........O.....OR*.*O...R*.O..*.RRR.*R..R.. ...R...OR ...O#
+#..O.....   ...R.R...O..*.*R.RR..*RRR......R*.*.O.R..ORR..R#
+#..*O.... S  .O*.R.O...O.R.R..*RRO. .*.*O. ...O.*O..O...*..#
+#.........O ....OR*.*O...R*.O..*.RRR.*R..R.. ...R...OR ...O#
 #@........*..*.*ORO.O..ORO.R*.X....*..*.O.*...*O*...O*.R..*#
 #.....O..O*....R...O..OO.R*RR.RRR*.R.RR.*R..R.O.R.*OO.....O#
 ############################################################

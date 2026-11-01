@@ -6,22 +6,22 @@ hint: Gammas on patrol, a Neutron or two, yellow canisters and an Initiator and 
 #... .R....O..O.R.R  . R.R...###..#..*..*O..O....O*RO*.O.O.#
 #..  .R ..OO.OO.R.R...  .#..... ..R#.*...OR.RO.**O...*O....#
 #.T. . .R........  .......##### #.R....OO..R..O..OORR.OO..*#
-#..e....... . .O..*.*R....R .  .#RRR.....O.R.O.O.OO.......O#
+#. e ...... . .O..*.*R....R .  .#RRR.....O.R.O.O.OO.......O#
 #... ..... .O.yOR..R.R  R...#### # .O.O*OO*.RO.OOO.R..O.OO.#
-#.. . R...O......RRRR ..R..#.. S #<..*...O.*.*.O...O*OOO**.#
-#.... R.ROO.OO. .RR*. RR#R.##...#.....O.O...R*..*O.R.R.***.#
+#.. . R...O......RRRR ..R..#.  S #<..*...O.*.*.O...O*OOO**.#
+#.... R.ROO.OO. .RR*. RR#R.##.  #.....O.O...R*..*O.R.R.***.#
 #...R.R.R...R.R.RR..RR..R.R..#. #R.#O*RRRO.O.O.ROR..R...RRO#
 #.........*OR..R*R..yR......R. R.RR#..O*.O.RR..R.*OOROO*O..#
 #.R..O.RRRR...OR.R.RR...RRR#R..#.R. ..OO..RRR...R..R.*.OOOO#
 #R.R...RR*OR.O.O......R.#R.#R     R.R.R.*.R..O.O.ORRORROOR.#
 #...R.R..OORORORR.RR...RRR. R.R.RR.oORRR.*...O.RR..R*RO.RRO#
-#.......RR*.R.*.R.RR.R..oR .S.. RRRo.O.OO*.R*O..RORR.OOR...#
-#.R..R.RR.ROO.OO.R .R.R.R...R ...ooRR.*.*.RROR..*..R.OO..OR#
+#.......RR*.R.*.R.RR.R..oR .... RRRo.O.OO*.R*O..RORR.OOR...#
+#.R..R.RR.ROO.OO.R .R.R.R...RS...ooRR.*.*.RROR..*..R.OO..OR#
 #R.O...R...*O..R.R....R..R v  ...RRo*.OOORR*RO..O...RRO.O**#
-#..RRR.*R.*O.O..*Ov^v<  R.R. .  . R.......O...OOOO.ROOO.O..#
+#..RRR.*R.*O.O..*Ov^v<  R.R.S.  . R.......O...OOOO.ROOO.O..#
 #....R......OO..*R.  >  . ..  .. .R.....O...R..OOO...OO.O..#
 #..R*R...O.*...R.Rv^> <^.R.  ....R ..O..O....O.O.....R*O.OO#
-#...*RRR..*.OO. <<   >v RS. ........O.OO.OORR.....OOR*O...O#
+#...*RRR..*.OO. <<   >v R.. ........O.OO.OORR.....OOR*O...O#
 #..RRRR....*O..RR.v ^<  R..........RO......O.O.OOO*.O.O.O**#
 #..R...R...OO*O*.  <><  R.... .....RO..O..OR...O.O*RO....O*#
 #...*R.XR*O..*..R< v > vR.. . ...R....O.OORR..@.OOOROR....O#

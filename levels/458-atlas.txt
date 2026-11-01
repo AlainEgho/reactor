@@ -5,24 +5,24 @@ hint: 84 Gammas loose in the open, 18 red canisters and Cask to blast and 30 air
 ############################################################
 #d*R*OOOO*OO. R#RRRR.dRd   .. . .RR   R .  R.....##.#.#    #
 #O<.O****O**..RRRRR.ddd. .#.# RRR     RR R.*.#@R.     # . ##
-#ROOOOOOOOOOR#R#R....R. .   |.R RR R . SRS.SR..R.  SRR. .S.#
-#dROOOOOOOOO. R#R.Rd. ..  # # ..R R    .S  S.R...   S. .. .#
-#dRdOOOOOOOO#..vRRR*. RR##.#RR .. .RSRRRSS  S S   RRS .  . #
-#.OROOOOOOOO.vv###RR.  R# .R R R .   RR .SS  S S      S .# #
-#OOdOOOOOOOOR#.#RRR# .R# # S.    RR...  S.  S   R  RR S R# #
-#RddOOOOOOOOR# R#R#...R# . .R   R R R.R   RSR SR S  S.S.   #
+#ROOOOOOOOOOR#R#R....R. .   |.R RR R . SR...R..R.  .RR. .S.#
+#dROOOOOOOOO. R#R.Rd. ..  # # ..R R    .S  ..R...   S. .. .#
+#dRdOOOOOOOO#..vRRR*. RR##.#RR .. .RSRRRSS  . .   RRS .  . #
+#.OROOOOOOOO.vv###RR.  R# .R R R .   RR .SS  . .      S .# #
+#OOdOOOOOOOOR#.#RRR# .R# # ..    RR...  S.  S   R  RR S R# #
+#RddOOOOOOOOR# R#R#...R# . .R   R R R.R   RSR .R S  S.S.   #
 #vROOOOOOOOOv###R#RR  #..#R#R^   .RRR R.R RSSS RR..     .# #
 #O#OOOOOOOOO. #RRRR#. R#R#RXR.. . v .  .S SR.R.S. S.*# R- ##
-#OddOOOOOOOO##R#R#RRR..RS. .R  . R R . RSRSR  S S  ....   R#
-#...O..OO...##vR.T##R...^S.#  RRR.<R.R    .R..           #.#
-#.......OOO.. v...##R# ...R  . .  R R. . RR.  R RR SSR S  S#
+#OddOOOOOOOO##R#R#RRR..R.. .R  . R R . RSRSR  S S  ....  SR#
+#...O..OO...##vR.T##R...^S #  RRR.<R.R    .R.. S S   S  S#.#
+#.......OOO.. v...##R#    R  . .  R R. . RR.  R RR SSR S  S#
 #OO. .OO....R##R.#B## . .R#.R^.*..R   .R  SR. R  R      R.S#
 #... ....    RRR-R.-R#R. ..RR...R  RR  RR R   R SS  S  SS.S#
-#  R        R###..-.##... .S .R.RR   .R..*.  -    SSSRSS# .#
-#           v. ##R..   .#R#   . R  . R. ..RR.R ..  SSS S  S#
-# R         RR.v.#RT.R#RR#. # .  R R R.RRR.   . .#RR.SSS# ##
+#  R        R###..-.##... .. .R.RR   .R..*.  -    SSSRSS#S.#
+#           v. ##R..   .#R#   . R  . R. ..RR.RS..S SSS S  S#
+# R         RR.v.#RT.R#RR#. # .  R R R.RRR.   . .#RR.SSS#S##
 #.          RRR.|#R.RRR#R.RR ..R      .RRRRRR .#SSSSSRSSS S#
 #R          .v #RR#RRRRR#.R#RR # .. R. .   R. ..SSS#SSS..# #
-# R         R. .####RRR#RdR. < #<#. # #  #. .#   .. #      #
+# R         R. .####RRR#RdR. < #<#. # #  #. .# S .. #  S S #
 # .         . R<####RRR#.d d.< . #<##.<<  ..  .  .# #.# R ##
 ############################################################

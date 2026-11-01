@@ -10,7 +10,7 @@ hint: Gammas on patrol and Concrete walls. Few Pellets, and each one is guarded.
 ############.#RR  R.RR... RR..R . ...R.R. .  R ..  ...######
 ###########...#RR R.  ..  R. R . .RR ......R.R...R .R..#####
 ###########.R.#   RR... .R. R ..   ...RR. ..RRRR..RRR.   .##
-############R... R. ..R. . R.. R R R.R....O.RXS..R....# .###
+############R...SR. ..R. . R.. R R R.R....O.RX...R....# .###
 #############R#.   . . .R  .RR..   RR ..R.ORRRRR R .R.## ###
 ############.##RR RR ...RR*..R..RRRR . RR... RR. . RR. #.###
 ############.R...RR R .  v..RR.R .R .. ..R.R..RR.R...R#. ###

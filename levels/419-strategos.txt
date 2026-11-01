@@ -3,26 +3,26 @@ need: 75
 hint: 21 Gammas loose in the open, a Neutron or two, red canisters and yellow canisters and an Initiator. Every Pellet counts.
 ---
 ############################################################
-#...OR.O.O.....OOORR SR SRR  .. ..  ..   . R.*.   R    ....#
+#...OR.O.O.....OOORR .R .RR  .. ..  ..   . R.*.   R    ....#
 #...R.......O*..OOdO.R  R  R.  . .. . . .*R ....R     .O.@.#
-#..S...R.*.*..O.O.O...*.  R  . .....  ..R.. ...*R     .....#
-#. .RR..O.*.O.O...ORR...    . .  .O.... .     .*.R     ....#
-# . .....**...OO*RR.    RR R ..  ....   R  R..*..  R       #
-#...R...R***RO**RRR.RS RRR R.R..R .  . .*.  .*..  R    e   #
-#**....R**..RR.RR..RR    S R..OR  .R . .eRR..*..           #
-#***R...*R.**R.OO.R.      RRR.R.R.. . ..*R  ... R R        #
-#oR..OR.R*.RRRRSR.R.R.OO.RRR..O.ORR..RRRO..R...R..R.RR.R.RR#
-#.RRR..RRRRSRR**... .RORR..Ro...ORRRO**.OR.R..R.RRRO.R.. R.#
-#..o.RRR*RR**RRRe R.ROdOR..O.O....R.OR**R....Rd..ORRO.... .#
+#......R.*.*..O.O.O...*.  R  . .....  ..R.. ...*R     .....#
+#. .RR..O.*.O.O...ORR...S   . .  .O.... .     .*.R     ....#
+# . .....**...OO*RR.    RRSR ..  ....   R  R..*..  R       #
+#...R...R***RO**RRR.RS RRR R.R..R .  . .*.  .*..  R    .   #
+#**....R**..RR.RR..RR    S R..OR  .R . ..RR..*..           #
+#***R...*R.**R.OO.R.  S S RRR.R.R.. . ..*R  ... R R        #
+#oR..OR.R*.RRRR.R.R.R.OO.RRR..O.ORR..RRRO..R...R..R.RR.R.RR#
+#.RRR..RRRR.RR**... .RORR..Ro...ORRRO**.OR.R..R.RRRO.R.. R.#
+#..o.RRR*RR**RRR. R.ROdOR..O.O....R.OR**R....Rd..ORRO.... .#
 #..o....*O*RO.R*...OR.OORR..........R.RR.O.ROR.R.RRORO.RR..#
 # .oRo.RRR**..RR.O.R...O.RRR.OO.RRR........RRRO..R.O...ORR.#
-#..O.o.RRO..*RR*RR..RR.RO.R...O.RR.ROO.RR.OR....R.RR.RR..S #
+#..O.o.RRO..*RR*RR..RR.RO.R...O.RR.ROO.RR.OR....R.RR.RR... #
 #....R..O.OO......R. <v<R<R R.R.**...RRO...OR R  .R RR  .R.#
-#. .R.....O.O.OOORO.  < < > .ORR*.R*.**OdOOOR RRR   R  RS  #
-#.. ..R...OOO..O.R..  ^>v^R ....O.R..RO....OR  RS  RS   RR.#
-# Rv  RRR>^T..RO.ROR  v   v^....R.R.O.O.OOO.R R          . #
-#  RvR  yRR . ..OR*.v^ >> RR....R.RORRR.OOO.  RR      R  RR#
-#^ R Rv^R   RRRRR*OR >v >  R.....RR...OO.OO. R  R R   R RRR#
-#    >    > .RRO.Rd. v << <RS.....SS .OOOOO. R R     RR X.S#
-# <  v    < .OO..O. ^v  R  >SS.S.RRS..OOO.O. . RRSR   S   .#
+#. .R.....O.O.OOORO.  < < > .ORR*.R*.**OdOOOR RRR   R  R.  #
+#.. ..R...OOO..O.R..  ^>v^R ....O.R..RO....OR  RS eRS   RR.#
+# Rv  RRR>^T..RO.ROR  v   v^....R.R.O.O.OOO.R R  S   S   . #
+#  RvR  yRR . ..OR*.v^ >> RR....R.RORRR.OOO.  RRS S S RS RR#
+#^ R Rv^R   RRRRR*OR >v >  R. ...RR...OO.OO. R  ReRe  R RRR#
+#    >    > .RRO.Rd. v << <R.   .... .OOOOO. R R    SRR X..#
+# <  v    < .OO..O. ^v  R  >.S S RR. .OOO.O. . RRSRS  S S .#
 ############################################################

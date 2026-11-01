@@ -176,9 +176,40 @@ const SETUP = {
   }
 };
 
-const most = process.argv.includes('--most');
-const args = process.argv.slice(2).filter(a => a !== '--most');
+const most = process.argv.includes('--most'), ladder = process.argv.includes('--ladder');
+const args = process.argv.slice(2).filter(a => !a.startsWith('--'));
 const from = +(args[0] || 1), to = +(args[1] || E.LEVELS.length);
+// --ladder: like --most, but plays longer and keeps the state each time the Pellet count rises. Then,
+// from the highest rung down (at most eight tries), the need is set to that rung's count and the player
+// walks to the Reactor; the first rung that wins is the proven count, printed as "took" on a "won" line
+// (never above the level's own need: a level that gives up its need is proven as it stands).
+if (ladder) {
+  for (let i = from - 1; i < Math.min(to, E.LEVELS.length); i++) {
+    const lv = E.LEVELS[i], t0 = Date.now(), rungs = [];
+    const fresh = () => {
+      const g = E.createGame(Object.assign({}, lv, { need: 9999 }));
+      try { if (SETUP[lv.name]) SETUP[lv.name](g); } catch (e) { /* the search starts from wherever the setup got to */ }
+      return g;
+    };
+    rungs.push(fresh());
+    const ENOUGH = new Error('enough'); // collecting stops once the level's own need is in hand
+    try {
+      play(fresh(), { timeLimit: 240 * 1000, maxBacktracks: 40, onBest: s => { rungs.push(s); if (s.got >= lv.need) throw ENOUGH; } });
+    } catch (e) { if (e !== ENOUGH) throw e; }
+    const byGot = new Map();
+    for (const s of rungs) if (s.state === 'play') byGot.set(Math.min(s.got, lv.need), s);
+    const tops = [...byGot.keys()].sort((a, b) => b - a);
+    const tries = tops.length <= 8 ? tops : tops.filter((_, k) => k % Math.ceil(tops.length / 8) === 0);
+    let proven = -1;
+    for (const k of tries) {
+      const s = byGot.get(k);
+      s.need = k;
+      if (play(s, { timeLimit: 60 * 1000 }).state === 'won') { proven = k; break; }
+    }
+    console.log(`most ${String(i + 1).padStart(3, '0')} ${lv.name.padEnd(20)} need ${lv.need} took ${Math.max(proven, 0)} ${proven >= 0 ? 'won' : 'stuck'} rungs ${tops.length} top ${tops[0]} ${((Date.now() - t0) / 1000).toFixed(1)}s`);
+  }
+  process.exit(0);
+}
 // --most: how many Pellets each level gives up. Plays with an unreachable need until the player is
 // stuck, then sets the need to what it took and walks to the Reactor, so the count printed is proven.
 if (most) {

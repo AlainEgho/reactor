@@ -3,16 +3,16 @@ need: 49
 hint: Gammas on patrol, 14 red canisters and Cask to blast, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
 ---
 ############################################################
-#.  .R.S....O.RO..R .R.OOR. .O..O..ORRR. . ....R..*ORRRORR*#
-#. .RR .R .RR.....R. RR..R. RR......RR*R.RRR  R*..RRR**d.*.#
+#.  .R S ...O.RO..R .R.OOR. .O..O..ORRR. . ....R..*ORRRORR*#
+#. .RR  R .RR.....R. RR..R. RR......RR*R.RRR  R*..RRR**d.*.#
 # ..   RRRR  .R<RR.R..O..R. R.RRRR . ..**RR*.R.OR .R.dRRR**#
 #. .R..  R.R..RRO..R.R...R.R .R.  ..R RRR...o**..RRRR.RRROR#
 #...RR R.R. ..RRR.R.ORR..OR  .. .RRO.RR*..R.RRO..ROR.Rd.R.R#
-#    ..RR  RR.R  .R.RO.....RO..O. .OR.RRoRR*RORR...**R.*O.o#
+#S   ..RR  RR.R  .R.RO.....RO..O. .OR.RRoRR*RORR...**R.*O.o#
 # .R  .. .. .O...R..ORO.RO...ROR..RR*. RoR.R*..R  RRo.RdROd#
-# .. .  . .R..R....R..RORROR..R. R.O.R.RR*..RR.....*O.RR..*#
+# .. .     R..R....R..RORROR..R. R.O.R.RR*..RR.....*O.RR..*#
 # ..R.RR S  .RRRO.ROO...R.RO....RR.R*.o...RR.R.R.oR...RROR.#
-# .R SR...R.R..RROR.R.RR X.R.OOR.OO.RRR*RO..do.R*.RR R .OdR#
+# .R .R.. R.R..RROR.R.RR X.R.OOR.OO.RRR*RO..do.R*.RR R .OdR#
 # .R .R. R..OO...R.. . RR.. .R.ORR..RR.Ro.R*.*RR.RRRR .... #
 #..R R..RR R.R.RRO. .ROOOO..O.ORR. ..R*RR......RR..*.R*R.  #
 # . ..R. .  ....R.RR..R..RO...RORR...R*.....R...@...RR..O..#
@@ -20,9 +20,9 @@ hint: Gammas on patrol, 14 red canisters and Cask to blast, yellow canisters and
 #.  R.R . RRRR.R..R..R.RRRRR... .RR.RR..d..R.R.R.RRR .RR.OR#
 #. R . ...R .R. R.O.RROROOR.  .R. RO..R.OR.RR*.R..R..R.OR..#
 # . R.R R.R ...R..R.ORR.R.. .R..OR...RRORR.R*.O. .O*Rd.d..R#
-#..R.... . .R.O.R...RO. ..RR.OO....RRy*..RR.RRO...*...R*Roo#
+#  R.... . .R.O.R...RO. ..RR.OO....RRy*..RR.RRO...*...R*Roo#
 #S R   RR R.R..OR. .R...  .R.OO.R..R.*.yR.*.RR.R.R.RR.*.R..#
-#. R   RR RR.ROOR.R.RR  ....RORO.. ...R.RdORRRoR..*RR.dR.**#
+#  R   RR RR.ROOR.R.RR  ....RORO.. ...R.RdORRRoR..*RR.dR.**#
 #. RR .R  .R.RRRR..ORO..RRR..R..R .O.R...R.dR.R.O.RRR*.RR..#
 # ..... ... ..OO..O...RR.OO.R .R..O.T.*..RR...O..RRO.O.*RR.#
 ############################################################

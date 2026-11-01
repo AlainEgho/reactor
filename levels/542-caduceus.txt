@@ -10,13 +10,13 @@ hint: Gammas on patrol, a Neutron or two, red canisters and yellow canisters and
 #.....O.OOO..O...o#>#   . ....O. #..  #*O.^#Ov^ .O.O***OOO*#
 #.R.......O...O#o.###*.O..O..O.. R.OO...R. #*. >*.>.O.**O**#
 #OR....O.......#.R# .v.........O....R#RR .O.^<vv*O*.OOO*.OO#
-#........yO.R#T#.####S#   # # #..# SR.OOOOO*#R#R.#.##R#..oo#
-#....... ##.#. #.. #..# #        # .OROOOO#.#R##RR..O##.#..#
-#.........# . ..##<..#   #   ##   R#..ROOO#. <<###O##...R#.#
-#R....#.Oy# ###.#R##.# ^  ##   # R#  R*.O*#OO## R##RR.#oo#o#
+#........yO.R#T#.####.#S S# # #..# .R.OOOOO*#R#R.#.##R#..oo#
+#....... ##.#. #.. #  # #        # .OROOOO#.#R##RR..O##.#..#
+#.........# . ..##<  # e #   ##   R#..ROOO#. <<###O##...R#.#
+#R....#.Oy# ###.#R## # ^  ##   # R#  R*.O*#OO## R##RR.#oo#o#
 #....O...#  R#RdRR#R# #..   ###.  SO..R......*#.Ro.o##...o##
 #O.....*Oy ##R#.RR# ..####.###.  .#O##R.  #R.#.oR.#oR..oo###
-#O.O.O*..y # R eRR  R. . #*. .#  ##O.R. RR.o.o#ooo##o###.oo#
+#O.O.O*..y # R .RR  R. . #*. .#  ##O.R. RR.o.o#ooo##o###.oo#
 #*.O.*..*y#y  RRRR#. ## ..o. .O#OO*.^  RRO#..#o#R.##..ooO#o#
 #.***RR.OO#*.R#RR..dR##..o....*#OOO#O#O*OOR RR.*....##.R.###
 #.OO.ROOR#.y.*.R..#d.oo.*o.o....O#O*##O.*O.O. v#.R.RR...##o#

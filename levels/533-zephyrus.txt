@@ -13,9 +13,9 @@ hint: Gammas on patrol, orange canisters, airlocks in the walls and Concrete wal
 #O.OO.OO.OOO.O.    RR####...#.## #..#...>.< ### #^.>##..##o#
 #...O.OO...O..R ...R ##o#.#.#. .  .R#####.# #.#..#.#.#.##..#
 #.O...OO. .OR.R. .R. ##o....##. ..^#..#.#..##.#.# .... # .o#
-#OOOOO.O...OOOR..S....#o...###.# #....#.#...#... .### #.####
-#O...OO.OO.OROO.. S ..#oooo#o.##.##o.#..###.#.###....<..#o##
-#..OOOOO.OO.R... . R..oo#oo#o.###o.o###^.^##...#..####...o.#
+#OOOOO.O...OOOR.......#o...###.# #....#.#...#... .### #.####
+#O...OO.OO.OROO.S S S.#oooo#o.##.##o.#..###.#.###....<..#o##
+#..OOOOO.OO.R...   R..oo#oo#o.###o.o###^.^##...#..####...o.#
 #O.O.O..OOO. R. .SR. .##o.o##o.oo#.####.#.#..###.#####..##o#
 #O.O.O.O.OO...R   R S####oo##.o.#.o#........#..#..^..#..##o#
 #OOOOO.OOO.O.OR.    R####oooo#o##ooo#.##.#.#......###...##o#
@@ -24,5 +24,5 @@ hint: Gammas on patrol, orange canisters, airlocks in the walls and Concrete wal
 #..O.......O.RR.S  R #oooo#o####.#o#ooo......#..#...#.####o#
 #..OOOO.OO.O.OR    R .oo#ooo#o##o#o##o###.#o.#..#.o##oo##o##
 #O..O.O.OO.OO>R...R S###oo##oo.oo#oo#ooo##o>ooo.#.o##...ooo#
-#O@....O..OOO..  SR  .o##ooooo##oooooooo.o.####o.o#.oo.o##o#
+#O@....O..OOO..  .R  .o##ooooo##oooooooo.o.####o.o#.oo.o##o#
 ############################################################

@@ -11,7 +11,7 @@ hint: Gammas on patrol and Concrete walls. Few Pellets, and each one is guarded.
 ####R.# R  ..R.  . .RR . . R.R..... ..  ....R.R#############
 #### #.  RR..  ...RR..R.RR... . R.RR.R . RR... #############
 ####...R  R.. .R  ..  .  RR. R.RR  R. .....R.R  ############
-######..RR..RRSRRR .  R  .R.... .RRRRR.R R.. . R############
+######..RR..RR.RRR .  R  .R.... .RRRRR.R R.. . R############
 ####R #    .XRORR ...R.RR . R. R  RvR..R..  #. #############
 ####. ..R..RRROR.RR ....RRRRR R.*RR R....RR...R#############
 ####.  ..   ........ .RR... RR.R.....R.R  R R###############
@@ -20,7 +20,7 @@ hint: Gammas on patrol and Concrete walls. Few Pellets, and each one is guarded.
 ######R .RR.RRR....R. R . RRRRR... RRRR .RR.# ..############
 #####.....R.RR..R..RR. RR RRRR   RRR RR. ..... .############
 ####R  .R...RR...R...R.R. .RRR  R  R  RRRR. R R#############
-###### #. #### # # ##..#R RR R .  . .R. .RR . R#############
+###### #. #### # # ##..#RSRR R .  . .R. .RR . R#############
 ######.# ##. ..#.###. ##R   ..RR...R  R...R #.R#############
 #####.   ## .#    .#..R RR .  .. R... ..R  R .. ############
 ######..#########.##.##......R...R.R.RR.R...R#..############

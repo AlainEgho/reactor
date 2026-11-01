@@ -9,6 +9,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { Board, rng } from './board.mjs';
+import { roomy } from './roomy.mjs';
 
 const [FIRST, LAST] = [+(process.argv[2] || 396), +(process.argv[3] || 445)];
 // need info zonk base empty ram hard snik elec bug orange yellow red term port grav: one row per classic level 62-111
@@ -182,5 +183,6 @@ PROFILE.forEach((p, k) => {
   const pellets = b.count('*'), supply = pellets + 6 * b.count('e');
   b.need = supply === 0 ? 0 : Math.max(1, need > 0 ? Math.min(need, supply) : pellets);
   b.unseal(); // neither the Reactor nor one-way airlocks may shut the start in
+  roomy(b.g); // every Gamma and Neutron gets room to be seen, none near the start
   b.save();
 });

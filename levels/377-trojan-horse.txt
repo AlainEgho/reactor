@@ -9,8 +9,8 @@ hint: Four rooms: hot spots flare in the Graphite round the Pellets; hydrogen ce
 #.BBBBBBBB*BBBBBBBBBBB*BBBBB.#.....#......#......#..****...#
 #.BBBBBBBBBBBBBBBBBBBBB*BB*B....R*R ...R*R ...R*R ..***.O..#
 #.B*B*BBBBBBBBB*BBBBBBBBBBBB.#..RRR ...RRR ...RRR ..*......#
-#.BBBBB*BBBB*BBBBBB*B*BBBBBB.#..### #..### #..### #.O. S ..#
-#.BBBBBBB*B*B*BBB*BB*BBBBBBB.#..F   ...F   ...F   ..O......#
+#.BBBBB*BBBB*BBBBBB*B*BBBBBB.#..### #..### #..### #.O. S   #
+#.BBBBBBB*B*B*BBB*BB*BBBBBBB.#..F   ...F   ...F   ..O.   ..#
 #............................#......................*O***..#
 #............................#.............................#
 ##############.#############################.###############
@@ -20,9 +20,9 @@ hint: Four rooms: hot spots flare in the Graphite round the Pellets; hydrogen ce
 #.IIIIII**IIIIIIIIII*IIIII*I.#..R*R..R*R..R*R..R*R..R*R.*..#
 #.*IIII*IIIIIIIIIIIIIII*IIII.#..RRR..RRR..RRR..RRR..RRR....#
 #.II*I*I*IIIIIIIII*IIIIIIIII............................*..#
-#.IIII*II*III*III***IIIIIIII.#.**.....**..*...**O.**O*O....#
+#.IIII*II*III*III***IIIIIIII.#.**..  .**..*...**O.**O*O....#
 #.IIIIII*IIIIII*IIIII*IIIIII.#..*. S .**..**.*******....*..#
-#............................#.O*......*OOO..O.*O*O.*.O....#
+#............................#.O*.   ..*OOO..O.*O*O.*.O....#
 #............................#.............................#
 #............................#...........................X.#
 ############################################################

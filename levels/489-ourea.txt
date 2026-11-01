@@ -3,7 +3,7 @@ need: 81
 hint: Gammas on patrol, hot spots under foot, orange canisters and 55 airlocks. Every Pellet counts.
 ---
 ############################################################
-#OOO**OOR******OR*#O+SO.+# > . #> ##O...O....O....OO*.....O#
+#OOO**OOR******OR*#O+.O.+# > . #> ##O...O....O....OO*.....O#
 #***O**RO**ORO**..RO##.. ###>>.## #+.##O*......O.O..O**....#
 #**###*##R*.*#O*o.*.#.   ##v <### v#O#O#O.OOO.OR...R.O.....#
 #.O@.*o.**.o#o.#..## #.# + #^.# v.v#.OO..O.O..O*O...O*OO..O#
@@ -19,7 +19,7 @@ hint: Gammas on patrol, hot spots under foot, orange canisters and 55 airlocks. 
 #   .##..R.*RO.O..RO.#..######..o##..##.#....##O#...####...#
 #R  .###*.OO.OOOO#.O#.....##..B#..#. #  +  # ##.S      ##S##
 # R*.##OO.**O.OOOOO#...#B####.### .#  S  .##S #+.   ##.*#  #
-#.R*.*#O*OOO*..OO.O# #+.#B###.##+..# #O# #.+#   .+.*.+#..  #
+#.R*.*#O*OOO*..OO.O# #+.#B###.##+..# #O# #.+#S  .+.*.+#..  #
 # ...O*#.OOO**.OO.O.##..#.....###... .+# ## ##    ..+#   # #
 #. .##..OOOOOOO.##OO......#.#..BB#.#  +#.   #            # #
 #S  #..#O.O.O.O.#O.O#.#.##.B...##### #  # # + #   +  # # # #

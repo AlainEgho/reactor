@@ -3,7 +3,7 @@ need: 119
 hint: Gammas on patrol, red canisters, yellow canisters and an Initiator and orange canisters. A long harvest.
 ---
 ############################################################
-##.    #y.  .^ .O...O...O..O..OO...OO<.OOO**O#O#*OOOO<O*OOO#
+##.S   #y.  .^ .O...O...O..O..OO...OO<.OOO**O#O#*OOOO<O*OOO#
 #.*#    ##.#....#....O...O.....O..OO.#.***.*OO*<OO*.##*O*O*#
 #.#.  # #.##.  .#<..OO.X...O..O....O. #*O*O***OO*OO.O*OO*O.#
 #  #   y .O#.###O....O..OO.OO...O......***O**#OO.OO..o.R..@#
@@ -16,7 +16,7 @@ hint: Gammas on patrol, red canisters, yellow canisters and an Initiator and ora
 ##R#R#######ooRR#..o.#.O.*#o.#..*#..##.*.**O#*##..O....O*.O#
 #.*.R....R*.#..###R.#*##.ORR*O*RO.RO.#.O*O.O.O>....OOO...OO#
 #.........R..#....O.*..#OOO#.#O#R.#.**#...OO**.#...*.....O.#
-#R.R.....R.R...#.SR#.. .R#.. ....#O...#.**OO.#...O...O.OO.O#
+#R.R.....R.R...#..R#.. .R#.. ....#O...#.**OO.#...O...O.OO.O#
 #.R...........##.#O. ##.#..O#.##.#.. .R....*.#OO.O...O.O*.*#
 #.....R.R......#....R..R.O*O..RO.*O...O.........OO....O....#
 #R.....R.....o*>.#...O..*O..OO*O.RO*..*...*O*#.O*O..O......#

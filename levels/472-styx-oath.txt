@@ -16,13 +16,13 @@ hint: Gammas on patrol, yellow canisters and an Initiator and orange canisters. 
 #oRy.yRR#.#..RR#.## ..oo.....*....o....o...o*.*..o...... . #
 #o.o.RR...ooRRo.###R#.#o..........R.....ooo..*.*o..o..*... #
 #.RRRoo.oo.R.Ro. . .o.oo.....*...*...RRR...o.*........... .#
-#ooooo.RR.RRoRo.#. ...#o.o...O...R...R...oo.......o...S. ..#
-#o.oo...oo..ooo. #.#.ooo.o...O...oo.o..ooR.o...*.o...... .*#
-#oooooooooooooo.. ##o.#.....oO..o.oR.R.R...o**.......S.. ..#
-#..ooo.o..ooooo. ##oo##......o......oRoR..o......o.oS..S ..#
-#..oo.o..o..oo..# .##o.o..oo.o..o..RRRo.o.RR..*...oo.*.....#
-#.oo....o..oo.o.##.#..oo.o.o....R..o..oRoRoo.*....#*.S..o. #
-#o...o.oo.....o. # .o#....oo......o..oRo.o.R.....o+.SS..S..#
-#o*...ooo..o.oo..# .o.#o.ooo.oo.o..ooo...o.oo.o.##....SS*.S#
-#.*...ooo.o.oo.o.X#..oo#..oo...*.o.ooo...oo.o..o#. #..*....#
+#ooooo.RR.RRoRo.#. ...#o.o...O...R...R...oo.......o.. S S..#
+#o.oo...oo..ooo. #.#.ooo.o...O...oo.o..ooR.o...*.o... .. .*#
+#oooooooooooooo.. ##o.#.....oO..o.oR.R.R...o**...... S .S..#
+#..ooo.o..ooooo. ##oo##......o......oRoR..o......o.oS .S ..#
+#..oo.o..o..oo..# .##o.o..oo.o..o..RRRo.o.RR..*...oo.*...S #
+#.oo....o..oo.o.##.#..oo.o.o....R..o..oRoRoo.*....#*....o  #
+#o...o.oo.....o. # .o#....oo......o..oRo.o.R.....o+..S ... #
+#o*...ooo..o.oo..# .o.#o.ooo.oo.o..ooo...o.oo.o.##.   SS* S#
+#.*...ooo.o.oo.o.X#..oo#..oo...*.o.ooo...oo.o..o#. #. *... #
 ############################################################
