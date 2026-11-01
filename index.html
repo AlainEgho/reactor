@@ -9086,7 +9086,6 @@ function showMenu(slide){
   const cleared=base?base.filter(function(_,i){return bp.done[i];}).length:0;
   const tabs='<div class="tabs" role="tablist">'+
     '<button type="button" class="tab" role="tab" data-act="set" data-set="remake" aria-selected="'+(menuView==='levels'&&set!=='original')+'">Fission<small class="n"> · '+LEVELS.length+'</small></button>'+
-    '<button type="button" class="tab" role="tab" data-act="set" data-set="original" aria-selected="'+(menuView==='levels'&&set==='original')+'">Classic'+(datLevels?'<small class="n"> · '+datLevels.length+'</small>':'')+'</button>'+
     '<button type="button" class="tab" role="tab" data-act="view" data-view="meltdown" aria-selected="'+(menuView==='meltdown')+'">Meltdown'+(save.meltScore?'<small class="n"> · '+fmtN(save.meltScore)+'</small>':'')+'</button>'+
     '<button type="button" class="tab" role="tab" data-act="view" data-view="parts" aria-selected="'+(menuView==='parts')+'">Components<small class="n"> · '+PARTS.length+'</small></button></div>';
   let body;
