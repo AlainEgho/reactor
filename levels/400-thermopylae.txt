@@ -1,0 +1,28 @@
+name: Thermopylae
+need: 53
+hint: 18 Gammas loose in the open, a Neutron or two, red canisters and yellow canisters and an Initiator. Every Pellet counts.
+---
+############################################################
+#.^>v <.*. R                    #    . ##     #*.   R     .#
+#   >^ .R.>                      >    .## # ###<.>#R .*>  .#
+#^v <> ^ R R R R    R  R R R  R   > R^ R   #      yT*R*RvS #
+# >v  >  >     R R Ry R     RR vR           y.# .###...RRR.#
+# ^  v ^   RRRyRR  RR RRRR   R RR  R   R##  R y# y     R.**#
+#^ v ^    >R.*RR  ..**.*R  R.O.. R  R++   R ###*S#      ...#
+#<  ^ >v>   R*.*. RR*RR..R. .OOR >RR d+R   R  ##.## R  R Rv#
+# ^  v<  R R...*.. RR.....  R.R.RR     R*R .*R#R #       R #
+#    RR     R ...    ..... R.  .RR  R RR.. .#.# #R RR#d#RR##
+#  R  ^   R    R  R R..@..R  RRRR   RRR  R R     R  |##R  d#
+#R RR     SR R R  SRRR.R.. SR .R   RRX*RS     ## #R ###|dR #
+#RR RRR R R*RS  .R..S.RR.R R   R*RRR ..R^  .*RR*.          #
+#  v RR  <R.<  RRR   >RR.R.. R..*.*R R    RRR..R.   RR  R  #
+#.O.     # #RR  R*RRRRR R*RRR..O.*.R  R    R R R R R RR  RR#
+#...R    R.    RR..*RRR R..R  R..RR R>>     .. .R  RSS< #-R#
+#.    RR  R     . .*R   ..R. R  S    R  RR RR  RR RR R# d R#
+#    R   R     R. RRSR >Rv R       RR RSR   R  RR RR. # RR##
+#e R RRR     SR   R.    .R.>R.O.R.ORR| RR   RR.   RR ##  # #
+#       R RR   R..R^R RR*RR.RR..RR***R*.           R   ##  #
+#RR  R     RRR  RRR*<.S.R.R. R.O.O**RORO.  R R    R  #    ##
+#               ..*.R RS.. . ..S.O*.OO*R.S   dO.RROR.......#
+#               R.R.R  <.*R<R  R***OOORO. RR.OOO..OR..OO*O*#
+############################################################

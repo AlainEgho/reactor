@@ -1,0 +1,28 @@
+name: Nike
+need: 80
+hint: Gammas on patrol, 12 red canisters and Cask to blast, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
+---
+############################################################
+#T.....O...*.O...*O.O....O......O*....*..*....O.....O.o.O..#
+#....OO........O..........O..y.....O.O.OO*.OO...O.O.OO...O.#
+#......O*.....O..O.......O....O....OOO.O.O...OOO.*O.*......#
+#..RRR*O.OROR.*R..#..#.#R.R...ROR.R.O...ORO.R..ORRR..RRR...#
+#Rd....RR.*O....OO#**..oO#*RORR...*RROOO..O.RRR.ROO*.R..RR.#
+#.ROOdRR.O.R.R.R...*OO#o......RO...RRR..OR.R*OROO..O.R*.*OR#
+#O.dd..*..R.ORRR.O*##*O.O#*.R.O.... .R.R.OR..O*.....d.R.O..#
+#OO....R....RROO.Oo#..o..##O..*.  .*ROROOO.RR..ORS  ...RR*O#
+#...O..RR..*OO.dOd*....o..#O.OR.  ....OO.OR...*OR. .....*dO#
+#..O..O.RO.O.R..OOooo*.oO..OOORR**...OROO.R..O....R.  ..ROO#
+#..O.OO.....O.R.O.#R#.....#.OOR.... .ROO..*OOO...R.  ..R..O#
+#......R..OO.OOO.. ##o*...#O.O*R . S.R..OO......O.R ..R**..#
+#.....OOR.*O.RO.O. .#oo.O.#..dRR. . RRO..d.ORO*..SR.. .R.*.#
+#O..O..R.O..RRR.O...*..*....@.R ..  .OO.OO..R....RR  ..*O.O#
+#..O.O..R.O..O.OOOo#o...##.O...  .*..OR*OORR*d..  . ..R*R..#
+#RRR.R*R..RR*R.*R.#R.#.**.**RRR..RR.*..RRRRR*.RR.RR.R..R*..#
+#.RR.RRR.R*.*R.RR.*##R..R#.R.RR*RR*RR.RR...R.*.RR.*..R*...R#
+#*..*RR*...RRRRR..R.*.R..RRR..*ORR..*RRR.*.*R.RR*R.R.*R....#
+#R...R..R.R..R..RRR..R##RR..R.R...R..RR..RR......R...RR...*#
+#R  RR R          RR  RR.  RR   R.   RRR R R     R     R .X#
+#dS   .  RR  R  R      R RR    Rv   R      R RRR R R    RRR#
+# R  R . R   RR. RR        R      RR   R   R    R   RRR  SR#
+############################################################

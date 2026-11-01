@@ -1,0 +1,28 @@
+name: Thanatos
+need: 114
+hint: Gammas on patrol and Lead everywhere. A long harvest.
+---
+############################################################
+# . .  R .R..O..RRR*.R ..*RR..O.RR.O.*OO..O.O.OOR.R.ORRO*..#
+#R  R.RRR...*.. .RO...RR*ROR.ROOO..R.ROR..R...O...O..*OOO.@#
+# R    RRR..R*R.ROR..O.*.O.RR.O.O*...**.R..R .R..R.....RR..#
+#  ...RRRRR..OR.R.O*.R...O*RRR.R.*ROO*..*.ROR.O*R ... R R.R#
+# RR  R  .R..*..O.**R.R.O*.R..ROO.*.*.*RR...R.O..*...OR.ORX#
+#RR    RR..R..R..*.O.*R..*OO..OOO*RRO**R*R ROR.ROR...R.....#
+#.    R .R..**.RR.R*OR.*RORR.ROOO..R*RROO.R...*RR.RR.O.  . #
+#..SR  RS....ROR*..OR*.O..O....*O.*R*RO*RR R RR. .*ROOR*R .#
+#.SR  R..ORR.R..R.OR*.R.*O*RR.*.O*.O**OR...  ROORRR..*OO.  #
+#    SR RORRO...RO.*.RR.R.ORR.RRORO.*.*OR.ORO.... R..ROR.R #
+#. R . ....R...*.RO*.OR*RO.RR.OO*RR.R.*.*OOROR..   .RO...R #
+# .   R RR.R*.R.R...*.R.R.R..*OO..O.O**..RO.RR ..R. ....  .#
+# RR  RRR.RRO.RORO.O...R.**RO*R.R*RORRORR*O.RR..OR*...RRR.R#
+# R  RRR .ROOO*.R***.RO..*.ROR.**R.R****O.RO...R*RR.O.RO.RR#
+#R  RR . R..*.*R..RRO*.R..ORR.**.R.*.*.OR..RO. ..RRRR....R*#
+#RR RRRR RRR*R..R.OO..ORROO*RR.*.ORRO..*R.ROROR... . ..OOR.#
+#     RR ....O..*R*R......OOROO.RR.*RO*R...O....  ... ..O..#
+#RR R RRR.RR.R.RR..ROR.*R....ROR...R.ROR..RRRO.. ..RR  ....#
+#    .  RR..**........RR....RR..RO..OO.RO. .ORO*R.  R .OO..#
+#RR R R ..O....R. R*O*...O..RR..R.......RR R..O..R..RR..R.R#
+#*. R R ..RR  R.R..O..R...R .*..O.....RR..R .....RR. . R. R#
+#.RR  R. RR..*O..O..O*R. ..R.R.R.......O...R.O.RR*..R . .. #
+############################################################

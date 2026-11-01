@@ -1,5 +1,5 @@
 name: Fenrir
-need: 90
+need: 110
 hint: Two long galleries: acid pools wait under the Pellets; and Alphas run the lanes. Gravity is on, Gammas sleep in every room.
 gravity: on
 ---

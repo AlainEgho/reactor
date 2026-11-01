@@ -1,0 +1,28 @@
+name: Gaia
+need: 40
+hint: 25 Gammas loose in the open, orange canisters, airlocks in the walls and wide open space. Every Pellet counts.
+---
+############################################################
+#.      #.**OOOOOOOOO*O*#O.OO*.O. .  R<..  .RO.   S  ......#
+#.     .*R.#*OO**O*O***OO#**....*R....  .   .R... <R.R.R@..#
+#  .....#..#*#*OOO**OOOO#R..v.*R*v.R..RS.R .OOO.  R^ R.RR..#
+#.  . S*....O*OR**O*O*OO.#..RR.RRSR .RR   RRRRR.RSR .R...RR#
+#  . ...R ..OROOOOOOORO*O.R# ....^.RRR <R.  .R.ROR.R.RRR...#
+#   ..  .....RR.OOOO#OR.....  R .*.RORO*.... R .OO...RRO...#
+# .. .     .##..OR**#O.O....R  ..R<.ORROooo...RRROR ..OO...#
+# .     ....O..#*OOO.RR#.....O.R . ..*OO..o.    .R. ...RO..#
+#.  .. ..........#.R........##S    ##.##..### ##O###. #O*# #
+#  ..*.S ........R.##.......    R # . .*#.  #R .R.#   ###.##
+#  ....  . ......#*O........# RS# .#R.*..#. S      .# R...S#
+#. ..S*..R.RRR . RR..R R RR R  RR  RR....  R.R  .R. .    R*#
+#  . ...R. .  .R.R   .R..R .   RR    R R      RRR  R R R.RR#
+#.. .   ...SR .. .R. R. .. R R    R   R  R RRS . .R R.R..S*#
+#... . ..R .                           ..  .   .  .. ....S.#
+#.... .. .R                               . ..  ... ....*S*#
+#  ..  ....R                                   ..........*S#
+#.........R                                    .. .. ...**.#
+#....... ..S                             .  . ..  .......*S#
+#...S....RR.                              . .   . ..... .SS#
+#..........S                                . . ...... ..*S#
+#..X....RR.                          .   .  .    . ......*S#
+############################################################

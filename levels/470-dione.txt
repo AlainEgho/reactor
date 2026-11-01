@@ -1,0 +1,28 @@
+name: Dione
+need: 1
+hint: Red canisters and Cask packed wall to wall. Few Pellets, and each one is guarded.
+---
+############################################################
+#.@.RR.R..R......RRRR..R.RR...RRR..R..R........R..RR.RR....#
+#RR......R.RRRRR.R..R..R..RRR.R...RR.RRRR.RRRR...R...RR....#
+#O..R...R..RR....R..R.RR...R....R......RR.R.R....R..R.RRRX.#
+#R.RR.....R.R...R.R...R..R...R.RR...R...R.....R.R......R..R#
+#.....R.R.....R...R.........R.....R.RR....R.R..RR..R.R.....#
+#RR.....RRRRRRRR.....R..RR.RR.R..R..R..RRR..RR.RRR.RRRR..R.#
+#RRRR.RRR.....R.RRRRRR.RR...RRR.RRRRRR.RRRR.RR...R.R.....RR#
+#...*...R..RRR...R.R.RRRR..R..RR.RR..RRR.RR..R..RRR..R.RR..#
+#...RR.R....R...R..R...RR......R..R.......R.RR..R..R...RR.R#
+#R..R....R.R.R.RR....................R.R...RR.....R..R....R#
+#R.R............R...RRR..RRR.R...R..R..R.R....R.R...R..R...#
+#RR..RRR.R.R..R....R.....R..RRRR.RR.RR.R.R..R.RRRR..RRR..R.#
+#...R....R.RRRRR.R.RR.RR...R...R.R.R.R.RRR.RRRRRR..R......R#
+#..RR.R..R.....R.R.RRRRR..RRR.R.R......R........R.R..RR.R.R#
+#.......R.......RRR..R...R..R......R..R.RRR.R...R....RRR...#
+#R..R..RRR..RR.R..RR...R.R.R..R.R.......R......R.RRRR....RR#
+#R...R..R.R..R..R.R.........R..RR......RR....R.R..R.R..R.R.#
+#...R.......R..R..R.R...R.RR..RRR..RR.RR..RR.....R....R....#
+#.R.RRRRR.R........RR.RRRRR......R..R.R....RR.RRR..RR.R....#
+#R...R....R..............R..RR.RR..R....R.RRR...R....R..RRR#
+#R.R.R..R...R...R.R.R...RR...RRRR.RRRRR.R..R..R.RRR..RR.RdR#
+#o..RR.RR...R.R...R.R.R..RR..R.....R.....R.RRRR.R...RR.....#
+############################################################

@@ -1,5 +1,5 @@
 name: Empire
-need: 66
+need: 40
 hint: Three halls side by side: a magnet waits behind Graphite plugs with Lead at the end of each spoke; fallout covers the floor, with Iodine at its corners; and a belt runs the length of the room. 134 seconds of air.
 air: 134
 ---

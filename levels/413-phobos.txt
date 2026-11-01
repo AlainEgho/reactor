@@ -1,0 +1,28 @@
+name: Phobos
+need: 51
+hint: 16 red canisters and Cask to blast and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#R.*R.RX......R.....RRO.ORO...RR........RR.O...RR.....R.R**#
+#.*RR*.R.RR.ROO*R...*O.OO.O......R..R...*RR...ROORO*.R..**R#
+#........O.RR.R.RR.R..O.OO..ORR......dd...d...R.OO.ROO.RR*R#
+#R..RO.OO*ROR.......O..R..*RR.O.....RR...RR......ORR..O.R**#
+#.O.RO..OR.OO..*.RRO..OR...O..OO..R.dRdR..dR.R...O......*RR#
+#...OR.*..RR...R..R.RO.ROR......O*.Od.....d..OR...O...R...O#
+#O...ROORROO....R....O.O...RR.R.ROOR.RR...R.R....O..O..OOR.#
+#.R.R..O.R..O.R.d......*R..OR..R....d.R..R......RR..R.O.O..#
+#.O.ROR.R.OR.O.OR.R....ROOR..R...OR..R....R.O..*RR..OO.OOR.#
+#R......R.OdO..*.R.R..R................@.R..OR..R..R..O..R.#
+#.R.ORORR...ORR..........O..R....*...R........R..R*RR......#
+#.OROO.R.R...RR.R...OR*.OR....RR.O....RRR..R.....*O.ORR..RO#
+#O.RR.O...d..........RO.O.O.....*.RORR.RR.R...RR.R..RR.OOO.#
+#.....O.O.R..........OR.O..O.R..R.OO...............RR.*R..O#
+#..RRO*...O.......RR....RR....R..............R.O..ORR.R.*OR#
+#...R...RRRRO.R.....O.RO....R..R.....R..R..R...ORR...*R.ORO#
+#....RdR.OO.O.OO....OO*......R....RR........O..O.RR..OR.RO*#
+#.O.*.RRO.OO..ROOR.R.RR...O...RR.R..R.ORROO.....O.OO...R.O.#
+#O..OOO.R.R.*...O*RR..OOO..OOR.....R.ORR....*ROOR*.R..d...R#
+#R.OO.R.O....R.ORROOOO..O...R.O....RROR*.O..ROORO*RR...O...#
+#R*RR.OOR....*RO..O.....R.....R*....O.R.*..R......R....RRRR#
+#*.**R.R*OOOOR.O..OO.R....dRRO.OR...O...RR..d.....R.....O**#
+############################################################

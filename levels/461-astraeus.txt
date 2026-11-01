@@ -1,0 +1,28 @@
+name: Astraeus
+need: 133
+hint: Red canisters, airlocks in the walls and Lead everywhere. A long harvest.
+---
+############################################################
+#*.......OR.RR..RR.RR...R.O..O......RO*O.O......O.*O.O...RR#
+#.O....O.OO.*.*.R..*.*RR...**.........>.O*. ..O.O......O***#
+#O...*RR.OO*.....*O...*O.RR*....RRRO.*RR.O...O*....O.....*O#
+#O*.....R...O...O..*O..*R.....OOO...ROO.*.OR....*...O..R..R#
+#...RXRR.R.R*.O.....O.O*.*.OO.O.*O.R*RRO..*........OROO.O*.#
+#...*O..*R..O..*..O.RORORO*.R.R.*.RRO...R.RR...O..RO....O..#
+#O.O.OR.@R...*O..O...RR.*.R. .O.R..R...O.**.O.O...*..R.....#
+#O...RRO.R..*..O...*....ROR.R|RR ........O....*..O.*.O.RO..#
+#..*....ORR.RRRR.O.O.R ......**...*R.....O..O*..R.R*...*OO.#
+#..*..OO.RR.R....OO.>..R.O..**R.O*.....O..O*R#. ..OOO...*O.#
+#.*......R.O.RO.O.O...O*.*OORR...RR.*.O.O.....R....#.*....O#
+#R..ROO*..ROO.RR..OR .ORO..*.R < ^^R..O...O.*.#.. .O.O.*...#
+#ORR....RO..OOR.R.R...O*.O..R .RRR*OO.O. .O... ...#.*O.*...#
+#*..RRRRR..O.O..R.*.RRR*.O.OO.^R..RR..O....OOR+O.*.RO.O..O*#
+#O.. R..R RRO... .R*R ..R.O.R.R*<.OR....R.OOO..RORR.O......#
+#O..R+O....RO.....**.R.*.O.R*.RR<.R*...OO**...O.O..OR..*.O.#
+#*.O*O...OR..O..RR..R..+R*.RORR>vR..O.O...OR...OO.......OO.#
+#.*..RRR...OR*O.... .O.OO.O*.RR.RRR..*.....OO..O.O.*O*.....#
+#.ORR**.RR.d...O.R...*O.*.....O.*O*OO..OR.....**O..**.RO.O.#
+#....OR.OR**.R.R.R.>O*.O.O*. ..-RRO..ROO.ORO*.*..*O.RO*R...#
+#.o...O.OO...R....*O..O.*.*...*.O*.O.*R....*OO....O.*.*. .O#
+#RR.O.*..*O....RO.RR.O.*..O.O*....RR.*.R**.O..O..O.**O...R.#
+############################################################

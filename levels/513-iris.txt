@@ -1,0 +1,28 @@
+name: Iris
+need: 51
+hint: 16 red canisters and Cask to blast and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#RRR.*RR.O*..R.OO.........R..RR..O..RRO...R.O..O.RRORXR...R#
+#**R.......R....R*R.R..R.........R.OROR....R*.R...O....*R.*#
+#**O.....OO.R..RR.R.RR.........R..OOO.*..RR....R..R.RR*RR..#
+#..R.OO...O.RR....RdRd.ROR.*OR....O..R.R.ORRR.R.ORR.OR.O...#
+#R*.O*.OR.........dRd.dR.O..R..ORR.OO.*.O..*d...OOR...ORRR.#
+#RO.O...O.........Rdd.Rd.R.O..OR...R..RO..R.O.O.*...ROO.O..#
+#O*RRO..RR.R...RR.R.d..R...O.R.*O.OROO....R.O...ORORR...OR.#
+#O..R.O.R.O....R...R.....O.RR....OR...R.RRO..ORO.dRO.ORRR..#
+#...O.OO*R.R..O..R...R...OR.....RO......RR...RO..OR.RR..RO.#
+#.R..O.....R..RR..........*....R.O.O......R..R..R.......OO.#
+#..R..R.OR.RO.O*......R@...R.............R...*..R.O.R*O...R#
+#*R.*OO.RR.O.....R......R..*RR.RO...OOO......RO.RR...O..RO.#
+#..RR.ROO....RR.....R.RR.OO..R..R..OR.......R..O.R..O.R...O#
+#O.ORR.R*R.....R..R...R...O...RR.O.ORO.........OR..dR.OO.RR#
+#.OROO..R..*.R...R.R..R....O.....O..RO*........R..O.O.OR...#
+#.O....R...OR.O.............R.R.......RRO*..R..*OO.RROORR..#
+#.R..O.dR.*RO*OR.......R...RR....R.R..*..R..R.O.R..RRO.d...#
+#*.RR.R..R..OOR.....RR*R..............R.R...RRR....OROO..R.#
+#.R..OR..R.OO.O...R.R..RRR..R..RR...ORO.R.....ROR...**.....#
+#*R....O...O.R.dR*.RO..O...R*.O..R..O..O....O.RR*.OOO*..RRO#
+#RO..OR.O*R.O..OR.R.OOO.R...ORRO..OdO......OOO*.RR.RORO.O*O#
+#R*.R...RR..........O.OR...R.O.O.OROO.ROO.ORO.OO...ORR*.O*R#
+############################################################

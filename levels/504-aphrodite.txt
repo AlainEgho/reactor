@@ -1,0 +1,28 @@
+name: Aphrodite
+need: 119
+hint: Gammas on patrol and orange canisters. A long harvest.
+---
+############################################################
+#*...*......**.O...##.*R.*. R## .  #####RRR   RRR  R## RRRR#
+#...*.**.**.*...*.#.#......    . ####### #RRR RR .R##R..|R##
+#..*....o.o..***.*#.. #  ##   # ####### .. R  SR #R#R-. R R#
+#**O.*.O.**.RRRO.O#. R   # R#*. RRR RR  RRR      . #R .  .R#
+#..***.**O*....*..#.#R# R#. R#*##   R .*RRRR*R RRR  R. .RR##
+#..*.O*.O.R***O***# #R### .  .R. .  R .R.  R..    RRR# ..*R#
+#*.RO**O*.O.R*O.*O..O#.  # #R.  .*#   R  RRRR R R  RRSR #R##
+#***O*OOO**OOO*R...R.. R R R    ..RR    R    RRRR RR#.|...T#
+#.*O.O.OOO..O*OO.O#*.R RRR.RRR    RR R S R R .*.   ## .  R##
+#..*..OR*O*.**.OO*##..R.      R    R   R R. R...#.*. . #|###
+#O.O.*..****O..R*O..##  # # R R   RRR  RRR .  R  ..R#RR#R#B#
+#.....OOO..O*.OR.*#@*. . .R  R   .*. RRRRR.RR    S  RRS  R.#
+#O*.***..OOO.ORO*O*-..RRRR  R. .*R#.RRR    . R  R RR . RR#B#
+#..O.O.**.*...O.O..##.. . .   R.RR    RR   RR .R    .RRR.-.#
+#*O.**.OROO.RROO*. R  RRS RR R . RR    R .*.    R  .R. . #-#
+#..*R.*.R...O.OO*.#.R. R  RR R RRRRR .. .R..RRR . R R .. RR#
+#*.OOOO*...OOoOOO. .#S  R R RRRR RRR# R.. RR  RR RR   R .  #
+#O*...O*.*O.*..*..R..  R . .S    R    R RRR  .R RRRR  RRRR.#
+#O.RO*.RR**..ORO.*.*#  . R. R   RR  RR#  #RR.  S R RR RR   #
+#.....O.O.*OOO.*.ORO.  RRR R#  RR .SRRRR.RRSRS.*. . #.#. # #
+#o.O...O.**.O.*...##.R  RR RR*RR RR RRRR R.   .R.R.*R . RR #
+#.X.o........OO*O..R. RRR . ....  RR    .*.R.*RR R.RR #. R##
+############################################################

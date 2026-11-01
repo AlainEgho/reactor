@@ -1,5 +1,5 @@
 name: Shangri-La
-need: 55
+need: 97
 hint: One open floor in four quarters: a laser sweeps a lane with Pellets lying in it; a belt runs the length of the room; Gammas sleep in the walls; and a magnet waits behind Graphite plugs with Lead at the end of each spoke. 145 seconds of air.
 air: 145
 ---

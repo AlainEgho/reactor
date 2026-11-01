@@ -1,0 +1,28 @@
+name: Battlecry
+need: 51
+hint: Gammas on patrol. Every Pellet counts.
+---
+############################################################
+#.#@.#  ..OOO.RROOR*R  .R    .*RR  ..#.##..ORO..R..RR...OO*#
+#.O#.....O.OR.*ORO.....RR  R RR.RR. ......#.#R.....O.RR....#
+#.O.R.##.ORORR.R.O*..R.. .    R R#RR###.#....###...##..R.R.#
+#.##..O#...R*RRO..*.  .RR RRRR ..  R###.###.R#.#...OR.R.RR.#
+#.#..OO#OORO*O..RR.RRR ..R R   RR.  ....#####....#..O......#
+#O.O...R..ROO.O..OR..R... .OR ..R. R.RRR..R.. .R...RRRRR..R#
+#.OOR..R.ROR.O..RORR RRRR.R.R. R. ...RRR..R .RR.R.RRR.....R#
+#...RR..OO..O.OOR.*R..SOR R.. RRR..R.....RR.. . ....R..RRR.#
+#O.RO..*RORRO.O...R*. RR.R..RRRRRRO.RRR.RR..  .RR.RR.R.....#
+#R....R*ORO*.ROR*....R.O.OOO...RRR....R.RR.....R*....R.RR..#
+#..RORROR*OOROO.R.O..RR*..OOR.O.RR..R.R .R..RR RRRRR...RR..#
+#R.ORRRO****.OO*RR.R R.RRO...OO...R....R....RR...*..R....R.#
+#..R*RO*.*O.O...R.*O.R..OORRR.R.R.R*.RR...R..RRR.R.....R...#
+#..R*..R..O**O.O*RRRRR..OOOOR..R..RRR..R.RRR..RR.RRR.RRR.RR#
+#R.ROR RR.O*.R.RRR.RR.*.ROROR.......R......RRRRR.R..RR....R#
+#*.**R.. .R..RRO**.O..R.OOOO..RR.RR.R...R.RR.R......R.R.O.R#
+#.R.RR....RR .....RRR....OORO.R..R..R.R.RR.R..R....RR...R..#
+#.*R R #. RR#.X .*RR.OR.OROROR.R...RRR...R.R..RRR RRRR.. ..#
+#.....  .  R.*.*R.RR.R.R.OORO. R.RR.RR.R.R....R.R...R.R.. R#
+#.*R.R#OR.*#RR.OO*R. RO...RRR..R..R.R......R.... .RO....R.R#
+#R.OO.RRRR...R..RRR. RR.. R .*.OO*R*..R.R.R*.RRRR....R..R..#
+#...R. .R   .RR..*...RR.R R .RR.R.RO.RRRR.RR...RR......R...#
+############################################################

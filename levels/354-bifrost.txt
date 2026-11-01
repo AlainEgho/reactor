@@ -1,5 +1,5 @@
 name: Bifrost
-need: 58
+need: 113
 hint: Three halls side by side: acid pools wait under the Pellets; fallout covers the floor, with Iodine at its corners; and Pellets wait in Cask cages, one plug in the roof of each. 142 seconds of air.
 air: 142
 ---

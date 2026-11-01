@@ -1,0 +1,28 @@
+name: Styx Oath
+need: 44
+hint: Gammas on patrol, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
+---
+############################################################
+#.@.###....##*.#O..ooO.#.............o....oo.o...o....oo.*.#
+#.TT*T...###..#.#o.#..o..*..*....*ooo.ooo.o..ooooo.o..oo...#
+#...T..T......#.oRyy..#....O....oo...RR..R....RRR..*o.....O#
+#.T.............#.#ooo....O.......R.RR.R..RR.R...R.Ro.RR...#
+#T...T.T.....#.##..o.#.#.......*R.o.R..RRR....R...R.R.o...o#
+#..*...T*....... ##o..ooo........R...**RR.R..oRo...o*... ..#
+#...*.*....T..#...#o.#*..........o.o.R*RRoo.*oRoo.o...... .#
+#...T.....T.#.*# R.o#o#...O......o..R*..o.*.R.R......... ..#
+##o.R#..RR..y.##y .##oo#...o.....o..o..o.o.o......*o.......#
+##.RR#RyRy#RRRRR   ..#o.o.O.O.....ooo....o..*.....o....... #
+#oRy.yRR#.#..RR#.## ..oo.....*....o....o...o*.*..o...... . #
+#o.o.RR...ooRRo.###R#.#o..........R.....ooo..*.*o..o..*... #
+#.RRRoo.oo.R.Ro. . .o.oo.....*...*...RRR...o.*........... .#
+#ooooo.RR.RRoRo.#. ...#o.o...O...R...R...oo.......o...S. ..#
+#o.oo...oo..ooo. #.#.ooo.o...O...oo.o..ooR.o...*.o...... .*#
+#oooooooooooooo.. ##o.#.....oO..o.oR.R.R...o**.......S.. ..#
+#..ooo.o..ooooo. ##oo##......o......oRoR..o......o.oS..S ..#
+#..oo.o..o..oo..# .##o.o..oo.o..o..RRRo.o.RR..*...oo.*.....#
+#.oo....o..oo.o.##.#..oo.o.o....R..o..oRoRoo.*....#*.S..o. #
+#o...o.oo.....o. # .o#....oo......o..oRo.o.R.....o+.SS..S..#
+#o*...ooo..o.oo..# .o.#o.ooo.oo.o..ooo...o.oo.o.##....SS*.S#
+#.*...ooo.o.oo.o.X#..oo#..oo...*.o.ooo...oo.o..o#. #..*....#
+############################################################

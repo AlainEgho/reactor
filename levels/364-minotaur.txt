@@ -1,5 +1,5 @@
 name: Minotaur
-need: 68
+need: 97
 hint: Six rooms in two rows: a belt runs the length of the room; Alphas run the lanes; hot spots flare in the Graphite round the Pellets; an ice floor carries you past its Pellets; a line of orange canisters stands shoulder to shoulder over caged Pellets; and hydrogen cells sit under their stores. 132 seconds of air, Gammas sleep in every room.
 air: 132
 ---

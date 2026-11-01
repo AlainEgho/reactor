@@ -1,5 +1,5 @@
 name: Midgard
-need: 57
+need: 130
 hint: Four rooms: a line of orange canisters stands shoulder to shoulder over caged Pellets; Antipellets lie shoulder to shoulder with the Pellets; Plutonium sits on posts under hanging Lead; and isotopes decay while you work.
 ---
 ############################################################

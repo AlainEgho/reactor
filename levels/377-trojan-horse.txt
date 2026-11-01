@@ -1,5 +1,5 @@
 name: Trojan Horse
-need: 81
+need: 98
 hint: Four rooms: hot spots flare in the Graphite round the Pellets; hydrogen cells sit under their stores; an ice floor carries you past its Pellets; and Pellets wait in Cask cages, one plug in the roof of each. Gammas sleep in every room.
 ---
 ############################################################

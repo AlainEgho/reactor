@@ -1,0 +1,28 @@
+name: Pallas
+need: 124
+hint: Red canisters, orange canisters and Lead everywhere. A long harvest.
+---
+############################################################
+#..O....RR..O...ROOR..O*....*..R..**..*.....ORORO.O*...X.R.#
+#*Ro...o........O..R..ROO**.O.RRRRR....O.*...*..O.O..R.R...#
+#.o*......O..O..R.......OROR*..#o.O.RR.*.RR..*...O.*RR....*#
+#...o.........O.OR...O*.O*.*.#...OR*.O..O.OR..........R.O.R#
+#..........o..*O*.*RR.O...R.O..R........O..*..OO.**...R.*.R#
+#.....R@.R.oOO....dR..*..O.R...#.....ROR...O....OO.O..*....#
+#R.R....R..*...*R...R.R.*.*.#.*OO*..ORR.R.O..*OOO...R..OO..#
+#R.*..R...O...OOR.RRO**..R.....O....R.*...*d..*O..O.*.RRO..#
+#...R*.RRRR..R.RRRRRO#...#..#OR.*R.R*..**.O.O.O.*..*O..O*..#
+#...O..O.R.R.*..RR..R*....*RRR#.*O.R#*.....O...O...O..O.O..#
+#*O..RR.R...O..*R.R.R.O.#R#O*..#.OR..##...O...OO.O...*..O..#
+#RRR.*RO.R..O.R.O. .*RR.R...#O.#*...*R*#.RR*.O..O*.O..O.OO.#
+#...*......*RRR.RR.....*ORR*..O.#*.OOO....R.R.....O.O.*..**#
+#.R..oO.....RR.OO*.OR .R....R.R###*O#o*#O.R.R.R.O.O.O*....O#
+#.*.o..R*.R.*....*RRR.R.R*..O...##..#..#...*.......Oo..o.oo#
+#.o..RORR..RO.R..*.....*OORR.O..#..O#O....O..o*O...o..o....#
+#O....RRO.R.O..*R.O. R>O..OR..RR.O........OO.**O..oo.O.o.*o#
+#O*R.R.*....OO.R.RO.R....**R..O*......*O..*...R.oO..OO...*.#
+#O.RRR.RO...ORO*..*..R.RR.*RO....O.O.O.O*O..O..RR*.o.......#
+#R....RRO..o*.R..ROO.O.RR.RO**..*...O.O*....R..OO..O.O..*O.#
+#..O....O..OR...O...O*..R .R..O.**.O...OOO....R.*RR........#
+#.*O...O.*....R.O.*.R.*R .*O..OOO...OO.OO...R*....O..O*...*#
+############################################################

@@ -1,0 +1,28 @@
+name: God of War
+need: 101
+hint: Red canisters, orange canisters, 49 airlocks and Lead everywhere. A long harvest.
+---
+############################################################
+##.O*O.X*OROv.OOOOR.RO..^RROOO^.O. v..OO.#O*R... .OdR>R.OOO#
+#..OO.OR*<O.R.RR**.O..<R**.RO.O*.RR.*R.*-OR-vRd.R#O#O<...*O#
+#.RR*OOR>*.RRRR*.O..R.R.OR.RRR.*.R#.#...OR# #..R##....O^.*^#
+#O...RRRR*RR*.RR**..RRR.ROROOO*.RR.Ro#..RR# - R.#R.  #*..OO#
+#.#.RRORROO.*vRO.*RORRR.>OO^RR*O*. R.## .o.R# ..*OR. R#....#
+#RO.OO.R.*ORRRR..OO.R>R.O*R*..RO.#.RO.#.R#R R..*.*R.R.OR  ^#
+#*..R*R ..R@OO..^*.R  R.RR..RRO..#.....o#   ROO^..*.<-RRRR #
+#R.RO.RO.R*ORRRR*ORR  ..*RR*..RRO..R#R##R*R#.*R..RR.+ R R R#
+#..O*.RR...RRO.ROOR*.RRv.>..R*.R.R.RRR.O..Oo*RR*ROR R.O.  ##
+#ORRR*ORR...OR..^.OO...RR RR*.*.RRR.#RR.#..OOR..R*...R... .#
+#OOR*.*RRRRO**RRRR..RRRRR.RROORR..v..RR R#.#OR^R>***O|..O^##
+#ROoRRO....O.R.RRR*R.RRR..OR*RO..R...#R# . .#o#O.OR*OR*RR#R#
+#..RR*R.R R.RR| R..oO*. R.R.RR..RRR . ###.##..o#ORROOORR.###
+#..#R... R<R*R .ORO*.R.R.O*. .RR.O. ...Roo#. .o#R...OOO.*Ro#
+#O# . R*R .O.RR..ORR.RO*R.R.RR. ...R#o#*o##.#Oo. .#.ORvOR>.#
+#R. R.R-O..R.  .ORO...+oRO*.**.RRR..o..##.o####.RRR..#...oO#
+#...#*RRRR..R R#..RR  .RRRR.<...O*R.#*#o#o#####..O.RRO.RRO.#
+#RR.OR.ORR#R*..*ROO.RR.R..**R>.RR..#...OO.**OROO.RRR#..R##.#
+#O..*RROO.O..ROO.OR.ROR.RO*OR#.OR#.R.OOO......O.. R .RORR. #
+#OR..RR*O...R..#R*.R...*O.R..R.....R#*.#..*. .R. . .R.OR##.#
+#RR>RR..... > .RRR.RRR.RRR....*O#.*o.*#..OO.  .R.. .-...RR<#
+#v.*....R.R R..O.R.*RR>RRR . ..O#RO*.>.O*OO. RR*.RR>*R .*###
+############################################################

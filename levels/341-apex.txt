@@ -1,5 +1,5 @@
 name: Apex
-need: 85
+need: 125
 hint: Four rooms: fallout covers the floor, with Iodine at its corners; liquid sodium hangs over the dig; Gammas sleep in the walls; and isotopes decay while you work. 115 seconds of air.
 air: 115
 ---

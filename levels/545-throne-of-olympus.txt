@@ -1,0 +1,28 @@
+name: Throne of Olympus
+need: 101
+hint: Red canisters, orange canisters, 49 airlocks and Lead everywhere. A long harvest.
+---
+############################################################
+#OO*R d>.#.#RRdO.R#-oR.   RRO^*O*R R R>.*OOOORRR*.O.*.O.O..#
+#OOO^ . .OOR v.R*....OR*. R*OROOOO^*. R.*.OOOv..>.R**RO.O.##
+#.OR. #<.O#.R.RO-.O..O#*v ...O*R..RR. .#.ROO*RR.R.OOOO.RRO.#
+#*..RR#>R#**#.#RRR.#.#.#..#...RO.R**.R.....O**ROR***RRORR..#
+#R.O-RR ..R*.RR# ^R .# #R.#.RRRROO^R.. .O^**R.RRO@RRR*RR #O#
+#^R.*.R. R#R.*R .O. # ..R#RO.*OO.RRRRR.ORRR*. R.R..RO.ROO..#
+#O.R...#..R .-. .R#R...#.R.RR*OR..*<RR.RRR*..RRvR<R.RO.RORO#
+##..^OO..*.R^*R..R#  #RR..v.O.O*R... RRORR*R.O*.  R...OO.R.#
+#OR.#...R.**.OO#OO....RO.R..RROR..RRR .ORR.RRRRO.R.*.RR.ORO#
+#.#.^..+ RR*R.RR*O.#..O.O.R..R.RRRR.Rv<OR*.^O*R.RRRORR.O**.#
+#.  |RO.R.O<*RR.*.#  RR...R.R*RO*<*. ..RROR.RR..*.RRR*.R*O.#
+#.#..ROOR.RO..##.#R#..o*.RRRO.RO*RRR.*+RO*O. .R*RROOO..Ro..#
+##o.<ORRRR.R#####.## Ro...R..R.RR..*.R.R#R.O.RRR..>R.R-R.R.#
+#RROO*OO.R.#O#.o#. ##.#o.R.R*.. ..RO. RRRRO..  R.RR.*. RROR#
+##RRO*O.RR*Oooooo#.# .##.  .R..ORR..O. RR*RRRR|.R. .... .OR#
+#R.OOORRvO.R#o.oO#*..##.RR#..RR.R.*RRR.RXOOO#. RO.. R*RR#OR#
+#R.RO..R..RR.o.*.#o*O#O.*..>#RRO*OR.o.**RROORR..RR.ORRROOR.#
+#R.ROR # R  .OO#o.o#O..o.OR .R<ROR......R.*O. #*RR...RR.#. #
+# .##. .. R R##o.Oo##*#O..R.R.....R*R ..RRO.RRR..OO..*.*. R#
+#.#R. R.*.R.  R...O...#.o.#**OO. ..*RR.*R..O.*<.O.R...<*RR.#
+#R##..<-.... R .OO*O..#O#.R.#.OR. ..RR<RR..RRO.R.#R .....*.#
+#*.>.RRR R..*.RR*O.O.*.<*R.O...O.RR*.RRRR..RRR.. ..R.OR.R.v#
+############################################################

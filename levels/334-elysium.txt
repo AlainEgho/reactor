@@ -1,5 +1,5 @@
 name: Elysium
-need: 78
+need: 122
 hint: A core walled in the middle and four galleries round it: a laser sweeps a lane with Pellets lying in it; Antipellets lie shoulder to shoulder with the Pellets; Plutonium sits on posts under hanging Lead; hot spots flare in the Graphite round the Pellets; and liquid sodium hangs over the dig. 122 seconds of air.
 air: 122
 ---

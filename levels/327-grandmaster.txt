@@ -1,5 +1,5 @@
 name: Grandmaster
-need: 71
+need: 120
 hint: Three halls side by side: hydrogen cells sit under their stores; Plutonium sits on posts under hanging Lead; and an ice floor carries you past its Pellets.
 ---
 ############################################################

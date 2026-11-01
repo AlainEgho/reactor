@@ -1,5 +1,5 @@
 name: Laureate
-need: 68
+need: 103
 hint: A core walled in the middle and four galleries round it: acid pools wait under the Pellets; hot spots flare in the Graphite round the Pellets; hydrogen cells sit under their stores; liquid sodium hangs over the dig; and Alphas run the lanes.
 ---
 ############################################################

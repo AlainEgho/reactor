@@ -1,5 +1,5 @@
 name: Olympus
-need: 76
+need: 99
 hint: Three halls side by side: an ice floor carries you past its Pellets; Gammas sleep in the walls; and a line of orange canisters stands shoulder to shoulder over caged Pellets. 124 seconds of air.
 air: 124
 ---

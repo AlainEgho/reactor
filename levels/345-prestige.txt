@@ -1,5 +1,5 @@
 name: Prestige
-need: 89
+need: 129
 hint: One open floor in four quarters: Gammas circle Pellets on their posts; Neutron farms wait for their Lead; hydrogen cells sit under their stores; and a laser sweeps a lane with Pellets lying in it.
 ---
 ############################################################

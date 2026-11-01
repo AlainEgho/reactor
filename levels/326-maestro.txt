@@ -1,5 +1,5 @@
 name: Maestro
-need: 70
+need: 90
 hint: Four rooms: Gammas sleep in the walls; hot spots flare in the Graphite round the Pellets; fallout covers the floor, with Iodine at its corners; and Gammas circle Pellets on their posts. 130 seconds of air.
 air: 130
 ---

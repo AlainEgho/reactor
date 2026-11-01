@@ -1,0 +1,28 @@
+name: Ouranos
+need: 103
+hint: Airlocks in the walls and Lead everywhere. A long harvest.
+---
+############################################################
+# R.O..O..OO.O.ORR  R.OORRO..ORROO*OOO..O.     RRO.O.ORO.  #
+#  ..OROO..O.OO.O. .*.R.*O*RR**R....O....R R.O. .OR....R.  #
+#   .OOOOOOOOOO.RORR*R ....*R.ROR  R*.R.*. .RO. RR.RRR..   #
+#RR.O.O.O..O.OO..*RRR.*.R.RR. R.. RRR.RR..RO.O. RR*R RO*R  #
+#RR.OOO.O..O.OOO.O..*RR.R R .O.R*. <O.R. .RRRR. .... R..R R#
+# R.......R...R.RRR..R.RR   RR*.R.RR.OR.R>.*.R <. RORR  R.O#
+# RR.RRRRR    R  ..OR.*R R*R.O.RO*. ..RROR.R.OOR.O..ORR .OR#
+#>R...R    RR  RRR.RR*.. ..R...RvOOO.R..O.OR.R.>..O..RRR...#
+# ..@R.        .*.O*R.**R.R..R..O..R. ..ORR.O.O*ORRR  . ..R#
+#R.R... R     RRRRRRRRR.R .ORR R.R .R RRRR..*O..RR.. RR RO.#
+#v.RR..  R      R  .R .*RR.*R.  .ORR .RR  R..RRR . .RR .RO.#
+# R< RRR      R  RR..*R..RORRRR*RR..R..R RO.O..O..R  RRRO.O#
+#R    R  RRR R .*RR.*.OR.OROR.ORRO..O....RRR.R*.R  .RRRR*O.#
+#R R       RRR .*R*..ROR...*R.RO.O..R.OORR RR*O..O.R*ROROOO#
+# .      R  R R.R.R...O.R.OR..*R.O..O*RR*.....ORR.....O.OXR#
+# RR            R*.R*R***ROO*RO*O.ROR..R.OOR ...RO. RRRO...#
+#  RRR   R      R.**RR...*RR.ROO.ORR.. R.RR..RORR*..R.O*.RR#
+# RR**..***.  .*R*RRR R*R.. .ROOR..RR .**R.R.RR*R.RO.RRR*O.#
+#R R....*....*.*R*RR.....R*RR.O.O.R..O.....R.*****RROO**OO*#
+# ^R.**...  .*...O.**RR.OR..OR**.*.RROO.R.O.O..R.R..*ROROR*#
+#  RR.RR RRR.R.R..*RR..*O.*R...*.O......RR.R.... R...**O.O.#
+#     R    R. R .R.*R .O.R....*OOO. .O.*...ROOO.*ROO.O**O.O#
+############################################################

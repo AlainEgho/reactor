@@ -1,5 +1,5 @@
 name: Philosopher's Stone
-need: 85
+need: 134
 hint: One open floor in four quarters: a sealed vault waits for the Quantum tunnel beside it; Pellets wait in Cask cages, one plug in the roof of each; a belt runs the length of the room; and liquid sodium hangs over the dig. 115 seconds of air, Gammas sleep in every room.
 air: 115
 ---

@@ -1,5 +1,5 @@
 name: Titan
-need: 76
+need: 117
 hint: Three halls side by side: an ice floor carries you past its Pellets; Pellets wait in Cask cages, one plug in the roof of each; and Alphas run the lanes. 124 seconds of air, Gammas sleep in every room.
 air: 124
 ---

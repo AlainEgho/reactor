@@ -1,0 +1,28 @@
+name: Enyo
+need: 61
+hint: Gammas on patrol, 10 red canisters and Cask to blast, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
+---
+############################################################
+#.O.....OO...T.. ...Rd  .O.  R S     >  .o. .ooo..ooo.oo...#
+#..OO....O.......... <.O.O.   <      #  .o.....oo..o..o....#
+#O..O.#...O.#R..RRR*R.RR.*RR.RO*.ORO..##.ooo...##.....#.#o.#
+##R..#O###O..Rd..RR.R . R..RO.*R**OR.^.O...R.#R.. R.###R.#.#
+#..O...OO.O.RR.RRRR.R*R+RRRRRRdRO*ORR*.R...#R..#R#.......O.#
+#..y.#..#.#....RRR..+...++R .RROO***...R.R#.R R*+ + ...*#o.#
+#.o#......#...RRRR.R #R# ....*RO****..O.oo.. +.+R R.R..Ro.o#
+#..............RR*.RRR##R . R.R.*OOOO.#*o#.#R     .v# .....#
+#.y.....#..#.R.d#..#R#RRR R +*.R......S.oo. R .    ....#...#
+#.#....#..#.... #R.R.RR*.R# .+. RRR..O.#.#....R+ R +# .#o###
+##..#.....#.OR.#Rd*.....RR.+*R R.*O...R###R.  +.  .+..RR.oo#
+#............#...d.. # vR#^R.- >+*v. R...#R#++R*v . ..R ...#
+#........O...  R#ROO..>. #R  v> .>.  .#.o#.. .R..  RRR..#o.#
+#.....#..#..R R#.O.RRR<#.  ^ >*.. >^ ....oo.   RR+ +.*##.oo#
+###*####.*##R..oO.RR*.### R R..+R. R .#RR##........#...Ro.o#
+###*.*#*##.*#.#RR.RR.O.. #R*.| .*^*R  ...o.##R... .#R..##oo#
+##*.*#*.#**#*oR#RROO|##..|R#>.^RRX-..#.Ro#.o...##R......o..#
+#O.OO...*....#RRd#RRR#. #.... #R. # ## >##.ooo.###oo#o...#o#
+#.@......*.O####.R#d.#>.d.R#S..  RR...#R.#oooo.o.o#oooooo#.#
+#**.O*O..OO.*R#..d#.R..*.- #. ..## # #..oooo.#oooo.o#o#oooo#
+#..O.*.OO*O... .      .........oo......Roo#o.##o#o#oooo###.#
+#*O*O.**.O*..  S        .ooooo.oooo.o...oo.#ooooo#oo#oo###.#
+############################################################

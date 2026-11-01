@@ -1,5 +1,5 @@
 name: Medusa
-need: 67
+need: 95
 hint: One open floor in four quarters: a belt runs the length of the room; hydrogen cells sit under their stores; hot spots flare in the Graphite round the Pellets; and Antipellets lie shoulder to shoulder with the Pellets. 133 seconds of air, Gammas sleep in every room.
 air: 133
 ---

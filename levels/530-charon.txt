@@ -1,0 +1,28 @@
+name: Charon
+need: 44
+hint: 23 red canisters and Cask to blast and Cask packed wall to wall. Every Pellet counts.
+---
+############################################################
+#Rd............R..R....RR..R..RRR.RR.RR...RR.RR.R.......Rd.#
+#Rd.R...RR.R.R..R.R.......RR............R..........R.R.R..X#
+#dR.R.R....R..R.R......R..R.............RR....R.R.........R#
+#dd..RRR*.O*RR.OR......O.O....R.O...R..R.O.RRO*.O*.RORR..R.#
+#dRO.....R.R.RRO...R.R*RRR.R.R.*R*.RO.O.ROR...RO..R..OOROR.#
+#RR.RO..O.OR....RR.RO.R..ORRR.R.O.RRR.R*R.R..ORRR..R.RO*RR.#
+#Rd.RRR.RRORRR.R*O.ORR..R*OR...OROR....RRORR...RRR....R....#
+#RRRRORO.RRRRR...OR.RRRRROOR..RR..RR.ORROOR.RRRR..R.RORRR.R#
+#dd.O..R*ORO.RROORORORRRRR*RR.RR*R.*.R.RRRR.RR*OR.RORR.*R..#
+#dRRR.R..*OR.RRR.*.R.O*.RR.RR.RRO.R..RORRRR.RR.RR..RRRORO.R#
+#dRRR.RRRR.R.RRRRRR.R....RO.R.ROOORRR..OR*R..ROO*RO...ORRR.#
+#RRO.....*OO....R*R.O..ROR.....RO..O..R*.O...R.RO.R...RO.R.#
+#RdR..RR..R...RROO.R...*R.RRRRO.R.OR..R..OR...OR.R..O.ROO..#
+#ddR.R..OO.RRR..ROO....R.OORR..O..R.RORORRRRR*R...ORR.RR...#
+#dR.O.R.*.RRR..RR..R.O..RR*R..*RRR...*..RRR@ROROR...*R.*RR.#
+#dROR.R.RO....RRR..R.R..R...R.R*...*R.R*.OR....RRR.RR.R.R..#
+#dR..R*.RRRRRR.ORRR..R.RRR..R...RR....RR..R..RRRRR..O.R...R#
+#dd.R.R.R*......*RR..*..*RR...R.R..R...RRRR..OOR..*..RRORR.#
+#RRR......RRR...RRO.R...O.R..RRORR..RO.RRRRR.R.R..R..RR.OR.#
+#d...R..RR.R....R...R.O.RRR..RO..OR..RRRRO..RR........*....#
+#RdRO.RO.OO.R..OO....RR..O...RO.R...O.R..OR.R*OR..ORR..R.RR#
+#Rd...R.....RR.RR.OR..R.RO.R.RRR........R..R..RRRR.OR.R.O..#
+############################################################

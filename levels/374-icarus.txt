@@ -1,5 +1,5 @@
 name: Icarus
-need: 78
+need: 28
 hint: Two long galleries: hot spots flare in the Graphite round the Pellets; and Pellets wait in Cask cages, one plug in the roof of each. Gravity is on, Gammas sleep in every room.
 gravity: on
 ---

@@ -1,0 +1,28 @@
+name: Rearguard
+need: 75
+hint: Gammas on patrol, a Neutron or two, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
+---
+############################################################
+#..O.*.O.*R...O..RR..*.OR..R.###...R   .R.  ...O.RO..  ...T#
+#O.*O...*OOR.*O....*..*....... ........ R ....O.O..R .. . .#
+#.*..O..O.OO...OR....OO. #R ### RR... ..  RR .yOOR. .  .. .#
+#O..O...R..O....O.O*....#.### ###... R.R.R.......O.. .e....#
+#OO.*O*..O.R*OO.O..ROO.O>.R#    R###**R...RRO.. ...R.......#
+#.R..O**..ORO.*.R.R*..R.R..RR#RS..RR.RR..RRROO..R R .RR....#
+#O.RO.R.RR.OOR*O.ROR.O.*R.RR#R#.RR.RR..RRRRRO.RRRR.O.R..RR.#
+#R*O.R*RRRR*ROR.RR..OR..R....#..R... y.*.  .RO.RRO.R. ...R.#
+#O...O.*OO....O..R.*.OO. #.#  .#.....R....RR..*.R..R...O...#
+#OO.*.OO.O.R....RR.OO....R#.   #.##.....R....O..OR.O.......#
+#OOOOOO.R.*...O...OO**O. R. .##..RR........R..OO.*.*.......#
+#O...*O.*R..O.*O*O.R*OO....R.. .  .oR.R....R..O....O.......#
+#O.*O.OO.O.O*.O.O.R..*.OoooR .S  R.oR.......OO.O..**..O....#
+#*..O..OR.R.....O..*.*.OoooR ....RooX...RRR...*OOORR.......#
+#.RR.R*ORR.OOO...RRR.R..RR.R .RR.R.R>R  RRR .R.RRRR.R....R.#
+#OO.OOORRRORRRR..R.RO....R.R. .R.R.R^ RR >R..O..ORR.RRR..R.#
+#R..OR..O.OROO. RO.OR.R....R.v...RR.v  >^ R<.*OO**R.R...RR.#
+#O.OOO...O.....O..O...O. . .  ..  SR <vvR  v..O*R.....**..R#
+#..O*OO..R..O..O..O...O. ... .  R...< <v^^R>.OOO*..*.R*R..R#
+#O*.....ROOO...O.ORR..O..R.R. ....R.        ...*O..R..R.R..#
+#*.*. .OOOO*.O.OR..R...ORR.. ......Rv<>>>R v.OO*..*R..R...R#
+#OO..O.OO*RR@..O.O.O..OO...... ....R    R > .*.OOOR*.R.....#
+############################################################

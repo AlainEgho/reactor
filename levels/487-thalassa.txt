@@ -1,0 +1,28 @@
+name: Thalassa
+need: 17
+hint: Lead everywhere. Few Pellets, and each one is guarded.
+---
+############################################################
+####ROORO-OO##RT..OO..OO..O.O..OO..........RRR.RR.R..R..ORR#
+####OX#O-RR###R#O..*.O.OO.OO.OO.#RO.RRR.RRR.....R..R.R..RR.#
+##.|.#..R#RRR##ROO...O.O..O..OOO#.*RRRRRR..RR..R.ORR.RR....#
+#R..O...R.#RR#.R..O.O.O..O.O....R#O#RO.O......RR.RR*.RR...R#
+#RR#RR.R#...R..ROO.O.O.OO.OO.OOO.OO....R.R.RR..R R.O....O.O#
+#R..R.@RRR  ..RR.OOO...O..OOOO.OOO.....OOR RR.OR.....RR..R.#
+#. R.....  R .RR...O.O.O.O..*.O.O#.*R.RR.RRRR..O.RRR..R.RR.#
+#. ..R.R.R R.RR.OO..O.OO.OOO.O.O#..#OOR .R . .RRRR.O.R....R#
+#.R..#.# RRR.RR.OOOO*.O.O..O.O.O.#.O.RRRROR.RRRO.....RRRR..#
+#OR..R#R. R...RR..OOOOOOOO..O..O##O.OR.RO.O...R.RRR..O..O..#
+#.#*O.R#R R R*RR......O.OO..OO...O..OO.....R ROR...R*OR.R..#
+#..R#...RR**RR*..O..O.O.OOO.O.O.O#OOROR.RR ...OO.RRR.RR....#
+#R.R#...ORRR.RRRO.OOO.O...O..O.O#.#.RRRR..R....R....R.ROR.R#
+#R..R...RR#R.RR*OO...OO..OO.O..O.....R.R.  . .R .R..R..RR..#
+#RR..#R..R..*##RO.O.OO*O.O.OOOO.#.#R.R.R..... . .R..R...R..#
+#RR.RR.-....###ROO...O..O..O.O.OO....R.R.  .......R..R.R...#
+#R....R..O#.RR#RO..OO.O.O..O...OO.#OR...R RR.. RR.R.RR.R..R#
+#..RR..RR.R.ORR...RRRRR.ORRO.ORR.RR#.R..... ...........R..R#
+#R.R...RR..RRO.OROOR.R..........RRR.....R.....  ..R...RO.R #
+#RR.R.RRRO.O..RR.....OO...RR..OR#O#.....  RR.. ...R...RR.R.#
+#.....RRO...R  ..*.*OO.O.............R..R.R ... ...........#
+#..R....ORR...R....O.O..........R....RR.R R... ......R.RR.R#
+############################################################

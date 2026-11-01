@@ -1,5 +1,5 @@
 name: Griffin
-need: 63
+need: 128
 hint: Four rooms: Alphas run the lanes; Gammas sleep in the walls; isotopes decay while you work; and a belt runs the length of the room. Gammas sleep in every room.
 ---
 ############################################################

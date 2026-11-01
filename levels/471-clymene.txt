@@ -1,0 +1,28 @@
+name: Clymene
+need: 87
+hint: Yellow canisters and an Initiator and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#.R*....*O....*........O..O.....*O*OO.OO.*..OO.....*...O*R.#
+#.RR...O..OO.OOO............*O..*OO*..*...O..*..O..OOO..RR.#
+#.R....ORR.R..*O..O.......O....O........R..ROORO......R.ROO#
+#.*ORR.RR.....RR..**.......O...O.O..O.O.RR...R..O..RORR.*OO#
+#...ROOO......RRR..RO.OO..........O..O..O...R*..RO.O.R..O.R#
+#..OOO....OO..OORR*.RRRR.R.RRR..RR.*RO**.O*OOR.....R..OO.O.#
+#..O........*..OR.O...ORO...R*R....RROR.OO.ROO*...RR.O.OO..#
+#.O...*O.O..*....OR.R.O..RR.ROOR.O.RR..R..R.R*.OO.R..*....O#
+#......O...OO....... ..X .RRR.RO......OO*.....O........*..O#
+#O*O...........OO...R.RR   yR*.R.....O..O.OO*.O*....OO.*O..#
+#...O...........O...RRRRR   .R.O..O.O.*....OO*.O......O.OO.#
+#........O.....O....yROR.....RRO..O.OO... RO.O.O...O.....O*#
+#*..O.....O...*..O..R.....T...yR..O.R.RO...O..O...O.O..*...#
+#O.O.O.OO.O.........RR ..@....RR..O.R.*...R..O**.....O...*O#
+#...R*OOR.........*OORR.RRRR.R..OR*R..*R.....*RRRRRR..*OOO*#
+#O.....O.RR.OO......RR*.....RORR.OR.*ROROR.*.R*..**RO...*.*#
+#O......*O.R..O.O..ORRR..yRR...RRO*..*ORRR.R*R.RR*RRO...O..#
+#..*OR*R.R.O...*ROR.R.....O......O....O.........RO..*O*.*OR#
+#.R.O.OR...ORR.R*.O.ROOO*O.*O...O.......O.....O.OR.OOO*.R*R#
+#.R.R..R.OR..R*.RR.R....OO*O...O......OO.O.......RO.....*.R#
+#.R*O..........O...O..O........*.....O....O*O... .O. RR...R#
+#..OO....OO...*O..O..O........O.O...*..O..O..... .R. . .  .#
+############################################################

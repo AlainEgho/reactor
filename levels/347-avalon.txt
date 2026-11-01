@@ -1,5 +1,5 @@
 name: Avalon
-need: 51
+need: 107
 hint: Four rooms: Neutron farms wait for their Lead; Gammas sleep in the walls; a magnet waits behind Graphite plugs with Lead at the end of each spoke; and Antipellets lie shoulder to shoulder with the Pellets.
 ---
 ############################################################

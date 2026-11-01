@@ -1,0 +1,28 @@
+name: Selene
+need: 120
+hint: Gammas on patrol and wide open space. A long harvest.
+---
+############################################################
+#  .. . .  ..  .  .....  ...OOO. .   .   . ..  .. .. ...  .#
+#. .  ..  ... . ..  .    ......... ... ..  .. .   .  .  . .#
+#                                                          #
+#                                                          #
+#                                                          #
+#                                                          #
+#                                                          #
+#                                                          #
+#    R  ROO*R*O*R*R*.   RO**RR***RR*.   RR*RRR*ORO**.      #
+#    R  X****R**R***.   RRRR*R*RRORO.  .*ORO**ROO*RR.R     #
+#     R.*RRRRRO*RORR.   RO******R**R.  .OORR*ROOOOOR R R   #
+#      .OOO*O***OROO.  S**OROOOOOO**.  .R*O**OOOOOO*.  R   #
+#   R R.****OO**R*O*.  .***R**O**RO*.  .OORROO*O*O*O.S     #
+#   R  .*O**OO*****R.  .R**OO*OOO*RRS  .OO*OOO**O*OOR  R   #
+#   RR .*R**O*RRRROR    R*R*R**OOR.*.  .OROORO***ORO.      #
+#      R*OOOO*R****R    RR*R*OR*O.O..  .*RRRRORO*ROOR R    #
+#      .RORR***R**RR   .***RR*RO*O.R   .*RRORO***ORR. R    #
+#       ...........    ............    ............        #
+#                                                          #
+#                       .....                              #
+#                       .....                              #
+#                       ..@..          .                   #
+############################################################

@@ -1,5 +1,5 @@
 name: Hydra
-need: 66
+need: 96
 hint: Two long galleries: Alphas run the lanes; and hot spots flare in the Graphite round the Pellets. Gravity is on, Gammas sleep in every room.
 gravity: on
 ---

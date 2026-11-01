@@ -1,5 +1,5 @@
 name: Valkyrie
-need: 60
+need: 169
 hint: Two long galleries: Pellets wait in Cask cages, one plug in the roof of each; and isotopes decay while you work. Gammas sleep in every room.
 ---
 ############################################################

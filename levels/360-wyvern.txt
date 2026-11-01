@@ -1,5 +1,5 @@
 name: Wyvern
-need: 64
+need: 117
 hint: Three halls side by side: Neutron farms wait for their Lead; Pellets wait in Cask cages, one plug in the roof of each; and a belt runs the length of the room. 136 seconds of air, Gammas sleep in every room.
 air: 136
 ---

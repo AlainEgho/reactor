@@ -1,0 +1,28 @@
+name: Triumph
+need: 44
+hint: 23 red canisters and Cask to blast and Cask packed wall to wall. Every Pellet counts.
+---
+############################################################
+#..........................................................#
+#.dX....................................................dRd#
+#.RR.RR.RR*ORO*RO...ROR..RR.ORROR*RRRRO.RORRRRR..RR.RORR.Rd#
+#R*.ORO..RR.RORRR*R...ROOR.*R.O.RORRRO.*O...RR*R.*R..R*...R#
+#O..RRRRO.ORRRROO.RORRRR.RRR.RR*RO.ORR.ORRRRR..OOOORORROddR#
+#R..RR..R...RRRR...R..R........R..RRRR..R......R..RR.RRR.RR#
+#RR...R...RR.R..R..R.RRR...R.R.R.RRR..R.R.RR.R.R.RRR.R...R.#
+#R...R.RR....RR.RRR...RR..RR..RR.RR..RR.R...R..R..R.RRR.ddd#
+#.RR.RORO...ORROOOROO..RROR..R.RORRROROORORRRR.O.O.**RRRddd#
+#.R.RR.RRRORRRR*..RRRR..RR.*O.O.R*RR.RRR.O..R*.R.ROORRRO.RR#
+#O*.RR.O.*RORO.R.RR*ROR.RR.RROR*..OO*R...RRRR.RRRR.RRROO..R#
+#...RO.R..R*RR.R.RR.....RRROR..RO.R..O.......RRRO.R.RRR*dRR#
+#RR.RRR..R....*R.OO@..RR..R....ORRO.R.*.R*.RO.....R..R.R..d#
+#.*.....OR.....O..R.ORR.R....RR*.RRR.R.RR.RR..R.RRO....O.dR#
+#.R.RRR.RRROR.O..RR...*...R...ORRO.R...O.O...R..R.O.R.OR.dd#
+#O.RR..OR..O.RRR*R..RR...RO.R.O..R...RRORR.R.RR..RR*.R.OdR.#
+#R..R.......O.RR.RO....RRR.....R.RR*R.R...RRO..R....R.....R#
+#OOR*.RR.ROORORRR...RR.O.OR..RRORROO.O*ORR.RO..RORR.R.O.d.R#
+#.RRO.RR*RR.R.OORO.RRRR.R.R.*.OORR*ORR..RR.O.O.R.*ORO*RRdd.#
+#.R.R...RO..R*RR*ORO.O..RR*RRR.RRRRRORR.R*R.RR.ROR..RRRO.R.#
+#.R..R.RRR...RR...R........R.R.RRR....R.R............R..d.R#
+#....R...R....RR.......RR..R.....RR.R......RRR..RR.R..RRd.R#
+############################################################

@@ -1,0 +1,28 @@
+name: Leto
+need: 56
+hint: 17 Gammas loose in the open, airlocks in the walls and wide open space. Every Pellet counts.
+---
+############################################################
+#  R. R.R.. R .RR  R  .###R#*.*##***R .S   R.  ..   RR ..R #
+#RS .      R  .  R R  #R####***.***#..R  .RR  .R...    R   #
+#  < RRR  R R   R.     ....**.....#*RR      R R R  R  .RR  #
+# R        .. R R.  #R S****## #*|... #..R   .   v R     . #
+# R R  R R.  .    .  .RR****##**#R#*.R#  RRR   .    R .R . #
+#R  R RR..RRRR R R R. ...***#..#R-#.RRR R.RRR . .. RRR.R R #
+#.R  R .  RR.  ..> R..  .****#.*..#  R    RR ...R R..SR   .#
+#    . ...   .R.  RR  R#..*R##-.. .*.R ..   R RR. R   R   .#
+# R   RRR..R. . ..RR  R R.#*..**#R.#. ..RRR X>.R      R   <#
+#R  . ....< . . R     ...*.*##*#.   R  RRR  R.  R RRRR .  R#
+#R   .R.@...R . SR  .>. #.#S...## .#R  .  .   . ...  . .. S#
+#   RR.....S RRRR SR.  .****..*..  #  R..R     .R S< RRR. R#
+#.  RR....RR>   R.. #  ##*#**#.###..  .R  RR R.       RR.  #
+# ..  .  R . R.   .   RR#*#*-*###.*. . #RR S.S.RR.RR  .    #
+#R RR.S .  RRR.RR R .R .####... ..|#R> #   . R.RRR ..SR  R #
+#   R R v.RRRR     R.  .  RR #  .*.- R .R .R^. R.R. R R   .#
+#  R. .. RR   RRRR.R   .#  ..RR...*. R  . RRR  R.  .. RR . #
+#    .     RR   .  ..  S . .. RR.#..#  .     R  R  . RRR .R#
+# R  .     . R .    # .. #. . ..#..#RR   .R  .   R R   .   #
+#RR  RRR RR  .  RRR  .R #R##. .  .  #.  .RR  . .     R    R#
+# R    ..     .. RRR. # |####...###R  .RRR. . . R   . RR R #
+# S.R.R .RR   .R.   . . ###|....###. .SR   . . R .R. .  .  #
+############################################################

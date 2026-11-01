@@ -1,0 +1,28 @@
+name: Golden Age
+need: 60
+hint: Lead everywhere. Every Pellet counts.
+---
+############################################################
+#.....O.O**OO...O.O.OOOO. .....OO. .*OOO......OO.........XO#
+#....OOO*OOO....O....OO... ..O..O...OO.*.....OO........OOO.#
+#...O*..O*R*R.R.O.R.O..OOR*..O.R.R.ROROR.R..R.RORR..O.O.RR.#
+#*O.ROO.*RROORO.R*R.OORRRO.R.R.RRO..R..RO..RROOO.RR.R...R..#
+#OO..R.RO*OR...ROOR.RR..ORO*O..R.R.OO**.R..R.R*O....RR.R..O#
+#...R.R.....O..........OO.......O...OO......**O*O*OOO..*...#
+#....O*R.......O..O..O..OOO..O..O.O.......O.OO**...O...O...#
+#...........*O.*....OO.OO....O.O....O..O....OOO*......O....#
+#OO.OOOOR.OORORORO.R...RRR...R.OR.RR..OR..ROR*R.R RO.R.R...#
+#.O.O.R..@OR.RR.*OO.R.R....R.O.RO...O.R.OR.RRROO...R.R*.OOO#
+#...R..RRO...**..R.ROOR...R..RR.O..R.RR..R....**R. .R.O.O.O#
+#O..ROOOROO.O...OO..RR.R..RRRO.OR*..RO.RO.R.RRO.O.  RR.OO.*#
+#..ORR....R.R.RO.R.R*R.O..RO....R.R.O.RRR.O.R.OOOR. ..OR...#
+#.O..O.OOORR..RRRR.O..O.R..O.RRR.R.O.....RR...RORRO.....OO.#
+#**OR...........O...*.O....*OOO. .O.O. .O.O....OO....RR.OO.#
+#**OORO.........*...O*O.  .OOOO..O..OO...O....OO.O.....OO..#
+#OOO.ORO......O.......O....OOOO.O...... ... .O*..O*.R......#
+#.O.ROORO.O.OORR.*O..R..R .RRRROO.R.......R....R..R...O.  .#
+#...R..ORRR.ROO.O...RR....R..OO.RRO.O.....RR.RR..R.......O.#
+#O.. ....RO...R*RRRRR.OO. R.OO.R.......ROR.....R..RRRRORO*.#
+#.*O...........O.O....OO...OOO.O.O..O*.OO..*.O....OO....O.*#
+#*OOOOOOOO..OO...OOO.O.OOO.OO....OOO.OO*.OOO......*OO...O**#
+############################################################

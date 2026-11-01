@@ -1,5 +1,5 @@
 name: Pantheon
-need: 74
+need: 98
 hint: One open floor in four quarters: Plutonium sits on posts under hanging Lead; Gammas circle Pellets on their posts; an ice floor carries you past its Pellets; and Antipellets lie shoulder to shoulder with the Pellets. 126 seconds of air.
 air: 126
 ---

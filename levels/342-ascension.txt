@@ -1,5 +1,5 @@
 name: Ascension
-need: 86
+need: 100
 hint: Three halls side by side: Neutron farms wait for their Lead; hydrogen cells sit under their stores; and hot spots flare in the Graphite round the Pellets. 114 seconds of air.
 air: 114
 ---

@@ -1,5 +1,5 @@
 name: Virtuoso
-need: 69
+need: 123
 hint: One open floor in four quarters: Antipellets lie shoulder to shoulder with the Pellets; liquid sodium hangs over the dig; fallout covers the floor, with Iodine at its corners; and Plutonium sits on posts under hanging Lead.
 ---
 ############################################################

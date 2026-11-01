@@ -1,5 +1,5 @@
 name: Pegasus
-need: 62
+need: 98
 hint: Six rooms in two rows: Alphas run the lanes; a magnet waits behind Graphite plugs with Lead at the end of each spoke; Pellets wait in Cask cages, one plug in the roof of each; Antipellets lie shoulder to shoulder with the Pellets; a line of orange canisters stands shoulder to shoulder over caged Pellets; and a belt runs the length of the room. 138 seconds of air, Gammas sleep in every room.
 air: 138
 ---

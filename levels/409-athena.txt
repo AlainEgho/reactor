@@ -1,0 +1,28 @@
+name: Athena
+need: 80
+hint: Gammas on patrol, 12 red canisters and Cask to blast, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
+---
+############################################################
+#.......*.O.O.O..*.....OO*OO....O.O......O.........OO.....T#
+#..o.*...OOOO..O.OO....O............O...*...O..O.....*.....#
+#O......OOO....O..O.*O.O....O.y.*O..OOO.......O*OO.OO.O*...#
+#.O*....O.OOOO.O.......O....O....O......*..O....*......O...#
+#..O..*O....OO.*OO..*O......O.....O**..O.O............O.O.O#
+#R**R.d*. .R**.RRR.ROOOR*R.R.RR.#...**#..##RRRR.RR.Od.R..dd#
+#.R.R RRRR R..ROORRO..RR.R .ROORRRR#oo##R*.oR.OOO..*R..R..R#
+#..R.R....RRR.OR.O.RORRR R.*..RRO#.O*#o*O#O.RO.RRR*.RdRRRR.#
+#.O.. RR. RS..O.RO..R.R.*....OOR.#O.o.oo#OR.RO.O.....R.R..O#
+#.dO.. R... .O.OR.OROOO... ..O...O.#.o..Od.o.R.R....O...OO.#
+#OOO.....R.R.O*.O.O.OOOR*..*RR. #.OO....Od#..OO.*OO.RO.O..O#
+#*...R.*.SRR...**.RO..Od....d.O..#.#o..ooO.*R.ORO...R......#
+#.O.R.*..R ......R.RROOR. .*.OR....O*o..O#O...OOO..O.RO..O.#
+#.*....R  ..O....OO..ORO. S...RROO.#.....#.#.ORO..O..R.....#
+#.O.R.R...RRO.R...OR.RRR.RR......RO.....#.#RRR.R..R.ROR..RR#
+#.R..*RR.O.R..d.R.RRRRO.R*..R@.R...####...O.R..RRR.R....R.O#
+#......R.R.RRRR..R...*....O....RRR..*.o..#.R..O..*OO.RO....#
+#R*RRR*.R**.*RR**.RR**RRR.**.Rv*R*R.RRR*.RRRRR.RRRRRRRR*.R.#
+#R.*.*RRRRR.RRRRR*RRR.RRRRRR.R*R*.RRRR*.*R*RRR**R*.*R*...R*#
+#RR.RRRRRR.R.RR.R.RRRRR.RR.R..RR.RRR.RR.R..RRRR..R.R..RRRRR#
+# .S                                                      d#
+# .X                                                      S#
+############################################################

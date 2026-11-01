@@ -1,0 +1,28 @@
+name: Conqueror
+need: 114
+hint: Gammas on patrol and Lead everywhere. A long harvest.
+---
+############################################################
+#RROOORO. .OROO. ..R..OOO*.OOO..R*..O.RR..OR*R....R..  RR  #
+#@*....RRR.*......O.R*R.R..R.RRRR*.O*. ...R*..*RR.R.R .  R #
+#R.O.   R*RRRO.OR.ORRO*RO.OO.RR.OO.R.R.R.R.RRRR.....R RR R #
+#R.O.   ....*..R...R*..*O.R*.OR.*.RO.*.R..*O*O..RRRR  R R  #
+#X.RRR.R..R.O.OO.OR*.**.RO..ORO.RR*..R*OO.RR..ORRRRR  ..  R#
+#.  .R.OOOROR.OROR*.**RRR**RO.RRO.O*R.**.*O.R...R.RR .    .#
+#.  .O.RR...RO.OR..R.OR*.RO.ROROO.R...O**O*R.R**R..RR .R R #
+#R R...O.. RR*R.R*R .*ROOR*OR...O.OR.**R.RO.O......O. R  R #
+#R..R*RO.R*R..O..R....*R....O.R.O*RRRR...*RO..R.RR..RR   .R#
+# R .*...RR.OR.O*.RRR****RR*R.ROR.O.*RO.R..R.R.RR.ORR  . SS#
+#O..R.RR  .O.RROOO. .O*.OO**O.R..*R.R*O.R..OO....RRRSS.R  R#
+#RR. R..O.*...RORRO*.*RRROO..R..*O.*.....*.OR**ORO..  RRR. #
+#.*. ...*RRR.O..*.RRR*ORR*O*O*R....*OR...R..R*....RRR R   R#
+#.ROR RRRRRO.O.R..R .**OOR.R*.RRRO.R**OR.*OR.O....RRR R    #
+#R.O.R.R ....O.R.ORR.O.R*RO..OR*ORR*O.O.O.R*R.**.RRRR  R RR#
+#...R.O. .R..OOOR.R .OR*O*...R..ROROR.R*.R..OORR.RR.  RR   #
+#O.R...... ..R.RO*...*O**R.OR.R......R.RRR.OR*..RR..R  .  R#
+#.R ..O.*R. .*..O.. ....R..O...R*. .R..R*R..*...RRR. RR  R #
+#RR......R .O.O.R.R....R.*...R.RR.. ...O*OR**.RRRO..  RR R #
+#  ..O.. R..R.O. R..OR.O..R.RR.*RO...*.O....O....RRRR R   .#
+#.RR..R RR.  R.O.RR..R......RR....R.*..RR  ... R. RRRR R*.R#
+#.  RRR..RR..O... RR.........RO.R .O...ROOR.R   R.RRR  ... #
+############################################################

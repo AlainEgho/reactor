@@ -1,5 +1,5 @@
 name: Tartarus
-need: 96
+need: 70
 hint: Two long galleries: fallout covers the floor, with Iodine at its corners; and a belt runs the length of the room. The lights are out, Gammas sleep in every room.
 dark: on
 ---

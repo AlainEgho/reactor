@@ -1,0 +1,28 @@
+name: Nemesis
+need: 123
+hint: Gammas on patrol, a Neutron or two, red canisters and yellow canisters and an Initiator. A long harvest.
+---
+############################################################
+# v  v>< v .**OR.**ORR*O. R.  ..   .*. .R .*.*.**o*........#
+#< >   >>< R*OOR.O***R>..  .. .S.R.>....*.......Oo........o#
+#^^vv    ^R..**O...OOO..  ... S  ..S.....R*.. .Ro...oo.. .o#
+# ^ v<>^>R >R.OOR.RRRO..R..  .   .. .. .*R...R.....o.... ..#
+#     v <vR .*.O..O**OOR...R.....R  R.R*.. ....RooR...... .#
+#^   <vvRv .OO*R**R.OOO.. . ..    .R......  . ...o....... .#
+#><<   ...R..OR*...*.R.OR..R.. . .. ......R.....o..R..o....#
+# < <> >^v.^OR..*.OR...RS... .   S.R .*....**. R...R..o.O. #
+#v> >< ^R@<^.R.OOR..*R*R#R....R..#.........R.... .R...R....#
+#< ^.R R..RRR.*...R.R*..R..R.R##.....RR... .*......RR...v  #
+#R.   .vX>.R*RR..*....R ..R....#R.##RR.*R...R.>ROO..RR...RO#
+#O..ORR.>R*R..RRR.R ..*.#RRR...RR.R#......... ...SR .R#....#
+#*OOO**O*R.R.  R.R.. ^*R#R#R#RR#RR##RRR.......R.R.<R.O*#RRR#
+#R..*.OOOOOO*. R R .RR.RR..#.o..RR....RR...R.R.RSS.R.ROR.. #
+#O**OOOOOR*R..*. .R ..*RR .#....RRRo...... .R..R...o.#..*.*#
+#**O*O****OO.R*.  .*..R.. R*-R...R.R........e..R.R..o....R.#
+#*O*OOOO**.OR..RR.*R*... RR#< .RR#o..RR....O....o..oo. . R #
+#**OOOOOOO*O. .*R...R... . .y# y......R.....R...o.Ro.......#
+#***OO*O*OR*.R.*R  .*. RR ...y.  d.#........R.....o.#*.S.R*#
+#*OO.O**.RO*RRRR.R .*. R#.R.  #   R..... ...... .......R...#
+#***.*OO*.*O..R...*...R*..**.*.*R. R.R............*..R....R#
+#****O***.O*..*. .RR...*#RRR.R*R#.|T<........R.Ro..R#R..R..#
+############################################################

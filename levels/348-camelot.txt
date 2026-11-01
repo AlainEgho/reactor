@@ -1,5 +1,5 @@
 name: Camelot
-need: 52
+need: 107
 hint: Three halls side by side: Pellets wait in Cask cages, one plug in the roof of each; liquid sodium hangs over the dig; and a laser sweeps a lane with Pellets lying in it. 148 seconds of air.
 air: 148
 ---

@@ -1,0 +1,28 @@
+name: Achilles
+need: 12
+hint: 66 red canisters and Cask to blast, orange canisters and Cask packed wall to wall. Few Pellets, and each one is guarded.
+---
+############################################################
+#O.R...O.oR.o...........RRRRRRRRRRRRR.d.RRRRRR.....R..RRRRR#
+#...........R.....d.RR.RRRRRRRRRRRRR.d.RRRRRRRRR.....RRRRRR#
+#..O.R.o.o..o..o.....R.XRRRRRRRRRRRRRd.RRRRRRR.R....RRRRRRR#
+#*R.RR.Ro.o.....oo.d.R..RRRRRRRRRRRRR..RRRR.RR...R...R.RRRR#
+#d...Rd....Ro...R......RRRRRRRRRRRRRR.d................R.RR#
+#....RR......o....o....RRRRRRRd*RRdRRRR..................RR#
+#.............R.RoR.R....RRRRRRddR.RRRR...........R........#
+#...R....*ooR..Oo..RRR..RRRRRRRR..dRRRR.R..................#
+#RdR.......*..o.o..o.....RRRRRRR.RRR..R.RRR......d.d..d....#
+#.d..d.R..d.R..o.....R..RRRRRRR..RRR....RRR.....d..........#
+#d.O...R.....do...o...oRRRRRRRRR..R....R.RRRR...d..........#
+#..RO....R......R.R....RRRRRRRRR.RRRR....RR................#
+#.......o*..R.R.O..RR..RRRRRRR.R..RR..R....................#
+#R......R...d..R....R..RRRRRRR....R.......R................#
+#......R*...d.......RRRRRR....R......d..............d......#
+#.O..*.*.Rd..dR.*.....RRR.............................d....#
+#......d.*d......O....RRRR............d....R..........d....#
+#..dOR.....R...R.....dRRR.R..d.R..d.d.d..................d.#
+#..RR......R.*.Rd..d....R....d....RR.d...R....R.........d..#
+#d....R....o...dR........R..d...R...d..d...............d...#
+#o.R..d...R.dR....*...d.d......RRR...........d............@#
+#..o..........d.....dR.........RRR...d....d.d..d..d.......d#
+############################################################

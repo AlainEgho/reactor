@@ -1,5 +1,5 @@
 name: Paragon
-need: 72
+need: 158
 hint: Two long galleries: isotopes decay while you work; and a sealed vault waits for the Quantum tunnel beside it.
 ---
 ############################################################

@@ -1,5 +1,5 @@
 name: Mjolnir
-need: 59
+need: 93
 hint: A core walled in the middle and four galleries round it: Pellets wait in Cask cages, one plug in the roof of each; a laser sweeps a lane with Pellets lying in it; a belt runs the length of the room; Plutonium sits on posts under hanging Lead; and a sealed vault waits for the Quantum tunnel beside it. 141 seconds of air.
 air: 141
 ---

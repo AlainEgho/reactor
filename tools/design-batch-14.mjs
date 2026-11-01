@@ -104,15 +104,15 @@ if (want(268)) {
 
 // 269 Long Night: a maze in the dark on two minutes of air.
 if (want(269)) {
-  const b = new Board(269, 'Long Night', 60, 'A maze in the dark on four minutes of air. Every tank buys thirty seconds and every Lamp two more cells of sight, and the maze will not tell you which turn is right. Lead hangs over the corridors.', { fill: '#' });
+  const b = new Board(269, 'Long Night', 60, 'A maze in the dark on four minutes of air. Every tank buys thirty seconds and every Lamp two more cells of sight, and the maze will not tell you which turn is right. The Reactor is at its heart.', { fill: '#' });
   b.head('air: 240').head('dark: on');
   b.maze('.');
   // a few walls knocked through, so the maze has loops and a wrong turn is not always the whole way back
   for (let n = 0; n < 70; n++) { const x = 2 + b.int(56), y = 2 + b.int(20); if (b.get(x, y) === '#' && ((b.get(x - 1, y) === '.' && b.get(x + 1, y) === '.') || (b.get(x, y - 1) === '.' && b.get(x, y + 1) === '.'))) b.set(x, y, '.'); }
-  const ok = both(away(1, 1, 2), away(57, 21, 2));
+  const ok = both(away(1, 1, 2), away(29, 11, 2));
   b.scatter('t', 14, { on: '.', ok }).scatter('L', 3, { on: '.', ok });
-  b.scatter('*', 95, { on: '.', ok }).scatter('O', 30, { on: '.', ok: both(ok, (x, y) => b.get(x, y + 1) !== ' ') });
-  place(b, 1, 1, 57, 21);
+  b.scatter('*', 95, { on: '.', ok }).scatter('O', 10, { on: '.', ok: both(ok, (x, y) => b.get(x, y + 1) !== ' ') });
+  place(b, 1, 1, 29, 11); // the way out is the heart of the maze
   b.fit(0.8).save();
 }
 

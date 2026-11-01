@@ -147,9 +147,10 @@ export class Board {
   }
   // A rough check that ignores physics: how many Infotrons Murphy can walk, dig, push or port his way
   // to (counting 9 for each Electron farm and each Electron he can reach), and whether he reaches the Exit.
-  reach() {
+  // With blast set, Cask ('R') counts as open too (a floor with red or yellow canisters can blow it away).
+  reach(blast = false) {
     const MASK = { '^': 1, '>': 2, 'v': 4, '<': 8, '|': 5, '-': 10, '+': 15 }, DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0];
-    const open = c => c !== undefined && ' .*dBXOoyS@eIrpNQtLh!cP/\\F,AVUJ%ZKHGqg'.includes(c);
+    const open = c => c !== undefined && (' .*dBXOoyS@eIrpNQtLh!cP/\\F,AVUJ%ZKHGqg'.includes(c) || (blast && c === 'R'));
     let sx = 0, sy = 0;
     this.g.forEach((r, y) => r.forEach((c, x) => { if (c === '@') { sx = x; sy = y; } }));
     const seen = new Set([sy * 60 + sx]), q = [[sx, sy]];
@@ -164,7 +165,79 @@ export class Board {
         seen.add(ny * 60 + nx); q.push([nx, ny]);
       }
     }
-    return { supply: infos + 9 * (elec + this.farms.length), exit };
+    return { supply: infos + 9 * (elec + this.farms.length), exit, seen };
+  }
+  // Both of the below, in turn, until neither changes anything (opening an airlock can show that the
+  // Reactor is in the way, and moving the Reactor can bring more airlocks to the edge).
+  // When neither helps, one wall between what can be reached and open floor beyond it is knocked through.
+  unseal() {
+    for (let i = 0; i < 400; i++) if (!this.freeExit() & !this.openPorts() && !this.breach()) break;
+    return this;
+  }
+  // Knocks one wall (Hardware or Cask, never the border) through, where it stands between a reached cell
+  // and an open cell that cannot be reached. Returns whether it did.
+  breach() {
+    const blast = this.count('d') + this.count('y') > 0, r = this.reach(blast);
+    if (r.supply >= this.need) return false;
+    const OPEN = ' .*dBOoyS@eIrpNQtLh!cP/\\F,AVUJ%ZKHGqg';
+    for (const k of r.seen) {
+      const x = k % 60, y = (k / 60) | 0;
+      for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+        const wx = x + dx, wy = y + dy, bx = wx + dx, by = wy + dy;
+        if (wx < 1 || wy < 1 || wx > 58 || wy > 22 || !'#R'.includes(this.get(wx, wy))) continue;
+        if (!OPEN.includes(this.get(bx, by) || '#') || r.seen.has(by * 60 + bx)) continue;
+        this.set(wx, wy, '.');
+        return true;
+      }
+    }
+    return false;
+  }
+  // On a floor rebuilt from another map the Reactor can land in the only way out of the start's pocket
+  // (it stays shut until the Pellets are in). If it hides Pellets that way, it moves to the open cell
+  // farthest from the start. Returns whether it moved.
+  freeExit() {
+    const blast = this.count('d') + this.count('y') > 0, before = this.reach(blast);
+    if (before.supply >= this.need) return false;
+    let ex = null;
+    this.g.forEach((r, y) => r.forEach((c, x) => { if (c === 'X') ex = [x, y]; }));
+    if (!ex) return false;
+    this.set(ex[0], ex[1], '.');
+    const r = this.reach(blast);
+    if (r.supply <= before.supply) { this.set(ex[0], ex[1], 'X'); return false; }
+    // the farthest '.' by walking distance over what can now be reached
+    let sx = 0, sy = 0;
+    this.g.forEach((row, y) => row.forEach((c, x) => { if (c === '@') { sx = x; sy = y; } }));
+    const dist = new Map([[sy * 60 + sx, 0]]), q = [[sx, sy]];
+    let far = ex, fd = -1;
+    while (q.length) {
+      const [x, y] = q.shift(), d = dist.get(y * 60 + x);
+      if (this.get(x, y) === '.' && d > fd) { fd = d; far = [x, y]; }
+      for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) {
+        const k = (y + dy) * 60 + x + dx;
+        // airlock cells are stepped over by reach(), so they are not in seen, but the walk goes through them
+        if ((r.seen.has(k) || '<>^v|-+'.includes(this.get(x + dx, y + dy) || '#')) && !dist.has(k)) { dist.set(k, d + 1); q.push([x + dx, y + dy]); }
+      }
+    }
+    this.set(far[0], far[1], 'X');
+    return true;
+  }
+  // On a floor rebuilt from another map, one-way airlocks can shut the start in. While fewer Pellets can be
+  // reached than the floor needs, the one-way airlocks at the edge of what can be reached become four-way
+  // ones, ring by ring. Returns how many it changed.
+  openPorts() {
+    const blast = this.count('d') + this.count('y') > 0, ONE = '<>^v|-';
+    let changed = 0;
+    for (;;) {
+      const r = this.reach(blast);
+      if (r.supply >= this.need) return changed;
+      const edge = [];
+      for (const k of r.seen) {
+        const x = k % 60, y = (k / 60) | 0;
+        for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) if (ONE.includes(this.get(x + dx, y + dy) || '#')) edge.push([x + dx, y + dy]);
+      }
+      if (!edge.length) return changed;
+      for (const [x, y] of edge) if (this.get(x, y) !== '+') { this.set(x, y, '+'); changed++; }
+    }
   }
   // Lowers need to `ratio` of what reach() finds, when the layout came out leaner than planned.
   fit(ratio = 0.85) { this.need = Math.min(this.need, Math.floor(this.reach().supply * ratio)); return this; }

@@ -1,0 +1,28 @@
+name: Jason
+need: 75
+hint: 21 Gammas loose in the open, a Neutron or two, red canisters and yellow canisters and an Initiator. Every Pellet counts.
+---
+############################################################
+#...   .    ..  ...*.  ...    R. R SRSRO. .OOO*.....OR.....#
+#...  .O. R   .*. RR.. ... .. R.      RRR .OOO.O....R.O... #
+#@..  ... RR*....  R   ..  . .. R RR   .Od.OO...O..R......S#
+#...       R..  ...  .   . .R...ORS  SR..R.O.R..*O**.*.... #
+#...       R*.*.*.R   .   .R.OR...RR  R.RR...R.O*R*R......*#
+#        RR.*.....R R ........RRR   .  R  .RO.OORR*R*R...*.#
+#          ... .. .R ..   .R.RR .   .*R.R R*O.R.....RR**...#
+#.R  .R.. R  R R.eRRO.*R R ....R. R.O.R.. .R.****R .*R....R#
+#. .R.Re.O.R....*.R.OR.*R....o...R .RR  .R.R.SRRRRRR....RR*#
+# RR. ..OORRd..R*. RO...RRR...OR...Rd.OReRR.RR**.*RR*R.O.oo#
+#. . RR...RRRR...R .O**ROO.OR.O.. R.OOOOR.  .RR*RS***R..R..#
+#.. R R  RRRO. .RR..RR.OOR........R.O>..<R.R..**OO*.RRoo. .#
+#RR. ...O.RO..RR.O............OO..RR.R .RR..ORO*.*RO.*.... #
+# ..R.O...R.. R.OOORR..R.R.O.O..R<>.OR .RROORR..RO*..R.....#
+#..OSR.RR ...R ..OO.dORR..R...R.ORR.R.O...O..O.....R.R..o.O#
+#RRS.          R.RO.OO.R.*R.RRR.R^   .v<R.O*R..RO.R.O. .R..#
+#RRRR  S     RR..ROO..RR.O*...R.R^><<  .O..O.ORROR .RRR .R #
+#RR  R R   S   ROOO...R.*.*RR.R..v< >v >RR.OR...TOR<. ... .#
+#RRR    R RR RR..OOO.**.RR.R.RR..    ^vR.R.*O.R..... R. RR.#
+#R..   R    R .OORO..OOO.RRS..RR.  >^ v>. ..OR.R^  <   v   #
+#.X.RS R  R R ROROOO.....SS...SR. <>v vOd...OOO.  >v  v  ^ #
+# .R   S SR   .OOROO. .O..RSS..S. v ^ ..R ..O..R< y  v^>   #
+############################################################

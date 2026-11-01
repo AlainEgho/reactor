@@ -1,5 +1,5 @@
 name: Ragnarok
-need: 97
+need: 129
 hint: One open floor in four quarters: an ice floor carries you past its Pellets; Antipellets lie shoulder to shoulder with the Pellets; a laser sweeps a lane with Pellets lying in it; and liquid sodium hangs over the dig. 103 seconds of air, Gammas sleep in every room.
 air: 103
 ---

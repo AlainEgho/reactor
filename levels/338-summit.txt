@@ -1,5 +1,5 @@
 name: Summit
-need: 82
+need: 133
 hint: Two long galleries: hydrogen cells sit under their stores; and acid pools wait under the Pellets. 118 seconds of air.
 air: 118
 ---

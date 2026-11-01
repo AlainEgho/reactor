@@ -1,5 +1,5 @@
 name: Satori
-need: 54
+need: 26
 hint: Four rooms, a Reactor sealed in the middle, and every switch flips every gate in the plant. The way in is a count, not a key: plan the whole tour before your first throw.
 ---
 ############################################################

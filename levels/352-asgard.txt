@@ -1,5 +1,5 @@
 name: Asgard
-need: 56
+need: 114
 hint: Six rooms in two rows: isotopes decay while you work; Antipellets lie shoulder to shoulder with the Pellets; hot spots flare in the Graphite round the Pellets; liquid sodium hangs over the dig; Gammas sleep in the walls; and acid pools wait under the Pellets. 144 seconds of air.
 air: 144
 ---

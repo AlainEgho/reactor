@@ -1,0 +1,28 @@
+name: Catapult
+need: 82
+hint: 60 airlocks and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#.O..OO.O*.R.....R....RR.. R RR*R..OR.R ....R*.*......O..OO#
+#.......R......OR.....RRR.<v< R^. .#v.#>..R.ORO...*..O<.RO.#
+#..OOOO.RO..O.^..O....OR>..R. .   RR R.R...RRO..vX.O*.ORRRR#
+#@......OR.>...RR.RRO...RR....>R RR>. .<OR..RO..R R..RR...O#
+#.O..*..OR..O.RR.ORRR>.O...RR*RR ..R<RvR..R.O.RO..R..RR. .^#
+#**O....ROR.OOOOOOR.OOO^R*OOOO...RR  .vR*OOR..RR.RROORR....#
+#O*OOR.RR*.OO.O.RR.R*RR.OROO..... RR..R.OR.v>.R.O.R.OO.OO..#
+#RRR..R^*RRO.OOOOO.OOR...RROO...R .R..vRRRR..RRO.. v...RO..#
+#*O*...O.R.O..O.OORR..OO.........R. vRO.RO***.OR*.... .O**O#
+#*OO.....*ROO.O.O<...O....OO.OO.  RRRRR.OO.RORO*.R.OR.RRRO^#
+#.....O.*R.O.O.O.O. ...OO.O........R  .RRO..**.RORROOOOR..R#
+#. .RO*OO<RRR..R.RvR....R..RR.v.*.RRRR.R*.*...O.RR...OR^R.O#
+#OR.R.ROR.RR..RRRR..R.RO....R ..RRR RRvvRO.R RRvO.*RRR^ RO.#
+#R^OR ..*. vR.RRR..RR.R.R..R.R.. .. . .R..*RR..RR.RR...R.R.#
+#*OOOR.*OO..O..ORRR.ROO*.ROO.O.. R*RR ...O.R..R.O< .Rv  .. #
+#OOOO..OO.....*O..R RO.RO.R*.O..OR.R ..*.RORRO..R>RR. R.RR<#
+#OOOO<OROO.....OO*...O.R.O..OO..RR.*Rv.RvRRORRRR .*^R>..OOO#
+#*OO.RO...R.O.RR*ROR**OOROR..ORRRRRR. .v R.*.>O...RR..vR^R*#
+#O*OOR.RRO>.*R^.OROROO*O.ORRR.O.R.  .. R.R.RR.O. .OR*OOORRO#
+#O**.O*OO.OOOOO...*<.OOO*ORRRO..  ROR.R.O.OO..OR^RR...RRR..#
+#.*O**O...OOOO**ORR*.O**.OO.O...RO<R.Rv...O.OR..O*R. .R....#
+#****.RRRR....OOO*O*..*OR.<.O.O...*R .*RR.*R.R..O<....*> .*#
+############################################################

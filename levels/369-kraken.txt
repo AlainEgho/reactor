@@ -1,5 +1,5 @@
 name: Kraken
-need: 73
+need: 102
 hint: One open floor in four quarters: Alphas run the lanes; an ice floor carries you past its Pellets; liquid sodium hangs over the dig; and Gammas sleep in the walls. 127 seconds of air, Gammas sleep in every room.
 air: 127
 ---

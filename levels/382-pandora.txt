@@ -1,5 +1,5 @@
 name: Pandora
-need: 86
+need: 126
 hint: Six rooms in two rows: Neutron farms wait for their Lead; hot spots flare in the Graphite round the Pellets; Plutonium sits on posts under hanging Lead; Antipellets lie shoulder to shoulder with the Pellets; a laser sweeps a lane with Pellets lying in it; and hydrogen cells sit under their stores. 114 seconds of air, Gammas sleep in every room.
 air: 114
 ---

@@ -1,5 +1,5 @@
 name: Cyclops
-need: 72
+need: 128
 hint: Two long galleries: Gammas circle Pellets on their posts; and a sealed vault waits for the Quantum tunnel beside it. Gammas sleep in every room.
 ---
 ############################################################

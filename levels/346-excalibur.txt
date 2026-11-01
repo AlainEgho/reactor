@@ -1,5 +1,5 @@
 name: Excalibur
-need: 50
+need: 94
 hint: Six rooms in two rows: a line of orange canisters stands shoulder to shoulder over caged Pellets; liquid sodium hangs over the dig; hydrogen cells sit under their stores; an ice floor carries you past its Pellets; acid pools wait under the Pellets; and Antipellets lie shoulder to shoulder with the Pellets. 150 seconds of air.
 air: 150
 ---

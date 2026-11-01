@@ -1,5 +1,5 @@
 name: Basilisk
-need: 71
+need: 100
 hint: A core walled in the middle and four galleries round it: Pellets wait in Cask cages, one plug in the roof of each; a magnet waits behind Graphite plugs with Lead at the end of each spoke; a line of orange canisters stands shoulder to shoulder over caged Pellets; liquid sodium hangs over the dig; and isotopes decay while you work. 129 seconds of air, Gammas sleep in every room.
 air: 129
 ---

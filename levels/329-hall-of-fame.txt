@@ -1,5 +1,5 @@
 name: Hall of Fame
-need: 73
+need: 95
 hint: A core walled in the middle and four galleries round it: Alphas run the lanes; Antipellets lie shoulder to shoulder with the Pellets; Gammas circle Pellets on their posts; fallout covers the floor, with Iodine at its corners; and an ice floor carries you past its Pellets.
 ---
 ############################################################

@@ -1,0 +1,28 @@
+name: Caduceus
+need: 94
+hint: Gammas on patrol, a Neutron or two, red canisters and yellow canisters and an Initiator. Every Pellet counts.
+---
+############################################################
+#..RR..#.....O.*o.*#*^  vv  .O.v   vR##.. # d<<>  <O*OO...R#
+#R*.OOR.#..O...oO..##. v    vvv    v# >#..O#< + >OO*O*OO.R@#
+#R..*O#*R.OO.O.#o# ## v v    vv  # .*.RO#.^#    .OOOOOO*.RX#
+#*.O...O.O..OO.#.##*.^^.. ...   ..*.#..OR*>#*.  .^OO***O**.#
+#.....O.OOO..O...o#>#   . ....O. #..  #*O.^#Ov^ .O.O***OOO*#
+#.R.......O...O#o.###*.O..O..O.. R.OO...R. #*. >*.>.O.**O**#
+#OR....O.......#.R# .v.........O....R#RR .O.^<vv*O*.OOO*.OO#
+#........yO.R#T#.####S#   # # #..# SR.OOOOO*#R#R.#.##R#..oo#
+#....... ##.#. #.. #..# #        # .OROOOO#.#R##RR..O##.#..#
+#.........# . ..##<..#   #   ##   R#..ROOO#. <<###O##...R#.#
+#R....#.Oy# ###.#R##.# ^  ##   # R#  R*.O*#OO## R##RR.#oo#o#
+#....O...#  R#RdRR#R# #..   ###.  SO..R......*#.Ro.o##...o##
+#O.....*Oy ##R#.RR# ..####.###.  .#O##R.  #R.#.oR.#oR..oo###
+#O.O.O*..y # R eRR  R. . #*. .#  ##O.R. RR.o.o#ooo##o###.oo#
+#*.O.*..*y#y  RRRR#. ## ..o. .O#OO*.^  RRO#..#o#R.##..ooO#o#
+#.***RR.OO#*.R#RR..dR##..o....*#OOO#O#O*OOR RR.*....##.R.###
+#.OO.ROOR#.y.*.R..#d.oo.*o.o....O#O*##O.*O.O. v#.R.RR...##o#
+#.*.R.*..  ##.R.RRdd#.*o..o#o# .O###**#**RR...RR..##RR...oo#
+#.*RRROO. .# .*.RR#R##*#..o*#.v#.O*.O#OROOR   .#R...#.#.Ro##
+#.R*R*..R.R...R*O..#d#.o*o..<.OO#O*..<.*O*.R.  .o.o#...##.o#
+#.....RO.R..*.RO*..d...<... .##..*O.#.*O***O.R...o.oo#do#oo#
+#.....R.**O..*O.R.. #.# ...#.o.#.OO.#O*..**O.## .#..o#.ooo##
+############################################################

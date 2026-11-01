@@ -1,0 +1,28 @@
+name: Echidna
+need: 34
+hint: Lead everywhere. Few Pellets, and each one is guarded.
+---
+############################################################
+#.......OOO.O.OO.O.....OO........O.OO...O.. .O.O........*.O#
+#.....O................O.O.OO..O.......O......O......*...O*#
+#OR....OR..OO.OR.R...RRORRO..O.R.....R.RRR .OR...R..@*R.R..#
+#.R..RRORR..R.OO.ROR.O.ROOR.RR....RR..O.. RR.R.OR.RRR...*.*#
+#......RO.R...RRR.O.ORO..R.O..R.R.RO.RR..O.. ROR....*RO....#
+#O..O.R..OO.R.O.O...*O..O....R.O*..OR..R.......OO.O.OROR..R#
+#...RO...O..O...RR....OO.R.O..R...O......R...O.OOR.........#
+#O.OOO. ....R......O..O...R*..O.O...*....R...*OOOO.RR.*.R.R#
+#RR.RO..R*O.RO#O.*R....RO.RR#.R.RRR.#.R.R..R.RO..ROR R...R.#
+#OO..R.R.OR.....R#R..OO.#R...R.RO..O.RRRR.RRR.R.ORO#.RR....#
+#*..RO#R.RO.RRR .R.ROR.RR.. RRO.O.........O#....OR.OORR.R.R#
+#*O..O. .OO.OR.......O......RO.O.O...ORRR.......R*..OR  .R.#
+#OO...OO..OO.OR....O...OO..R.O....OO....R*.....O.OO......R.#
+#OO....R....... RR.O....OOR..O.*O.....OO.......OR..OOR R...#
+#R..R RR...RRR.R...#OOR*O#RR..*R..RO....OO.R.O.*ORRRRRO....#
+#R...R ...O.R..OR.ORO.O.R.R.RRO#..O...#R.OR#RR....#. R.RR..#
+#....#R.R.R..O#.*R..OR.R..O.O.RR..R.....R.RROR.OO..R. ..RR.#
+#......O..*O..OO..R.O...O..RO. R....O.O.....OO..OORO. .. R.#
+#..O.OO.O..*OOORO..*OOO... R..R.*O.OOR.ROO.R...OOOO.. R..R #
+#*OO.RORO.OO..R.OROOOOO. ..  ..O.O.O..*O...R.O*.OOR. ..O. .#
+#....RO.OO..RR..ROO.O....R....OR....OR...R.R.O....R..R..OXO#
+#O..O.R....O.O...R.O*..ORO*O.RO...OOOOR..OO......R.*ROO...O#
+############################################################

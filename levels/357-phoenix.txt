@@ -1,5 +1,5 @@
 name: Phoenix
-need: 61
+need: 75
 hint: One open floor in four quarters: hydrogen cells sit under their stores; an ice floor carries you past its Pellets; a sealed vault waits for the Quantum tunnel beside it; and Gammas sleep in the walls. 139 seconds of air, Gammas sleep in every room.
 air: 139
 ---

@@ -1,5 +1,5 @@
 name: Zenith
-need: 84
+need: 75
 hint: One open floor in four quarters: Gammas sleep in the walls; Pellets wait in Cask cages, one plug in the roof of each; a line of orange canisters stands shoulder to shoulder over caged Pellets; and hydrogen cells sit under their stores.
 ---
 ############################################################

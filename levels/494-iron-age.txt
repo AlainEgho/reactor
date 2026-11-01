@@ -1,0 +1,28 @@
+name: Iron Age
+need: 76
+hint: Lead everywhere. Every Pellet counts.
+---
+############################################################
+#...OO.O*O*O....  .OO.O.......O. .O.O*O.....OOOO........@OO#
+#......OOO**O....O.OOOOO. . .O....O.OO*O.............O....O#
+#.O*.*ORROORO...R.OORROR*RRORR.R..ROOR.OR.RRR*OO..R..OR.ROR#
+#......ORO**.R.RR..OOO..ORR.O.R....RR.*R....OR.RR...R.R...R#
+#O.OR.ROR**O.RRORR.*R..OOO.*O...OR.RO.*R.O.ROOR...RR.RO....#
+#...O........O....... .OO........OO.O.O.....*OOO.OOOOO.....#
+#O..R.RR....OO*...O..O.O.OO...O.....O.......****.*....O....#
+#......*......*......OO...OO.OO....OO.....O.*OOO...O...*...#
+#....ORROOR.R**..R...RRR....RRO..ROR.R.RRO.O.R.O. .ORRO*OO.#
+#OO.**..RRXORRR..OO...O.......RRR.RO.OR....RR**R..RR..R..O.#
+#...O.RO.OO..O.O*RRORO......O........O.R.R.R.*R.OR.R..R.O.O#
+#.*.RROO.R*.RR..RR.R..*ROR....RO...R...OOR .O...ORO.R.R.OO.#
+#...OR*O**ROO..R.O.RR.RORO.R.O..OR*.ORRRR...ROR.OO..R....*.#
+#*O......RR..RO.OO...OR......RRRR..R..R..RRORR..RO.R..OO..O#
+#**O.RO...O...O.....OOO..O..O.O.O..O..O.. .O..O..O....R....#
+#*O*O..R.........**.***..O..OOOO...OO....OO..O*O*....RR..O.#
+#O**OO*RO.  .........O*...*.OOO.....O.  .....O..O.O...O.O.O#
+#..OO.ROO.O.RR  RR. RORO...R.OR..RR..R....RR.R...R...RO...O#
+# ..R..RR...*OOO*R. .RR..RR..O..RO.O.RO..OR...R..RR.R.O. .*#
+#.O..O..RR RR.ORROO..... R..OOOR...RR.R..R...RR.R...R.....O#
+#*.*...........OO.........O...OO...O..OO.OO*....O*... .O*.*#
+#OO*OOOOO.O.O.O..OOOOOOO.OOOOO...OOOO**O.O.O...O.O.O....*OO#
+############################################################

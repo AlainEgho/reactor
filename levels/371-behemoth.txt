@@ -1,5 +1,5 @@
 name: Behemoth
-need: 75
+need: 117
 hint: Four rooms: Alphas run the lanes; a belt runs the length of the room; a magnet waits behind Graphite plugs with Lead at the end of each spoke; and Gammas circle Pellets on their posts. Gammas sleep in every room.
 ---
 ############################################################

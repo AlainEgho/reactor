@@ -1,0 +1,28 @@
+name: Heracles
+need: 100
+hint: Gammas on patrol, 15 Neutrons to split, 28 red canisters and Cask to blast and orange canisters. Few Pellets, and each one is guarded.
+---
+############################################################
+#  #    #      ..S... #.<..#..#####.##.##.#.###...#.###X..##
+#    #     .   SSS#.# .# . .#.#.###.#...#....#.......###...#
+#    #  . # . ..SS..#  R. ###...........###.......#.#####.##
+# R#.*.. RRR RR  .###   R. ###.#..O.O..O..#..###dddo#d.@...#
+#. RR..R  ....  S..## .*...#.#..O....O..##....o..#odo.#...##
+# . .   . .  ##.S# .#R...R #.#..O.O#...O...OO.o#do.o.#.>####
+#R R..R.#R.   #.SS .. R    .O##.O#O.O##.O.O#.o##o...d.#O...#
+#..RRR..RR*.... . R  R.*.  #.................o.#dd.oddo.##.#
+#RRRRR*.RRRR.R.R.*..  .R...#.#...............#o..o.do.o##..#
+#R.RRRRRRRRR.#. .R...  .. R..................o.odo.do.##...#
+#R.RRRRR...R..RR R ..RR . R#.................###odd..do#o.##
+#.ddRRRRR..d...  . ...  . .###RR.#.RRRR.e#.RR.....#..#....|#
+#..dRdd..dRR##.R R..RR R  R#...e..#R....##R.#RR#.RR.e..R.RR#
+#RdRRRRdd.RR...*.RR  .R R .#.R.#R..R..e..R...R##.RRR..R#..##
+#R..RRRR..dR# .R.   ..*. .R...R#RR#R#.....R#eR..eR##..#.e. #
+#..o.###oooo.#^.*...R..R R..##RRRRR....R.e.e.R......e...R. #
+#......#..o.#...... ..    ..R#e.RRR.R.....RRR..RRR.R...RR..#
+#.#..#..o.o..##RR R   R*.. .RRRe....ReR..RR....RR.eRR.R....#
+##ooo.o.....o..       ......#RRR....RRRR....RR.RR..RR.eRR..#
+#.o.o.o.o.ooo.. R . .##   ....R#.......R.....RR.....#..#...#
+#..o....o...v..# .  # . #R.##R...R....R.....R#.......R..#. #
+#o.ooo...o.. .## R.#. .... ...R.R......#R..##...#...#......#
+############################################################

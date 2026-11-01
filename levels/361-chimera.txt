@@ -1,5 +1,5 @@
 name: Chimera
-need: 65
+need: 85
 hint: A core walled in the middle and four galleries round it: isotopes decay while you work; Alphas run the lanes; a line of orange canisters stands shoulder to shoulder over caged Pellets; an ice floor carries you past its Pellets; and a belt runs the length of the room. 135 seconds of air, Gammas sleep in every room.
 air: 135
 ---

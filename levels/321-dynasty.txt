@@ -1,5 +1,5 @@
 name: Dynasty
-need: 65
+need: 80
 hint: Four rooms: liquid sodium hangs over the dig; hydrogen cells sit under their stores; Gammas sleep in the walls; and isotopes decay while you work.
 ---
 ############################################################

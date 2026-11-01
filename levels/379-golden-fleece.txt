@@ -1,5 +1,5 @@
 name: Golden Fleece
-need: 83
+need: 120
 hint: A core walled in the middle and four galleries round it: acid pools wait under the Pellets; isotopes decay while you work; Alphas run the lanes; liquid sodium hangs over the dig; and Plutonium sits on posts under hanging Lead. 117 seconds of air, Gammas sleep in every room.
 air: 117
 ---

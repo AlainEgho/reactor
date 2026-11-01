@@ -1,5 +1,5 @@
 name: Holy Grail
-need: 84
+need: 146
 hint: Two long galleries: a belt runs the length of the room; and Pellets wait in Cask cages, one plug in the roof of each. Gammas sleep in every room.
 ---
 ############################################################

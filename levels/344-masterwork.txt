@@ -1,5 +1,5 @@
 name: Masterwork
-need: 88
+need: 110
 hint: A core walled in the middle and four galleries round it: Antipellets lie shoulder to shoulder with the Pellets; hot spots flare in the Graphite round the Pellets; isotopes decay while you work; a line of orange canisters stands shoulder to shoulder over caged Pellets; and Gammas circle Pellets on their posts. 112 seconds of air.
 air: 112
 ---

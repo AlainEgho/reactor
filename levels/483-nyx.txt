@@ -1,0 +1,29 @@
+name: Nyx
+need: 28
+hint: 78 airlocks, wide open space and gravity. Few Pellets, and each one is guarded.
+gravity: on
+---
+############################################################
+#v+X.v  vv vvvv v  v vv vv  vv vvv   vvv v vvvv v   v      #
+#.+@+.vv   vv    vv  vv  vv    v v v v  v v    v vvvvvv ^vv#
+#.RRR.   R       ^R                .*.         .*.#   #    #
+#...RR.OR RR  R*.                  ...      #  #.##   #  # #
+#   .O... .*.RRR<R R                                   # ^ #
+#  .O.. R ..R . R.              R  .*. .RR<. R    ###   ^  #
+#R.R.R .  ..      ^       R        .*OR...  #R .  #      ^ #
+#.R RR RR R.OR*. .*R    R         R.RR.R R . .*# #   .*#   #
+#. .*R   .*.#... .#.    R      R   .OO.R   . ..R #*# ...   #
+# R...  ....  #.O^                 RO.O.       R #.#*.     #
+#.    R .*.##  ..^ #       .O.    RR.RO.^R^   R    ...  ^*.#
+# .R    ...*#  ^^ ##  .O.  ..R  R   ..R.ORO..O.  .*. #  ...#
+#.*.     ..*...#> .   ...   . R R.*R  R.RO*OR..  ..#    ^ ^#
+#...    ....#*.           RR     ...R  RR.R..R           # #
+#. . R.*.  .OO.OO.OO.  .*.         R   .OOOO.#      .*.    #
+#*..  ...  .O#OOOO#O.  ...   R  RRR    .O#OO.O#     ...    #
+#.. R  R   ..O.#OO#O.                  .OOO#...       #   ^#
+# ... R.    #..OO##O.R .R RR         R ...##              ^#
+#. .R.R.   .O#O##OOO.R  R  BR  R        #ROO#             ^#
+#. .*..   R.O#.O#OO#.      ..       R  R.O#.O.#            #
+#R..R.RR   .R..R..R.   R  R  R RRR      ...R..RR  R .RR   R#
+#.... .RRRR   RR R   RRRRRR   R .  RRR    RRR R.O.RR .  R R#
+############################################################

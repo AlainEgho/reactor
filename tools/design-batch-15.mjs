@@ -128,7 +128,7 @@ for (let k = 0; main && k < 50; k++) {
   const r = rng(num * 104729), lay = LAYOUTS[ORDER[k % ORDER.length]];
   const dark = [13, 14, 37].includes(k); // only Onyx, Obsidian and Valhalla are dark
   const air = (k >= 10 && k % 4 === 2) || (k >= 35 && k % 3 === 0) ? 160 - k : 0;
-  const grav = ORDER[k % ORDER.length] === 'bands' && k % 10 === 7;
+  const grav = ORDER[k % ORDER.length] === 'bands' && k % 10 === 7 && k < 40; // not on Apotheosis: its pits trap
   // the pieces: one per region, no repeats, each fitting its region; calm early floors leave a region plain
   const regions = lay.regions.slice(0, k < 10 ? 2 : k < 25 ? 3 : lay.regions.length);
   const used = new Set(), picks = [];

@@ -1,5 +1,5 @@
 name: Odyssey
-need: 79
+need: 80
 hint: One open floor in four quarters: a sealed vault waits for the Quantum tunnel beside it; a belt runs the length of the room; hot spots flare in the Graphite round the Pellets; and a laser sweeps a lane with Pellets lying in it. 121 seconds of air, Gammas sleep in every room.
 air: 121
 ---

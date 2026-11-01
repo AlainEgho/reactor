@@ -1,0 +1,28 @@
+name: Dionysus
+need: 141
+hint: 57 Gammas loose in the open and Cask packed wall to wall. A long harvest.
+---
+############################################################
+#RRRRRRRRRRR...RRRR*..RRS.*.RR....*RRR*.....RRR..*.*....R..#
+#RR..RRRR..RR.......RRR..RRSS*.R.R.*SRR.R..R.**.R.*.RRR..R.#
+#.R...RRR.R.RRR..R..RR.....SRR....R.S.RR..*..*R..*....R.RR.#
+#S.*RRRR....RRRR..SRRR.R....SRR.*..*RR..R..RRR....R*...SR*.#
+#*S.RR...R*.R...*.S.*.*..*R*RRRRR.*.RRR*...RRR.R...S.*SS...#
+#SR.....*..RR..RRRRSRSR...**.R..**.....*.R**.R.R.RRR.*R*..R#
+#RS..@RRR...RR*.RRRS..RRRR*R*R*...RR.R..*...RR**.RRRR...S.*#
+#RSR.....SS.*....RRR.RRR.*.R..RR..R....R.RRR.*R*RR*..*.R.R.#
+#SSR...R..S.R.*.*S..R.......R.R.*RRRR.RR..**.*R*RRR...RR...#
+#SSSRS.R..*.RR*...R.*.R.**R.*.......*.*R..R*.R..*.RR*RR.*R.#
+#RSRRR.......R...R.*SRRRR.R......R.*R*...R**R.*RR*RR..R*R..#
+#RS..RR..RR*....RRRRR.........R....RR.R.RR*RR.R..RR..R..R..#
+#RSS.RR.R.R.RR....R....R*..RRR*.RRRRRRRRR..R....*RRR.R..R.R#
+#SSR.R.............*RRR*R.RRRR..R.R.RR..RR..*.R**...*.R*.RR#
+#SRRRRR.R....R..R..R.R......R.R....*RRR.RR.R..RR*....*..RRR#
+#RRS.R.*..RR.RRR...*SRR*R..R..RRRR..*.R.*R..*....RRRR......#
+#R..RR.......R.RR.*.RRSSR**RR..R*.S*R*.R.RR.RRR....RR..*RR.#
+#RRS.S.RR..R.R.R*.R*...*R*R.R*...RS*RRR.*.*.**...R.RRR..RR.#
+#RRR.R.R..*......RR.RRR.R.S.R..RRRS.....R.R*...R.RRRRR.*RRR#
+#RRR.RR....RR.RRRRR...*..*S.*S.RR.*R**R..R*.*R*RR..RR...RRR#
+#RRR.RR...**R....R...RRR.RS..R.RRRRR**.....**.......RRR.R.X#
+#RRR*RRR.....R.R....R...SRRR*...R*.*..SR..*..R.R...RRR.....#
+############################################################

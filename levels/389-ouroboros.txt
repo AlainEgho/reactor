@@ -1,5 +1,5 @@
 name: Ouroboros
-need: 93
+need: 166
 hint: Four rooms: Neutron farms wait for their Lead; a sealed vault waits for the Quantum tunnel beside it; Gammas circle Pellets on their posts; and Antipellets lie shoulder to shoulder with the Pellets. Gammas sleep in every room.
 ---
 ############################################################

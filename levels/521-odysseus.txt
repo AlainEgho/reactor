@@ -1,0 +1,28 @@
+name: Odysseus
+need: 51
+hint: Gammas on patrol. Every Pellet counts.
+---
+############################################################
+#O..R.R...OO##.OO.#.###.RR.*RR R  R . .R*R*ROOROO.OO#.O###.#
+#.*O..R......R..##...... ...R.    R . R..RO*RO.R..O#.O####.#
+#....RR......R#...#..#.#R .   R RR.R .R....OO.R...O..#...@.#
+#.R....OR.#..#R.#.RR...# ..R R .RR ..R R.R*O.OO.OOR........#
+#..RRR...#..#R.. R#...R#.R  RR   ..R...RRRO.R.R..O...R.RO.O#
+#..........RR..#.R...... #  RR RR  R.R..R..ROOR.RO...OORR.O#
+#.RR...RR...#.#......RR.RR.R RR .R   . ..R**OR.ORRROO.....O#
+#RR..R.....R ...R..R. R...R..R.R....R.. RR.*.R.OROO*RO..R..#
+#R......RR.RR  .R.....RRR.R.RR..OO..R.. RR.R*OOO*ORR*.O....#
+#..R...R*..... RR .....R.RO..RRRO.OOSO.....OO...*ROOOORRRO.#
+#.R..RRRR.RR..R.R ..RR.R .....R..OORO*RR.R*OR..RR.RR..RRORO#
+#..R.R.....RRR.....R...R.R*.R..ROOOOR.R  ..**.*O*.O*....*..#
+#R........R..RRR.R..RR.R....R.ORRORR... R..ROOO...*O*R*R...#
+#......RR..R..RRR...R.R..RR..R..OOORR..RRR.RO.OO*O**.OR*..O#
+#.RR.R.RR.*R...RR..RR...RR....O.ROOR.R..RR.O.*....*R.R.RO..#
+#.RO.R.. ..............R..RRO.R..ROR. .RR.**RROR .R.R .RR*R#
+#..R..R.R. ..RRRR......RR.....RO.OORR.R.RR.*RR.R#...R .XR*R#
+#R.. .RRRRR.R.R..R........R..ROORORROR.*R.OR*#  RRR   .OR*.#
+#...RRRR..RO..R.RRRRR.RR.R.......ROO.RR...R.... .R. RR.RO*.#
+#....R.R.R.....*R.R...RR.ROO..OR.O..R. R..*..R.R.R .*RROR.O#
+#R.. .....R..RRR....R...*...O.....R   RRORRR**..RR ...#.#..#
+#..R.R.R..R.......R.RRR..R.*.*. .R.  R...RR..RR.   R R. ...#
+############################################################

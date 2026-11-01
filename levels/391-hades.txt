@@ -1,5 +1,5 @@
 name: Hades
-need: 95
+need: 149
 hint: A core walled in the middle and four galleries round it: a laser sweeps a lane with Pellets lying in it; hot spots flare in the Graphite round the Pellets; Gammas circle Pellets on their posts; Neutron farms wait for their Lead; and isotopes decay while you work. The lights are out, 105 seconds of air, Gammas sleep in every room.
 air: 105
 dark: on

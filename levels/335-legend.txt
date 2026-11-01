@@ -1,5 +1,5 @@
 name: Legend
-need: 79
+need: 131
 hint: One open floor in four quarters: isotopes decay while you work; a sealed vault waits for the Quantum tunnel beside it; hot spots flare in the Graphite round the Pellets; and a laser sweeps a lane with Pellets lying in it. 121 seconds of air.
 air: 121
 ---

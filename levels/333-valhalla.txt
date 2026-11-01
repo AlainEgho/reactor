@@ -1,5 +1,5 @@
 name: Valhalla
-need: 77
+need: 70
 hint: Two long galleries: Gammas sleep in the walls; and a sealed vault waits for the Quantum tunnel beside it. The lights are out, gravity is on.
 dark: on
 gravity: on

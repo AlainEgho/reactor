@@ -1,0 +1,28 @@
+name: Trident
+need: 82
+hint: 60 airlocks and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#.OR..+....*ORO... .R+ +. .R. .+*.. ..O.R...O...O.*.O.....O#
+#O...O......O*O...R.RR++OR.R+RR*R...+.RRRR.....OR+.....@...#
+#...R.OOO...R*R........#.# ++ +..RR+R.R...OO....OR..OO.....#
+#O....RO*R...R...OO.RRR+R...RR.R.RR.OR RR.ROOROORRR..OOOOO.#
+#.RR.RRORR.+OO+R..R.. R. R.R+.O.O.ORO..R...OR.OOR.*R....*OR#
+#+.R.RO..R+.R.R..+OR.RR+  .R..OO..O.O.R..RO+..R..R.R.OR.R*R#
+#.O.R..O.  RROR..RR.. RRR  ..RR.RRR*OOO*..O.O.OO..*..R.*+.O#
+#*RO.ROO.R. .*O..OR*. RR.  R..O..O....RR+OO....OROR...O.**.#
+#*..RROO.RR.R*...O.RR..R  .RR..OO..RO.+ROOO. .OOOORO.O..O*O#
+#.O+OO..O.O**RR..O**. RvR.RR..OO.OO.R..OORO...O..*ROO....O*#
+#ROROR...OR.OR*OOO.ORRR+.RR....O..R....ORROO......*.O.....O#
+#..O++OO..R..R.O.O.RO*RR RRROO..RRR.RR.RR..R. RR .++OOOO*O+#
+#RR+.OR.. R*R.R.*.R*.R.R .R.......O....R..R RR..+ROO..ORO..#
+#. R.R.+..RRv R...... +vR*.. R..R..O..*RO....RRR.R.OORRROR.#
+#  R ROR R...R.OO.*RRRRRR..R+...R..RROOR..RR+O.OR RRR*....O#
+#.OR*OR+.O+*ROO.RR...  R  R.OR..R*RROO.RROR..*RO...RR....OO#
+#.*RR..O.RR^.RRRO. RR.RRRRRRRO...*RRR*R*R*OR..O.ROO..ROOO**#
+#OOO+.RRRR.+RRO.....+..RRR .OO.OR.O..OROO+O...+RR.OOROOOOOO#
+#O..RR..R ..R.....ROR+.+. R.**RO.RRO.OOROR*R.*.O...O.OO*O**#
+#.^  .R.+.. .O+OOO*.R. R*RXOOO...RO+*OO***OO*..O..R.**.***.#
+#*R<.R..R....RR...R...R..>RO...O....O.*RRO*OO.O..+R*RR.O**O#
+#..R.v.R*O*O......*R.R*vR RO...O.ROOO...ROO*OO**OO.OROOO.*O#
+############################################################

@@ -1,0 +1,28 @@
+name: Cottus
+need: 18
+hint: Orange canisters. Few Pellets, and each one is guarded.
+---
+############################################################
+#O.......O......O....RRO.R.....O..@....................o...#
+#...........oR.R.O.....O.RO....o.R.R..................o....#
+#O..o........O.R...O..RR.......O..R.R..R.RR.R...R..........#
+#...OOO..OO.R.R.O...R...O..R......R.R........RR*.RR........#
+#......O..O.O.......OR..Ro.R...OOR..*R.R..R...R..R*........#
+#..O..R.R...R..........R....O..R.R.....RR.o..*RR.R...R..R.R#
+#R.R.R..RR.........O..R..R..ORRRR..oRRRR..R.R.....*RR*.....#
+#R..RR.OR...RR.......R..O.RO......R...*..R..R....RR.RR.R...#
+#...*R.O......RO....R.ORRR....R..R..RR.R.R.R...R.....*.R.R.#
+#.R.R....O.O..RR......R.O.X.OR..RR.R...RR..R..R.....RR.*R..#
+#.RR..RRO.....O......RR.R.R..RR...RRRR...RR.RR.....R*RRRR..#
+#......oRR...R.R.R.R..RORRRR.....RRRO.OoR..ORR.OR..........#
+#OO.........R...R.Ro..R..ROR...R...R........RR.............#
+#.......R.R.RR.RR..*ORR..OO*R.RRR.R. ...O..O.....R.R.......#
+#.RRRR.R....OOO..R.RO...O.RR...O.....R.R..R..R......RR.....#
+#R..R.............OR.O..R.O......OR....R.O.RO..RR.RR...RR.R#
+#...RR....R...O..OO.OO.O.*......oRR.....RR.R.ROO...R.......#
+#.*...OO..........R..O*OOO.....OROR...###R##o##o#.R##oRRRo.#
+#O...R.RO..O...O.......ORR.............#RR#RRRR#oo#oooRRR#o#
+#OO.R...O......ORR.*O.....R..OOO..RR#...R.*.Roo#RRoRo###RR.#
+#..OO..RO.........RR..R. .RO....R.Rooo.RRooooooo.oo.o.RRRRo#
+#.O..R....OO.......RR.RR.R... ...o..oRoRRRRoRRR.ooRR.oooRoo#
+############################################################

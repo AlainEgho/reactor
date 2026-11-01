@@ -1,0 +1,28 @@
+name: Phalanx
+need: 143
+hint: Gammas on patrol, airlocks in the walls and Lead everywhere. A long harvest.
+---
+############################################################
+#OOO*ORO*.RRORR RR. R...RO..**O*RROO...R...RR...*R*...*O..R#
+#OOOOOOOR*.RO*.O. ..RR.RR..RRR****RORRO..RRROR R.*.O.*R***.#
+#ROROOOOR.O.O.R*RRROOOOO.RRRR..R...*RRR.RR.... RROORRR*.RR.#
+#OOROOO*ROOR*.O..OROROOOOR*RR*R..R..O...R...RR..RORRRROR*..#
+#ROROOO*R*ORR..R*RR*OOOO.R..**R.RR.RO...R.R.R +.RR**RROR..O#
+#.RRR...RRRRRR..ROR.OROR. ROROO.**O#RO..*OO....RRO**R*R***O#
+#OROR.RROR.**.#*ROORRRRRR...RRRORORRRR#.R#RR.R*****RO.O**.*#
+#...ROOOO**R..RR*.R..OR.....ROOR*O.*.#.ORR##*OR**O***RRR*OO#
+#.R.....***#OOOO.RR#R*.. R RRORR..RR*R#RR*OO..R#R.R.....O.O#
+#.......R*O**OO*RRRROOO.    R.R #.#R##.*R.OR.ROR.O#.RRRR..O#
+#....#R#OR****ORRRO.ROR.RR RO.. .ORR#O..R..#.R.RORR#.ORR**O#
+#..###...O**#OO.O.#OOO.. .RRR.R RRRO..RRR...R...****O.*.***#
+#R..#R..OOO**OROR.OO.ROR RRRRRRR...R..RRR...R.RR***O.+R.*O.#
+#RR#.R###*OO*OR.OR..O.R. R*.R  R.R......R.ROR...***OR*.+.*O#
+#....R.O.#.RRR*R..#..RR. ##.# R#. R RRRRRR.RRR.R**O.RRRR.*R#
+#R#@.R..R..##.O..R....RR #.*..R R*R RRRRRR...R.R**O.*.R**..#
+#R..*.. ..R.RR#..R#O..RR ##*.S# .*RRRRRRRR.RRRR..****..RO**#
+#..#*RR RRR.*.R.R...R.R.O.#O..O#OO*..R  R+...RR..O.....R.OO#
+#R.R.#  ..R..R*R...R.R...O*.#R#..OO*.   +. .RRR.R*..RRRR.**#
+#   R  RR.......R.......##O..O. .*R.*+ + ..RR...RR.R..R..**#
+# R# R*R..##...............#.RR....RR..RR.R.+...R . ..R....#
+#..*.##.. .RR.RO..R.R...O...#....RRRRR.....R..+.R.....R...X#
+############################################################
