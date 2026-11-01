@@ -45,8 +45,8 @@ check(await page.locator('.cat').count() === 11, 'the entrance shows eleven cate
 await page.screenshot({ path: join(shots, 'ui-menu.png') });
 await page.locator('.cat[data-cat="5"]').click();
 check(await page.locator('.lv').count() === 25 && /Physics Wing/.test(await page.locator('.cathead h3').textContent()), 'the Physics Wing opens on its 25 levels');
-// Levels open one at a time: a category's first level is open, the rest wait their turn.
-check(await page.locator('.lv[data-lv="141"]:not(.locked)').count() === 1 && await page.locator('.lv.locked[disabled]').count() === 24, 'only the first Physics level is open; the other 24 are locked');
+// A category's first five levels are open; the rest open one at a time as the one before is cleared.
+check(await page.locator('.lv:not(.locked)').count() === 5 && await page.locator('.lv[data-lv="145"]:not(.locked)').count() === 1 && await page.locator('.lv[data-lv="146"].locked[disabled]').count() === 1 && await page.locator('.lv.locked[disabled]').count() === 20, 'the first five Physics levels are open; the other 20 are locked');
 await page.screenshot({ path: join(shots, 'ui-category.png') });
 await page.keyboard.press('Escape');
 check(await page.locator('.cat').count() === 11, 'Escape goes back to the categories');

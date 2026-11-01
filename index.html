@@ -9187,22 +9187,18 @@ function mirrorCatOf(i){for(let k=0;k<CATS.length;k++) if(i<bonusRange(k)[1]) re
 function bonusSection(k){
   if(!mirrorLevels) return '';
   const r=bonusRange(k),p=save.sets.mirror;let done=0;for(let i=r[0];i<r[1];i++) if(p.done[i]) done++;
-  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' floors · tighter par · '+done+'/'+(r[1]-r[0])+' cleared'+(isUnlocked('mirror',r[0])?'':' · they open once this category is cleared')+'</span></div>'+
+  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' floors · tighter par · '+done+'/'+(r[1]-r[0])+' cleared</span></div>'+
     levelGrid(mirrorLevels,r[0],r[1],'mirror');
 }
-// Levels open one at a time. A category's first level is always open, so any category can be started;
-// each level after it opens once the one before it is cleared. A category's bonus floors open one by
-// one after all its own levels are cleared. A classic file opens from its first level on. The access
-// code opens everything.
+// A category's first OPEN_FREE levels are always open; each level after them opens once the one before
+// it is cleared. A category's first bonus floor is always open too, and each later one opens once the
+// one before it is cleared. A classic file opens from its first level on. The access code opens everything.
+const OPEN_FREE=5;
 function isUnlocked(which,i){
   const p=save.sets[which];
   if(save.unlocked||p.done[i]) return true;
-  if(which==='remake'){const k=catOf(i);return i===CATS[k].from-1||!!p.done[i-1];}
-  if(which==='mirror'){
-    const k=mirrorCatOf(i),c=CATS[k],r=bonusRange(k);
-    for(let j=c.from-1;j<Math.min(c.to,LEVELS.length);j++) if(!save.sets.remake.done[j]) return false;
-    return i===r[0]||!!p.done[i-1];
-  }
+  if(which==='remake'){const k=catOf(i);return i-(CATS[k].from-1)<OPEN_FREE||!!p.done[i-1];}
+  if(which==='mirror'){const r=bonusRange(mirrorCatOf(i));return i===r[0]||!!p.done[i-1];}
   return i===0||!!p.done[i-1];
 }
 const ACCESS_CODE='chernobyl';
