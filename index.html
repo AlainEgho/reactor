@@ -43,6 +43,10 @@ body{background:var(--bg);color:var(--fg);font-family:var(--mono);font-size:14px
 .tre{width:.95em;height:.95em;fill:var(--hero);flex:none}
 .lvl{font-size:13px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
 .stats{display:flex;gap:22px}
+/* Phones held upright: the score row sits in a strip under the keys, and the key band a little higher. */
+.statbar{display:flex;justify-content:center;align-items:center;padding:6px 0 calc(8px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--line)}
+.statbar .stats{flex:0 1 auto;justify-content:center}
+body.statsdown .pad:not(.free){padding-bottom:calc(14px + var(--lift,0px))}
 .stat{display:grid;grid-template-rows:auto auto;grid-auto-flow:column;column-gap:8px;row-gap:2px;align-items:center}
 .stat .ico{grid-row:span 2;width:28px;height:28px;border-radius:5px;border:1px solid var(--line)}
 #sNeed.open{animation:sweep .4s ease-out}
@@ -418,6 +422,7 @@ body.xmas #bAct::before{font-size:22px}
       <button class="act" id="bAct" type="button" data-place="act"><svg class="tre" viewBox="-1 -1 2 2" aria-hidden="true"><path d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(120)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><path transform="rotate(240)" d="M.15,.26L.5,.866A1,1 0 0 1-.5,.866L-.15,.26A.3,.3 0 0 0 .15,.26Z"/><circle r=".18"/></svg><span>Snap · Drop</span></button>
     </div>
   </div>
+  <div class="statbar" id="statBar" hidden></div>
   <div class="arrangebar" id="arrangeBar" hidden><span>Drag the keys where your thumbs want them</span><button type="button" class="btn" data-arr="reset">Reset positions</button><button type="button" class="btn primary" data-arr="done">Done</button></div>
   <p class="keys"><kbd>Arrows</kbd> or <kbd>WASD</kbd> move &middot; <kbd>Space</kbd> + direction snaps without moving &middot; hold <kbd>Space</kbd> to drop a red canister &middot; <kbd>Shift</kbd> + direction uses the gadget &middot; <kbd>R</kbd> restart &middot; <kbd>P</kbd> pause &middot; <kbd>M</kbd> music</p>
 </div>
@@ -433,6 +438,9 @@ const ICE=29,CONV=30,MAGNET=31,MIRROR=32,SWITCH=33,GATE=34,CRATE=35,ALPHA=36,ACI
   HYDRO=41,ANTI=42,FALLOUT=43,IODINE=44,PLUT=45,ISO=46,NGUN=47,QTUN=48,TANK=49,LAMP=50;
 const DX=[0,1,0,-1],DY=[-1,0,1,0];
 const EXPL_TICKS=5,BOMB_FUSE=16,BUG_CYCLE=32,BUG_ON=6;
+// Holding the drop key (Space, or Snap with no direction) this many ticks (2.5 s) drops a red canister,
+// so a tap or a short press never drops one by accident.
+const BOMB_HOLD=20;
 const STASIS_TICKS=40,LASER_CYCLE=32,LASER_ON=8,ROD_WORTH=3,SHIELD_GRACE=3;
 // Belts and magnets act every CONV_EVERY / MAG_EVERY ticks; a magnet reaches MAG_RANGE cells. A lit
 // fuse burns FUSE_TICKS per cell. Coolant grows one cell every COOL_EVERY ticks and crystallises when
@@ -13901,7 +13909,7 @@ function moveMurphy(g,inp){
     g.pushTicks=0;
     if(loose){g.holdTicks=0;walk(g,m.x,m.y+1);return;}
     if(inp.act){
-      if(++g.holdTicks>=2&&g.red>0&&m.bomb===0){g.red--;m.bomb=BOMB_FUSE;emit(g,'arm');}
+      if(++g.holdTicks>=BOMB_HOLD&&g.red>0&&m.bomb===0){g.red--;m.bomb=BOMB_FUSE;emit(g,'arm');}
     }else g.holdTicks=0;
     return;
   }
@@ -15821,6 +15829,12 @@ function render(now){
           ctx.translate(.5,.55);ctx.rotate(lean);ctx.scale(sx,sy);ctx.translate(-.5,-.55);
         }
         D.iso(ctx,g.m.face,an,busy,g.need>0?Math.min(1,g.got/g.need):(g.got>0?1:0),clamp(1-(now-eatT)/450,0,1));
+        if(g.holdTicks>0&&g.red>0&&g.m.bomb===0){
+          // Holding to drop a red canister: a ring fills round Iso over the BOMB_HOLD ticks.
+          const k=Math.min(1,(g.holdTicks+p)/BOMB_HOLD);
+          ctx.beginPath();ctx.arc(.5,.55,.47,-Math.PI/2,-Math.PI/2+k*Math.PI*2);
+          ctx.strokeStyle='rgba(255,90,70,.9)';ctx.lineWidth=.07;ctx.lineCap='round';ctx.stroke();
+        }
         break;}
       case SNIK:D.gamma(ctx,facing(c),an);break;
       case ELEC:D.neutron(ctx,an+x*97+y*53);break;
@@ -16262,7 +16276,7 @@ const PARTS=[
   ['hot','Hot spot',BUG,"Looks like Graphite until it flares. Step on one while it flares and it goes off under Iso."],
   ['orange','Orange canister',ORANGE,"Falls like Lead but never rolls, and goes off when it lands or when something lands on it. Iso pushes it sideways."],
   ['yellow','Yellow canister',YELLOW,"Pushes in all four directions and never falls. Pressing an Initiator sets off every yellow canister on the level."],
-  ['red','Red canister',RED,"Iso picks it up. Hold Space to drop it, and it goes off a moment later. The HUD counts what Iso carries."],
+  ['red','Red canister',RED,"Iso picks it up. Hold Space (or Snap) for 2.5 seconds to drop it; a ring fills round Iso as you hold. It goes off a moment later. The HUD counts what Iso carries."],
   ['initiator','Initiator',TERM,"A control panel. Walk into it, or press it with Space + direction, and every yellow canister goes off."],
   ['airlock','Airlock',PORT,"Iso passes through to the cell beyond, only the ways its arrows show. Nothing else gets through."],
   ['thruster','Thruster',JET,"Gadget, 3 charges. Shift + direction dashes through open space until something blocks. Lifts Iso out of a pit when gravity is on."],
@@ -16418,6 +16432,8 @@ function nextIn(k){
   return {set:'remake',i:CATS[k].from-1};
 }
 // Draws each component canvas in the overlay, in its category's theme when it names one.
+// The icons in the header and, on a phone held upright, in the score strip under the keys.
+function drawBarIcons(){drawLegend(document.querySelector('.bar'));const sb=document.getElementById('statBar');if(sb&&!sb.hidden) drawLegend(sb);}
 function drawLegend(root){
   (root||ov).querySelectorAll('canvas[data-legend]').forEach(function(el){
     const c=el.getContext('2d'),px=el.width,now=performance.now(),keep=theme;
@@ -16604,7 +16620,7 @@ function dialog(title,body,buttons,anim){
 function wearTheme(catName,keyIdx){
   document.body.style.setProperty('--wing',theme.fl[3]);
   $('lvlCat').textContent=catName;
-  drawLegend(document.querySelector('.bar'));
+  drawBarIcons();
   Music.setKey(keyIdx);
 }
 // The level intro strip: its title and category in the category's colour, over the floor building in.
@@ -16686,7 +16702,7 @@ function startLevel(i){
   const kc=set==='remake'?catOf(i):set==='mirror'?mirrorCatOf(i):-1,kname=kc>=0?catName(kc)+(set==='mirror'?' · Overtime':''):'Classic';
   wearTheme(kname,kc>=0?kc:17);
   introHint=levels[i].hint||('Collect '+game.need+' Pellet'+(game.need===1?'':'s')+', then reach the Reactor.'+(game.grav?' Gravity is on.':''));
-  if(startBombs(set,i)) introHint+=' You start with '+START_BOMBS+' red canisters to drop as bombs. '+game.bonus+' extra Pellets are hidden here: take 5 for Fantastic, 10 for Superb.';
+  if(startBombs(set,i)) introHint+=' You start with '+START_BOMBS+' red canisters: hold the drop key 2.5 s to drop one. '+game.bonus+' extra Pellets are hidden here: take 5 for Fantastic, 10 for Superb.';
   showIntro(levelLabel(i),kc>=0?kname:'Classic level',theme.fl[3]);
   try{cv.focus({preventScroll:true});}catch(e){}
 }
@@ -16829,7 +16845,7 @@ function setXmas(on){
   $('kNeed').textContent=xmas?'Gifts needed':'Pellets needed';
   $('kRed').textContent=xmas?'Red letters':'Red canisters';
   Music.festive(xmas);xmasLabel();
-  drawLegend(document.querySelector('.bar'));
+  drawBarIcons();
   if(game) hud();
   if(!ov.hidden){if(screen==='menu') showMenu();else drawLegend();}
 }
@@ -16944,10 +16960,11 @@ function padSpots(o,W,H,top){
   const A=padEl.querySelector('.dpad .u').offsetWidth||52,gap=Math.max(8,padPrefs.gap),step=A+gap;
   const G=bGad.offsetWidth||60,Gh=bGad.offsetHeight||G,S=bAct.offsetWidth||76,Sh=bAct.offsetHeight||S;
   const m=Math.max(14,Math.round(Math.min(W,H)*.035)),flip=padPrefs.side==='right',old=padPrefs.pos[o].dpad;
+  const mb=m+(document.body.classList.contains('statsdown')?($('statBar').offsetHeight||0):0); // clear of the score strip
   let cx,cy;
   if(old){cx=old.x*W;cy=old.y*H;}
-  else if(o==='portrait'){cx=W/2;cy=H-m-A/2;}
-  else{cx=m+step+A/2;cy=H-m-A/2;if(flip) cx=W-cx;}
+  else if(o==='portrait'){cx=W/2;cy=H-mb-A/2;}
+  else{cx=m+step+A/2;cy=H-mb-A/2;if(flip) cx=W-cx;}
   cx=clamp(cx,step+A/2,Math.max(step+A/2,W-step-A/2));
   cy=clamp(cy,top+step+A/2,Math.max(top+step+A/2,H-A/2));
   const out={u:{x:cx,y:cy-step},l:{x:cx-step,y:cy},d:{x:cx,y:cy},r:{x:cx+step,y:cy}};
@@ -16961,7 +16978,7 @@ function padSpots(o,W,H,top){
     out[flip?'gad':'act']=place(flip?G:S,flip?Gh:Sh,false);
   }else{
     const sx=flip?m+S/2:W-m-S/2,gx=flip?sx+S/2+gap*2+G/2:sx-S/2-gap*2-G/2;
-    out.act={x:sx,y:H-m-Sh/2};out.gad={x:gx,y:H-m-Gh/2};
+    out.act={x:sx,y:H-mb-Sh/2};out.gad={x:gx,y:H-mb-Gh/2};
   }
   return out;
 }
@@ -17012,7 +17029,18 @@ function placePad(){
   });
 }
 applyPad();
-addEventListener('resize',applyPad);
+// The score row lives in the header, except on a phone held upright, where it moves to the strip under
+// the keys. The stat elements keep their ids, so the HUD writes to them wherever they are.
+const statsEl=document.querySelector('.stats'),statBar=$('statBar'),barEl=document.querySelector('header.bar');
+function placeStats(){
+  const down=coarse&&innerWidth<=560&&innerHeight>innerWidth;
+  if(down&&statsEl.parentNode!==statBar){statBar.appendChild(statsEl);statBar.hidden=false;}
+  else if(!down&&statsEl.parentNode===statBar){barEl.insertBefore(statsEl,barEl.querySelector('.tools'));statBar.hidden=true;}
+  document.body.classList.toggle('statsdown',down);
+  drawLegend(statsEl);
+}
+placeStats();applyPad();
+addEventListener('resize',function(){placeStats();applyPad();});
 function goFull(){
   if(!coarse||!padPrefs.full||screen!=='play') return;
   const el=document.documentElement,req=el.requestFullscreen||el.webkitRequestFullscreen;
@@ -17218,8 +17246,8 @@ function boot(data){
   soundLabel();resize();
   if('ResizeObserver' in window) new ResizeObserver(resize).observe(stage);
   else addEventListener('resize',resize);
-  drawLegend(document.querySelector('.bar'));
-  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){sprites.clear();if(screen==='menu') drawLegend();drawLegend(document.querySelector('.bar'));});
+  drawBarIcons();
+  if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){sprites.clear();if(screen==='menu') drawLegend();drawBarIcons();});
   if(save.name&&!datLevels) fetchDat().then(function(ok){if(ok&&screen==='menu') showMenu();});
   if(data&&data.set&&(data.set==='remake'||datLevels)) set=data.set;
   if(data&&typeof data.level==='number'&&L()&&data.level>=0&&data.level<L().length&&data.screen==='play') startLevel(data.level);

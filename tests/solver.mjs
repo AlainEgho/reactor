@@ -8,7 +8,8 @@ export function makeSolver(E) {
     [{ dir: 0, act: false }], [{ dir: 1, act: false }], [{ dir: 2, act: false }], [{ dir: 3, act: false }],
     [{ dir: -1, act: false }],
     [{ dir: 0, act: true }], [{ dir: 1, act: true }], [{ dir: 2, act: true }], [{ dir: 3, act: true }],
-    [{ dir: -1, act: true }, { dir: -1, act: true }],
+    // Drop a red disk: the key held BOMB_HOLD ticks.
+    Array.from({ length: E.BOMB_HOLD || 2 }, () => ({ dir: -1, act: true })),
     // The gadget: one press (Shift held for a tick, then released by the next action).
     [{ dir: 0, act: false, gad: true }], [{ dir: 1, act: false, gad: true }], [{ dir: 2, act: false, gad: true }], [{ dir: 3, act: false, gad: true }],
     [{ dir: -1, act: false, gad: true }],

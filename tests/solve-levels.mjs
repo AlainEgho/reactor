@@ -11,7 +11,7 @@ const here = dirname(fileURLToPath(import.meta.url));
 const html = readFileSync(join(here, '..', 'index.html'), 'utf8');
 const src = html.slice(html.indexOf('// ENGINE-START'), html.indexOf('// ENGINE-END'));
 const E = new Function(src + `
-return {createGame,step,at,LEVELS,DX,DY,BOMB_FUSE,beamCells,LASER_CYCLE,LASER_ON,
+return {createGame,step,at,LEVELS,DX,DY,BOMB_FUSE,BOMB_HOLD,beamCells,LASER_CYCLE,LASER_ON,
   T:{EMPTY,BASE,HARD,RAM,ZONK,INFO,MURPHY,EXIT,SNIK,ELEC,BUG,ORANGE,YELLOW,RED,TERM,PORT,EXPL,BOMB,INVIS,
      JET,TRACT,STASIS,TELE,DOOR,KEY,LASER,DRONE,ROD,SHIELD,
      ICE,CONV,MAGNET,MIRROR,SWITCH,GATE,CRATE,ALPHA,ACID,FUSE,BURN,COOL,HYDRO,ANTI,FALLOUT,IODINE,PLUT,ISO,NGUN,QTUN,TANK,LAMP}};`)();
@@ -45,7 +45,7 @@ function goto(g, tx, ty) {
 const move = (g, dir, n = 1) => { for (let i = 0; i < n; i++) E.step(g, { dir, act: false }); };
 const wait = (g, n) => { for (let i = 0; i < n; i++) E.step(g, idle); };
 const useGad = (g, dir) => { E.step(g, { dir, act: false, gad: true }); E.step(g, idle); };
-const bomb = (g, awayX, awayY) => { E.step(g, { dir: -1, act: true }); E.step(g, { dir: -1, act: true }); goto(g, awayX, awayY); wait(g, E.BOMB_FUSE + 8); };
+const bomb = (g, awayX, awayY) => { for (let i = 0; i < E.BOMB_HOLD; i++) E.step(g, { dir: -1, act: true }); goto(g, awayX, awayY); wait(g, E.BOMB_FUSE + 8); };
 // A copy of the game, made the way the solver makes one, so a timed move can be tried before it is played.
 const clone = g => Object.assign({}, g, { cells: g.cells.map(c => Object.assign({}, c)), pending: g.pending.map(p => Object.assign({}, p)), events: [], m: Object.assign({}, g.m), gadget: g.gadget ? Object.assign({}, g.gadget) : null });
 // Plays `act` on a copy after 0, 1, 2... idle ticks, and on the real game after the first wait where

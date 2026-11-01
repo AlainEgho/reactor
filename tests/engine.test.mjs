@@ -13,7 +13,7 @@ return {createGame,step,at,explode,parseDat,LEVELS,DX,DY,beamCells,
   T:{EMPTY,BASE,HARD,RAM,ZONK,INFO,MURPHY,EXIT,SNIK,ELEC,BUG,ORANGE,YELLOW,RED,TERM,PORT,EXPL,BOMB,INVIS,
      JET,TRACT,STASIS,TELE,DOOR,KEY,LASER,DRONE,ROD,SHIELD,
      ICE,CONV,MAGNET,MIRROR,SWITCH,GATE,CRATE,ALPHA,ACID,FUSE,BURN,COOL,HYDRO,ANTI,FALLOUT,IODINE,PLUT,ISO,NGUN,QTUN,TANK,LAMP},
-  EXPL_TICKS,BOMB_FUSE,STASIS_TICKS,LASER_CYCLE,LASER_ON,ROD_WORTH,GADGET_CHARGES,
+  EXPL_TICKS,BOMB_FUSE,BOMB_HOLD,STASIS_TICKS,LASER_CYCLE,LASER_ON,ROD_WORTH,GADGET_CHARGES,
   CONV_EVERY,MAG_EVERY,MAG_RANGE,FUSE_TICKS,COOL_EVERY,COOL_CHECK,HALF_LIFE,ISO_WORTH,DOSE_MAX,DOSE_HEAL,IODINE_TICKS,AIR_TANK};`)();
 const { createGame, step, at, LEVELS, T } = E;
 
@@ -172,7 +172,7 @@ test('a dropped red disk explodes after the fuse and spares Murphy at distance',
   const g = mk(['##########', '#@d     R#', '##########']);
   run(g, 1, { dir: R, act: false });
   assert.equal(g.red, 1);
-  run(g, 2, { dir: -1, act: true });
+  run(g, E.BOMB_HOLD, { dir: -1, act: true });
   assert.equal(g.red, 0);
   assert.ok(g.m.bomb > 0, 'bomb armed');
   run(g, 3, { dir: R, act: false });
@@ -181,10 +181,23 @@ test('a dropped red disk explodes after the fuse and spares Murphy at distance',
   assert.equal(g.state, 'play');
   assert.notEqual(at(g, 2, 1).t, T.BOMB);
 });
+test('a short press does not drop a red disk; only the full hold does', () => {
+  const g = mk(['##########', '#@d     R#', '##########']);
+  run(g, 1, { dir: R, act: false });
+  run(g, E.BOMB_HOLD - 1, { dir: -1, act: true });
+  assert.equal(g.m.bomb, 0, 'not armed before the hold is up');
+  assert.equal(g.red, 1);
+  run(g, 1, { dir: -1, act: false });
+  run(g, E.BOMB_HOLD - 1, { dir: -1, act: true });
+  assert.equal(g.m.bomb, 0, 'letting go starts the hold again');
+  run(g, 1, { dir: -1, act: true });
+  assert.ok(g.m.bomb > 0, 'armed once the key has been held BOMB_HOLD ticks');
+  assert.equal(g.red, 0);
+});
 test('standing on your own bomb is fatal', () => {
   const g = mk(['#####', '#@d #', '#####']);
   run(g, 1, { dir: R, act: false });
-  run(g, 2, { dir: -1, act: true });
+  run(g, E.BOMB_HOLD, { dir: -1, act: true });
   run(g, E.BOMB_FUSE + 2);
   assert.equal(g.state, 'dead');
 });
@@ -857,7 +870,7 @@ test('Floors come back when Iso leaves them, and a dropped canister takes the fl
   assert.equal(g.under, T.ICE); assert.equal(g.slide, 1);
   run(g, 1);
   assert.equal(g.m.x, 4); assert.equal(g.under, T.FALLOUT); assert.equal(at(g, 3, 1).t, T.ICE);
-  run(g, 2, { dir: -1, act: true });
+  run(g, E.BOMB_HOLD, { dir: -1, act: true });
   run(g, 1, { dir: R, act: false });
   assert.equal(at(g, 4, 1).t, T.BOMB, 'the canister sits where the fallout was');
   run(g, E.BOMB_FUSE + E.EXPL_TICKS + 2);
@@ -1024,9 +1037,9 @@ const SCRIPTS = {
   },
   'Demolition Bay': (g) => {
     goto(g, 3, 5); goto(g, 4, 1); goto(g, 8, 2); goto(g, 8, 3);
-    run(g, 2, { dir: -1, act: true }); goto(g, 5, 3); run(g, E.BOMB_FUSE + 8);
+    run(g, E.BOMB_HOLD, { dir: -1, act: true }); goto(g, 5, 3); run(g, E.BOMB_FUSE + 8);
     goto(g, 13, 3); goto(g, 14, 1); goto(g, 14, 5); goto(g, 18, 5);
-    run(g, 2, { dir: -1, act: true }); goto(g, 15, 5); run(g, E.BOMB_FUSE + 8);
+    run(g, E.BOMB_HOLD, { dir: -1, act: true }); goto(g, 15, 5); run(g, E.BOMB_FUSE + 8);
     finish(g);
   }
 };
