@@ -16007,7 +16007,7 @@ function flyTo(x,y,col){
 // Restarts a one-shot CSS animation on an element.
 function bumpEl(el){if(reduceMotion||!el) return;el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump');}
 // A read-only window for the browser tests: the game, the screen, the camera and the tile size.
-window.__fission=function(){return {game:game,screen:screen,cam:cam,TS:TS,set:set,dat:datLevels,mirror:mirrorLevels,xmas:xmas,flakes:flakes,drawBoom:function(c,k,s){D.boom(c,k,s);},
+window.__fission=function(){return {game:game,bonusStill:function(){const bad=[];LEVELS.forEach(function(lv,i){if(!startBombs('remake',i)) return;let g;try{g=createGame(lv);}catch(e){return;}const before=new Set();g.cells.forEach(function(c,p){if(c.t===INFO) before.add(p);});addBonusPellets(g,i);const mine=[];g.cells.forEach(function(c,p){if(c.t===INFO&&!before.has(p)) mine.push(c);});for(let t=0;t<60&&g.state==='play';t++) step(g,{dir:-1,act:false,gad:false});const left=mine.filter(function(c){return g.cells.indexOf(c)<0;}).length;if(left||g.state!=='play') bad.push((i+1)+(g.state!=='play'?' ('+g.state+')':'')+':'+left);});return bad;},bonusStats:function(){return LEVELS.map(function(lv,i){if(!startBombs('remake',i)) return null;try{return addBonusPellets(createGame(lv),i);}catch(e){return -1;}});},screen:screen,cam:cam,TS:TS,set:set,dat:datLevels,mirror:mirrorLevels,xmas:xmas,flakes:flakes,drawBoom:function(c,k,s){D.boom(c,k,s);},
   // Plays every effect once and returns the names of any that threw.
   sfx:function(){const bad=[];for(const k in SFX){try{SFX[k](0,0);}catch(e){bad.push(k+': '+e.message);}}try{Music.setKey(3);Music.tick(1,{heat:.5,danger:.5});}catch(e){bad.push('music: '+e.message);}return bad;},kill:function(){if(game&&game.state==='play'){kill(game);noteDeath();}}};};
 
@@ -16196,7 +16196,12 @@ function setText(el,key,v){if(hudCache[key]!==v){hudCache[key]=v;el.textContent=
 function hud(){
   if(!game) return;
   const left=Math.max(0,game.need-game.got);
-  setText(sNeed,'need',left===0?(xmas?'TREE LIT':'REACTOR READY'):pad3(left));
+  const extra=game.bonus?Math.max(0,game.got-game.need):0;
+  setText(sNeed,'need',left===0?(extra>0?'+'+extra+' EXTRA':(xmas?'TREE LIT':'REACTOR READY')):pad3(left));
+  if(game.bonus&&screen==='play'){
+    const tier=extra>=10?2:extra>=5?1:0;
+    if(tier>(game.tierShown||0)){game.tierShown=tier;toast(tier===2?'Superb! '+extra+' extra Pellets.':'Fantastic! '+extra+' extra Pellets. Five more for Superb.',2500);}
+  }
   sNeed.classList.toggle('open',left===0);
   setText(sRed,'red',String(game.red));
   redStat.hidden=!(game.hasRed||game.red>0); // most levels have no red canisters; keep the bar short
@@ -16637,17 +16642,51 @@ function noteFeatures(g){
     else if(c.t===FALLOUT) g.hasDose=true;
   }
 }
+// The 10+ categories hand Iso 7 red canisters to drop as bombs at the start of every level, their own
+// floors and their Overtime floors alike; a restart hands them over again.
+const START_BOMBS=7;
+function startBombs(which,i){const k=which==='remake'?catOf(i):which==='mirror'?mirrorCatOf(i):-1;return k>=0&&(CATS[k].age||0)>=10;}
+// The 10+ categories also hide 10 extra Pellets in the Graphite, on top of the need. The finish is rated
+// by how many extras Iso took: 10 Superb, 5 Fantastic, fewer Good. Each extra replaces Graphite that
+// rests on Graphite or Concrete and has nothing that falls on top, kept apart from the others and from
+// Iso's start, so it stays put until Iso digs round it. The spots are fixed per level.
+const BONUS_PELLETS=10;
+function addBonusPellets(g,seed){
+  const FALLS=[ZONK,INFO,ORANGE,YELLOW,RED,ROD,PLUT,ANTI,ISO];
+  const ok=[];
+  for(let y=1;y<g.H-1;y++) for(let x=1;x<g.W-1;x++){
+    if(at(g,x,y).t!==BASE) continue;
+    const b=at(g,x,y+1).t;
+    if(b!==HARD&&b!==BASE) continue;
+    if(FALLS.indexOf(at(g,x,y-1).t)>=0) continue;
+    if(Math.abs(x-g.m.x)+Math.abs(y-g.m.y)<3) continue;
+    ok.push(y*g.W+x);
+  }
+  const r=rng(0x51ab+seed*977);
+  for(let i=ok.length-1;i>0;i--){const j=Math.floor(r()*(i+1)),t=ok[i];ok[i]=ok[j];ok[j]=t;}
+  const taken=new Set();let n=0;
+  for(const p of ok){
+    if(n>=BONUS_PELLETS) break;
+    if(taken.has(p-1)||taken.has(p+1)||taken.has(p-g.W)||taken.has(p+g.W)) continue;
+    put(g,p%g.W,(p/g.W)|0,cell(INFO));taken.add(p);n++;
+  }
+  g.total+=n;g.bonus=n;
+  return n;
+}
+// How a 10+ finish is rated, from the extra Pellets taken.
+function bonusGrade(g){const ex=Math.max(0,g.got-g.need);return ex>=10?'Superb':ex>=5?'Fantastic':'Good';}
 function startLevel(i){
   const levels=L();
   // A locked level is never started: the menu opens on its category instead.
   if(!isUnlocked(set,i)){menuView='levels';menuCat=set==='remake'?catOf(i):set==='mirror'?mirrorCatOf(i):-1;showMenu();return;}
-  mode='levels';cur=i;if(set==='remake') menuCat=catOf(i);else if(set==='mirror') menuCat=mirrorCatOf(i);setTheme(themeFor(set,i));game=createGame(levels[i]);game.levelSet=set;noteFeatures(game);acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;shots.length=0;pops.length=0;eatT=-1e9;shieldLostT=-1e9;heat=null;score=0;combo=0;comboTick=-99;maxCombo=0;
+  mode='levels';cur=i;if(set==='remake') menuCat=catOf(i);else if(set==='mirror') menuCat=mirrorCatOf(i);setTheme(themeFor(set,i));game=createGame(levels[i]);game.levelSet=set;if(startBombs(set,i)){game.red=START_BOMBS;addBonusPellets(game,i);}noteFeatures(game);acc=0;cam.set=false;lastLocked=-99;blasts.length=0;snaps.length=0;shots.length=0;pops.length=0;eatT=-1e9;shieldLostT=-1e9;heat=null;score=0;combo=0;comboTick=-99;maxCombo=0;
   screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();cv.classList.remove('dead','paused');
   game.hard=set==='mirror';game.label=levelLabel(i);
   // A bonus floor belongs to its category: its colours, its name on the header, its key in the score.
   const kc=set==='remake'?catOf(i):set==='mirror'?mirrorCatOf(i):-1,kname=kc>=0?catName(kc)+(set==='mirror'?' · Overtime':''):'Classic';
   wearTheme(kname,kc>=0?kc:17);
   introHint=levels[i].hint||('Collect '+game.need+' Pellet'+(game.need===1?'':'s')+', then reach the Reactor.'+(game.grav?' Gravity is on.':''));
+  if(startBombs(set,i)) introHint+=' You start with '+START_BOMBS+' red canisters to drop as bombs. '+game.bonus+' extra Pellets are hidden here: take 5 for Fantastic, 10 for Superb.';
   showIntro(levelLabel(i),kc>=0?kname:'Classic level',theme.fl[3]);
   try{cv.focus({preventScroll:true});}catch(e){}
 }
@@ -16679,12 +16718,13 @@ function showWon(){
   const tally='<span class="tally">'+
     '<span>Pellets and bonuses</span><b data-n="'+score+'">0</b>'+
     '<span>Reactor started</span><b data-n="'+PTS.clear+'">0</b>'+
+    (game.bonus?'<span class="new">Extra Pellets · '+Math.max(0,game.got-game.need)+' of '+game.bonus+'</span><b class="on">'+bonusGrade(game)+'</b>':'')+
     '<span>Time bonus · '+fmt(secs)+'</span><b data-n="'+bonus+'">0</b>'+
     '<span class="sum">Score</span><b class="sum" data-n="'+total+'">0</b>'+
     '<span class="'+(newBest?'new':'')+'">'+(newBest?'New best score':'Best '+fmtN(p.score[cur]))+'</span><b></b>'+
     star(1,'Cleared')+star(STAR_FAST,'Fast · under '+fmt(parSecs(game)))+star(STAR_CHAIN,'Chain · combo ×'+chainGoal(game))+
     (save.streak>=2?'<span class="new">Streak · levels without dying</span><b class="on">×'+save.streak+'</b>':'')+'</span>';
-  dialog(last?'All levels cleared':setWord()+pad3(cur+1)+' complete',tally+(last?'<br>That was the last level.':''),
+  dialog(last?'All levels cleared':setWord()+pad3(cur+1)+' complete'+(game.bonus?' · '+bonusGrade(game)+'!':''),tally+(last?'<br>That was the last level.':''),
     !nextOpen?[['levels','Levels'],['retry','Play again']]:[['next','Next level (Enter)'],['retry','Play again'],['levels','Levels']],'rise');
   countUp();
   // A chime for each star as it pops in, timed to the rows above it arriving.
