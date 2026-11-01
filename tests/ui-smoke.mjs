@@ -187,7 +187,7 @@ if (dat) {
   // categories and listed under each category's own levels.
   await page.locator('#bLevels').click();
   await page.locator('.tab[data-set="remake"]').click();
-  check(await page.locator('.cat').count() === 11 && /bonus/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'with a classic file loaded, the category cards count their bonus floors');
+  check(await page.locator('.cat').count() === 11 && /overtime/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'with a classic file loaded, the category cards count their bonus floors');
   await page.locator('.cat[data-cat="0"]').click();
   check(await page.locator('.lv:not(.bonus)').count() === 33 && await page.locator('.lv.bonus').count() === 9, 'the Fuel Hall lists its 33 levels and 9 bonus floors');
   await page.locator('.lv.bonus').first().click();
@@ -198,7 +198,7 @@ if (dat) {
     for (let y = 0; y < a.H && ok; y++) for (let x = 0; x < a.W; x++) { const c = a.codes[y * a.W + x]; if ((swap[c] || c) !== b.codes[y * b.W + (b.W - 1 - x)]) { ok = false; break; } }
     return { ok, label: document.getElementById('lvlName').textContent, cat: document.getElementById('lvlCat').textContent, hard: f.game.hard, set: f.set };
   });
-  check(mir.ok && /Bonus 001/.test(mir.label) && /Fuel Hall · Bonus/.test(mir.cat) && mir.hard && mir.set === 'mirror', 'Bonus 001 is the eleventh classic level flipped, in the Fuel Hall, with tighter par');
+  check(mir.ok && /Overtime 001/.test(mir.label) && /Fuel Hall · Overtime/.test(mir.cat) && mir.hard && mir.set === 'mirror', 'Overtime 001 is the eleventh classic level flipped, in the Fuel Hall, with tighter par');
   await page.screenshot({ path: join(shots, 'ui-bonus.png') });
   await page.locator('#bLevels').click();
   check(/Fuel Hall/.test(await page.locator('.cathead h3').first().textContent()) && await page.locator('.lv.bonus').count() === 9, 'Levels from a bonus floor opens its category');

@@ -9066,7 +9066,7 @@ function hud(){
   gravStat.hidden=!game.usesGrav;
   setText(sGrav,'grav',game.grav?'On':'Off');
 }
-function setWord(){return set==='original'?'Classic ':set==='mirror'?'Bonus ':'Level ';}
+function setWord(){return set==='original'?'Classic ':set==='mirror'?'Overtime ':'Level ';}
 function levelLabel(i){return mode==='meltdown'?'Meltdown · Round '+melt.round:setWord()+pad3(i+1)+' · '+L()[i].name;}
 let toastTimer=0;
 function toast(msg,ms){
@@ -9226,7 +9226,7 @@ function mirrorCatOf(i){for(let k=0;k<CATS.length;k++) if(i<bonusRange(k)[1]) re
 function bonusSection(k){
   if(!mirrorLevels) return '';
   const r=bonusRange(k),p=save.sets.mirror;let done=0;for(let i=r[0];i<r[1];i++) if(p.done[i]) done++;
-  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Bonus</h3><span>'+(r[1]-r[0])+' floors · tighter par · '+done+'/'+(r[1]-r[0])+' cleared</span></div>'+
+  return '<div class="cathead bonus" style="--wing:'+BONUS_COL+'"><h3>Overtime</h3><span>'+(r[1]-r[0])+' floors · tighter par · '+done+'/'+(r[1]-r[0])+' cleared</span></div>'+
     levelGrid(mirrorLevels,r[0],r[1],'mirror');
 }
 // A category's first OPEN_FREE levels are always open; each level after them opens once the one before
@@ -9347,7 +9347,7 @@ function catCards(){
       '<span class="blurb">'+esc(c.blurb)+'</span>'+
       (icons?'<span class="newparts"><small>'+label+'</small>'+icons+'</span>':'')+
       '<span class="prog"><i style="width:'+Math.round(done/n*100)+'%"></i></span>'+
-      '<span class="cmeta">'+done+'/'+n+' cleared · '+stars+' ★'+(bn?' · <i class="bonus">'+bd+'/'+bn+' bonus</i>':'')+'</span></button>';
+      '<span class="cmeta">'+done+'/'+n+' cleared · '+stars+' ★'+(bn?' · <i class="bonus">'+bd+'/'+bn+' overtime</i>':'')+'</span></button>';
   }).join('')+'</div>';
 }
 // The head of an open category: its name in its colour and the way back to the entrance.
@@ -9480,7 +9480,7 @@ function startLevel(i){
   screen='play';ov.hidden=true;ov.innerHTML='';clearInput();hud();cv.classList.remove('dead','paused');
   game.hard=set==='mirror';game.label=levelLabel(i);
   // A bonus floor belongs to its category: its colours, its name on the header, its key in the score.
-  const kc=set==='remake'?catOf(i):set==='mirror'?mirrorCatOf(i):-1,kname=kc>=0?CATS[kc].name+(set==='mirror'?' · Bonus':''):'Classic';
+  const kc=set==='remake'?catOf(i):set==='mirror'?mirrorCatOf(i):-1,kname=kc>=0?CATS[kc].name+(set==='mirror'?' · Overtime':''):'Classic';
   wearTheme(kname,kc>=0?kc:12);
   introHint=levels[i].hint||('Collect '+game.need+' Pellet'+(game.need===1?'':'s')+', then reach the Reactor.'+(game.grav?' Gravity is on.':''));
   showIntro(levelLabel(i),kc>=0?kname:'Classic level',theme.fl[3]);
