@@ -1,0 +1,28 @@
+name: Ruby
+need: 52
+hint: Two long galleries: Plutonium sits on posts under hanging Lead; and fallout covers the floor, with Iodine at its corners.
+---
+############################################################
+#@.........................................................#
+#....*....*....***..O..*.*O*...*.*..*..*..O*...*....*..**..#
+#............*........*.......O...*...O*.*..**.*...*.**O...#
+#..................*.............................O.........#
+#...O.....O.....O..*..O..*..O.....O.....O.....O.....O..*...#
+#............*.................O...........*.....*.....OO..#
+#... ..... ..O.. ..... ..... ..*.. ..... ..*.. ..*.. ...*..#
+#...P..*..P.....P.....P.....P.....P..O..P..*..P..O..P...O..#
+#...#.....#..O..#.....#.....#.....#.....#.....#.....#......#
+#..........................................................#
+##########.###################.###################.#########
+#..........................................................#
+#.prrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrr*rrrr..#
+#.rrrrr*rrrrrrrrr*rrrrrrrr*rrrrrrrr*rrrrr**rrrrrrrrrrrrrr..#
+#.r*rr*rrrrr*r*rrrrrrrrrrrr**rrrr*rrrrrr**r*rrrrrrrrr*rrr..#
+#.rrrrrrrrrrrrrrrrrrrr*rrrrrr**rrrrr*rrrrrrrrrrrrr*rrrrrr..#
+#.rrrrrrr*rrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrr*rrrrrrrrrrrr..#
+#.rrrrrrrrrrrrrr*r*rrrrrrrrrrrr*rr*rrrrrrrrrrrrrrrrrrrrrr..#
+#.rrrrrrrrr*rr**rrrrr**rrrrrrrrrrrrrrrrrrrrrrrrr*rr*rrrrr..#
+#.r*rrr*rrrrrrr*rrrr*rrrr*rrrrrr*rrrrr***rrrrrrrrr*rrrrrp..#
+#..........................................................#
+#........................................................X.#
+############################################################

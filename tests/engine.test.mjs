@@ -41,7 +41,7 @@ LEVELS.forEach((lv, i) => {
     for (let x = 0; x < g.W; x++) { assert.equal(lv.map[0][x], '#'); assert.equal(lv.map[g.H - 1][x], '#'); }
     for (let y = 0; y < g.H; y++) { assert.equal(lv.map[y][0], '#'); assert.equal(lv.map[y][g.W - 1], '#'); }
     const electronYield = (flat.match(/e/g) || []).length * 6, rodYield = (flat.match(/U/g) || []).length * E.ROD_WORTH;
-    const isoYield = (flat.match(/h/g) || []).length * E.ISO_WORTH, plutYield = (flat.match(/P/g) || []).length >= 2 ? 9 : 0;
+    const isoYield = (flat.match(/h/g) || []).length * E.ISO_WORTH, plutYield = (flat.match(/P/g) || []).length * 6; // each sphere split leaves Pellets round it
     assert.ok(g.total + electronYield + rodYield + isoYield + plutYield >= lv.need, `need ${lv.need} but only ${g.total} placed (+${electronYield} from electrons, +${rodYield} from rods, +${isoYield} from isotopes)`);
   });
   test(`${i + 1} ${lv.name}: board is stable and Murphy survives 120 idle ticks`, () => {

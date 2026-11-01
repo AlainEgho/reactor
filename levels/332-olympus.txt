@@ -1,0 +1,29 @@
+name: Olympus
+need: 76
+hint: Three halls side by side: an ice floor carries you past its Pellets; Gammas sleep in the walls; and a line of orange canisters stands shoulder to shoulder over caged Pellets. 124 seconds of air.
+air: 124
+---
+############################################################
+#@..................#..................#...................#
+#..........t........#.. S .........*...#.d.................#
+#.IIIIIIIIIIIIIIIII.#........*...*.....#..oooooooooooooo...#
+#.IIIIIIIIIIII*II*I.#......*.O..*......#..RRRRRRRRRRRRRR...#
+#.I*II*I**IIIIIIIII.#.*...**.*..O*.....#.R*R*R*R*R*R*R*RR..#
+#.IIIIIII**I*I*IIII........*.O...........RRRRRRRRRRRRRRRR..#
+#.IIIIIIIIIIIIIII*I.#..................#...................#
+#.**IIIIIIIII*III*I.#.*..*......*.*....#..O...........*....#
+#.III*IIIIIIIII*III.#.*......OO..**.*..#.......*.*..*..*...#
+#.IIIIIII*IIIIII*II.#.....O.O..O.......#...**.....*O...*...#
+#.IIIIIIIIIIIIIIIII.#.*...*.**.*.......#.**......*..*.*....#
+#.II*IIIIIIIII*IIII.#...t..........*.*.#....O..O....**.....#
+#.IIIIIIIII**IIIIII.#....*...........*.#....*..*....O......#
+#.IIIIIIIIIIIIII*II.#..*............*..#..O....O...*...O...#
+#.IIIIIIIIIIIIIIIII.#.O*.....O..O......#.**....*.*......O..#
+#.*IIIIIIIIIIIIIIII.#.............*....#...*...*...*.O**...#
+#.IIIIIIII*III*IIII...............O......O.....t....O..*...#
+#.*II*IIIIIIII*IIII.#.....*...*O.......#...........**......#
+#.IIIIIIIII*IIIIII*.#...............*O.#........*O.*.......#
+#...................#.......*.. S .....#..*.O......**......#
+#...................#..................#...................#
+#...................#..................#.................X.#
+############################################################

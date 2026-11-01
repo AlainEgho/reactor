@@ -1,0 +1,28 @@
+name: Enlightenment
+need: 66
+hint: The last floor. Four quarters, one discipline each: ice and Alphas, light and mirrors, the hive, the fallout. The Reactor is sealed in the centre behind a gate, and the switch is as far from it as the plant allows. Everything the Guru taught, at once.
+---
+############################################################
+#@....*...........*...OO.....#.O..O....*..O...............O#
+#..IIII*IIII*I*IIII*I*III*...#.............................#
+#..IIIIIIIIIIIIIIII*II*II*...#.  *   *   *  /*   *   *   l.#
+#..IIIIIIIII*II*IIIII*III....#.............. .............*#
+#...................................O....... .........**..O#
+#..A                     .O..#.....*........ ..O..**...*...#
+#.*..........................#.............. ..............#
+#*......................#######l  *   *   * \ *   *   *  ..#
+#..A                   .#.........#........................#
+#.O.....................#.........#..O.....*.....*.....*...#
+############.###########g....X....###########.##############
+#..O.**......*.......*..#.........#.*.........*........*...#
+#..RR.RR..ORR.RR...RR.RR#.........#.rrrrrrrrrrrrrrrrrrrrr.*#
+#..R S R...R S R...R S R###########.rrrrrrrrrrrrrrrrrrrrr..#
+#..RRRRR...RRRRR...RRRRR.....#......rrrrrrrrrrrrhrrrrrrrr..#
+#......O.**...........**.....#.*...prrrrrrrhrrrrrrrrrrrrrp.#
+#........*.......*........**..O....*rrrrrhrrrrrrrrrrrrrrr..#
+#......RR.RR*..RR.RR.........#......rrrrrrrrrrrrrhrrrhrrr..#
+#......R S R...R S R....O....#*...*.rrhrrrrrrrrrrrrrrrrrr..#
+#......RRRRR...RRRRR.......O.#..O...rrrrrrrrrrrhrrrhrrrrr..#
+#...O.O.*........O...........#...........**..............s.#
+#....O..*.......*..*.........#....*........O...............#
+############################################################

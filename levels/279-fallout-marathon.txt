@@ -1,0 +1,28 @@
+name: Fallout Marathon
+need: 50
+hint: The whole floor is fallout but for a scatter of Graphite islands, and only a few islands hold Iodine. Run from island to island, take what lies between, and let the dose drain before the next run.
+---
+############################################################
+#@.....................*...................................#
+#rrrrrrrOrrrrrrr*rrrrr**rrrrrr*rrrrrrrrrrrrrrrrrrrrrrrrrrrr#
+#rrrrrrrrrOrrrrrrrOrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*#
+#*rrr.p.*.*rrrrrrrrrrr*O*rrrrrrrrrrrrrrrrrrrrr*r*rr*rrrrrrr#
+#r*rr.....rrrrrrrrrrrrOrrrr*rrr*rrrrrrrrrrrrrrrrr*rrrrrrrrr#
+#rrrrrOrrrrrrrrrrrrrrrr*r*rr*rr*r....rOrrrrrrrrrr*rrrrrrrrr#
+#rrrrr*rrrrr*rrrrrrrrOrrrrrrrrrrr....rrrr*rrrrrrrOrrrrrrrrr#
+#rrr*rr.p...rrrr......rrrrrrrrrrrrrr*rrrrr....rrrrrrrrrrrrr#
+#rrrrrr.....rrrr.....*rrrrOrrrrr*rrrrrrrrr....rrrrrrrrrrrrr#
+#rrrrrrrrrrrrrrr....rrrrrrrr**rr...rrr*rrOrrrrrrOrrOrrrrrr*#
+#rrrrrrrrrrrrOrrrrrrr*rrr..*..rr...r*rrrrrrrrrrrrrrrrrrrr*r#
+#rrrrrr*rrrrr*rrrrrrrrrrr.......rrrrrrrrrrrrr*rrrrrrrrrrrrr#
+#rrrrrrrrrrrrrrrrOrrrrrrrrrrr...rrrrrrrrrrrrrrrrrrrrr*rrrrr#
+#rrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrrr.p..r.p..rrrrrrrrrrrrr#
+#*rrrr**rr*rrrrrrrrrrrrrrrrrrrrr*rrrr....r....rrrOrrrrrrrrr#
+#rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrr#
+#rrrr*...rr*rrrrrrrrrrrrrrr*rrrrr**rrr*rrr*rr....rrrrrrrrrr#
+#Orrrr.*.rrrrrrrrrrrrr*rOrrrrr.p.*.rrr**rrrrr....rrrrrrrrrr#
+#rrrrrrrrr*rrr**rr*rrrrrrrrrrr.....rrrrrrrrrrrrrrrr*rrrrrrr#
+#rrr*rrrrr*rrrrrrrrr*rrrrrrrrrrrrrrrrrrrrrOrrrrOrrrrrOrrrrr#
+#rrrrrr*rrrrrrrrrrrrrrr*rrrrrrrrrrrrrrrrrrrOrrrrrr*rrrrrrrr#
+#*rrrrrrrrrrrrrrrrrrrr*rrrrrrrrrrrrrrr*rrrrrrr*rrrrrrrrrrXr#
+############################################################

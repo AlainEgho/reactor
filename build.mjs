@@ -52,8 +52,8 @@ function parseLevel(file, text) {
   if ((flat.match(/@/g) || []).length !== 1) bad.push('needs exactly one @');
   if (!flat.includes('X')) bad.push('needs an Exit (X)');
   const n = re => (flat.match(re) || []).length;
-  // Isotope pellets count two; a pair of Plutonium spheres going critical leaves at least nine Pellets.
-  const supply = n(/\*/g) + 9 * n(/e/g) + 3 * n(/U/g) + 2 * n(/h/g) + (n(/P/g) >= 2 ? 9 : 0);
+  // Isotope pellets count two; every Plutonium sphere split leaves Pellets round it, six at the least.
+  const supply = n(/\*/g) + 9 * n(/e/g) + 3 * n(/U/g) + 2 * n(/h/g) + 6 * n(/P/g);
   if (!lv.name) bad.push('missing name');
   if (!(lv.need >= 0)) bad.push('missing need');
   if (lv.need > supply) bad.push(`need ${lv.need} but at most ${supply} Infotrons exist`);

@@ -1,0 +1,28 @@
+name: Domino
+need: 75
+hint: Two lines of orange canisters stand shoulder to shoulder on Cask shelves, and every one that goes off sets off the next. Under each shelf Pellets wait in Cask. Two red canisters start a line; be well away from it when it runs.
+---
+############################################################
+#@.........................................................#
+#............*..........**.......**.......O..............O.#
+#.d........*...............*...................*...........#
+#.............*.............**..........*.....*............#
+#..........................................................#
+#....oooooooooooooooooooooooooooooooooooooooooooooooo......#
+#....RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR......#
+#...R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*RR.....#
+#....RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR......#
+#........O....*........*....O..............O...............#
+#..*.......................O...............................#
+#..........*..................................O............#
+#.........*.......................................*.O...d..#
+#...............*.............*.......O....................#
+#..........................................................#
+#....oooooooooooooooooooooooooooooooooooooooooooooooo......#
+#....RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR......#
+#...R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*R*RR.....#
+#....RRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR......#
+#.*..*............................*.....O..................#
+#O..........................*...O....................*.....#
+#......*O.....*..............*.....O..*..................X.#
+############################################################

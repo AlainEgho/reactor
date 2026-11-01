@@ -157,6 +157,16 @@ const SETUP = {
       goto(g, x - 2, y - 1); move(g, R); bomb(g, ax, ay);
     }
   },
+  // Spend the first keycard on the Reactor's own door, as the hint says: down the west edge across the
+  // Gamma corridor, the card at the foot of the floor, then the door from above. The search has the
+  // other four cards for the vaults.
+  // Straight runs only, so the walk never digs under Lead: the west edge, the bottom row, the east edge.
+  'Keymaster': g => {
+    goto(g, 1, 10);
+    timed(g, c => move(c, D, 2), c => c.m.y === 12);
+    goto(g, 1, 22); goto(g, 40, 22); move(g, U); move(g, D);
+    goto(g, 57, 22); goto(g, 57, 14); goto(g, 52, 14); move(g, D); move(g, U);
+  },
   // Every bunker sits two cells off a vein: bomb on the vein beside it, back off up the vein.
   'Bunker': g => {
     for (const x of [8, 20, 32, 44, 56]) {

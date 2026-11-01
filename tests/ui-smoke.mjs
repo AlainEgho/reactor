@@ -41,7 +41,7 @@ await page.locator('#nameIn').fill('Tester');
 await page.locator('#loginForm button').click();
 await page.locator('.cat').first().waitFor();
 check(/Signed in as Tester/.test(await page.locator('.mark .who').textContent()), 'the menu greets the signed-in player');
-check(await page.locator('.cat').count() === 11, 'the entrance shows eleven categories');
+check(await page.locator('.cat').count() === 13, 'the entrance shows thirteen categories');
 await page.screenshot({ path: join(shots, 'ui-menu.png') });
 await page.locator('.cat[data-cat="5"]').click();
 check(await page.locator('.lv').count() === 25 && /Physics Wing/.test(await page.locator('.cathead h3').textContent()), 'the Physics Wing opens on its 25 levels');
@@ -49,9 +49,9 @@ check(await page.locator('.lv').count() === 25 && /Physics Wing/.test(await page
 check(await page.locator('.lv:not(.locked)').count() === 5 && await page.locator('.lv[data-lv="145"]:not(.locked)').count() === 1 && await page.locator('.lv[data-lv="146"].locked[disabled]').count() === 1 && await page.locator('.lv.locked[disabled]').count() === 20, 'the first five Physics levels are open; the other 20 are locked');
 await page.screenshot({ path: join(shots, 'ui-category.png') });
 await page.keyboard.press('Escape');
-check(await page.locator('.cat').count() === 11, 'Escape goes back to the categories');
+check(await page.locator('.cat').count() === 13, 'Escape goes back to the categories');
 const minis = await page.$$eval('.cat img.mini', els => els.filter(e => e.complete && e.naturalWidth > 0).length);
-check(minis === 11, `every category card shows a miniature (${minis})`);
+check(minis === 13, `every category card shows a miniature (${minis})`);
 // The access code opens everything (the rest of this test visits levels all over the game).
 await page.locator('#codeIn').fill('chernobyl');
 await page.locator('.code.done').waitFor();
@@ -173,8 +173,8 @@ await page.locator('#ov').waitFor({ state: 'hidden' });
 check(/Level 142/.test(await page.locator('#lvlName').textContent()), 'Ice links to Thin Ice, the first level with ice');
 
 if (dat) {
+  // The menu has no Classic tab; a level file still loads through the file input, onto the classic list.
   await page.locator('#bLevels').click();
-  await page.locator('.tab[data-set="original"]').click();
   await page.locator('#datFile').setInputFiles(dat);
   await page.locator('.levels.dense .lv').first().waitFor();
   check(await page.locator('.levels.dense .lv').count() === 111, 'LEVELS.DAT loads 111 levels');
@@ -187,9 +187,9 @@ if (dat) {
   // categories and listed under each category's own levels.
   await page.locator('#bLevels').click();
   await page.locator('.tab[data-set="remake"]').click();
-  check(await page.locator('.cat').count() === 11 && /overtime/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'with a classic file loaded, the category cards count their bonus floors');
+  check(await page.locator('.cat').count() === 13 && /overtime/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'with a classic file loaded, the category cards count their bonus floors');
   await page.locator('.cat[data-cat="0"]').click();
-  check(await page.locator('.lv:not(.bonus)').count() === 33 && await page.locator('.lv.bonus').count() === 9, 'the Fuel Hall lists its 33 levels and 9 bonus floors');
+  check(await page.locator('.lv:not(.bonus)').count() === 33 && await page.locator('.lv.bonus').count() === 7, 'the Fuel Hall lists its 33 levels and 7 bonus floors');
   await page.locator('.lv.bonus').first().click();
   await page.locator('#ov').waitFor({ state: 'hidden' });
   const mir = await page.evaluate(() => {
@@ -201,11 +201,10 @@ if (dat) {
   check(mir.ok && /Overtime 001/.test(mir.label) && /Fuel Hall · Overtime/.test(mir.cat) && mir.hard && mir.set === 'mirror', 'Overtime 001 is the eleventh classic level flipped, in the Fuel Hall, with tighter par');
   await page.screenshot({ path: join(shots, 'ui-bonus.png') });
   await page.locator('#bLevels').click();
-  check(/Fuel Hall/.test(await page.locator('.cathead h3').first().textContent()) && await page.locator('.lv.bonus').count() === 9, 'Levels from a bonus floor opens its category');
-  await page.locator('.tab[data-set="original"]').click();
+  check(/Fuel Hall/.test(await page.locator('.cathead h3').first().textContent()) && await page.locator('.lv.bonus').count() === 7, 'Levels from a bonus floor opens its category');
   await page.reload();
-  await page.locator('.lv').first().waitFor();
-  check(await page.locator('.levels.dense .lv').count() === 111, 'the loaded file is remembered after a reload');
+  await page.locator('.cat').first().waitFor();
+  check(await page.evaluate(() => (window.__fission().dat || []).length) === 111 && /overtime/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'the loaded file is remembered after a reload');
 }
 check(errors.length === 0, 'no script errors' + (errors.length ? ': ' + errors.join(' | ') : ''));
 await browser.close();

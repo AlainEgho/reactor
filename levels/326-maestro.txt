@@ -1,0 +1,29 @@
+name: Maestro
+need: 70
+hint: Four rooms: Gammas sleep in the walls; hot spots flare in the Graphite round the Pellets; fallout covers the floor, with Iodine at its corners; and Gammas circle Pellets on their posts. 130 seconds of air.
+air: 130
+---
+############################################################
+#@...........................#.............................#
+#.. S .**.*......O. S .......#........t....................#
+#...........*................#.*BBBBBBBBBBBBB*BBBBBBB*BBB..#
+#.......*.O.....*..**...O....#.BBBB**B*BBBBBBB*BBBBBBBB*B..#
+#.*......*..*.............O....BBBBBB*B**BB*BBBBBBBBBBBBB..#
+#....O.*.*...*...............#.BBBBB*BBBBBBBBBBBBBBBBBBBB..#
+#..*........*....O...*...O*..#.BBBB*BBBBBB*BBBBBBBBB*BBBB..#
+#.......Ot......O......**....#.BBBBBBBB*B*BBBB**BBB*BBBBB..#
+#......*... S .......*.....*.#.............................#
+#............................#.............................#
+##############.#############################.###############
+#............................#.............................#
+#.prrrrrr*rrrrrrrr**rrrrrrrr.#..   .O..   ....   .O..   ...#
+#.rrrrrrrrrrrr*rrrr*rrrrrrrr.#.. * .**. * ..*. * .*.. * ...#
+#.rrrr*rrrrrrrr**r*r*r*rrrrr.#.. #S..*. #S.**. #S.... #S...#
+#.rrrrrrrrrr*rrrrrr*rrr*rrr*.#..   ..*.   ....   .*O.   ...#
+#.rrrrrrrrrrrrrrrrrr*rrrrrrr................O..............#
+#.rrrrrrrrrrrr*rrrrrrr*rrrrr.#.*...t.*..O..OO.**.*..O.*....#
+#.rrrrrr*rrr**rrrrrrrrrrrrrr.#...*..*.O.*..................#
+#.rrrrrrr*rrrrrrrr*rrrrrrrrp.#...*......*...*..**..........#
+#............................#.............................#
+#............................#...........................X.#
+############################################################

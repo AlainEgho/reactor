@@ -15,7 +15,7 @@ const byNum = new Map(files.map(f => [+f.slice(0, 3), f]));
 // The most a level can be asked for and still pass the engine test's supply check.
 function cap(text) {
   const flat = text.split(/^---$/m)[1], n = ch => flat.split(ch).length - 1;
-  return n('*') + 6 * n('e') + 3 * n('U') + 2 * n('h') + (n('P') >= 2 ? 9 : 0);
+  return n('*') + 6 * n('e') + 3 * n('U') + 2 * n('h') + 6 * n('P');
 }
 
 const table = Object.assign({}, NEEDS);
