@@ -181,26 +181,13 @@ button{font:inherit;color:inherit}
   .pad{display:flex;align-items:center;justify-content:space-between;gap:16px}
   .app>.keys{display:none}
 }
-/* The player's Controls settings arrive as variables on #pad: --as arrow/wheel scale, --gap arrow
+/* The player's Controls settings arrive as variables on #pad: --as arrow scale, --gap arrow
    spacing, --bs button scale, --lift extra height off the bottom edge, --op opacity. */
 .pad{padding-bottom:calc(env(safe-area-inset-bottom,0px) + var(--lift,0px));opacity:var(--op,1)}
 .pad.lefty{flex-direction:row-reverse}
 .acts.swap{flex-direction:row-reverse}
-.pad.wheelmode .dpad,.pad:not(.wheelmode) .wheelzone{display:none}
 .dpad{--k:60px;display:grid;grid-template-columns:repeat(3,calc(var(--k)*var(--as,1)));grid-template-rows:repeat(3,calc(var(--k)*var(--as,1)));gap:var(--gap,6px)}
 .dpad button{border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-size:calc(20px*var(--as,1));touch-action:none;user-select:none;-webkit-user-select:none}
-/* The wheel: a thumbstick. The zone takes the touch (the whole free width, so a floating wheel can
-   land under the thumb); the base and knob only draw. */
-.wheelzone{--kw:160px;flex:1 1 auto;align-self:stretch;display:flex;align-items:center;min-height:calc(var(--kw)*var(--as,1));touch-action:none;user-select:none;-webkit-user-select:none}
-.pad.lefty .wheelzone{justify-content:flex-end}
-.wheel{position:relative;flex:0 0 auto;width:calc(var(--kw)*var(--as,1));height:calc(var(--kw)*var(--as,1));border-radius:50%;background:rgba(17,22,30,.8);border:2px solid var(--line);box-shadow:inset 0 0 0 calc(12px*var(--as,1)) rgba(255,255,255,.025);pointer-events:none}
-.wheel svg{position:absolute;inset:0;width:100%;height:100%}
-.wheel path{fill:none;stroke:var(--muted);stroke-width:4;stroke-linecap:round;stroke-linejoin:round;transition:stroke .1s}
-.wheel path.arc{stroke:transparent;stroke-width:5}
-.wheel[data-dir="0"] .c0,.wheel[data-dir="1"] .c1,.wheel[data-dir="2"] .c2,.wheel[data-dir="3"] .c3,
-.wheel[data-dir="0"] .a0,.wheel[data-dir="1"] .a1,.wheel[data-dir="2"] .a2,.wheel[data-dir="3"] .a3{stroke:var(--hero)}
-.knob{position:absolute;left:28%;top:28%;width:44%;height:44%;border-radius:50%;background:linear-gradient(#2a3342,#161c26);border:2px solid var(--hero);box-shadow:0 4px 10px rgba(0,0,0,.5);transition:transform .14s ease-out}
-.wheel.held .knob{transition:none;background:linear-gradient(#3a3420,#1c1a12)}
 /* Controls: the settings sheet covers the board only, so the controls below stay live to try. */
 .padsheet{position:absolute;inset:0;z-index:4;overflow:auto;background:var(--scrim);display:grid;place-items:start center;padding:12px}
 .padset{width:100%;max-width:440px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:12px}
@@ -284,7 +271,6 @@ button{font:inherit;color:inherit}
 /* Narrow phones: the pad shrinks to fit beside both thumbs. */
 @media (max-width:480px){
   .dpad{--k:52px}
-  .wheelzone{--kw:140px}
   .act{--ka:76px}
   .act.boost{--ka:60px}
 }
@@ -347,9 +333,6 @@ button{font:inherit;color:inherit}
   </main>
   <input type="file" id="datFile" accept=".dat,.DAT,.d00,.sp,.SP" hidden>
   <div class="pad" id="pad">
-    <div class="wheelzone" id="wheelZone">
-      <div class="wheel" id="wheel"><svg viewBox="-50 -50 100 100" aria-hidden="true"><path class="c0" d="M-7,-34L0,-41L7,-34"/><path class="c1" d="M34,-7L41,0L34,7"/><path class="c2" d="M-7,34L0,41L7,34"/><path class="c3" d="M-34,-7L-41,0L-34,7"/><path class="arc a0" d="M-23,-39.8A46,46 0 0 1 23,-39.8"/><path class="arc a1" d="M39.8,-23A46,46 0 0 1 39.8,23"/><path class="arc a2" d="M23,39.8A46,46 0 0 1 -23,39.8"/><path class="arc a3" d="M-39.8,23A46,46 0 0 1 -39.8,-23"/></svg><div class="knob" id="knob"></div></div>
-    </div>
     <div class="dpad">
       <button class="u" type="button" data-dir="0" aria-label="Up">&#9650;</button>
       <button class="l" type="button" data-dir="3" aria-label="Left">&#9664;</button>
@@ -7424,8 +7407,7 @@ function sample(){
   const a=act||actTap,gd=gad||gadTap;tapDir=-1;actTap=false;gadTap=false;
   return {dir:dir,act:a,gad:gd};
 }
-var wheelReset=null; // set by the phone wheel, which lets go of its direction when input is cleared
-function clearInput(){held.length=0;tapDir=-1;act=false;actTap=false;gad=false;gadTap=false;if(wheelReset) wheelReset();
+function clearInput(){held.length=0;tapDir=-1;act=false;actTap=false;gad=false;gadTap=false;
   document.querySelectorAll('.on').forEach(function(b){b.classList.remove('on');});}
 
 /* ---------- audio ---------- */
@@ -9692,68 +9674,25 @@ bGad.addEventListener('pointerdown',function(e){e.preventDefault();audioInit();t
   cv.addEventListener('pointerup',end);cv.addEventListener('pointercancel',end);cv.addEventListener('lostpointercapture',end);
 })();
 
-/* ---------- phone controls: the wheel and the Controls sheet ---------- */
-// Phones steer with a wheel by default, a thumbstick like a football game's: drag the knob and Iso
-// walks the way it points, four ways, with a dead zone in the middle. The four-arrow pad is the other
-// choice. Side, sizes, spacing, sensitivity, button size and order, height and opacity are set in
-// Controls (the gear in the header, or the pause dialog) and kept in this browser only.
-var PAD_DEF={style:'wheel',side:'left',as:100,gap:6,float:true,dead:25,bs:100,snapOut:true,lift:0,op:100,pad:true,swipe:true,buzz:true};
+/* ---------- phone controls: the Controls sheet ---------- */
+// Phones steer with the four-arrow pad. Its side, arrow size and spacing, button size and order, height
+// and opacity are set in Controls (the gear in the header, or the pause dialog) and kept in this
+// browser only.
+var PAD_DEF={side:'left',as:100,gap:6,bs:100,snapOut:true,lift:0,op:100,pad:true,swipe:true,buzz:true};
 var padPrefs=Object.assign({},PAD_DEF);
 try{const s=JSON.parse(localStorage.getItem('fission_pad')||'null');if(s&&typeof s==='object') for(const k in PAD_DEF) if(typeof s[k]===typeof PAD_DEF[k]) padPrefs[k]=s[k];}catch(e){}
 function savePad(){try{localStorage.setItem('fission_pad',JSON.stringify(padPrefs));}catch(e){}}
-const padEl=$('pad'),wheelZone=$('wheelZone'),wheelEl=$('wheel'),knobEl=$('knob'),padSheet=$('padSheet'),bPad=$('bPad');
+const padEl=$('pad'),padSheet=$('padSheet'),bPad=$('bPad');
 function applyPad(){
   const s=padEl.style,p=padPrefs;
   s.setProperty('--as',p.as/100);s.setProperty('--gap',p.gap+'px');s.setProperty('--bs',p.bs/100);
   s.setProperty('--lift',p.lift+'px');s.setProperty('--op',p.op/100);
-  padEl.classList.toggle('lefty',p.side==='right');padEl.classList.toggle('wheelmode',p.style==='wheel');
+  padEl.classList.toggle('lefty',p.side==='right');
   // Snap sits on the outer edge by default, whichever side the buttons are on.
   padEl.querySelector('.acts').classList.toggle('swap',(p.side==='right')===p.snapOut);
   padEl.hidden=!p.pad;
 }
 applyPad();
-// The wheel. A floating wheel jumps to where the thumb lands in its zone and goes home on release.
-(function(){
-  let pid=null,cx=0,cy=0,dir=-1;
-  function rest(){wheelEl.style.transform='';knobEl.style.transform='';wheelEl.classList.remove('held');wheelEl.removeAttribute('data-dir');}
-  function setDir(d){
-    if(d===dir) return;
-    if(dir>=0) release(dir);
-    dir=d;
-    if(d>=0){press(d);buzz(8);wheelEl.dataset.dir=d;}else wheelEl.removeAttribute('data-dir');
-  }
-  function move(e){
-    // The knob travels at most .42 of the radius, so it stays inside the base and the lit rim shows.
-    const r=wheelEl.offsetWidth/2,dx=e.clientX-cx,dy=e.clientY-cy,len=Math.hypot(dx,dy),lim=r*.42,k=len>lim?lim/len:1;
-    knobEl.style.transform='translate('+(dx*k).toFixed(1)+'px,'+(dy*k).toFixed(1)+'px)';
-    if(len<r*padPrefs.dead/100){setDir(-1);return;}
-    const ax=Math.abs(dx),ay=Math.abs(dy);
-    let d=ax>ay?(dx>0?1:3):(dy>0?2:0);
-    // A little stickiness, so a thumb near the diagonal does not flicker between two ways.
-    if(dir>=0&&d!==dir){
-      const keep=dir===1?dx>0&&ax*1.3>=ay:dir===3?dx<0&&ax*1.3>=ay:dir===2?dy>0&&ay*1.3>=ax:dy<0&&ay*1.3>=ax;
-      if(keep) d=dir;
-    }
-    setDir(d);
-  }
-  wheelZone.addEventListener('pointerdown',function(e){
-    if(pid!==null) return;
-    e.preventDefault();audioInit();
-    if(screen==='play'&&introT>0) endIntro();
-    pid=e.pointerId;try{wheelZone.setPointerCapture(pid);}catch(err){}
-    const b=wheelEl.getBoundingClientRect(),hx=b.left+b.width/2,hy=b.top+b.height/2,r=b.width/2;
-    if(padPrefs.float){
-      const z=wheelZone.getBoundingClientRect();
-      cx=clamp(e.clientX,z.left+r,Math.max(z.left+r,z.right-r));cy=clamp(e.clientY,z.top+r,Math.max(z.top+r,z.bottom-r));
-      wheelEl.style.transform='translate('+(cx-hx).toFixed(1)+'px,'+(cy-hy).toFixed(1)+'px)';
-    }else{cx=hx;cy=hy;}
-    wheelEl.classList.add('held');move(e);
-  });
-  wheelZone.addEventListener('pointermove',function(e){if(e.pointerId===pid) move(e);});
-  const end=function(e){if(e.pointerId!==pid) return;pid=null;setDir(-1);rest();};
-  ['pointerup','pointercancel','lostpointercapture'].forEach(function(ev){wheelZone.addEventListener(ev,end);});
-  wheelReset=function(){const p=pid;pid=null;dir=-1;rest();if(p!==null){try{wheelZone.releasePointerCapture(p);}catch(err){}}};
-})();
 // The Controls sheet covers the board only, so the controls under it stay live to try while it is open.
 let padFrom='',padOv=false;
 function padSeg(k,label,opts){
@@ -9768,14 +9707,12 @@ function padCheck(k,label,off){
   return '<label class="prow"><span>'+label+'</span><input type="checkbox" data-pk="'+k+'"'+(padPrefs[k]||off?' checked':'')+(off?' disabled':'')+'></label>';
 }
 function renderPadSheet(){
-  const p=padPrefs,wheel=p.style==='wheel';
+  const p=padPrefs;
   padSheet.innerHTML='<div class="padset" role="dialog" aria-label="Controls"><h2>Controls</h2>'+
     '<div class="note">The game is paused. Try the controls below while you change them.</div>'+
-    padSeg('style','Steer with',[['wheel','Wheel'],['dpad','Arrows']])+
-    padSeg('side','Steering on the',[['left','Left'],['right','Right']])+
-    padRange('as',wheel?'Wheel size':'Arrow size',70,150,5,'%')+
-    (wheel?padSeg('float','Wheel',[['true','Follows thumb'],['false','Fixed']])+padRange('dead','Dead zone',10,50,5,'%')
-          :padRange('gap','Arrow spacing',0,24,1,'px'))+
+    padSeg('side','Arrows on the',[['left','Left'],['right','Right']])+
+    padRange('as','Arrow size',70,150,5,'%')+
+    padRange('gap','Arrow spacing',0,24,1,'px')+
     padRange('bs','Button size',70,150,5,'%')+
     padSeg('snapOut','Snap button',[['true','Outer'],['false','Inner']])+
     padRange('lift','Raise the controls',0,120,4,'px')+
