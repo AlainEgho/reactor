@@ -222,16 +222,28 @@ body.xmas #bAct::before{font-size:22px}
 @media (pointer:coarse){
   .pad.free{position:fixed;inset:0;display:block;padding:0;z-index:3;pointer-events:none}
   .pad.free .acts,.pad.free .dpad{display:contents}
-  /* The band under the board: Gadget, the T of arrows in the middle, Snap. Mirrored by .lefty. */
-  .pad:not(.free){display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;justify-items:center;column-gap:8px;padding-top:6px}
-  .pad:not(.free) .acts{display:contents}
-  .pad:not(.free) .dpad{grid-column:2;grid-row:1}
+  /* The band under the board: one centred 3 x 2 grid of big keys. Gadget, Up, Snap on top; Left, Down,
+     Right below; mirrored by .lefty. A cell is 88 px times Arrow size, or a third of the width when the
+     phone is narrower, so the band always fits across. */
+  .pad:not(.free){--cell:calc(88px*var(--as,1));display:grid;grid-template-columns:repeat(3,min(var(--cell),calc((100% - 2*var(--gap,6px))/3)));justify-content:center;align-items:center;justify-items:center;gap:var(--gap,6px);padding-top:6px}
+  .pad:not(.free) .acts,.pad:not(.free) .dpad{display:contents}
+  .pad:not(.free) .dpad button,.pad:not(.free) .act{width:100%;height:auto;aspect-ratio:1;max-width:none;min-height:0;overflow:hidden}
+  .pad:not(.free) .dpad button{font-size:calc(28px*var(--as,1))}
+  .pad:not(.free) #bGad{width:88%}
+  .pad:not(.free) .act{font-size:12px}
+  .pad:not(.free) .act .tre,.pad:not(.free) .act svg{width:26px;height:26px}
+  .pad:not(.free) .dpad .u{grid-column:2;grid-row:1}
+  .pad:not(.free) .dpad .l{grid-column:1;grid-row:2}
+  .pad:not(.free) .dpad .d{grid-column:2;grid-row:2}
+  .pad:not(.free) .dpad .r{grid-column:3;grid-row:2}
   .pad:not(.free) #bGad{grid-column:1;grid-row:1}
   .pad:not(.free) #bAct{grid-column:3;grid-row:1}
   .pad.lefty:not(.free) #bGad{grid-column:3}
   .pad.lefty:not(.free) #bAct{grid-column:1}
-  .pad:not(.free) .act{height:auto;aspect-ratio:1;max-width:100%;min-height:0;overflow:hidden}
-  .pad.free .dpad button{width:calc(var(--k)*var(--as,1));height:calc(var(--k)*var(--as,1))}
+  .pad.free .dpad{--k:72px}
+  .pad.free .dpad button{width:calc(var(--k)*var(--as,1));height:calc(var(--k)*var(--as,1));font-size:calc(26px*var(--as,1))}
+  .pad.free .act{--ka:88px}
+  .pad.free .act.boost{--ka:72px}
   .pad.free .dpad button.on{transform:translate(-50%,-50%) scale(.94)}
   .pad.free [data-place]{position:absolute;transform:translate(-50%,-50%);pointer-events:auto}
   .pad.free .act.on{transform:translate(-50%,-50%) scale(.94)}
@@ -323,6 +335,17 @@ body.xmas #bAct::before{font-size:22px}
   .act.boost{--ka:54px}
   .act{font-size:9px;letter-spacing:.04em;gap:2px}
   .act .tre,.act svg{width:18px;height:18px}
+  .pad.free .dpad{--k:62px}
+  .pad.free .act{--ka:76px}
+  .pad.free .act.boost{--ka:62px}
+  .pad:not(.free) .act{font-size:10px}
+}
+/* A short screen, a small phone on its side: the floating keys a little smaller, so the T of arrows
+   still fits under the header. */
+@media (pointer:coarse) and (max-height:340px){
+  .pad.free .dpad{--k:58px}
+  .pad.free .act{--ka:72px}
+  .pad.free .act.boost{--ka:58px}
 }
 /* Moments: the level intro strip, the board's state behind a dialog, and how dialogs arrive. */
 .intro{position:absolute;left:0;right:0;top:22%;display:flex;flex-direction:column;gap:5px;padding:14px 26px;background:rgba(10,13,18,.9);border-top:1px solid var(--line);border-bottom:1px solid var(--line);border-left:6px solid var(--wing,var(--hero));pointer-events:none;animation:intro-in .22s ease-out;transition:opacity .2s}
