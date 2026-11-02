@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fission · Privacy policy</title>
+<meta name="description" content="What the Fission puzzle game stores, what it sends, and what it never collects.">
+<style>
+:root{--bg:#0a0d12;--panel:#121722;--line:#243043;--fg:#e6e9f0;--dim:#9aa3b5;--amber:#f5b731}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:40px 20px 80px}
+h1{font-size:30px;line-height:1.2;margin:0 0 4px}
+h2{font-size:19px;margin:36px 0 10px;color:var(--amber)}
+p,li{color:var(--fg)}
+.meta{color:var(--dim);font-size:14px;margin:0 0 28px}
+.box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:20px 0}
+.box p{margin:0}
+ul{padding-left:22px}
+li{margin:6px 0}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--dim);font-weight:600}
+code{font-family:ui-monospace,Consolas,monospace;font-size:14px;background:var(--panel);padding:1px 5px;border-radius:4px}
+a{color:var(--amber)}
+footer{margin-top:48px;color:var(--dim);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>Fission — Privacy policy</h1>
+<p class="meta">Applies to the Fission game on Android, iOS and the web (<a href="https://alainegho.github.io/reactor/">alainegho.github.io/reactor</a>). Last updated 2 November 2026.</p>
+
+<div class="box"><p><strong>The short version:</strong> Fission has no accounts, no analytics, no advertising and no servers of its own. Everything you type or earn in the game stays on your device. We do not collect, receive, sell or share any personal data.</p></div>
+
+<h2>What the game stores on your device</h2>
+<p>Fission keeps the following in the app's local storage (and, on the web, in a first-party cookie) so that the game remembers you between sessions:</p>
+<table>
+<tr><th>Item</th><th>What it is</th></tr>
+<tr><td>Name</td><td>The name you type on the sign-in screen. It is only used to greet you on the menu. It can be anything; it does not have to be your real name.</td></tr>
+<tr><td>Progress</td><td>Levels cleared, stars, scores, streaks, which level set is selected, and whether you have seen the How to play guide.</td></tr>
+<tr><td>Preferences</td><td>Sound and music on or off, the on-screen control layout, Christmas mode, and any access codes you have entered.</td></tr>
+<tr><td>Level file</td><td>If you choose to load a Classic level file from your device, a copy is kept locally so it is there next time. You can forget it from the menu at any time.</td></tr>
+</table>
+<p>None of this ever leaves your device. Signing out from the menu clears the name; uninstalling the app (or clearing the site's data in your browser) removes everything.</p>
+
+<h2>What the game sends over the network</h2>
+<ul>
+<li><strong>Level data.</strong> The game loads its level file (<code>gamedata.txt</code>) from the same place the game itself is served from. In the apps it is bundled inside the app, so nothing is downloaded.</li>
+<li><strong>Fonts.</strong> The game's two typefaces are fetched from Google Fonts (<code>fonts.googleapis.com</code> and <code>fonts.gstatic.com</code>). Like any web request, this lets Google see your IP address and the browser's standard request headers. Google's handling of these requests is described in the <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts privacy FAQ</a>. No identifier from the game is included in the request.</li>
+<li><strong>Hosting.</strong> The web version is hosted on GitHub Pages. GitHub may log IP addresses of visitors for security and operational purposes under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>. We do not have access to any such logs.</li>
+</ul>
+<p>The game makes no other network requests. It does not phone home, does not report crashes, and does not contain any third-party SDK.</p>
+
+<h2>Permissions (Android)</h2>
+<ul>
+<li><code>INTERNET</code> — to fetch the fonts described above.</li>
+<li><code>VIBRATE</code> — short haptic taps when Iso digs, lands or wins. Can be ignored by turning vibration off in your system settings.</li>
+</ul>
+<p>The game does not request access to your location, contacts, camera, microphone, photos, files (other than a level file you explicitly pick) or any device identifier.</p>
+
+<h2>Children</h2>
+<p>Fission is suitable for all ages and is designed with young players in mind. Because the game collects no personal information from anyone, it collects none from children. The name field is a nickname that stays on the device; we recommend children do not type their full real name, although nothing would be done with it if they did.</p>
+
+<h2>Purchases and advertising</h2>
+<p>Fission is free, has no in-app purchases, and shows no advertising.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li>Sign out from the menu to clear your name from the device.</li>
+<li>Use "Forget this file" on the menu to delete a loaded level file.</li>
+<li>Uninstall the app, or clear the site's data in your browser, to remove every trace of the game.</li>
+</ul>
+
+<h2>Changes</h2>
+<p>If the game ever starts handling data differently — for example if an online leaderboard were added — this page will be updated first and the date at the top will change. The source of the game and of this page is public at <a href="https://github.com/AlainEgho/reactor">github.com/AlainEgho/reactor</a>, so any change is visible in its history.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: open an issue at <a href="https://github.com/AlainEgho/reactor/issues">github.com/AlainEgho/reactor/issues</a>.</p>
+
+<footer>Fission is an independent game by Alain Egho.</footer>
+</main>
+</body>
+</html>
