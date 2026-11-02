@@ -119,7 +119,7 @@ button{font:inherit;color:inherit}
 .lv.bonus .num::after{content:'B';font-size:11px;margin-left:3px;color:#d8d8e6;vertical-align:top}
 .cathead.bonus{margin-top:8px}
 .cat.full .cmeta{color:var(--go)}
-.cathead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding-bottom:10px;border-bottom:2px solid var(--wing)}
+.cathead{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;padding-bottom:10px;border-bottom:2px solid var(--wing)}
 .cathead h3{margin:0;font-family:var(--display);font-size:22px;letter-spacing:.08em;color:var(--wing)}
 .cathead span{font-size:12px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.mark .tre{animation:none}.lv,.lv:hover,.cat,.cat:hover{transition:none;transform:none}}
@@ -157,7 +157,32 @@ button{font:inherit;color:inherit}
 .err{color:var(--alarm);font-size:12px}
 .loadcard .fine{font-size:11px;color:var(--muted);opacity:.8}
 .setbar{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;font-size:11px;color:var(--muted)}
-.linkbtn{font-family:var(--mono);font-size:11px;background:none;border:0;padding:0;color:var(--amber);text-decoration:underline;cursor:pointer}
+/* Small actions inside text and cards are chips, not web links: same family as .btn, one size down. */
+.linkbtn{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:4px 9px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--amber);cursor:pointer;transition:border-color .16s,transform .16s}
+.linkbtn:hover,.linkbtn:focus-visible{border-color:var(--amber);transform:translateY(-1px)}
+/* The way back out of a category: a pill in the category's colour with a chevron, big enough to tap. */
+.backbtn{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px 8px 11px;border-radius:999px;border:1px solid var(--wing,var(--line));background:var(--bg);color:var(--wing,var(--fg));cursor:pointer;transition:transform .16s,box-shadow .16s}
+.backbtn::before{content:'';width:7px;height:7px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);margin-left:1px}
+.backbtn:hover,.backbtn:focus-visible{transform:translateX(-2px);box-shadow:0 0 0 3px color-mix(in srgb,var(--wing,var(--line)) 28%,transparent)}
+/* How to play: four pages of cards, each a part or a key beside a line or two about it. */
+.help{max-width:600px}
+.helphead{display:flex;flex-direction:column;gap:4px}
+.helphead small{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.helpbody{display:flex;flex-direction:column;gap:10px}
+.hrow{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border-radius:8px;border:1px solid var(--line);border-left:3px solid var(--hero);background:var(--bg)}
+.hrow canvas{width:52px;height:52px;flex:none;border-radius:6px}
+.htext{display:flex;flex-direction:column;gap:3px;min-width:0}
+.htext b{font-size:14px}
+.panel .htext p{font-size:12px;line-height:1.5;max-width:none}
+.htext kbd{font-family:var(--mono);font-size:10px;border:1px solid var(--line);border-bottom-width:2px;border-radius:4px;padding:1px 5px;color:var(--fg);white-space:nowrap}
+.hkey{flex:none;width:52px;height:52px;display:grid;place-items:center;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-size:20px;text-align:center}
+.hkey.act{border-radius:50%;border-color:var(--hero);color:var(--hero);font-size:9px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;padding:4px}
+.hkey.star{color:var(--hero);font-size:26px}
+.helpfoot{font-size:11px;color:var(--muted);line-height:1.5}
+.helpnav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dots{display:flex;gap:6px}
+.dots i{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.dots i.on{background:var(--hero)}
 .cat .mini{display:block;width:100%;aspect-ratio:18/7;border-radius:6px;border:1px solid var(--line);margin-bottom:4px;image-rendering:auto}
 .cat .newparts{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
 .cat .newparts small{width:100%;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
@@ -276,7 +301,7 @@ body.xmas #bAct::before{font-size:22px}
 @media (max-width:560px){
   .overlay{position:fixed;inset:0;padding:0;z-index:5} /* above the pad and the header */
   .overlay:has(.panel:not(.small)){place-items:start stretch}
-  .menubar .btn:not(.primary){display:none} /* the Components tab is right above */
+  .menubar .btn:not(.primary):not(.helpbtn){display:none} /* the Components tab is right above */
   .panel:not(.small){max-width:none;min-height:100%;border:0;border-radius:0;box-shadow:none;padding:max(12px,env(safe-area-inset-top,0px)) 14px calc(16px + env(safe-area-inset-bottom,0px));gap:12px}
   .panel.small{width:auto;margin:16px;max-width:calc(100% - 32px)}
   .mark span{font-size:26px}
@@ -14132,7 +14157,7 @@ function packSave(s){
   const b36=function(n){return n!=null?n.toString(36):'';};
   const list=function(p){return Object.keys(p.done).filter(function(k){return p.done[k];}).map(function(k){return k+'.'+b36(p.best[k])+'.'+b36(p.score[k])+'.'+b36(p.stars[k]);}).join('_');};
   // The Mirror Plant's progress rides at the end, where readers of the older shape ignore it.
-  return ['v2',s.sound?1:0,s.set==='original'?'o':s.set==='mirror'?'m':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0),b36(s.meltScore||0)+'.'+b36(s.meltRound||0),list(s.sets.mirror||{done:{}}),s.unlocked?1:'',s.name||'',s.bonus?1:''].join('~');
+  return ['v2',s.sound?1:0,s.set==='original'?'o':s.set==='mirror'?'m':'f',list(s.sets.remake),list(s.sets.original),b36(s.streak||0)+'.'+b36(s.bestStreak||0),b36(s.meltScore||0)+'.'+b36(s.meltRound||0),list(s.sets.mirror||{done:{}}),s.unlocked?1:'',s.name||'',s.bonus?1:'',s.seenHelp?1:''].join('~');
 }
 function unpackSave(str){
   const a=str.split('~'),v=a[0];
@@ -14148,7 +14173,7 @@ function unpackSave(str){
     return p;
   };
   const st=(a[5]||'').split('.'),mb=(a[6]||'').split('.'); // streak current.best and meltdown bestScore.bestRound (v2 only, optional)
-  return {sound:a[1]!=='0',set:a[2]==='o'?'original':a[2]==='m'?'mirror':'remake',sets:{remake:set(a[3]),original:set(a[4]),mirror:set(a[7])},streak:num(st[0])||0,bestStreak:num(st[1])||0,meltScore:num(mb[0])||0,meltRound:num(mb[1])||0,unlocked:a[8]==='1',name:a[9]||'',bonus:a[10]==='1'};
+  return {sound:a[1]!=='0',set:a[2]==='o'?'original':a[2]==='m'?'mirror':'remake',sets:{remake:set(a[3]),original:set(a[4]),mirror:set(a[7])},streak:num(st[0])||0,bestStreak:num(st[1])||0,meltScore:num(mb[0])||0,meltRound:num(mb[1])||0,unlocked:a[8]==='1',name:a[9]||'',bonus:a[10]==='1',seenHelp:a[11]==='1'};
 }
 function readCookie(){
   try{const m=document.cookie.match(/(?:^|;\s*)fission_progress=([^;]*)/);return m?unpackSave(decodeURIComponent(m[1])):null;}catch(e){return null;}
@@ -16041,7 +16066,12 @@ function flyTo(x,y,col){
 // Restarts a one-shot CSS animation on an element.
 function bumpEl(el){if(reduceMotion||!el) return;el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump');}
 // A read-only window for the browser tests: the game, the screen, the camera and the tile size.
-window.__fission=function(){return {game:game,bonusStill:function(){const bad=[];LEVELS.forEach(function(lv,i){if(!startBombs('remake',i)) return;let g;try{g=createGame(lv);}catch(e){return;}const before=new Set();g.cells.forEach(function(c,p){if(c.t===INFO) before.add(p);});addBonusPellets(g,i);const mine=[];g.cells.forEach(function(c,p){if(c.t===INFO&&!before.has(p)) mine.push(c);});for(let t=0;t<60&&g.state==='play';t++) step(g,{dir:-1,act:false,gad:false});const left=mine.filter(function(c){return g.cells.indexOf(c)<0;}).length;if(left||g.state!=='play') bad.push((i+1)+(g.state!=='play'?' ('+g.state+')':'')+':'+left);});return bad;},bonusStats:function(){return LEVELS.map(function(lv,i){if(!startBombs('remake',i)) return null;try{return addBonusPellets(createGame(lv),i);}catch(e){return -1;}});},screen:screen,cam:cam,TS:TS,set:set,dat:datLevels,mirror:mirrorLevels,xmas:xmas,flakes:flakes,drawBoom:function(c,k,s){D.boom(c,k,s);},
+window.__fission=function(){return {game:game,bonusStill:function(){const bad=[];LEVELS.forEach(function(lv,i){if(!startBombs('remake',i)) return;let g;try{g=createGame(lv);}catch(e){return;}const before=new Set();g.cells.forEach(function(c,p){if(c.t===INFO) before.add(p);});addBonusPellets(g,i);const mine=[];g.cells.forEach(function(c,p){if(c.t===INFO&&!before.has(p)) mine.push(c);});for(let t=0;t<60&&g.state==='play';t++) step(g,{dir:-1,act:false,gad:false});const left=mine.filter(function(c){return g.cells.indexOf(c)<0;}).length;if(left||g.state!=='play') bad.push((i+1)+(g.state!=='play'?' ('+g.state+')':'')+':'+left);});return bad;},bonusStats:function(){return LEVELS.map(function(lv,i){if(!startBombs('remake',i)) return null;try{return addBonusPellets(createGame(lv),i);}catch(e){return -1;}});},screen:screen,cam:cam,TS:TS,set:set,dat:datLevels,mirror:mirrorLevels,xmas:xmas,flakes:flakes,drawBoom:function(c,k,s){D.boom(c,k,s);},drawIso:function(c,santa){const x=xmas;xmas=!!santa;try{D.iso(c,0,0,false,0,0);}finally{xmas=x;}},
+  // A part drawn as the Components tab draws it, on a canvas of its own: name is a legend key, k a category
+  // (its colours), santa the Christmas look. The empty-space colour behind it is made transparent unless keep.
+  part:function(name,k,santa,px,keep){const x=xmas;xmas=!!santa;try{const el=document.createElement('canvas');el.width=el.height=px||112;el.dataset.legend=name;el.dataset.theme=k||0;const host=document.createElement('div');host.appendChild(el);drawLegend(host);if(keep) return el;const t=xmas?xmasOf(THEMES[k||0]):THEMES[k||0],c=el.getContext('2d'),im=c.getImageData(0,0,el.width,el.height),d=im.data,m=/^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(t.vd);if(m){const r=parseInt(m[1],16),g=parseInt(m[2],16),b=parseInt(m[3],16);for(let i=0;i<d.length;i+=4) if(d[i]===r&&d[i+1]===g&&d[i+2]===b) d[i+3]=0;c.putImageData(im,0,0);}return el;}finally{xmas=x;}},
+  cats:function(santa){const x=xmas;xmas=!!santa;try{return CATS.map(function(c,k){return {name:catName(k),from:c.from,to:Math.min(c.to,LEVELS.length),color:THEMES[k].fl[3],bg:THEMES[k].fl[1],blurb:xw(c.blurb)};});}finally{xmas=x;}},
+  names:function(santa){const x=xmas;xmas=!!santa;try{const o={};PARTS.forEach(function(p){o[p[0]]={name:xw(p[1]),text:xw(p[3])};});return o;}finally{xmas=x;}},
   // Plays every effect once and returns the names of any that threw.
   sfx:function(){const bad=[];for(const k in SFX){try{SFX[k](0,0);}catch(e){bad.push(k+': '+e.message);}}try{Music.setKey(3);Music.tick(1,{heat:.5,danger:.5});}catch(e){bad.push('music: '+e.message);}return bad;},kill:function(){if(game&&game.state==='play'){kill(game);noteDeath();}}};};
 
@@ -16559,7 +16589,7 @@ function catCards(){
 function catHead(k){
   const c=CATS[k],p=save.sets.remake,to=Math.min(c.to,LEVELS.length);
   let done=0;for(let i=c.from-1;i<to;i++) if(p.done[i]) done++;
-  return '<div class="cathead" style="--wing:'+THEMES[k].fl[3]+'"><button type="button" class="linkbtn" data-act="cats">← All categories</button>'+
+  return '<div class="cathead" style="--wing:'+THEMES[k].fl[3]+'"><button type="button" class="backbtn" data-act="cats">All categories</button>'+
     '<h3>'+esc(catName(k))+'</h3><span>Levels '+pad3(c.from)+'–'+pad3(to)+' · '+done+'/'+(to-c.from+1)+' cleared · Enter plays the next one</span></div>';
 }
 function totalScore(){const s=prog().score;let t=0;for(const k in s) t+=s[k];return t;}
@@ -16594,7 +16624,7 @@ function showMenu(slide){
   }else if(set==='remake'){
     const next=firstOpen();
     body='<div class="menubar"><div class="total">Total score <b>'+fmtN(totalScore())+'</b> · <b>'+totalStars()+'</b>/'+(levels.length*3)+' <span class="stars"><i class="on">★</i></span></div>'+
-      '<span class="row"><button type="button" class="btn" data-act="view" data-view="parts">Components</button>'+
+      '<span class="row"><button type="button" class="btn helpbtn" data-act="help">How to play</button><button type="button" class="btn" data-act="view" data-view="parts">Components</button>'+
       '<button type="button" class="btn primary" data-act="continue">Continue · level '+pad3(next+1)+' (Enter)</button></span></div>'+
       catCards()+codeField();
   }else{
@@ -16729,7 +16759,7 @@ function startLevel(i){
 function pause(){
   if(screen!=='play'||game.state!=='play') return;
   screen='paused';clearInput();cv.classList.add('paused');
-  dialog('Paused',esc(levelLabel(cur)),[['resume','Resume (P)'],['retry','Restart (R)'],['levels','Levels']].concat(coarse?[['controls','Controls'],['xmas',xmas?'Christmas off':'Christmas on']]:[]),'pop');
+  dialog('Paused',esc(levelLabel(cur)),[['resume','Resume (P)'],['retry','Restart (R)'],['levels','Levels'],['help','How to play']].concat(coarse?[['controls','Controls'],['xmas',xmas?'Christmas off':'Christmas on']]:[]),'pop');
 }
 function resume(){screen='play';ov.hidden=true;cv.classList.remove('paused');}
 function showDead(){
@@ -16767,6 +16797,70 @@ function showWon(){
   if(!reduceMotion) [1,STAR_FAST,STAR_CHAIN].forEach(function(bit,j){if(got&bit) SFX.star(j,(5+j)*.06+.3);});
 }
 
+/* ---------- how to play ---------- */
+// A short guide: the job, the dangers, the controls and the stars. It opens by itself after the first
+// sign-in ever, and again from the menu, the pause dialog and the Controls sheet. seenHelp rides in
+// the save (and its cookie) so it is shown once per player, not once per browser session.
+let helpPage=0,helpFrom='';
+function hrow(kind,val,title,text){
+  const pic=kind==='legend'?'<canvas data-legend="'+val+'" width="112" height="112"></canvas>':'<span class="hkey '+kind+'">'+val+'</span>';
+  return '<div class="hrow">'+pic+'<div class="htext"><b>'+xw(title)+'</b><p>'+xw(text)+'</p></div></div>';
+}
+function helpPages(){
+  const kb='<kbd>Arrows</kbd> or <kbd>WASD</kbd> move · <kbd>Space</kbd> + direction snaps · hold <kbd>Space</kbd> to drop a red canister · <kbd>Shift</kbd> + direction fires the gadget · <kbd>P</kbd> pause · <kbd>R</kbd> restart · <kbd>Enter</kbd> next level';
+  return [
+    {title:xmas?'Welcome to the North Pole':'Welcome to the plant',rows:
+      hrow('legend','iso',xmas?'This is Santa-bot':'This is Iso',xmas?'Your droid in a red suit. Walk it through each floor; the view follows.':'Your droid in a hazard-yellow shell. Walk it through each floor; the view follows.')+
+      hrow('legend','graphite',xmas?'Pine':'Graphite','Soft. Iso digs through it just by walking into it; most of a floor is made of it.')+
+      hrow('legend','pellet',xmas?'Gifts':'Pellets','Collect fuel Pellets. The counter at the top says how many are still needed.')+
+      hrow('legend','reactor',xmas?'The tree':'The Reactor',xmas?'When the counter reaches zero the tree is ready. Walk up to it and the level is cleared.':'When the counter reaches zero the Reactor opens. Walk in and the level is cleared.')},
+    {title:'What can hurt you',rows:
+      hrow('legend','lead',xmas?'Snowballs':'Lead','Heavy. Dig under it and it falls; stand under it and Iso is done for. Push it sideways along a flat run.')+
+      hrow('legend','gamma','Gammas','Patrol along the walls. One touch is fatal, but drop Lead on one and it bursts into Pellets.')+
+      hrow('legend','neutron','Neutrons','Bounce round open rooms. Keep clear; crushed under Lead, one becomes more fuel.')+
+      hrow('legend','red','Canisters','Explode when they fall or when a blast reaches them. A blast clears walls and everything in it, Iso included.')},
+    {title:'Controls',rows:(coarse?
+      hrow('key','▲','Move','Tap or hold the arrows, or swipe on the board. Keep a direction held to keep walking.')+
+      hrow('act','Snap · Drop','Snap and drop','Hold Snap and press a direction to take the next tile without stepping into it. Hold Snap on its own for 2.5 seconds to drop a red canister, then run.')+
+      hrow('act','Gadget','Gadget','Fires the gadget Iso is carrying (thruster, tractor, stasis…) in the direction you press next.')+
+      hrow('key','⚙','Lay out the keys','Controls (⚙) moves and resizes the keys, and sets swiping, vibration and full screen.')+
+      hrow('key','⌨','With a keyboard',kb)
+      :
+      hrow('key','▲','Move',"<kbd>Arrows</kbd> or <kbd>WASD</kbd>. Keep a key held to keep walking.")+
+      hrow('key','␣','Snap and drop','<kbd>Space</kbd> + a direction takes the next tile without stepping into it. Hold <kbd>Space</kbd> on its own for 2.5 seconds to drop a red canister, then run.')+
+      hrow('key','⇧','Gadget','<kbd>Shift</kbd> + a direction fires the gadget Iso is carrying (thruster, tractor, stasis…).')+
+      hrow('key','P','Pause, restart, next','<kbd>P</kbd> or <kbd>Esc</kbd> pauses · <kbd>R</kbd> restarts the floor · <kbd>Enter</kbd> plays the next uncleared level · <kbd>M</kbd> toggles the music.'))},
+    {title:'Stars, streaks and more',rows:
+      hrow('star','★','Three stars a floor','Cleared · Fast, under the par time · Chain, five Pellets in a row. Clear floors without dying to build a streak.')+
+      hrow('key','5','Floors open five at a time','Each category starts with its first five floors open; clearing one opens the next.')+
+      hrow('legend','hot','Meltdown','An endless run against a heating core, from the Meltdown tab. How far can you get?')+
+      hrow('legend','thruster','Components','The Components tab shows every part in the plant, what it does and the first floor it appears on.')}
+  ];
+}
+function renderHelp(){
+  const pages=helpPages(),n=pages.length;
+  helpPage=Math.max(0,Math.min(helpPage,n-1));
+  const p=pages[helpPage],last=helpPage===n-1;
+  screen='help';clearInput();
+  ov.innerHTML='<div class="panel help" role="dialog" aria-label="How to play"><div class="helphead"><small>How to play · '+(helpPage+1)+'/'+n+'</small><h2>'+p.title+'</h2></div>'+
+    '<div class="helpbody">'+p.rows+(last?'<div class="helpfoot">Open this guide again any time: from the menu, the pause screen or Controls (⚙).</div>':'')+'</div>'+
+    '<div class="helpnav"><span class="dots">'+pages.map(function(_,i){return '<i'+(i===helpPage?' class="on"':'')+'></i>';}).join('')+'</span>'+
+    '<span class="row">'+(last?'':'<button type="button" class="btn" data-act="helpdone">Skip</button>')+(helpPage>0?'<button type="button" class="btn" data-act="helpback">Back</button>':'')+
+    '<button type="button" class="btn primary" data-act="'+(last?'helpdone':'helpnext')+'">'+(last?'Let\'s play':'Next')+'</button></span></div></div>';
+  ov.hidden=false;ov.scrollTop=0;drawLegend();
+  const f=ov.querySelector('.btn.primary');if(f) try{f.focus({preventScroll:true});}catch(e){}
+}
+// from is where to go back to: 'play' (a game paused quietly under the Controls sheet), 'pause' (the
+// pause dialog), or anything else for the menu.
+function showHelp(from){helpFrom=from||'menu';helpPage=0;hidePadSheet();renderHelp();}
+function closeHelp(){
+  const from=helpFrom;helpFrom='';
+  if(!save.seenHelp){save.seenHelp=true;persist();}
+  if(from==='play'&&game&&game.state==='play') resume();
+  else if(from==='pause'&&game&&game.state==='play'){screen='play';pause();}
+  else showMenu();
+}
+
 /* ---------- sign-in ---------- */
 // A name is all it takes: it is kept with the progress in this browser and shown on the menu. Signing in
 // also loads the level file served next to the game, so the Classic set and the bonus floors are there.
@@ -16785,9 +16879,10 @@ ov.addEventListener('submit',function(e){
   e.preventDefault();
   const name=$('nameIn').value.replace(/[~<>]/g,'').trim().slice(0,24);
   if(!name){showLogin('Enter a name to sign in.');return;}
+  const first=!save.seenHelp; // the very first sign-in gets the guide before the menu
   save.name=name;persist();audioInit();
   const b=e.target.querySelector('button');b.disabled=true;b.textContent='Loading levels…';
-  fetchDat().then(function(){showMenu();});
+  fetchDat().then(function(){if(first) showHelp('login');else showMenu();});
 });
 // The access code opens every level, and the bonus code shows the bonus floors. Each is checked as it is
 // typed; nothing is sent anywhere. The field stays until both have been entered.
@@ -16820,6 +16915,10 @@ ov.addEventListener('click',function(e){
     case 'controls':openPadSheet('pause');break;
     case 'xmas':setXmas(!xmas);if(screen==='paused'&&game&&game.state==='play'){screen='play';pause();}else showMenu();break;
     case 'back':resumeGame();break;
+    case 'help':showHelp(screen==='paused'?'pause':'menu');break;
+    case 'helpnext':helpPage++;renderHelp();break;
+    case 'helpback':helpPage--;renderHelp();break;
+    case 'helpdone':closeHelp();break;
     case 'signout':save.name='';persist();showLogin();break;
     case 'set':set=b.dataset.set;save.set=set;datError='';persist();cur=0;menuView='levels';menuCat=-1;showMenu();break;
     case 'cat':menuCat=+b.dataset.cat;showMenu('slide-l');ov.scrollTop=0;break;
@@ -16882,6 +16981,12 @@ addEventListener('keydown',function(e){
   const d=KEYMAP[e.code];
   const onButton=e.target&&e.target.tagName==='BUTTON';
   if(e.code==='KeyM'&&!e.repeat){toggleMusic();return;}
+  if(screen==='help'){ // the guide: Esc closes, Enter and the arrows turn its pages
+    if(e.code==='Escape'){closeHelp();e.preventDefault();}
+    else if((e.code==='Enter'&&!onButton)||e.code==='ArrowRight'){if(helpPage>=helpPages().length-1) closeHelp();else{helpPage++;renderHelp();}e.preventDefault();}
+    else if(e.code==='ArrowLeft'||e.code==='Backspace'){if(helpPage>0){helpPage--;renderHelp();}e.preventDefault();}
+    return;
+  }
   if(screen==='play'){
     if(introT>0) endIntro();
     // Once Iso is gone or in the core, a fresh key goes straight to the tally.
@@ -17157,6 +17262,7 @@ function renderPadSheet(){
     padCheck('swipe','Swipe on the board',!p.pad)+
     padCheck('buzz','Vibration')+
     padCheck('full','Full screen while playing')+
+    '<div class="prow"><span>New here, or need a reminder?</span><button type="button" class="btn" data-pa="help">How to play</button></div>'+
     '<div class="pbtns"><button type="button" class="btn" data-pa="reset">Reset</button><button type="button" class="btn primary" data-pa="done">Done</button></div></div>';
 }
 function padSet(k,v){
@@ -17178,6 +17284,7 @@ padSheet.addEventListener('click',function(e){
   if(b.dataset.pk){padSet(b.dataset.pk,b.dataset.pv);SFX.ui();renderPadSheet();return;}
   if(b.dataset.pa==='reset'){padPrefs=padFresh();applyPad();savePad();renderPadSheet();}
   else if(b.dataset.pa==='arrange') startArrange();
+  else if(b.dataset.pa==='help'){const from=padFrom==='play'||padFrom==='pause'?padFrom:'menu';showHelp(from);}
   else if(b.dataset.pa==='done') closePadSheet();
 });
 // Opened from play it pauses quietly; from the pause dialog it goes back there; over a menu it hides
