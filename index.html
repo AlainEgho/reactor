@@ -179,6 +179,19 @@ button{font:inherit;color:inherit}
 .hkey.act{border-radius:50%;border-color:var(--hero);color:var(--hero);font-size:9px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;padding:4px}
 .hkey.star{color:var(--hero);font-size:26px}
 .helpfoot{font-size:11px;color:var(--muted);line-height:1.5}
+/* A guide page's live scene: the engine running on a tiny board, a big count under it, one line. */
+.help h2{font-size:30px}
+.hscene{display:flex;flex-direction:column;align-items:center;gap:12px}
+.hwrap{position:relative;max-width:100%}
+.hwrap canvas{display:block;max-width:100%;border-radius:12px;border:2px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.hwon{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:40px;font-weight:700;color:#fff;text-shadow:0 2px 12px rgba(0,0,0,.8);background:rgba(0,0,0,.25);border-radius:12px}
+.hcount{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:32px;font-weight:700;color:var(--hero);font-variant-numeric:tabular-nums}
+.hcount canvas{width:40px;height:40px;border-radius:8px}
+.hline{margin:0;font-family:var(--display);font-size:20px;font-weight:600;text-align:center;color:var(--fg);line-height:1.4;text-wrap:balance}
+.hkeys{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.hkeys .hkey{opacity:.3;transition:opacity .08s,transform .08s,box-shadow .08s}
+.hkeys .hkey.on{opacity:1;transform:scale(1.12);box-shadow:0 0 0 2px var(--hero)}
+.hkeys .hkey.act{width:auto;min-width:52px;padding:4px 12px}
 .helpnav{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .dots{display:flex;gap:6px}
 .dots i{width:8px;height:8px;border-radius:50%;background:var(--line)}
@@ -16066,7 +16079,7 @@ function flyTo(x,y,col){
 // Restarts a one-shot CSS animation on an element.
 function bumpEl(el){if(reduceMotion||!el) return;el.classList.remove('bump');void el.offsetWidth;el.classList.add('bump');}
 // A read-only window for the browser tests: the game, the screen, the camera and the tile size.
-window.__fission=function(){return {game:game,bonusStill:function(){const bad=[];LEVELS.forEach(function(lv,i){if(!startBombs('remake',i)) return;let g;try{g=createGame(lv);}catch(e){return;}const before=new Set();g.cells.forEach(function(c,p){if(c.t===INFO) before.add(p);});addBonusPellets(g,i);const mine=[];g.cells.forEach(function(c,p){if(c.t===INFO&&!before.has(p)) mine.push(c);});for(let t=0;t<60&&g.state==='play';t++) step(g,{dir:-1,act:false,gad:false});const left=mine.filter(function(c){return g.cells.indexOf(c)<0;}).length;if(left||g.state!=='play') bad.push((i+1)+(g.state!=='play'?' ('+g.state+')':'')+':'+left);});return bad;},bonusStats:function(){return LEVELS.map(function(lv,i){if(!startBombs('remake',i)) return null;try{return addBonusPellets(createGame(lv),i);}catch(e){return -1;}});},screen:screen,cam:cam,TS:TS,set:set,dat:datLevels,mirror:mirrorLevels,xmas:xmas,flakes:flakes,drawBoom:function(c,k,s){D.boom(c,k,s);},drawIso:function(c,santa){const x=xmas;xmas=!!santa;try{D.iso(c,0,0,false,0,0);}finally{xmas=x;}},
+window.__fission=function(){return {game:game,help:function(){return helpScene?helpScene.g:null;},bonusStill:function(){const bad=[];LEVELS.forEach(function(lv,i){if(!startBombs('remake',i)) return;let g;try{g=createGame(lv);}catch(e){return;}const before=new Set();g.cells.forEach(function(c,p){if(c.t===INFO) before.add(p);});addBonusPellets(g,i);const mine=[];g.cells.forEach(function(c,p){if(c.t===INFO&&!before.has(p)) mine.push(c);});for(let t=0;t<60&&g.state==='play';t++) step(g,{dir:-1,act:false,gad:false});const left=mine.filter(function(c){return g.cells.indexOf(c)<0;}).length;if(left||g.state!=='play') bad.push((i+1)+(g.state!=='play'?' ('+g.state+')':'')+':'+left);});return bad;},bonusStats:function(){return LEVELS.map(function(lv,i){if(!startBombs('remake',i)) return null;try{return addBonusPellets(createGame(lv),i);}catch(e){return -1;}});},screen:screen,cam:cam,TS:TS,set:set,dat:datLevels,mirror:mirrorLevels,xmas:xmas,flakes:flakes,drawBoom:function(c,k,s){D.boom(c,k,s);},drawIso:function(c,santa){const x=xmas;xmas=!!santa;try{D.iso(c,0,0,false,0,0);}finally{xmas=x;}},
   // A part drawn as the Components tab draws it, on a canvas of its own: name is a legend key, k a category
   // (its colours), santa the Christmas look. The empty-space colour behind it is made transparent unless keep.
   part:function(name,k,santa,px,keep){const x=xmas;xmas=!!santa;try{const el=document.createElement('canvas');el.width=el.height=px||112;el.dataset.legend=name;el.dataset.theme=k||0;const host=document.createElement('div');host.appendChild(el);drawLegend(host);if(keep) return el;const t=xmas?xmasOf(THEMES[k||0]):THEMES[k||0],c=el.getContext('2d'),im=c.getImageData(0,0,el.width,el.height),d=im.data,m=/^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(t.vd);if(m){const r=parseInt(m[1],16),g=parseInt(m[2],16),b=parseInt(m[3],16);for(let i=0;i<d.length;i+=4) if(d[i]===r&&d[i+1]===g&&d[i+2]===b) d[i+3]=0;c.putImageData(im,0,0);}return el;}finally{xmas=x;}},
@@ -16798,62 +16811,154 @@ function showWon(){
 }
 
 /* ---------- how to play ---------- */
-// A short guide: the job, the dangers, the controls and the stars. It opens by itself after the first
-// sign-in ever, and again from the menu, the pause dialog and the Controls sheet. seenHelp rides in
-// the save (and its cookie) so it is shown once per player, not once per browser session.
-let helpPage=0,helpFrom='';
+// A guide a five-year-old can follow: each page is one short line over a little live scene, run by the
+// game's own engine on a tiny board (Iso walking, digging, grabbing fuel, the Reactor opening, Lead
+// falling, a Gamma on patrol) and drawn with its own sprites. It opens by itself after the first sign-in
+// ever, and again from the menu, the pause dialog and the Controls sheet. seenHelp rides in the save
+// (and its cookie) so it is shown once per player, not once per browser session.
+let helpPage=0,helpFrom='',helpScene=null;
+// Each scene: a board in level-map letters and the moves Iso makes, one letter a tick ('.' is a rest).
+// When the moves run out, or the scene ends, it holds a moment and starts again.
+// Each scene is a tiny level and a script, one character per tick: U R D L walk, u r d l snap that way
+// (the grab key held with the arrow), h hold the grab key alone (arms a red canister), . wait.
+const HELP_SCENES={
+  meet:{map:['#######','#     #','#  @  #','#     #','#######'],need:0,run:'..RR..LL..'},
+  dig:{map:['#########','#@......#','#########'],need:0,run:'RRRRRR....'},
+  cans:{map:['#########','#@.*.*.*#','#########'],need:3,run:'RRRRRR....'},
+  snap:{map:['#########','#   *   #','#  *@*X #','#  .*.  #','#########'],need:4,run:'..r..l..u..d..RR....'},
+  door:{map:['#########','#@.*..X #','#########'],need:1,run:'RRRRR.....'},
+  lead:{map:['#######','#  O  #','#@....#','#######'],need:0,run:'RRRR......'},
+  spark:{map:['#######','# @O X#','#### ##','####e##','#######'],need:2,run:'....RR..............RDDUUR....'},
+  gamma:{map:['#########','#S       #'.slice(0,9),'#       #','#   @   #','#       #','#       #','#########'],need:0,run:'..............'},
+  bomb:{map:['#########','#@d..R*X#','#########'],need:1,run:'RRR'+'hhhhhhhhhhhhhhhhhhhhhh'+'LL'+'........................'+'RRRRR....'},
+};
+const HELP_DIRS={U:0,R:1,D:2,L:3};
+function helpSceneStop(){if(helpScene){cancelAnimationFrame(helpScene.raf);helpScene=null;}}
+function helpSceneStart(key,cvEl,numEl,wonEl,keysEl){
+  helpSceneStop();
+  const sc=HELP_SCENES[key],lv={name:'help',need:sc.need,map:sc.map},cols=sc.map[0].length,rows=sc.map.length;
+  const avail=Math.min(520,(cvEl.parentElement.parentElement.clientWidth||480)),px=Math.max(24,Math.floor(avail/cols)),dpr=Math.min(2,window.devicePixelRatio||1);
+  cvEl.style.width=px*cols+'px';cvEl.style.height=px*rows+'px';cvEl.width=px*cols*dpr;cvEl.height=px*rows*dpr;
+  helpScene={sc:sc,lv:lv,cv:cvEl,num:numEl,won:wonEl,keys:keysEl,ts:px*dpr,g:createGame(lv),i:0,acc:0,last:0,hold:0,raf:0,inp:{dir:-1,act:false,gad:false}};
+  helpScene.raf=requestAnimationFrame(helpFrame);
+}
+// The keys the script is pressing this tick, lit on the strip under the scene.
+function helpKeys(st){
+  if(!st.keys) return;
+  for(const el of st.keys.children){const k=el.dataset.k;el.classList.toggle('on',k==='act'?st.inp.act:st.inp.dir===+k);}
+}
+function helpFrame(now){
+  const st=helpScene;if(!st) return;
+  if(screen!=='help'||!document.body.contains(st.cv)){helpSceneStop();return;}
+  st.raf=requestAnimationFrame(helpFrame);
+  if(!st.last) st.last=now;
+  const dt=Math.min(250,now-st.last);st.last=now;
+  const over=st.g.state!=='play'||st.i>=st.sc.run.length;
+  if(over){st.hold+=dt;st.inp={dir:-1,act:false,gad:false};if(st.hold>1600){st.g=createGame(st.lv);st.i=0;st.hold=0;st.acc=0;}}
+  else{
+    st.acc+=dt;
+    while(st.acc>=TICK&&st.g.state==='play'&&st.i<st.sc.run.length){
+      st.acc-=TICK;
+      const ch=st.sc.run[st.i++],d=HELP_DIRS[ch.toUpperCase()];
+      st.inp={dir:d===undefined?-1:d,act:ch==='h'||(d!==undefined&&ch!==ch.toUpperCase()),gad:false};
+      step(st.g,st.inp);st.g.events.length=0;
+    }
+  }
+  helpKeys(st);
+  helpDraw(st,now);
+  if(st.num) st.num.textContent=Math.max(0,st.g.need-st.g.got);
+  if(st.won) st.won.hidden=st.g.state!=='won';
+}
+// The board, drawn as the game draws it: still tiles from the sprite cache, the live ones (Iso, Gammas,
+// anything moving) on top, moving between cells over the tick as they do in play.
+function helpDraw(st,now){
+  const g=st.g,c=st.cv.getContext('2d'),ts=st.ts,p=Math.min(1,st.acc/TICK),keep=game;
+  game=g; // tileSprite reads the game being drawn (the Reactor's open state)
+  try{
+    c.setTransform(1,0,0,1,0,0);c.fillStyle=theme.vd;c.fillRect(0,0,st.cv.width,st.cv.height);
+    const dyn=[];
+    for(let y=0;y<g.H;y++) for(let x=0;x<g.W;x++){
+      const cell=g.cells[y*g.W+x];
+      if(cell.t===EMPTY||cell.t===INVIS) continue;
+      if(cell.t===MURPHY||cell.t===SNIK||cell.t===ELEC||cell.t===EXPL||cell.t===BOMB||(cell.mt===g.tick&&(cell.ox||cell.oy))){dyn.push([cell,x,y]);continue;}
+      const s=tileSprite(cell,x,y,now);
+      if(s) c.drawImage(s,x*ts,y*ts,ts,ts);
+      if(cell.t===EXIT&&g.got>=g.need){c.setTransform(ts,0,0,ts,x*ts,y*ts);D.reactorGlow(c,now);c.setTransform(1,0,0,1,0,0);}
+    }
+    for(const it of dyn){
+      const cell=it[0],x=it[1],y=it[2];
+      let fx=x,fy=y;
+      if(cell.mt===g.tick&&(cell.ox||cell.oy)){const q=easeP(g,cell,p);fx+=cell.ox*(1-q);fy+=cell.oy*(1-q);}
+      const X=fx*ts,Y=fy*ts;
+      if(cell.t===MURPHY||cell.t===SNIK||cell.t===ELEC||cell.t===EXPL||cell.t===BOMB){
+        c.setTransform(ts,0,0,ts,X,Y);
+        if(cell.t===MURPHY){
+          D.iso(c,g.m.face,now,cell.mt===g.tick,g.need>0?Math.min(1,g.got/g.need):0,0);
+          if(g.holdTicks>0&&g.red>0&&g.m.bomb===0){ // the drop ring fills as the grab key is held
+            const k=Math.min(1,(g.holdTicks+p)/BOMB_HOLD);
+            c.beginPath();c.arc(.5,.55,.47,-Math.PI/2,-Math.PI/2+k*Math.PI*2);
+            c.strokeStyle='rgba(255,90,70,.9)';c.lineWidth=.07;c.lineCap='round';c.stroke();
+          }
+        }
+        else if(cell.t===SNIK) D.gamma(c,facing(cell),now);
+        else if(cell.t===ELEC) D.neutron(c,now+x*97+y*53);
+        else if(cell.t===BOMB) D.bomb(c,now);
+        else D.boom(c,(EXPL_TICKS-cell.timer+p)/EXPL_TICKS,x*13+y*7);
+        c.setTransform(1,0,0,1,0,0);
+      }else{const s=tileSprite(cell,x,y,now);if(s) c.drawImage(s,X,Y,ts,ts);}
+    }
+  }finally{game=keep;c.setTransform(1,0,0,1,0,0);}
+}
 function hrow(kind,val,title,text){
   const pic=kind==='legend'?'<canvas data-legend="'+val+'" width="112" height="112"></canvas>':'<span class="hkey '+kind+'">'+val+'</span>';
   return '<div class="hrow">'+pic+'<div class="htext"><b>'+xw(title)+'</b><p>'+xw(text)+'</p></div></div>';
 }
 function helpPages(){
-  const kb='<kbd>Arrows</kbd> or <kbd>WASD</kbd> move · <kbd>Space</kbd> + direction snaps · hold <kbd>Space</kbd> to drop a red canister · <kbd>Shift</kbd> + direction fires the gadget · <kbd>P</kbd> pause · <kbd>R</kbd> restart · <kbd>Enter</kbd> next level';
+  const x=xmas,me=x?'Santa-bot':'Iso';
   return [
-    {title:xmas?'Welcome to the North Pole':'Welcome to the plant',rows:
-      hrow('legend','iso',xmas?'This is Santa-bot':'This is Iso',xmas?'Your droid in a red suit. Walk it through each floor; the view follows.':'Your droid in a hazard-yellow shell. Walk it through each floor; the view follows.')+
-      hrow('legend','graphite',xmas?'Pine':'Graphite','Soft. Iso digs through it just by walking into it; most of a floor is made of it.')+
-      hrow('legend','pellet',xmas?'Gifts':'Pellets','Collect fuel Pellets. The counter at the top says how many are still needed.')+
-      hrow('legend','reactor',xmas?'The tree':'The Reactor',xmas?'When the counter reaches zero the tree is ready. Walk up to it and the level is cleared.':'When the counter reaches zero the Reactor opens. Walk in and the level is cleared.')},
-    {title:'What can hurt you',rows:
-      hrow('legend','lead',xmas?'Snowballs':'Lead','Heavy. Dig under it and it falls; stand under it and Iso is done for. Push it sideways along a flat run.')+
-      hrow('legend','gamma','Gammas','Patrol along the walls. One touch is fatal, but drop Lead on one and it bursts into Pellets.')+
-      hrow('legend','neutron','Neutrons','Bounce round open rooms. Keep clear; crushed under Lead, one becomes more fuel.')+
-      hrow('legend','red','Canisters','Explode when they fall or when a blast reaches them. A blast clears walls and everything in it, Iso included.')},
-    {title:'Controls',rows:(coarse?
-      hrow('key','▲','Move','Tap or hold the arrows, or swipe on the board. Keep a direction held to keep walking.')+
-      hrow('act','Snap · Drop','Snap and drop','Hold Snap and press a direction to take the next tile without stepping into it. Hold Snap on its own for 2.5 seconds to drop a red canister, then run.')+
-      hrow('act','Gadget','Gadget','Fires the gadget Iso is carrying (thruster, tractor, stasis…) in the direction you press next.')+
-      hrow('key','⚙','Lay out the keys','Controls (⚙) moves and resizes the keys, and sets swiping, vibration and full screen.')+
-      hrow('key','⌨','With a keyboard',kb)
+    {scene:'meet',title:"Hi! I'm "+me+'!',line:'Tap an arrow and I walk that way.'},
+    {scene:'dig',title:'I dig by walking!',line:x?'Walk into the pine and it goes away.':'Walk into the soft stuff and it goes away.'},
+    {scene:'cans',title:x?'Grab the gifts!':'Grab the green cans!',line:'The number shows how many are left.',count:true},
+    {scene:'snap',title:'Grab without moving!',line:(coarse?'Hold the big button':'Hold Space')+' and tap an arrow: I reach out and grab.',count:true},
+    {scene:'door',title:x?'Zero? Light the tree!':'Zero? Door open!',line:x?'When the number is 0, walk to the tree.':'When the number is 0, walk into the door.',count:true},
+    {scene:'lead',title:x?'Snowballs fall!':'Big balls fall!',line:'Never stand under one.'},
+    {scene:'spark',title:x?'Snowball on a spark!':'Ball on a star!',line:x?'Push a snowball onto the spark: POP, it turns into gifts!':'Push a ball onto the yellow star: POP, it turns into cans!',count:true},
+    {scene:'gamma',title:x?'Snowflakes bite!':'Wiggly ones bite!',line:'Stay far away from them.'},
+    {scene:'bomb',title:x?'Red letters go BOOM!':'Red cans go BOOM!',line:(coarse?'Hold the big button':'Hold Space')+' till the ring is full, then run away. It blows a hole!',count:true},
+    {title:'How to steer',rows:(coarse?
+      hrow('key','▲','The arrows','Tap one and I walk. Hold it and I keep going.')+
+      hrow('act','Snap · Drop','The big button','Hold it and tap an arrow: I grab without walking.')
       :
-      hrow('key','▲','Move',"<kbd>Arrows</kbd> or <kbd>WASD</kbd>. Keep a key held to keep walking.")+
-      hrow('key','␣','Snap and drop','<kbd>Space</kbd> + a direction takes the next tile without stepping into it. Hold <kbd>Space</kbd> on its own for 2.5 seconds to drop a red canister, then run.')+
-      hrow('key','⇧','Gadget','<kbd>Shift</kbd> + a direction fires the gadget Iso is carrying (thruster, tractor, stasis…).')+
-      hrow('key','P','Pause, restart, next','<kbd>P</kbd> or <kbd>Esc</kbd> pauses · <kbd>R</kbd> restarts the floor · <kbd>Enter</kbd> plays the next uncleared level · <kbd>M</kbd> toggles the music.'))},
-    {title:'Stars, streaks and more',rows:
-      hrow('star','★','Three stars a floor','Cleared · Fast, under the par time · Chain, five Pellets in a row. Clear floors without dying to build a streak.')+
-      hrow('key','5','Floors open five at a time','Each category starts with its first five floors open; clearing one opens the next.')+
-      hrow('legend','hot','Meltdown','An endless run against a heating core, from the Meltdown tab. How far can you get?')+
-      hrow('legend','thruster','Components','The Components tab shows every part in the plant, what it does and the first floor it appears on.')}
+      hrow('key','▲','Arrow keys','Press one and I walk. Hold it and I keep going.')+
+      hrow('key','␣','Space','Hold Space and press an arrow: I grab without walking.'))+
+      hrow('key','?','Need me again?','Find How to play in the menu, the pause screen or Controls (⚙).')}
   ];
 }
 function renderHelp(){
+  helpSceneStop();
   const pages=helpPages(),n=pages.length;
   helpPage=Math.max(0,Math.min(helpPage,n-1));
   const p=pages[helpPage],last=helpPage===n-1;
   screen='help';clearInput();
-  ov.innerHTML='<div class="panel help" role="dialog" aria-label="How to play"><div class="helphead"><small>How to play · '+(helpPage+1)+'/'+n+'</small><h2>'+p.title+'</h2></div>'+
-    '<div class="helpbody">'+p.rows+(last?'<div class="helpfoot">Open this guide again any time: from the menu, the pause screen or Controls (⚙).</div>':'')+'</div>'+
+  const body=p.scene?
+    '<div class="hscene"><div class="hwrap"><canvas class="hcv" aria-label="'+esc(p.title)+'"></canvas><div class="hwon" hidden>⭐ Yay!</div></div>'+
+    '<div class="hkeys" aria-hidden="true"><span class="hkey" data-k="3">◀</span><span class="hkey" data-k="0">▲</span><span class="hkey" data-k="2">▼</span><span class="hkey" data-k="1">▶</span><span class="hkey act" data-k="act">'+(coarse?'Snap · Drop':'␣ Space')+'</span></div>'+
+    (p.count?'<div class="hcount"><canvas data-legend="pellet" width="80" height="80"></canvas><b class="hnum">'+HELP_SCENES[p.scene].need+'</b></div>':'')+
+    '<p class="hline">'+p.line+'</p></div>'
+    :'<div class="helpbody">'+p.rows+'</div>';
+  ov.innerHTML='<div class="panel help" role="dialog" aria-label="How to play"><div class="helphead"><small>How to play · '+(helpPage+1)+'/'+n+'</small><h2>'+p.title+'</h2></div>'+body+
     '<div class="helpnav"><span class="dots">'+pages.map(function(_,i){return '<i'+(i===helpPage?' class="on"':'')+'></i>';}).join('')+'</span>'+
     '<span class="row">'+(last?'':'<button type="button" class="btn" data-act="helpdone">Skip</button>')+(helpPage>0?'<button type="button" class="btn" data-act="helpback">Back</button>':'')+
     '<button type="button" class="btn primary" data-act="'+(last?'helpdone':'helpnext')+'">'+(last?'Let\'s play':'Next')+'</button></span></div></div>';
   ov.hidden=false;ov.scrollTop=0;drawLegend();
+  if(p.scene) helpSceneStart(p.scene,ov.querySelector('.hcv'),ov.querySelector('.hnum'),ov.querySelector('.hwon'),ov.querySelector('.hkeys'));
   const f=ov.querySelector('.btn.primary');if(f) try{f.focus({preventScroll:true});}catch(e){}
 }
 // from is where to go back to: 'play' (a game paused quietly under the Controls sheet), 'pause' (the
 // pause dialog), or anything else for the menu.
 function showHelp(from){helpFrom=from||'menu';helpPage=0;hidePadSheet();renderHelp();}
 function closeHelp(){
+  helpSceneStop();
   const from=helpFrom;helpFrom='';
   if(!save.seenHelp){save.seenHelp=true;persist();}
   if(from==='play'&&game&&game.state==='play') resume();

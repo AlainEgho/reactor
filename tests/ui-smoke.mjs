@@ -41,10 +41,22 @@ await page.locator('#nameIn').fill('Tester');
 await page.locator('#loginForm button').click();
 // The first sign-in ever opens the How to play guide; its pages turn, and Escape leaves it for the menu.
 await page.locator('.panel.help').waitFor();
-check(/How to play · 1\/4/.test(await page.locator('.helphead small').textContent()), 'the first sign-in opens the How to play guide');
-check(await page.locator('.help canvas[data-legend]').count() >= 4, 'the guide shows the parts it talks about');
-await page.locator('[data-act="helpnext"]').click();
-check(/2\/4/.test(await page.locator('.helphead small').textContent()), 'Next turns the guide to its second page');
+check(/How to play · 1\/10/.test(await page.locator('.helphead small').textContent()), 'the first sign-in opens the How to play guide');
+// Each page runs a little scene with the game's engine; the picture changes as Iso moves.
+const sceneSig = () => page.$eval('.hcv', c => { const d = c.getContext('2d').getImageData(0, 0, c.width, c.height).data; let s = 0; for (let i = 0; i < d.length; i += 997) s = (s * 31 + d[i]) >>> 0; return s; });
+await page.waitForTimeout(300);
+const sig0 = await sceneSig(); await page.waitForTimeout(700);
+check(sig0 !== await sceneSig(), 'the guide\'s first page is a live scene that moves');
+await page.locator('[data-act="helpnext"]').click(); await page.locator('[data-act="helpnext"]').click();
+await page.waitForTimeout(150);
+check(/3\/10/.test(await page.locator('.helphead small').textContent()) && await page.locator('.hnum').textContent() === '3', 'the third page counts the cans left to grab');
+await page.waitForTimeout(1400);
+check(await page.locator('.hnum').textContent() === '0', 'and the count reaches 0 as Iso grabs them');
+// The snap page: Iso grabs the cans around him without leaving his cell, and the grab key lights up.
+await page.locator('[data-act="helpnext"]').click(); await page.waitForTimeout(1300);
+const snapG = await page.evaluate(() => { const g = window.__fission().help(); return { x: g.m.x, y: g.m.y, got: g.got }; });
+check(snapG.x === 4 && snapG.y === 2 && snapG.got >= 3, 'the snap page grabs cans without Iso moving (' + JSON.stringify(snapG) + ')');
+check(await page.locator('.hkeys .hkey.act').count() === 1, 'every scene shows the key strip with the grab key');
 await page.keyboard.press('Escape');
 await page.locator('.cat').first().waitFor();
 check(/Signed in as Tester/.test(await page.locator('.mark .who').textContent()), 'the menu greets the signed-in player');
@@ -52,7 +64,7 @@ check(await page.locator('.cat').count() === 17, 'the entrance shows seventeen c
 // The guide opens again from the menu, and its last page ends on Let's play.
 await page.locator('.menubar [data-act="help"]').click();
 await page.locator('.panel.help').waitFor();
-for (let i = 0; i < 3; i++) await page.locator('[data-act="helpnext"]').click();
+for (let i = 0; i < 9; i++) await page.locator('[data-act="helpnext"]').click();
 check(/Let's play/.test(await page.locator('.helpnav .primary').textContent()), 'the guide reopens from the menu and ends on Let\'s play');
 await page.locator('.helpnav .primary').click();
 await page.locator('.cat').first().waitFor();

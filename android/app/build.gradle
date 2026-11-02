@@ -1,6 +1,21 @@
 apply plugin: 'com.android.application'
 
+// Release signing: android/key.properties (kept out of git) names the Play upload keystore.
+def keyProps = new Properties()
+def keyPropsFile = rootProject.file('key.properties')
+if (keyPropsFile.exists()) keyPropsFile.withInputStream { keyProps.load(it) }
+
 android {
+    signingConfigs {
+        if (keyProps['storeFile']) {
+            release {
+                storeFile file(keyProps['storeFile'])
+                storePassword keyProps['storePassword']
+                keyAlias keyProps['keyAlias']
+                keyPassword keyProps['keyPassword']
+            }
+        }
+    }
     namespace = "io.github.alainegho.fission"
     compileSdk = rootProject.ext.compileSdkVersion
     defaultConfig {
@@ -20,6 +35,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (keyProps['storeFile']) signingConfig signingConfigs.release
         }
     }
 }
