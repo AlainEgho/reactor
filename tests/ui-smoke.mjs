@@ -39,12 +39,27 @@ await page.locator('#loginForm button').click();
 check(/Enter a name/.test(await page.locator('.login .err').textContent()), 'signing in without a name is refused');
 await page.locator('#nameIn').fill('Tester');
 await page.locator('#loginForm button').click();
+// The first sign-in ever opens the How to play guide; its pages turn, and Escape leaves it for the menu.
+await page.locator('.panel.help').waitFor();
+check(/How to play · 1\/4/.test(await page.locator('.helphead small').textContent()), 'the first sign-in opens the How to play guide');
+check(await page.locator('.help canvas[data-legend]').count() >= 4, 'the guide shows the parts it talks about');
+await page.locator('[data-act="helpnext"]').click();
+check(/2\/4/.test(await page.locator('.helphead small').textContent()), 'Next turns the guide to its second page');
+await page.keyboard.press('Escape');
 await page.locator('.cat').first().waitFor();
 check(/Signed in as Tester/.test(await page.locator('.mark .who').textContent()), 'the menu greets the signed-in player');
 check(await page.locator('.cat').count() === 17, 'the entrance shows seventeen categories');
+// The guide opens again from the menu, and its last page ends on Let's play.
+await page.locator('.menubar [data-act="help"]').click();
+await page.locator('.panel.help').waitFor();
+for (let i = 0; i < 3; i++) await page.locator('[data-act="helpnext"]').click();
+check(/Let's play/.test(await page.locator('.helpnav .primary').textContent()), 'the guide reopens from the menu and ends on Let\'s play');
+await page.locator('.helpnav .primary').click();
+await page.locator('.cat').first().waitFor();
 await page.screenshot({ path: join(shots, 'ui-menu.png') });
 await page.locator('.cat[data-cat="5"]').click();
 check(await page.locator('.lv').count() === 25 && /Physics Wing/.test(await page.locator('.cathead h3').textContent()), 'the Physics Wing opens on its 25 levels');
+check(await page.locator('.cathead .backbtn').count() === 1, 'an open category has a back button to the categories');
 // A category's first five levels are open; the rest open one at a time as the one before is cleared.
 check(await page.locator('.lv:not(.locked)').count() === 5 && await page.locator('.lv[data-lv="145"]:not(.locked)').count() === 1 && await page.locator('.lv[data-lv="146"].locked[disabled]').count() === 1 && await page.locator('.lv.locked[disabled]').count() === 20, 'the first five Physics levels are open; the other 20 are locked');
 await page.screenshot({ path: join(shots, 'ui-category.png') });
