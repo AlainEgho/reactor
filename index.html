@@ -428,6 +428,25 @@ body.xmas #bAct::before{font-size:22px}
 </div>
 
 <script>
+// The iOS and Android apps always show the on-screen keys, even when the device also has a mouse,
+// trackpad or keyboard (an iPad with a Magic Keyboard, a Chromebook, an emulator report a fine
+// pointer). tools/www.mjs stamps data-app on <html> in the app copy; the Capacitor bridge is the
+// fallback. Each CSS rule written for (pointer:coarse) gets a twin condition that always matches,
+// and the game's coarse flag below reads FISSION_APP, so haptics and the Controls sheet come too.
+window.FISSION_APP=document.documentElement.hasAttribute('data-app')||
+  !!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform());
+if(window.FISSION_APP){
+  const COARSE=/\(\s*pointer\s*:\s*coarse\s*\)/;
+  for(const sheet of document.styleSheets){
+    let rules;try{rules=sheet.cssRules;}catch(e){continue;}
+    for(const r of rules){
+      if(!r.media||!r.conditionText) continue;
+      for(const m of Array.from(r.media)) if(COARSE.test(m)) r.media.appendMedium(m.replace(COARSE,'all'));
+    }
+  }
+}
+</script>
+<script>
 // ENGINE-START
 const EMPTY=0,BASE=1,HARD=2,RAM=3,ZONK=4,INFO=5,MURPHY=6,EXIT=7,SNIK=8,ELEC=9,BUG=10,ORANGE=11,YELLOW=12,RED=13,TERM=14,PORT=15,EXPL=16,BOMB=17,INVIS=18;
 // Upgrade tiles (19+) exist only in Fission levels; a classic level file cannot contain them.
@@ -15958,7 +15977,7 @@ let frameNo=0;
 let shownScore=0; // the score the HUD shows, rolling toward the real one
 let dangerLvl=0;  // 0..1, how close the nearest hunter is to Iso this tick
 // Haptics: short pulses on a touch device, throttled for digging, never under reduced motion.
-const coarse=!!(window.matchMedia&&matchMedia('(pointer:coarse)').matches);
+const coarse=!!window.FISSION_APP||!!(window.matchMedia&&matchMedia('(pointer:coarse)').matches);
 let lastBuzz=0;
 function buzz(p){if(reduceMotion||!coarse||!navigator.vibrate||(padPrefs&&!padPrefs.buzz)) return;try{navigator.vibrate(p);}catch(e){}}
 // The HUD's score rolls up to the real score; the rest of the HUD is written per tick in hud().
