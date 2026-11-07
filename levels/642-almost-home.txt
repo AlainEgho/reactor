@@ -1,0 +1,14 @@
+name: Almost Home
+need: 7
+hint: Almost Home. Two walls overlap, with a gap at each end. Push a Lead ball sideways into the open, or leave it where it is. Take all 7 Pellets and step on the X.
+---
+################
+#.O..*........X#
+#############..#
+#*..........*..#
+#...#.....*....#
+#......*.......#
+#..#############
+#.*............#
+#@*........O  ##
+################

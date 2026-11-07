@@ -1,0 +1,28 @@
+name: Ziggurat
+need: 40
+hint: 25 Gammas loose in the open, orange canisters, airlocks in the walls and wide open space. Every Pellet counts.
+---
+############################################################
+#....  .RR.S S S S                         .  ....  .. .*.*#
+#...  S.. ..S S                     .     .   . ....   ....#
+#..X.  .R... S                              .   ....  S*   #
+# ... ..   .S                            .  .   ..... ... .#
+#S  ..R  ...                                  ......   S * #
+#  .....  ..                              .  .  . .. ..S.*.#
+#. ...R SRR                              .  . . . ..  .*.*.#
+#. ..*.R ..  .  ..R . R ..     RR R  R     . .  R RR. R....#
+#  ..... .RR   .RR .       . RR      R R RR   ..R. .. S  .*#
+#.. .. .. ...R R  R...R RR  R    R R.R      R.RR  ...R R..*#
+# ..... S  R R .R    ..RRR .             RSR  R  .. .RRR R*#
+# ..    ....R........RR...  ..<#   .*#  #O#.##R    . .. .#.#
+#*... ..  S.#....#.#.O*#...S..  #  .O# .*..SR  ##O#O.......#
+#.... .. . ...#.R.....O..#...R#  # S#. R*.  # . ..O#.O.. R##
+#.    . .   .O....O.#.... . R.  #*#R#...#R    # ##....# #.*#
+#   ...... ..***O.OOOO#O.#R #.^ R..RO...OROR.R .OO.RORRR.O.#
+# .. . .. ..RO#R#OOOOOOO...R.R    .R.RR.R<..RRRORR..OR.....#
+#  .*.S   ..RR***O*ORR#*...R.. R SR^.OR*RR ...ORRO.....RR.R#
+#  ... #  ...O#OOOO*OOR....R .R v..OO.R...RR .R.vRSR. R....#
+#     #.*. .OOO*OO*O*O*O.O*#.OR ....R. ..  ..RR.    ....@RR#
+#. ..  R.*.#*O*O*OOO*OO*ROROO#R.*... ..R .. .O.   S  R....R#
+# .  . R#..*O*OOOOO**OO*O*R#RR**R..*< .... .R... R <  .....#
+############################################################

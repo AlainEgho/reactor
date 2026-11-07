@@ -1,0 +1,12 @@
+name: Marbles
+need: 3
+hint: Marbles. A few pillars stand in the room. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#......*..X#
+#..#.......#
+#...#..*#..#
+#..#.##....#
+#.......*..#
+#@.........#
+############

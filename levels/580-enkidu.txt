@@ -1,0 +1,28 @@
+name: Enkidu
+need: 34
+hint: Lead everywhere. Few Pellets, and each one is guarded.
+---
+############################################################
+#OOO.O..O.O...O.O.O.O*...  .OR..RO.O.OO..RR.......*O..   .O#
+#.....*R..OOO.RO.O.R....O..O...*O...O....*OOO.O..R....R ROX#
+#O.....OR...O...OR.....RR*O...RO.O.OO.RO..*.R......O.ROOOO.#
+#R.OR*O*...RR.R.RROROOOR....#..O..O.OR..RR.*.RORRR.OO..R..R#
+#O..ROROROO...#OO*O#ORO.R...R...RRRROR.O.R.R#R.....OOR.R.R #
+#OR....#OR..O..O..ROROR*R.ROO.#.R.......OROR.OR..R.#R..R.R #
+#.... R..R.RRROORO..OO.RRR*..ROOR..R.RO..#.RO...ORO.R. R.R #
+#OOO. .... .*R......... ..O.ROOO*R..RO.O...O...O....O. R...#
+#O.O. ..R....O. .RO.O..R...R....OO..*R....O...O...RO*.R.R  #
+#.*.....OO.RO....O...OR.O..ORO.RO..OO....O....OR.ORO.O. R.R#
+#.OO...OO.ROOO.R....R..O..O.OOR........R...R.R..OOR.O..RRR.#
+#..OO..RO*R.*.ORRRRO.R..O.....RO...O.....R.#O.OR..O.OOR R .#
+#RORR..OR.O.O.....R.O.#RR.RR. ...OR........R..ROOR...RR ..R#
+#O*..OR.O..#R.R.# ..OO...OORR.RR.R...RRRR.O.O.R.ROOR.OR. ..#
+#....RORO.R.RO....RO.O.R.#.R..O. .#.R*..#..*RR..#..ORR...R.#
+#R. .O.ROO..RR..RR...R...*..RROR..*.R.RRR.ORR.RRR.R..O. R  #
+#...RR.OR.RR.O....O...ORRROORO.R...O....O...ROROR.@OR.R....#
+#R..OOR.R.R.OR.R.ORR.OOORRO...OR..OR...RRR....O.O*.OROR..R.#
+#.OO.O.....R.R.O.RRR*RR....R.ORR.R.R.....R  R...R.R*.R*R..R#
+#........O..OO.....O.....O.........OO......O..O........*...#
+#.........OO..OO.O......O.O..........O......O.........**.*O#
+#....O.O.O......OO.O..OO...O.OOO.O........O..O.O.......*O.O#
+############################################################

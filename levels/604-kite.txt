@@ -1,0 +1,12 @@
+name: Kite
+need: 3
+hint: Kite. One wall crosses the room, with a gap at the right. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#........*X#
+#..........#
+#.....*....#
+#.#######..#
+#.#.......*#
+#@.........#
+############

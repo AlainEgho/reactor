@@ -1,0 +1,14 @@
+name: Extra Bite
+need: 6
+hint: Extra Bite. Short walls hang down from the top. The Lead ball sits on the wall, so it stays put. Walk around it, take all 6 Pellets, and step on the X.
+---
+###############
+#..#*.#..#...X#
+#..#..#..#.*..#
+#.............#
+#...*.........#
+#....#*.......#
+#......*......#
+#.......*.....#
+#@........O  ##
+###############

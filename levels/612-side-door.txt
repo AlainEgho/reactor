@@ -1,0 +1,13 @@
+name: Side Door
+need: 4
+hint: Side Door. Two walls overlap, with a gap at each end. The Lead ball sits on the wall, so it stays put. Walk around it, take all 4 Pellets, and step on the X.
+---
+#############
+#..*.......X#
+##########..#
+#....*......#
+#.#....*....#
+#..##########
+#.....*.....#
+#@......O  ##
+#############

@@ -1,0 +1,28 @@
+name: Obelisk
+need: 56
+hint: 17 Gammas loose in the open, airlocks in the walls and wide open space. Every Pellet counts.
+---
+############################################################
+#R  RR R  R       R#  R ##R####R####   S # R R  R   R      #
+#R  R   R      R R.   # ############ R#R R.         R   RRR#
+# S     RR R. RR R .R . #+R#.+R##### #RR  R R R  RR.    R .#
+# RRSR^ RRRR R RRRRR  SR     .R # .*.R   R  RRRRRR  R    R #
+#   RRR R. R.  R   # # RRR RR .*X#R.RRR    RR .+RRR RRR.RR #
+#R  R  R  R .  RR R R  ##  RR ###   R## R RR . R   R RR .  #
+#R  R R    RRR. R R # RR# R #. # # RR . +RR       RR.   RR #
+#RR   RR R ..RR   #    .**#*####+  #R. R. R  R RRSRR R.  RR#
+#RR   R   . RRRR RSR.# R**#*.  .*.+.   #  RR. RR .RR.R RR  #
+#R  R RRR  RR . +  R ##R###.## #.# #RR R#.R  .RRR +R  R    #
+#   RR RRR..R.R RS R RR.*#****##+... #R . R  SR S . R   R R#
+#R R   RRRR  . RR R   .R.#...##R#*##.RRRR   RRR R  .R . R R#
+#R.  R<RRR .RRRR  # SR+R**. .*R .*#*. R   R . R.   RRR RR  #
+#  R .RR..  RRRR R S R.R*+R ##.#R###. R R  R  R+.S RRR + R #
+# .  RR@.R RR R    # + ...R #***R#   R  RR .RRR.R  RRR  RS #
+#.RR RR..R  ..RRRSR#R RR #*#..#.R#  R R RRR RR    R  RR RR #
+#+  R.RR.. R  RRR   R  .#****R#  ##*.   #RR RR   R R RR  R #
+#R   . R. .RR R   #R #R.**RR#*.+ #R.. R   R R .R R . R   RR#
+#   R .  RR R R RS  S. RR*.**##  +R#RRRRRRR   RRRRRR+    RR#
+# R RSRR  .  R  RR# # RR#*#*##******.R ##  R  R R R R   RR #
+#.R      R R      R   . R##*#*#.**#*. .                  . #
+# R   R     .RR     R#  #R#*#******#R.RR #RR  RRR R R  R R #
+############################################################

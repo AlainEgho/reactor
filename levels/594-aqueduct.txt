@@ -1,0 +1,28 @@
+name: Aqueduct
+need: 76
+hint: Lead everywhere. Every Pellet counts.
+---
+############################################################
+#.*O.....OOOO*..*O.O.O.O.O.O.O..O.O.**.O*O......O.....*OO*O#
+#OOOO*.OO..O..OOO.OO.OO..OO...OO...OOOO.O.OO.....*...O..*.*#
+#*.....O...O.OOOO........OOO..O....O....OOO.......O.......O#
+#RO*R RO..OR...OROOOO*..OROORORO. ROR. .RO.R. .........R..O#
+#..O.O....*O. .R...R.O.RO...R*O.O......ROORO..RR.O.RROOO.RR#
+#.*.O*RROO...RRR .O.RR**......O...RO.RO...R.R. ..R.*.R.O..O#
+#*.R..R....R .R. ....R*RROOR.R.R.RR..RR.  .*. . .R.R......O#
+#.*..RRO..*..RO......O..RRO. .R.  .O..OR.R.R.R...OOO.R.RRO.#
+#O*.O.**......R..OOORR**R.ORORO..R.*.....RR.OOO..R.O. .O*..#
+#RR.O.OO..R..RO.ROR.RO......ORROR...R.R... R.RRO. .OR...R..#
+#O**R.O..*RR....RRR..*.R..O..OORR. .OOOOOR .O......OOOR.O.O#
+#O..R.RR...O.ORR.OOO..RO..O.R...R....R.OR...*OR. .....O...R#
+#R....O.X.*...*.*OR.. ROO..R.O.R..O....OO.**.O.......RR..O.#
+#.RO.OO.*OR.R**RR.ORR....R....O...ORR..RO........*R.R..OO..#
+#.O..ROOO...R*OO....O. R..RRORRRR.....ORR.*O*R.RRROOO.O...O#
+#.OO......*O..RRR. .R...O..R.R...R.R.O...R*RRR..*R.O.....R.#
+#....R..*RORO..RO....RR.*O..OO.O....OO.RO.OR***O.RRO*R.....#
+#..RR.*.*R.*O..O....*O.RORRR*ORO.RRO.R......OR..O.OO...R..R#
+#*O.O.R.R..R.R...RROROOOR....O...O.RRRR.OOO.O.R*OR..R.R..R.#
+#O....*..OOO.O.OO...OOOOO.O....OOO...O*OOOOO..O........OO@.#
+#.O...*O*OOO....O..O.OO...... .OO...O.**...O...O......O...O#
+#.O....**OOO. ..O.O..OO...O.....O. ..*O.O.OO...O........OO.#
+############################################################

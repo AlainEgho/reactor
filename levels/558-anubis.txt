@@ -1,0 +1,28 @@
+name: Anubis
+need: 14
+hint: 84 Gammas loose in the open, 18 red canisters and Cask to blast and 30 airlocks. Few Pellets, and each one is guarded.
+---
+############################################################
+#SRRS       #R##RR###R#R+ .d..RR+R### ++R# ####.#S .#.S  #R#
+# .   S     # ##RRR##RR#d.d.. #R+  .. R#R  RR. .S #  #  ####
+#S S S S    +.RR+ ##RRR..R. ##.#..+ R#R#R  #    . SS  #S   #
+# S S S      .+.+RRRR#... . .# .     RR RR  . R SR S SSSSS #
+#S S S      #..# .T .RR.RRRR. . .R  RRR .  R.   SSRSSS.SS###
+# R S       .+RR#RR. ....#R. # . R R R.    RRR  SS#S.SR SS##
+# R  R      ##R##RRR.#.#.# ....         . R. #. SRSSSS  SS.#
+# . ..  ...O#RT#+..+ ## .   .R+R  RRR R R.  .. R  R . #SS S#
+#O.  .O.  .... .R#B.R#R.R. ... .  RRRRR R   RS.*.  R  R    #
+#OO. .O.OOO.##.+#R  #R+. + ##RR  R  RRR RR  R ..S  R  #RS. #
+#....O......R#+RR#.R#R##R R#.RR*RRR+. RR.   + RR      S   .#
+#ddOOROOOOOO#R## . R. R#  R#......   R... SSSSR R S   .R.R #
+#OOdOOOOOOOOR#R+. .. .R# ##R.R R. R R.. S  R .R.   RR   #. #
+#OOOOOOOOOOORR#.+RRR RRR  .RSR R+R.  .R     SSSR    RR   # #
+#ROO+#OOOOOO##R####RR#R#+R   # R R. . ..R    SS    R.S+  .*#
+#OOOdOOOOOOO. .##..R#RRR R  R#RRR .   .R . S.SS   S   R S..#
+#dOOOdOOOOOORR+*## RR# R  . R#     .  .R SR  RR R .S   S #R#
+#ROOOROOOOOO...##+..d .  R.  R  . R..R.R    R.  R .SS S   ##
+#OdOR.OOOOOOR#R#R#....#R. # R .R .RR.R .S ..R R.    SS##S.R#
+#*O*OOOOOOO*R#RRRRR RddR### .+ RR  R.  ..R...... .#  R#  . #
+#R*RdOO*O**O.. RRX..dd.R  . # .. .RR ... ......  #.R.#.# # #
+#OOd+.OO**OO##RRR .d..RR###.#. .R RR.*.   ..@..# . #  .   ##
+############################################################

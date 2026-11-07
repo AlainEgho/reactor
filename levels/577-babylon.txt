@@ -1,0 +1,28 @@
+name: Babylon
+need: 18
+hint: Orange canisters. Few Pellets, and each one is guarded.
+---
+############################################################
+#O.OO*.OR..O......R...RR  R.R.RR..Oooo.o.o#RRoRRR.oRooo.oRR#
+#O.O...O.O........R.R.........O.oR.R#o#R#RRRoo##Ro.o#oo.o.##
+#......RR..........R*RO...OR........oR#RR#ooo###R.#.R#.R.oo#
+#R..OR..R....O..O.O...ROO.OOR......R.R.....ORo.RRo.oRR..RRR#
+#O....R....O.....O.O.*R.R..R.O.........R.RRo*oORRoRoRRoRRRR#
+#O...R.....O.......R.R.O.R*..OO..R........RRRoOR..R.oR.Ro.R#
+#.R.R.R..R..OO..OO..OO.O....O...RRO..RRR..R..R.RRRR.o..RoR.#
+#...O.o....R..RR.oRRO..R..RROR.R.R..Oo. R. R.O....R........#
+#.........R.ORR..R...OO.RRR.......R.O......R...R.R.........#
+#.....R.R..R...RR...RRR..O.O.RRoR........ ...ORO...........#
+#..O....R..R..O..RR.R*R...OR*RR.R.RR . ....RO.RO...R.......#
+#RR.RR..OOR...R....RR.R..R.R...R....R...RRRR.R.RRR*...R....#
+#R.*RR....RR..R...R........O...RORRR*RRRR......R..R.R.R.**R#
+#ORR.RRR.RR......OR.....OR....Ro..R...RR.RRR....R....R.*...#
+#.....O.R.RRO.RR.....O..ROXR.R...R.R..RR......R...R.R.RR..R#
+#.........OO.R........RR....O..O.R......RR*R...R...........#
+#O.OO......O..RO.R...O...R...RR.R.R..R..R*......*..R...R...#
+#...O.OO...........R..O...R.O..R...RR.....*.....RR*..R..R..#
+#.O.........R..O.OR..R....RRR.ORO...RR.RRRRR...o..RR...R...#
+#..............R..O....RO.oR...........RR....R.R..o.......o#
+#...oO....O...R.o..R.ORO..R.ORR@..R...o..........R.........#
+#..............R...O...Oo....O.....R............R..........#
+############################################################

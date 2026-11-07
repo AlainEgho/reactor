@@ -1,0 +1,28 @@
+name: Rosetta
+need: 1
+hint: Red canisters and Cask packed wall to wall. Few Pellets, and each one is guarded.
+---
+############################################################
+#R..oRR..R.RR....R......R..R..R..R..R..R.RR..R...R.....RR..#
+#..R....R..RRRRR....RRR.........RRR.......RR........R...R..#
+#R..RR..RR.........R..RR..RRRR......R.RR...R..R........d...#
+#R.R..R..RRR.RR..R...R.RRRR..R..R.R.R......R.RRR...R....RR.#
+#..R....R......R..R.....R.RR.R.RR....R....R.RR.RR....RRRR..#
+#.R.R...R..R.R....R.RRR...........RR.RR.R...RR..R.RR..R.RR.#
+#R...R....R.R.R.R...R..R.R.R.R......RR.R.......R......R.R..#
+#.RR...R........R.RR.R...R..R.R.R....R...RR..RRR.RR.R...R..#
+#.R....RRR.RR.R.RR......RR..R....R...RRRRR.R..RRRR.R..RRR.R#
+#..R.....RR.RR..RR.RRRR...R.RRRR..RRRRR......RRRRR.R.....RR#
+#R.RR...R...RR..R.RR..R.R.R....R.RR..RRR.RR..R......R..R..R#
+#R..R.RR.R.R..RRR..RR.RRRR......RRRR.R..R.......RRRR...R..R#
+#..RR.R..R...R.R...RR.....RRR.R...R....RRRR...R....R..RRRRR#
+#.R.R..R.........RRR.R..RR.RR.....R...RRR...RRR.....R......#
+#..........R.RR.R.R..RR.RR......RR....R...R....R...RR.R.R..#
+#.RR...R......R.............R.R..RRR.....RR.RR.RRR....RR..R#
+#RR.R..RRR.RRRR...RRR...R....R.........RR.....R.RRR.RR..R.R#
+#R...*R..RR.RRR.R.RR..RRR.R...R..R.RRR..RRR.R...R....RR....#
+#.R.....RR....RR.RRRR...RRRRRRR..RR..R.RRRR..RRRR.RR.R...R.#
+#@R.....RRR....R.........R..RRRRR......RRR..RR...RR....X.R.#
+#.R..RR....RR......R..RR....R.....R...R.R...R..RR..R..RR...#
+#..O.R..R......RRR..R..RR..R......RR.R............RR....RR.#
+############################################################

@@ -1,0 +1,12 @@
+name: Sandbox
+need: 3
+hint: Sandbox. A wall stands in the middle, and the way around is at the bottom. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#...*.....X#
+#.....#....#
+#...*##....#
+#.....#....#
+#....*.....#
+#@.........#
+############

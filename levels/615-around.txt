@@ -1,0 +1,13 @@
+name: Around
+need: 4
+hint: Around. One wall crosses the room, with a gap at the left. The Lead ball sits on the wall, so it stays put. Walk around it, take all 4 Pellets, and step on the X.
+---
+#############
+#...*......X#
+#.........*.#
+#...........#
+#..########*#
+#...........#
+#...*.......#
+#@......O  ##
+#############

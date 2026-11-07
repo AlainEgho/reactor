@@ -1,0 +1,28 @@
+name: Cuneiform
+need: 103
+hint: Airlocks in the walls and Lead everywhere. A long harvest.
+---
+############################################################
+#RRRv.**.R****RR .*..R*RRRO..ORORR .R. R  .*RO.R. R*RO.OO.O#
+#R   R*.RR.R.R*RRR...*ORO.R...*.R.R.R.O.R..OR.O.R..*RO*RO.*#
+#.*..*R.  R***..R .R..R***R.*.*.O*O....*OR..OR*....RO*RR*OO#
+#...R..   RRR..RR RRR*O*OR.OOOO.RRROR .*.R .*RR.  RRRR*OO*R#
+# R R           R .*RO**RO.OOO....R.R..R. ..*OR.*ORRR*O*ROX#
+# RR .            .R.*R.RR*R**R.ORR*R.O*..R*RR..O.R.O*.RO..#
+#   .    R  R   R . R*.R....R*.R....OORR..OROO*RR.RO...**R.#
+#R  R   R R R RR .O**R. R  RR*. RRRRR.OO.R.RO.ORR ...R.*OOR#
+#R  R  R    R   R.R.RR.RR.OOOORRR.OOROO..R..*...OR.*R.OOR*R#
+#R R        R    .*.O***RO*R.RO.RORORR.. R.ROR .RR..R..ROOO#
+#R  < R RR  R RR .R*..R...*. R.....OR. ...O*..RRR .R.O.OR..#
+#      R .    RRR RO.*.  RR.R*R . R.. .R .R*R R R RR..RO..O#
+#.R..R  R   .  R RRR.R*..  R..RRRO..O. . RORO*.O.  .RRRO.OR#
+#R.^.      R .   R*.R**RO.RRO.OORR.R.. RRO.>.O...O.. .RRRO.#
+#R@RRR  R R R    .R*.OR..RRR..O.R . RRRR*.R.R..>.ROR RRR...#
+#....R ROOO.RR R.O...R*.R .O.... R .OR.OROO. .*R.RO.R. . . #
+#RRO..O..R..   .OORRRR**.R.RRROR^RR....ORORR R....OOR.*R  R#
+#>O.RR.R .O.R R.O.R ..**RR.*.RRO*. RR .RR*<OROR.R.*.R...RR #
+#...R    .O.R R.O. RRR.RR*.R*..R.*<R...........R ..R    R  #
+#O..OO.OOO.OROO.O.*.. .OR*OO.R..RORRRRR ..    RR.O.RRR     #
+#.R.ORO.O.OOOO..OO.RR..R.O*R..OO...*O. .. RRR   RORRRROR R #
+#  R...OOO.OO..ORO..OR  .R*RR.*R. ROOOR..O.O.RR RO. .O.. RR#
+############################################################

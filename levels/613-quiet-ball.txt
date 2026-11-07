@@ -1,0 +1,13 @@
+name: Quiet Ball
+need: 4
+hint: Quiet Ball. Short walls hang down from the top. The Lead ball sits on the wall, so it stays put. Walk around it, take all 4 Pellets, and step on the X.
+---
+#############
+#*.#..#..#.X#
+#..#..#..#..#
+#..*........#
+#......*....#
+#..#........#
+#*..........#
+#@......O  ##
+#############

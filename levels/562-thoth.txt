@@ -1,0 +1,28 @@
+name: Thoth
+need: 124
+hint: Red canisters, orange canisters and Lead everywhere. A long harvest.
+---
+############################################################
+#..*.O..O.*.R..RO..OO.R..O.RRO...*OOOO..O.R..R*RR.R.O.*....#
+#.RR.....R.....O...*....*.*OR..*.......O..R....O.*..*..O..*#
+#O.OR...O.R..*OR*.O.R.*OR..R. .*...OOO*..OO....RORO..O.O...#
+#..*O.ROR......RR.RO*R.R*O........O.OO.O...*....oo.o.....O.#
+#..O*.RO...O.O*O.R.....RR*..O..*O........OO..O*........oooo#
+#.OO.R..*.R.*.*..*......*RO.*R..O....O**O..*.o..o...o...*o.#
+#......ooR*..ROO.R*ORRR..OO..R.OO..O..O........OoO.*Oo..O.O#
+#.*oR..R.*..OR*R.R.*.  .OO.R.R#.#OO##..#R...RRRO....OO.....#
+#..Ro....R..R...ROOOR....R.  R#..#.O*###*...OR...OO.O.*.OOO#
+#.R..R.O...OR R.RRO.>..***RR..#.**.*O*.*#o..OO..O.O.*.O.**.#
+#.R..R..R*.R...OOR..RRR*.R...RR#.#O#R.O.R.*..R*.......**...#
+#RO...*RR.....R.O..O#.d.#R#**...*O.R#R..O*O.O.O..OOO.O..O..#
+#*.O..R..R..R...R....RRR.OO#R*...R....#..#*...O....O..O...O#
+#*...O.R@.RR.*..RO.R..ORO..###*.RO.R....**O......O*..*...*.#
+#..RR..R...R..*R..R*R.OROR...#.R..R..*..RO.O*..O.**.*...O..#
+#....RR.*O..O*...O..R..*#..O...o.O..ROR..R*..*...RO......O.#
+#..R.*.o..o.....R.R*...OO..#R*....O..RORd....O..*ORRO.*..R.#
+#..RR......o.O......ROR*R.**.O....*.O...R.O.O.OO.....O.*...#
+#........o..OR.OR*O.RR*.O.#..R...*O....R*...R....**.RO.R.R.#
+#o.O....o.oRR..O.OO...O.*.R.*..*..R......O.*R....OO.....R.X#
+#o........R.....*.R..O.O..*.RRR*RO.O..*O.*OO..OO.OR.*OO....#
+#...*R..O.....R.RO*..*R..OR.RR..**R.....O..R*R.*...R.R..R..#
+############################################################

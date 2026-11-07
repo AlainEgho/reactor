@@ -1,0 +1,14 @@
+name: Long Way
+need: 6
+hint: Long Way. A few pillars stand in the room. Push a Lead ball sideways into the open, or leave it where it is. Take all 6 Pellets and step on the X.
+---
+###############
+#.O...*......X#
+#.##......*...#
+#.#........#..#
+#..#.*........#
+#.....*.......#
+#....#..*#....#
+#.........*...#
+#@........O  ##
+###############

@@ -1,0 +1,12 @@
+name: Puddles
+need: 3
+hint: Puddles. One wall crosses the room, with a gap at the left. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#.*.......X#
+#.........*#
+#..........#
+#..#######.#
+#...*......#
+#@.........#
+############

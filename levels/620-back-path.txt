@@ -1,0 +1,13 @@
+name: Back Path
+need: 5
+hint: Back Path. A few pillars stand in the room. The Lead ball sits on the wall, so it stays put. Walk around it, take all 5 Pellets, and step on the X.
+---
+##############
+#..........*X#
+#..#.........#
+#.#.*.....#..#
+#..#....*....#
+#....#..#...*#
+#............#
+#@...*...O  ##
+##############

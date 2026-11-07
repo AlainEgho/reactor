@@ -1,0 +1,12 @@
+name: Meadow
+need: 3
+hint: Meadow. A few pillars stand in the room. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#*........X#
+#..#......*#
+#.#.....#..#
+#..#.##....#
+#.*........#
+#@.........#
+############

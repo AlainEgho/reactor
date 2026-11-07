@@ -1,0 +1,12 @@
+name: Hopscotch
+need: 3
+hint: Hopscotch. Two walls overlap, with a gap at each end. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#....*....X#
+#########..#
+#......*...#
+#.##########
+#........*.#
+#@.........#
+############

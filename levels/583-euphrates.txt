@@ -1,0 +1,29 @@
+name: Euphrates
+need: 28
+hint: 78 airlocks, wide open space and gravity. Few Pellets, and each one is guarded.
+gravity: on
+---
+############################################################
+# .. .RR R  #  ##R R  R  RR R   R     RR R#R . #R RR  Rv   #
+#R.RR.R    . #  #. #  R. RR     RR  R    .  R R    R    R  #
+# R.R    R.RRRR R R R  #    R  R  R       RR      .O.R RR R#
+#  ..R.*.  .OOOO.O#. R  RR         .O.   .O.OO.   ... v   ##
+#..*.R.R.  ..OOOO#.O.#.OR  RR*.    .#.R  ......O.       v  #
+#.... R     .OO.OOO...O..   B..   R  .O..O.#.OOO.          #
+#. .. R    .OOOO#OOO....   RRR     RR.#..##O#O...          #
+#*. R*. . .*v.....O.>  #         R R  R.*..O#R.R#.*.  #  v #
+#.. ...   ...##*..#O..  R    .*.R     R..R...  R ..#       #
+# R  R      ##O#O....v       ...RRR R .OORO..OR       v*.  #
+#   .R  . .*.....O.          R R   R. .#OR...OO.      ...  #
+#R R.*R...*..# .O..           R  R    .OO.R ...v     #     #
+#R ....#*... R...O.  v  R      .O.  R.OO..  RR .*.##       #
+#R RR  ....  # .... v         R...  .<.*.   #  .*. #  v v  #
+#   R      .# R##         R    R    .RO.OR v  R...# # .*.  #
+#.  RR  R RRR*R.**.                RRR.R..   #RR# .*##... ##
+# RRR. ...RRR.R..R.   < R R      .   R R.R .#  .  .##   vv #
+#  .O.RR RORR  .    v  v              . .    .*. ###       #
+#. .R. .*...R  .                     ..**.   ..#*#    #    #
+#^ ..^O... ^^  R^^^R      ^   ^ ^ ^  ^...^ ^ ^ ^.^^^^  ^v  #
+#^X.^...  ^^      ^^^^   ^^       ^ ^^ ^      ^ ^ ^      ^^#
+#  ^.@.^^  ^^^^      ^  ^^   ^ ^^      ^   ^ ^        ^    #
+############################################################

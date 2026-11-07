@@ -194,7 +194,7 @@
     const g2 = Array.from({ length: cols }, (_, i) => i % 6 === 2 ? 'pellet' : i % 9 === 7 ? 'red' : 'graphite');
     const g0 = Array.from({ length: cols }, () => 'concrete');
     board(c, land ? [g1, g2] : [g0, g1, g2], 0, h - (land ? 2 : 3) * t, t, 0, santa);
-    badge(c, ['545', X.xmas ? 'FLOORS' : 'LEVELS'], land ? w * .93 : w * .88, land ? h * .14 : h * .075, m * .1, L);
+    badge(c, ['645', X.xmas ? 'FLOORS' : 'LEVELS'], land ? w * .93 : w * .88, land ? h * .14 : h * .075, m * .1, L);
   }
 
   function crew(c, w, h, L, X) {
@@ -221,7 +221,7 @@
   function wings(c, w, h, L, X) {
     const m = Math.min(w, h), cats = X.cats, santa = X.xmas;
     background(c, w, h, L, w * .5, h * .1);
-    bigText(c, '545 FLOORS', w * .5, h * .07, w * .17, L, { max: w * .92, ls: .04 });
+    bigText(c, '645 FLOORS', w * .5, h * .07, w * .17, L, { max: w * .92, ls: .04 });
     text(c, 'across 17 wings, each with new tricks', w * .5, h * .135, w * .042, { max: w * .9 });
     const n = 8, top = h * .175, bh = h * .06, gap = h * .011, x0 = w * .05, bw = w * .9;
     for (let i = 0; i < n; i++) {
@@ -278,7 +278,7 @@
     text(c, X.xmas ? 'Help Santa-bot find every gift!' : "Dig. Grab the fuel. Don't get squashed!", w * .64, h * .58, h * .085, { max: w * .6 });
     const parade = X.xmas ? [['pellet', 0], ['lead', 2], ['gamma', 1], ['red', 3], ['reactor', 5]] : [['pellet', 0], ['lead', 2], ['gamma', 1], ['red', 3], ['neutron', 5]];
     parade.forEach((p, i) => sticker(c, part(p[0], p[1], santa, 256), w * (.44 + i * .1), h * .82, h * .19, L, { rot: i % 2 ? 9 : -9 }));
-    badge(c, ['545', X.xmas ? 'FLOORS' : 'LEVELS'], w * .93, h * .2, h * .17, L);
+    badge(c, ['645', X.xmas ? 'FLOORS' : 'LEVELS'], w * .93, h * .2, h * .17, L);
   }
 
   // The Play Store icon: Iso on the board colour with a glow (the same as the launcher icon).

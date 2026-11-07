@@ -1,0 +1,28 @@
+name: Cleopatra
+need: 69
+hint: 10 red canisters and Cask to blast and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#.R....O.OOO.OO....O.OdO...O...#..R.#*....O..*O...O.*..*..O#
+#.*R..*O....O#.O#O....O..*....#OO. .R..*.#O..OdO.O.O.....O.#
+#..R......O...#.O.......*..O........#...R.O....*...O....X*.#
+#OO.O#..@....O#O##.R....OOO*..RO.#..OO.RRR..R.RRO...R...RR.#
+#OOOO....##O...##.OR.*...O.O....RO..R#R*.OO...R.R...R.RR.O.#
+#R.OO####..#..O..d.R*.O...OO.*#R.O..#...RO.RR.......RRR.*..#
+#OROOR#*...#..##....R..RO......R.R..#R..#..O...OR.O....*O..#
+#..*O....R.O...**O.R..O.R*..O.R.RRRR.ORR ......**.RR...R.R.#
+#.....RdROO..*O...R..RORR..R.RR.*.RR*R.R.RO.....*RRRO.O.RRO#
+#....O*.R...O.....R..ORO.R....*.R*RR.O..*.........RORR...O*#
+#....O..OO...O.O..R..O..ROR.....dORR.R*R.O...OO.OO...R*..R.#
+#RR.O.ROO..#d...OO*.ROO*R*...dRR*RRR.O..RO...OO.R....OR...R#
+#..R.R##R.*R......RO....ORRO..Rd.RR*OR.R.ORR..OR..R.O.RO.O.#
+#*....OO#R#.*O....R..RR.R...ORRORRR*.RR..R.R...*R..R.R.....#
+#...*R...O...O..O.O.RRO....O..O.R..O.R....*.....*..R.RO.OO.#
+#..O.OOR..O.RR*R#.R.R..OR*R..R..O....O.R...OOR..O.*OROR..R.#
+#....O..R.O..O*R.ORR......R..OR.O....RO.O.RO*...*..R.....OR#
+#.OO..O.#..*.R.O..RRR.RO.O..O*...RRR...R........R.OO..O....#
+#.*...#...........O.R*...RR..O.....O.O.*.RORRR...*.R*R..R..#
+#...d*..R.....O.*..*.**OO.........O...RRO...R...O..O.R....O#
+#OOO...R..O*.O....R.R......O..O........RR...ORRR..OR....O..#
+#O..*...R..O..OOO.O..ORO.O.......O...R.O..RRO.O..O..dO..ROR#
+############################################################

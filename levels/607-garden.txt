@@ -1,0 +1,12 @@
+name: Garden
+need: 4
+hint: Garden. Short walls hang down from the top. Dig the Graphite, pick up all 4 Pellets, and step on the X.
+---
+#############
+#..#..#..#.X#
+#..#..#*.#..#
+#..........*#
+#...........#
+#..*.#......#
+#@......*...#
+#############

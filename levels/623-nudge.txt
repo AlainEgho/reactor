@@ -1,0 +1,13 @@
+name: Nudge
+need: 5
+hint: Nudge. A wall stands in the middle, and the way around is at the bottom. The Lead ball sits on the wall, so it stays put. Walk around it, take all 5 Pellets, and step on the X.
+---
+##############
+#...........X#
+#.*....#.....#
+#....#.#*....#
+#......#...*.#
+#......#.....#
+#.*..........#
+#@.....*.O  ##
+##############

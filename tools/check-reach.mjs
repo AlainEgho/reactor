@@ -1,4 +1,4 @@
-// Static check for the copied-classic floors (God of War, Titans, Olympus): from the start, following
+// Static check for the copied-classic floors (God of War, Titans, Olympus, Ancient World): from the start, following
 // one-way airlocks only the way they point, can Iso reach the Reactor, and how many Pellets can he reach?
 // Cask ('R') counts as passable on a floor that has red or yellow canisters, since it can be blasted open.
 // Prints one line per floor; with --fix, lowers a need that is above what can be reached (never raises).
@@ -9,7 +9,7 @@ import { fileURLToPath } from 'node:url';
 
 const DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'levels');
 const args = process.argv.slice(2), fix = args.includes('--fix');
-const nums = args.filter(a => /^\d+$/.test(a)), [FIRST, LAST] = [+(nums[0] || 396), +(nums[1] || 545)];
+const nums = args.filter(a => /^\d+$/.test(a)), [FIRST, LAST] = [+(nums[0] || 396), +(nums[1] || 645)];
 const MASK = { '^': 1, '>': 2, 'v': 4, '<': 8, '|': 5, '-': 10, '+': 15 }, DX = [0, 1, 0, -1], DY = [-1, 0, 1, 0];
 const OPEN = ' .*dBXOoyS@eIrpNQtLh!cP/\\F,AVUJ%ZKHGqg';
 let bad = 0;

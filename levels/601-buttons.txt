@@ -1,0 +1,12 @@
+name: Buttons
+need: 3
+hint: Buttons. Short walls hang down from the top. Dig the Graphite, pick up all 3 Pellets, and step on the X.
+---
+############
+#..#..#.*#X#
+#..#..#..#.#
+#.........*#
+#..........#
+#..#....*..#
+#@.........#
+############

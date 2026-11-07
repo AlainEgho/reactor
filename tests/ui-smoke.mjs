@@ -60,7 +60,7 @@ check(await page.locator('.hkeys .hkey.act').count() === 1, 'every scene shows t
 await page.keyboard.press('Escape');
 await page.locator('.cat').first().waitFor();
 check(/Signed in as Tester/.test(await page.locator('.mark .who').textContent()), 'the menu greets the signed-in player');
-check(await page.locator('.cat').count() === 17, 'the entrance shows seventeen categories');
+check(await page.locator('.cat').count() === 19, 'the entrance shows nineteen categories');
 // The guide opens again from the menu, and its last page ends on Let's play.
 await page.locator('.menubar [data-act="help"]').click();
 await page.locator('.panel.help').waitFor();
@@ -76,9 +76,9 @@ check(await page.locator('.cathead .backbtn').count() === 1, 'an open category h
 check(await page.locator('.lv:not(.locked)').count() === 5 && await page.locator('.lv[data-lv="145"]:not(.locked)').count() === 1 && await page.locator('.lv[data-lv="146"].locked[disabled]').count() === 1 && await page.locator('.lv.locked[disabled]').count() === 20, 'the first five Physics levels are open; the other 20 are locked');
 await page.screenshot({ path: join(shots, 'ui-category.png') });
 await page.keyboard.press('Escape');
-check(await page.locator('.cat').count() === 17, 'Escape goes back to the categories');
+check(await page.locator('.cat').count() === 19, 'Escape goes back to the categories');
 const minis = await page.$$eval('.cat img.mini', els => els.filter(e => e.complete && e.naturalWidth > 0).length);
-check(minis === 17, `every category card shows a miniature (${minis})`);
+check(minis === 19, `every category card shows a miniature (${minis})`);
 // The access code opens everything (the rest of this test visits levels all over the game).
 await page.locator('#codeIn').fill('chernobyl');
 await page.locator('.code.done').waitFor();
@@ -221,7 +221,7 @@ if (dat) {
   await page.locator('#codeIn').fill('bonus');
   await page.locator('.code.done', { hasText: 'bonus floors are on' }).waitFor();
   check(await page.locator('#codeIn').count() === 0, 'with both codes in, the code field goes');
-  check(await page.locator('.cat').count() === 17 && /overtime/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'with a classic file loaded, the category cards count their bonus floors');
+  check(await page.locator('.cat').count() === 19 && /overtime/.test(await page.locator('.cat[data-cat="0"] .cmeta').textContent()), 'with a classic file loaded, the category cards count their bonus floors');
   await page.locator('.cat[data-cat="0"]').click();
   check(await page.locator('.lv:not(.bonus)').count() === 33 && await page.locator('.lv.bonus').count() === 5, 'the Fuel Hall lists its 33 levels and 5 bonus floors');
   await page.locator('.lv.bonus').first().click();

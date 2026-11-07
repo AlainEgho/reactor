@@ -1,0 +1,14 @@
+name: Follow Me
+need: 7
+hint: Follow Me. A wall stands in the middle, and the way around is at the bottom. Push a Lead ball sideways into the open, or leave it where it is. Take all 7 Pellets and step on the X.
+---
+################
+#.O*..........X#
+#.#.*...#......#
+#..#.*..#......#
+#.......#..*...#
+#.......#..*...#
+#.......#..*...#
+#.........*....#
+#@.........O  ##
+################

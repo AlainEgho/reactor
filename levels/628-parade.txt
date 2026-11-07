@@ -1,0 +1,14 @@
+name: Parade
+need: 6
+hint: Parade. One wall crosses the room, with a gap at the right. The Lead ball sits on the wall, so it stays put. Walk around it, take all 6 Pellets, and step on the X.
+---
+###############
+#..*.........X#
+#....*........#
+#.......*.....#
+#........*....#
+#.##########..#
+#......*......#
+#.......*.....#
+#@........O  ##
+###############

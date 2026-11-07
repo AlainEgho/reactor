@@ -1,0 +1,13 @@
+name: Three Paths
+need: 6
+hint: Three Paths. A few pillars stand in the room. The Lead ball sits on the wall, so it stays put. Walk around it, take all 6 Pellets, and step on the X.
+---
+###############
+#.*..........X#
+#.*#..........#
+#...#...*..#..#
+#..#.....*....#
+#....#...#*...#
+#........*....#
+#@........O  ##
+###############

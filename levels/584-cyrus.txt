@@ -1,0 +1,28 @@
+name: Cyrus
+need: 42
+hint: 43 Gammas loose in the open and 46 airlocks. Every Pellet counts.
+---
+############################################################
+#R.R.*..R.R*RR.R..R*RR.R...RR*..O.    S  S       S ...   . #
+#..*....*....R..R*.......R..OR##+. .          S    .     S #
+#.R..R.R....@..*...*R .RR.R..R..  ..          S .   .S..   #
+#R R R R RR.R.R..OR.*.R...R..R. S  O......##OO.#R #.*# .. .#
+#R.... ..RRR... .R..R.  .R*.R. .  O.##O.O.O#OO..#..*.. .*  #
+#.*R .*RRRR.. R RR. R..RRRRRRR ...O..O*#O#O#O#.   ..OR.*.. #
+#.R..R.. ...R. RRR.RRRRRX*O.RR..O##..#.#..###O. R...RO... S#
+#   R  RRR R  R. R.RRRRRR.+RRR #.+ #+ #  .O#O.*..ROO+.. RO #
+#    R  RR   R  R R.#R R*..*O.. #O.# ## #..R*... .OO*OO.R.R#
+#.RRRR  RRRRR   R . .R R.R.R..  ### ### #.ORR.R+RO....R.O*O#
+#   R .   R R R.  ..*R.RR. R .#. ##.#  # .....*O.O.R . .OOR#
+#RRRRR R*..   . . RRR.. .RRRR######.S   #*R  ..R..RRRS ..R.#
+#  RRRR... R RRRR R.  R.RR+.R..*.#   ## ##. R R   R   S    #
+#     . .  RRR    ...RR..*. RR...# ##  S*.RR  R R  RS.*.RRS#
+#     RRRR .   RRRRR..RR.R....# . ##*##...S  R*R S   .R.R  #
+#  RR RR RR R   R .R RR*.RRRO.+  R +.. R  R  S..   S SS   S#
+#R      S. RR  RR RR..R.+R*.RR  +   ++R+ R   S  S S S  S S #
+# RR.  .RR.RR . R.R ..R.R.R.+R+R<R +R+ R S  SR   S S S    S#
+#.   RR  RR  SRRR R .RR ....  +v.R ++ R.+  R R      S    S #
+#.  R+ .O.RO.R     .O. RR.R.R. +>++ ++++  R           SR. .#
+#S  R  RR....   RRRR.R.. .RR*.+ +   +  + ++   .         .*.#
+#O.R . R     R RR .+ R*. .+*RR+  + +  +  +.*RS  S      SR..#
+############################################################

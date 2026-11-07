@@ -1,0 +1,14 @@
+name: Hideout
+need: 6
+hint: Hideout. A wall stands in the middle, and the way around is at the bottom. The Lead ball sits on the wall, so it stays put. Walk around it, take all 6 Pellets, and step on the X.
+---
+###############
+#...*........X#
+#......#*.....#
+#..#...#....*.#
+#......#......#
+#.*....#......#
+#....*.#......#
+#.......*.....#
+#@........O  ##
+###############

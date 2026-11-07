@@ -1,0 +1,28 @@
+name: Hadrian
+need: 60
+hint: Lead everywhere. Every Pellet counts.
+---
+############################################################
+#OO..*..O.OO*O.OOO.OOO...O..O..O..O.*.O.O*.O.O..O...*.*.O*O#
+#.*OO...OOOOOO*OOO...O.OOO..OOO.O.OOOO.O.O.....O.....OO.*.*#
+#.OO...O..........O...O.....OO...O..*O.O........O.......O..#
+#.ORO.R..O. .  . .R. .O.O. RRO. .O.RORRO.  .R.R*..R..R....R#
+#.**.R.O...R. R...R..R.*R.O.O..RO.RR.ORO.R .RR.OR..RO...OOR#
+#OO.O.RO..RO..R.R.OROR..RO.*O..RO.O....R.  .. ..R..R.OO..RO#
+#..R.ORR....RORRO.ORO*. R.O.R.R.O.O.... .RR.R.....*...O. .O#
+#........OORORO.RROR.O........ ...R.R ...OORO. ROOO..O.R..R#
+#R.OO....O...R.O..RRR..R..RR.R....O*...OO..RO.R..OO...O...O#
+#ROROR.OR.OO..R.OR.*O*O.RR.OO.RO.OR..ROOR. .OOO...R..RR.R.O#
+#**OO.OORR........RO....OOROO.RO.... .RORR..ROR. . R ..O*..#
+#O.O.R.O.OR.*RR.*..R.. ...O.R....OR..R.R..*R*..R.R.R.......#
+#.R...R..O.O.ROO*.ROO.R.R.R.R..R..R.R.OO.RO.R*R*O..RR.RO.O.#
+#O..R.O.R....*ROO...RR....OR..O.O.R..ORO.RO.ROR..... .ROO..#
+#..O.ROO..@..*ORO. .OORO.O..RORR......O...O...*.R*O. RO.O..#
+#.O..OO...R.O.RO.. RO....OR..ORRO.O..O..OORR*O..ROO...R...R#
+#R..O*R*R*..OR......R.OOO...RR.....OO.RR.R*RO*..*R*...O...R#
+#.RR...R.R.R..RO.R*.RRR.OOO*R*....O......R*..OO*.ORRRO.....#
+#....O**.*O....R.RR.O.O..RO..R.RRRR..ROOR..ORRR....ORO....R#
+#.....OO..O*OO....OOO.OO..O..O.O.O...O...OOO.OO.......OO...#
+#.O...*OOOOOOO. ..OOO.............OOO.O.*O.OO..........XOO.#
+#O..O.*O*.OO.O........OO....O... .OOOO.***....OO.......OO..#
+############################################################

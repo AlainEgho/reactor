@@ -11,3 +11,9 @@ tests/*.png
 dat-export/
 # Capacitor copies index.html and gamedata.txt here (node tools/www.mjs); never edit it.
 www/
+# Signing keys — never push to GitHub.
+keys.zip
+keys/
+store/keys.zip.enc
+# Bulk level archive; source of truth is levels/*.txt
+levels.zip

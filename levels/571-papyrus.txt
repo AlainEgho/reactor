@@ -1,0 +1,28 @@
+name: Papyrus
+need: 87
+hint: Yellow canisters and an Initiator and Lead everywhere. Every Pellet counts.
+---
+############################################################
+#...OR....O..*O.O....O...O.OO..........*....*O..O.R. . RRR*#
+#*ORR...O..O.O......O...*.........O......O.O......R .  .R..#
+#.R.O*O.O.........O.OO....*O*...O.....OO..O.O...R.*RO.R*. R#
+#.O....*.RR.*.R.*O*RRO.RR*O..RR.R.R.RR.RO.*.RR.R.O.R****..R#
+#R...O.ROOR.R.ROOR.ORO.....OR...R.O*O.O.O..R...RRROR*.OO*OO#
+#O.RRO.ORRR**....RR.*RO.R.R..O..O..O....*.*..R.OO*OROR.R*.O#
+#O....R.R*.RO...RRR.R......R..O.R..R....O....*R.O....RR*.*.#
+#....O......O..... .O.O. Ry ...O...O.O*R*R..O..OR...O*....O#
+#*....O...OO....*..R.... .......OOO.*..RRO.*.R*O....O..O.*.#
+#.O.O.O...O........RR ...RRT.R..*...OR .OR..O.OOO..O....O..#
+#..O..O.........OOyR..R.RXy@R....O..*.R.........R...R.*.O..#
+#.....O.....OO.O.ORRRR.ORRR.RR..OROOO.*O..O.OO.........O..O#
+#*.OO.....O..O.....RRR.Ry..RR......*O*OO.O.*O.*..O.*..OO...#
+#...................O. R RR RR.........OO.O*.O*.....O.O....#
+#....O..OO.........RR... RR RR..O.R..OO.O...OO...O.*.....O.#
+#RR....ROR.O....O.R.............R.OO*...R......R..R...O.OOO#
+#R..O..*R..O*R**RR.OO..*.....OR..*RROR.O*R*.O.R...ROO.O...O#
+#..O.OOR..OORR*.OR..RO.O.O.....RO..*RRR..*.R.R.RR.R.OR.O*OR#
+#....OR....R.RRO.*..OR.ROO.........R..R.RROR.OOR..RR.RORRO.#
+#RO*.*O.*.OOO...*OO............**OO..*.O*.O........O..O..RR#
+#R...R..................O....O**.OO.O..O..O*O.*.O...*..O*O.#
+#..O.R.....O..O..O......*..O..O.......O....O..OO.O..O.R*.R.#
+############################################################

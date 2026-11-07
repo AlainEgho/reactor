@@ -1,0 +1,14 @@
+name: Double Nudge
+need: 7
+hint: Double Nudge. Short walls hang down from the top. Push a Lead ball sideways into the open, or leave it where it is. Take all 7 Pellets and step on the X.
+---
+################
+#.O#..#..#....X#
+#.##.*#..#.....#
+#.....*........#
+#........*.....#
+#..#.....*.....#
+#.......*......#
+#......*.......#
+#@.......*.O  ##
+################

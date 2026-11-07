@@ -1,0 +1,13 @@
+name: Roll Right
+need: 5
+hint: Roll Right. Two walls overlap, with a gap at each end. The Lead ball sits on the wall, so it stays put. Walk around it, take all 5 Pellets, and step on the X.
+---
+##############
+#......*....X#
+###########..#
+#....*.......#
+#.#..*.......#
+#..###########
+#.*..........#
+#@..*....O  ##
+##############

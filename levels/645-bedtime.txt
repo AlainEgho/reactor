@@ -1,0 +1,15 @@
+name: Bedtime
+need: 7
+hint: Bedtime. One wall crosses the room, with a gap at the left. Push a Lead ball sideways into the open, or leave it where it is. Take all 7 Pellets and step on the X.
+---
+################
+#.O*..........X#
+#.#..*.........#
+#....*.........#
+#..#........*..#
+#..###########.#
+#........*.....#
+#........*.....#
+#........*.....#
+#@.........O  ##
+################

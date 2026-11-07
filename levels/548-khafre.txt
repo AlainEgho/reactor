@@ -1,0 +1,28 @@
+name: Khafre
+need: 75
+hint: Gammas on patrol and wide open space. A long harvest.
+---
+############################################################
+#S           R  R    R  R  R ..@.. R    R R    R           #
+#           RR     R  .RR  R R...R RR   R    R             #
+#                   R R  .   .R.R.   RR  R  R              #
+#               R  R*RRR R    RRR RR  R        R           #
+#           R  RR  ..RRRR  R     R   R  R R R              #
+#            R   R R   SR   RRR RR  R  RR  R               #
+#              R RR  R  RR R        S  R    RRRR           #
+# RR    RR    R  R RR RRR  RRRR RRR RR RR > .  . R        R#
+#R      R R RRR< R      R RR. RRRRR   RRRRR  R.  R .     RR#
+#R          R    RR RR .R  RR  R      R    R<R R R        R#
+#   R R    .>   RRR  .R.R     R.R .*R R.R RR    R  R     R #
+#OOOO**OOOO*.R...O.............................RO*OO*OO*OOO#
+#*O**OO*O**OOR.O*.........................O.*ROOO*O**OOO*O*#
+#*OOOOO*OOOO*O*RR.........................OO**..O***O*OO***#
+#*O*O*OOOO*O.....O............ ...........R.R...OOOO**OOOO*#
+#*OOO*OOOO*O. ..*R. ... ..... S   . ...  .RO. .**OO**OOOOOO#
+#*O*OO*O***OR.R..*...... . .S   .. . ........ R**OO*O*O****#
+#OOOOO*O**O*OOR......  .... .... . .. .... ..R****O**OO*O*O#
+#O*O*O*OO***OOOO... . S    ......... S   .R.*OO.*OOOO*OOOOO#
+#.*..O...*.*..RO. .... ..............  ... R..*.....***X*..#
+#O..*O.**..*. ..R......................... .R.*.**.*..*... #
+#......O....R..O. ....*......*..*.......*.. .R.**......*.*.#
+############################################################

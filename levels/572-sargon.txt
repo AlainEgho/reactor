@@ -1,0 +1,28 @@
+name: Sargon
+need: 45
+hint: Gammas on patrol, yellow canisters and an Initiator and orange canisters. Every Pellet counts.
+---
+############################################################
+#..o.o....o.o.....##ooooo....oo.......RRoR.o.o....#S oSSS *#
+#..*.*.o.o..#. .. .#o#oo.o*..oo.R..oRoo....R..ooo*S .#.  ..#
+#..o...ooo.....#.#Xooo#ooo.o..Rooo..oRooR.o...oR#o#S^#  ..*#
+#....oo.ooo.  .##oo.o.o#..o.........Ro...R...*..... o... ..#
+#oo.oo.oo......#oo.#ooo#o.oo..o.O.oo...o.o.ooo*... S..o.. .#
+#o..o..ooo..o..#..##oo#..o..o....oo.R..Ro.o.*o..*S o.......#
+#.oooo..ooo... . .##o..o........Ro..oR..o....*...o.o...*. .#
+#o.ooooooRo. ..R.R#o##.o.O.....*....oR..Roo....*...........#
+#..ooR.oo.o.. ..R.o.#.oo.o.......o.O...........o...S S.... #
+#oRRRoRoRo.R...# Rooo..........R.o..ooo...**....o.ooS    . #
+#.oooooRooR. .#...o##o##.o....R....*.oRoRo...oo*..*.o .... #
+#oy.RR##.##. .R#yR###ooo...o...o...o.......o.*.o......*....#
+##.o.*..R*....##  ##ooo........o......o....*......o........#
+#...yRy.*.RRR ..yR#oo#oo..O......o..o.o.....o*....*oo. .  .#
+#R*#.#yRR...R #R*..oo..#O....o.o..*....o.oo.*...o...... ...#
+#T......T...#.y...#o.o.*..oO..ooo...R..R*R.....o*......... #
+#.........T.#......#o.o............RRRR.*R..R.RR...o.. .o..#
+#..T.T..T...R........#.#....O.*.R...*R..RRo.oo.R.........oo#
+#.......T..T. #.#R##o#.#........o...RR*.*R....oo.....o. ..o#
+#..@T.#.....##.yO#o.o.o.....*.....R*o..RR.oR.ooRR.o.oo.....#
+##T*T..#..#..#.#..#o.#.#..*....oo...RR.o.RRooo...R.oo..O..o#
+#.TT..###....*#....#Oo.oO........o..R.ooooR...RRoR...R.*ooR#
+############################################################

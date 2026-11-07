@@ -15,7 +15,7 @@ import { pngFromBase64 } from './png.mjs';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = process.argv[2] || join(ROOT, 'store/android');
 const LOOKS = ['nuclear', 'christmas'];
-const POSTERS = [['hero', '01-hero'], ['crew', '02-meet-the-crew'], ['wings', '03-545-floors'], ['gadgets', '04-power-up']];
+const POSTERS = [['hero', '01-hero'], ['crew', '02-meet-the-crew'], ['wings', '03-645-floors'], ['gadgets', '04-power-up']];
 const DEVICES = [
   { key: 'phone', w: 1080, h: 1920, kinds: POSTERS },
   { key: 'tablet-7', w: 1200, h: 2133, kinds: POSTERS },

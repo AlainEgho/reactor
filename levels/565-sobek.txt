@@ -1,0 +1,28 @@
+name: Sobek
+need: 120
+hint: Gammas on patrol and wide open space. A long harvest.
+---
+############################################################
+#                      .....                               #
+#                      ..@..                               #
+#                      .....        .                      #
+#      RO.RRR  RR*.    ....R*R  R*O.     RO.RO..OR R R     #
+#     .OR.R.*.R R*.     .**R.R .**..  R  ..ORORO.R  RR     #
+#     ....*...*.*RR*.   .RR.  ....RR R .O....OR...OO.      #
+#       .*.R ....*.RR   R.*..*O.       ... RR..  ...O.     #
+#    .O*ROOROO*OO*R SR .O***R*O*R***.    RO**O**OO.R.R     #
+#    ..**O.**O*O**.   R*O***RO*OOO*RRO.RRO***O**OOR*OO.    #
+#    .*.O**RO*OO**.*. .R*OO*R*OO*OOO... .O*OOOO*.*OO*R.    #
+#    .R*O*.*O*O****O.  .OO**R**OROORO.  ..OO**OOO**.**.    #
+#     .R*.X.R*.R**...  ..*.**R*RR.*R..R R.R.OO*RO*.OR*.    #
+#      RR.R.*RO**..   RRR*R..R.RR**RR.O..O***.R.*R.ORR.    #
+#     R*RR.***R.O.  R  RRO*R R  RO.R ......R.*.OR....R     #
+#    .*O*.O..*ROR. .**. R*.*O*.**O**R     RORO*O.RO.O.     #
+#    ............  .... .............     ............     #
+#                                                          #
+#                                                          #
+#                                                          #
+#  .. .        .    .  .  ... .O.    ...  .  ..   .  .. ...#
+#.      . ..  .. ..  .    .O.O.......    .        .  .     #
+# .  ..  .     .. . .     ..... ..      . .  .. .   .   .  #
+############################################################

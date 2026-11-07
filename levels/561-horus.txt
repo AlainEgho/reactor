@@ -1,0 +1,28 @@
+name: Horus
+need: 133
+hint: Red canisters, airlocks in the walls and Lead everywhere. A long harvest.
+---
+############################################################
+#..RoRO**.R...OR..RO...O.*..O..OR*.*....*R.*O*O..*.O...O*..#
+#..R*..d....RO.R..*.. .**.*O..RR..ROO.**RO......*.*.*.R... #
+#OR..R..OOOO...*..OR>.....*.O.RR..ORR..O*O.*O....O.OOO.. R.#
+#.*OO..*O*RR.O.*..R*... RRO**ORR-R^OOO.O..R.*O.O...OO.....R#
+#.*.O..ROR....R.*OR..RRR.R.R.O*R.R.*O..O..O.....R.O..*O..O.#
+#OO.*. RRRR......O.OORRO...*..R>. RRRO..ORO.OR..*RO.O.O.O.*#
+#......+.. ...OO.RO...R*O.R..RO*.RRO..*..O*.O..*RO***.O....#
+#**...OOORR..RORO.RR .*ROO.*RORRO....O..OOO.#*..R.O......*.#
+#R..O.ORR..RO..R.. RR.ORO*....v.vRRR.OOO...*O.+R....O*..O*O#
+#RR.O..*.R ..*O...+...O*O.. .O*.R<O<..... RO...... R......*#
+#RRR.OR.O.R.*..ROR*. ....*....RRR<.vO......O.  .*#..OO..O.O#
+#..O....RR.....R...R... ...*O. .*...*......R....O#....*.*O.#
+#**...R..OR.OR.OO...O*..R.RRO...R.........#.......*.O.OO...#
+#.*O..OR.R.@*RR.*ROROO.O..O*..*.*R**O..OOOO*O. R.RR.....*OO#
+#...O...*.......*R.>.R.OR.....R*O.R*O.*...*OR...R.O....OO.O#
+#R.OR.RR.R.R....*....*..*O.R*.R*R.ROR*R....O..........O....#
+#R.X.....O...O...O.R.....ORRO.R.. .R*R..OR..**O....OO*....R#
+#.R..*.OROO...OOO*..O*O...ORR..O...O...OO.O.O..R..*O..O...*#
+#O...RR...RO.OO*...RO.OR..*RRRO|RR....R.R*...O.**..R.R..ROO#
+#.*O.*...O...OR**..*RR*R............OO..........O.......*.R#
+#.OO*..OOR........OR..RO.O...R..OO..R..>ROO*..O....OO.ROO*O#
+#..O..*..R..R...R..*.*.RO*.R...O*... .*.*....OO.....*..R.**#
+############################################################
