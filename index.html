@@ -6,9 +6,16 @@
 <title>RoboMind</title>
 <meta name="description" content="RoboMind — a robot puzzle game. Guide Iso through 19 wings. Dig, collect, think ahead.">
 <meta name="theme-color" content="#05070a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RoboMind">
 <meta property="og:title" content="RoboMind">
 <meta property="og:description" content="Guide Iso through 19 wings. Dig, collect, think ahead.">
 <meta property="og:type" content="website">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -164,6 +171,31 @@ a{color:inherit}
   margin-top:clamp(14px,3vh,26px);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
   padding-bottom:2px;animation:rise .7s ease-out .42s both;
 }
+.a2hs{
+  display:none;align-items:center;gap:10px;margin-top:clamp(12px,2.4vh,20px);
+  padding:8px 14px 8px 8px;border-radius:999px;border:2px solid var(--line);
+  background:rgba(10,13,18,.82);color:var(--fg);font:inherit;cursor:pointer;
+  font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  animation:rise .7s ease-out .48s both;
+  -webkit-tap-highlight-color:transparent;
+}
+.a2hs img{width:36px;height:36px;border-radius:10px;display:block;flex:none;box-shadow:0 0 0 2px #0a0d12}
+.a2hs:hover,.a2hs:focus-visible{border-color:var(--hero);outline:none}
+.a2hs.show{display:inline-flex}
+.a2hs-tip{
+  display:none;position:fixed;left:50%;bottom:max(18px,env(safe-area-inset-bottom));
+  translate:-50% 0;z-index:25;width:min(340px,calc(100% - 28px));
+  padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--panel);
+  box-shadow:0 18px 48px rgba(0,0,0,.55);text-align:left;font-size:13px;line-height:1.45;
+}
+.a2hs-tip.open{display:block}
+.a2hs-tip strong{display:block;font-family:var(--display);font-size:15px;letter-spacing:.06em;margin:0 0 6px;color:var(--hero)}
+.a2hs-tip ol{margin:8px 0 0;padding-left:1.2em;color:var(--muted)}
+.a2hs-tip li{margin:4px 0}
+.a2hs-tip .ok{
+  margin-top:12px;width:100%;appearance:none;border:0;border-radius:999px;cursor:pointer;
+  padding:10px 14px;background:var(--hero);color:#14110a;font-family:var(--display);font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+}
 .wing-tag{
   position:absolute;left:50%;bottom:max(14px,env(safe-area-inset-bottom));translate:-50% 0;z-index:1;
   font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);white-space:nowrap;
@@ -191,6 +223,7 @@ a{color:inherit}
   .brand{font-size:clamp(36px,9vw,72px)}
   #iso{width:clamp(80px,16vmin,120px);margin-top:4px}
   .sub{display:none}
+  .a2hs{margin-top:10px}
 }
 @media (prefers-reduced-motion:reduce){
   .brand,#iso,.bubble,.cta,.line,.sub,.crew,.more,.ring,.rays,.confetti i{animation:none}
@@ -233,10 +266,24 @@ a{color:inherit}
         <figure><canvas data-part="canister"></canvas><figcaption style="--c:#f5c518">Canister</figcaption></figure>
       </div>
       <span class="more">How it plays</span>
+      <button type="button" class="a2hs" id="a2hs" hidden aria-label="Add RoboMind to Home Screen">
+        <img src="icons/icon-192.png" width="36" height="36" alt="" decoding="async">
+        Add to Home Screen
+      </button>
     </div>
   </div>
   <div class="wing-tag" id="wingTag" aria-live="polite">Now showing · <b id="wingName">Fuel Hall</b></div>
 </section>
+<div class="a2hs-tip" id="a2hsTip" role="dialog" aria-label="Add to Home Screen" hidden>
+  <strong>Add RoboMind to your Home Screen</strong>
+  Tap Share, then <b>Add to Home Screen</b>. The Iso icon lands on your home screen like an app.
+  <ol>
+    <li>Tap the Share button in Safari</li>
+    <li>Choose Add to Home Screen</li>
+    <li>Confirm Add</li>
+  </ol>
+  <button type="button" class="ok" id="a2hsOk">Got it</button>
+</div>
 <div class="flash" aria-hidden="true"></div>
 
 <script>
@@ -606,6 +653,43 @@ document.addEventListener('visibilitychange',function(){
 });
 sizeAll();
 requestAnimationFrame(frame);
+
+// ---- Mobile: Add to Home Screen (Iso icon from the PWA manifest) ----
+(function(){
+  const btn=document.getElementById('a2hs'),tip=document.getElementById('a2hsTip'),ok=document.getElementById('a2hsOk');
+  if(!btn) return;
+  const ua=navigator.userAgent||'';
+  const isNative=!!(window.Capacitor&&Capacitor.isNativePlatform&&Capacitor.isNativePlatform());
+  const standalone=matchMedia('(display-mode: standalone)').matches||!!navigator.standalone;
+  const mobile=/Android|iPhone|iPad|iPod|Mobile/i.test(ua)||matchMedia('(pointer:coarse)').matches;
+  if(isNative||standalone||!mobile) return;
+  let deferred=null;
+  const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  function show(){btn.hidden=false;btn.classList.add('show');}
+  show();
+  window.addEventListener('beforeinstallprompt',function(e){
+    e.preventDefault();deferred=e;show();
+  });
+  window.addEventListener('appinstalled',function(){
+    deferred=null;btn.hidden=true;btn.classList.remove('show');tip.hidden=true;tip.classList.remove('open');
+  });
+  btn.addEventListener('click',async function(){
+    if(deferred){
+      deferred.prompt();
+      try{await deferred.userChoice;}catch(_){}
+      deferred=null;
+      return;
+    }
+    if(ios){tip.hidden=false;tip.classList.add('open');return;}
+    tip.querySelector('strong').textContent='Add RoboMind to your Home Screen';
+    tip.querySelector('ol').innerHTML='<li>Open the browser menu</li><li>Choose Add to Home screen / Install app</li><li>Confirm with the Iso icon</li>';
+    tip.hidden=false;tip.classList.add('open');
+  });
+  ok.addEventListener('click',function(){tip.hidden=true;tip.classList.remove('open');});
+  if('serviceWorker' in navigator){
+    navigator.serviceWorker.register('./sw.js').catch(function(){});
+  }
+})();
 })();
 </script>
 </body>

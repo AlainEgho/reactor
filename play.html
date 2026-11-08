@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>RoboMind</title>
+<meta name="theme-color" content="#05070a">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="RoboMind">
 <meta name="claude:viewport-fit-sides" content="cover">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -370,6 +378,8 @@ body.xmas #bAct::before,body.ancient #bAct::before{font-size:22px}
 .settings h3{margin:0;font-family:var(--display);font-size:18px;letter-spacing:.08em;color:var(--fg)}
 .settings .lead{margin:0;color:var(--muted);font-size:13px;max-width:48ch}
 .settings .block{display:flex;flex-direction:column;gap:10px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:var(--bg)}
+.a2hsbtn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px}
+.a2hsbtn img{width:28px;height:28px;border-radius:7px;flex:none}
 .prow .btn{padding:7px 12px}
 /* Floating layout: the keys leave the strip and float over the board, each where the player put it
    (left/top set by placePad). The pad itself lets touches through; only the keys take them. */
@@ -18762,14 +18772,21 @@ function catHead(k){
 }
 function totalScore(){const s=prog().score;let t=0;for(const k in s) t+=s[k];return t;}
 function totalStars(){const s=prog().stars;let t=0;for(const k in s) t+=countBits(s[k]);return t;}
-// Welcome Play lands on #pick: open the Kids level grid so a level is one tap away.
+// Welcome Play lands on #pick / #levels: the wing picker. #kids still opens the Kids grid.
 function wantPick(){const h=(location.hash||'').replace(/^#/,'').toLowerCase();return h==='pick'||h==='levels'||h==='kids';}
+function wantKids(){return (location.hash||'').replace(/^#/,'').toLowerCase()==='kids';}
 function themeBar(){
   const plant=!xmas&&!ancient;
   return '<div class="themes" role="group" aria-label="Theme">'+
     '<button type="button" class="themebtn" data-act="theme" data-theme="plant" aria-pressed="'+plant+'">Plant</button>'+
     '<button type="button" class="themebtn" data-act="theme" data-theme="xmas" aria-pressed="'+!!xmas+'">Christmas</button>'+
     '<button type="button" class="themebtn" data-act="theme" data-theme="ancient" aria-pressed="'+!!ancient+'">Ancient</button></div>';
+}
+function canOfferHomeScreen(){
+  if(window.FISSION_APP) return false;
+  if(matchMedia('(display-mode: standalone)').matches||navigator.standalone) return false;
+  const ua=navigator.userAgent||'';
+  return /Android|iPhone|iPad|iPod|Mobile/i.test(ua)||coarse;
 }
 function settingsView(){
   const next=firstOpen();
@@ -18785,13 +18802,15 @@ function settingsView(){
     '</div></div>'+
     (coarse?'<div class="block"><h3>Controls</h3><p class="lead">On-screen keys, size and layout for phones and tablets.</p>'+
       '<button type="button" class="btn primary" data-act="controls">Open controls</button></div>':'')+
+    (canOfferHomeScreen()?'<div class="block"><h3>Home screen</h3><p class="lead">Put Iso on your phone like an app.</p>'+
+      '<button type="button" class="btn primary a2hsbtn" data-act="a2hs"><img src="icons/icon-192.png" width="28" height="28" alt="">Add to Home Screen</button></div>':'')+
     '<div class="block"><h3>Codes</h3>'+codeField()+'</div>'+
     '<div class="block"><h3>Account</h3><p class="lead">Signed in as <b>'+esc(save.name||'—')+'</b>.</p>'+
       '<button type="button" class="btn" data-act="signout">Sign out</button></div></div>';
 }
 function openPick(){
   menuView='levels';set='remake';save.set=set;persist();
-  menuCat=KIDS_CAT>=0?KIDS_CAT:0;
+  menuCat=wantKids()&&KIDS_CAT>=0?KIDS_CAT:-1;
   showMenu();ov.scrollTop=0;
 }
 // slide is how the panel arrives: 'slide-l' going into a category, 'slide-r' coming back out.
@@ -19236,8 +19255,31 @@ ov.addEventListener('click',function(e){
     case 'meltdown':startMeltdown();break;
     case 'pick':datFile.value='';datFile.click();break;
     case 'forget':forgetDat();break;
+    case 'a2hs':offerHomeScreen();break;
+    case 'ok':menuView='settings';showMenu();ov.scrollTop=0;break;
   }
 });
+let a2hsPrompt=null;
+window.addEventListener('beforeinstallprompt',function(e){e.preventDefault();a2hsPrompt=e;});
+window.addEventListener('appinstalled',function(){a2hsPrompt=null;if(menuView==='settings') showMenu();});
+async function offerHomeScreen(){
+  if(a2hsPrompt){
+    a2hsPrompt.prompt();
+    try{await a2hsPrompt.userChoice;}catch(e){}
+    a2hsPrompt=null;
+    if(menuView==='settings') showMenu();
+    return;
+  }
+  const ua=navigator.userAgent||'';
+  const ios=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+  const body=ios
+    ? 'In Safari, tap Share, then <b>Add to Home Screen</b>. Iso’s icon will sit on your home screen.'
+    : 'Open the browser menu and choose <b>Add to Home screen</b> or <b>Install app</b>. Use the Iso icon.';
+  dialog('Add to Home Screen',body,[['ok','Got it']],'pop');
+}
+if(!window.FISSION_APP&&'serviceWorker' in navigator){
+  navigator.serviceWorker.register('./sw.js').catch(function(){});
+}
 datFile.addEventListener('change',function(){if(datFile.files&&datFile.files[0]) loadDat(datFile.files[0]);});
 addEventListener('dragover',function(e){
   if(!e.dataTransfer||Array.from(e.dataTransfer.types||[]).indexOf('Files')<0) return;
