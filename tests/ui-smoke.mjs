@@ -1,4 +1,4 @@
-// Drives index.html in Chromium: menu, a remake level, and (when a path is given) loading LEVELS.DAT.
+// Drives play.html in Chromium: menu, a remake level, and (when a path is given) loading LEVELS.DAT.
 // Borrows playwright-core from another local checkout; set PLAYWRIGHT_FROM to point elsewhere.
 // Usage: node tests/ui-smoke.mjs [path\to\LEVELS.DAT] [screenshot-dir]
 import { createRequire } from 'node:module';
@@ -31,7 +31,7 @@ const openLevel = async lv => {
 };
 
 // The entrance shows one card per category; a category lists only its own levels.
-await page.goto(pathToFileURL(join(here, '..', 'index.html')).href);
+await page.goto(pathToFileURL(join(here, '..', 'play.html')).href);
 // The game opens on a sign-in screen; a name is all it asks for.
 await page.locator('#nameIn').waitFor();
 check(await page.locator('.cat').count() === 0, 'the game opens on a sign-in screen');

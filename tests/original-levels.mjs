@@ -8,7 +8,7 @@ import { dirname, join } from 'node:path';
 const path = process.argv[2];
 if (!path) { console.error('Pass the path to LEVELS.DAT'); process.exit(2); }
 const here = dirname(fileURLToPath(import.meta.url));
-const html = readFileSync(join(here, '..', 'index.html'), 'utf8');
+const html = readFileSync(join(here, '..', 'play.html'), 'utf8');
 const src = html.slice(html.indexOf('// ENGINE-START'), html.indexOf('// ENGINE-END'));
 const E = new Function(src + '\nreturn {createGame,step,at,parseDat,DX,DY,T:{EMPTY,BASE,INFO,RED,EXIT,PORT,MURPHY}};')();
 const { T } = E;

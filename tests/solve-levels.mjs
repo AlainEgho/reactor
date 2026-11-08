@@ -8,7 +8,7 @@ import { dirname, join } from 'node:path';
 import { makeSolver } from './solver.mjs';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const html = readFileSync(join(here, '..', 'index.html'), 'utf8');
+const html = readFileSync(join(here, '..', 'play.html'), 'utf8');
 const src = html.slice(html.indexOf('// ENGINE-START'), html.indexOf('// ENGINE-END'));
 const E = new Function(src + `
 return {createGame,step,at,LEVELS,DX,DY,BOMB_FUSE,BOMB_HOLD,beamCells,LASER_CYCLE,LASER_ON,

@@ -1,5 +1,5 @@
 // Gameplay screenshots for the Google Play listing, next to the posters from tools/store-images.mjs.
-// Real play: the app build (www/index.html, with the on-screen keys) signed in, every level open, a
+// Real play: the app build (www/play.html, with the on-screen keys) signed in, every level open, a
 // level started and Iso walked a few steps in, shot at store sizes with the camera pulled in a little
 // (fewer tiles across than the game would pick by itself). Both looks, phone and the two tablets.
 // Output: store/android/<look>/<device>/05-..08-<level>.jpg (JPEG, which Play accepts; 24-bit, no alpha).
@@ -36,7 +36,7 @@ for (const [look, xmas] of Object.entries(LOOKS)) {
     await ctx.addInitScript(on => { try { localStorage.setItem('fission_xmas', on ? 'on' : 'off'); } catch (e) {} }, xmas);
     const page = await ctx.newPage();
     const errors = []; page.on('pageerror', e => errors.push(e.message));
-    await page.goto(pathToFileURL(join(ROOT, 'www/index.html')).href);
+    await page.goto(pathToFileURL(join(ROOT, 'www/play.html')).href);
     await page.evaluate(() => Promise.all([document.fonts.load('700 20px "Chakra Petch"'), document.fonts.load('500 12px "IBM Plex Mono"'), document.fonts.ready]));
     await page.addStyleTag({ content: '#toast{display:none!important}' }); // the level hint would cover the board
     await page.fill('#nameIn', 'Iso'); await page.locator('#loginForm button').click();

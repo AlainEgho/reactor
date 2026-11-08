@@ -183,7 +183,7 @@
     // the name and the line under it
     const tx = land ? w * .7 : w * .5;
     if (X.xmas) tag(c, 'CHRISTMAS MODE', tx, land ? h * .13 : h * .075, m * .028, { border: '#e63946' });
-    bigText(c, 'FISSION', tx, land ? h * .32 : h * .15, land ? h * .26 : w * .2, L, { max: land ? w * .52 : w * .72, ls: .06 });
+    bigText(c, 'ROBOMIND', tx, land ? h * .32 : h * .15, land ? h * .26 : w * .18, L, { max: land ? w * .52 : w * .78, ls: .04 });
     const sub = X.xmas ? ['Help Santa-bot', 'find every gift!'] : ['Dig. Grab the fuel.', "Don't get squashed!"];
     const ss = land ? h * .065 : w * .058;
     sub.forEach((t, i) => text(c, t, tx, (land ? h * .52 : h * .255) + i * ss * 1.25, ss, { max: land ? w * .52 : w * .9 }));
@@ -274,7 +274,7 @@
     glow(c, ix, iy, is * .8, X.xmas ? 'rgba(255,215,90,.35)' : 'rgba(245,197,24,.4)');
     c.drawImage(iso(1024, santa), ix - is / 2, iy - is * .48, is, is);
     if (X.xmas) tag(c, 'CHRISTMAS MODE', w * .64, h * .14, h * .05, { border: '#e63946' });
-    bigText(c, 'FISSION', w * .64, h * .36, h * .3, L, { max: w * .6, ls: .06 });
+    bigText(c, 'ROBOMIND', w * .64, h * .36, h * .26, L, { max: w * .62, ls: .04 });
     text(c, X.xmas ? 'Help Santa-bot find every gift!' : "Dig. Grab the fuel. Don't get squashed!", w * .64, h * .58, h * .085, { max: w * .6 });
     const parade = X.xmas ? [['pellet', 0], ['lead', 2], ['gamma', 1], ['red', 3], ['reactor', 5]] : [['pellet', 0], ['lead', 2], ['gamma', 1], ['red', 3], ['neutron', 5]];
     parade.forEach((p, i) => sticker(c, part(p[0], p[1], santa, 256), w * (.44 + i * .1), h * .82, h * .19, L, { rot: i % 2 ? 9 : -9 }));

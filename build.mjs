@@ -1,4 +1,4 @@
-// Builds the remake level set into index.html from levels/*.txt, and optionally writes the artifact copy.
+// Builds the remake level set into play.html from levels/*.txt, and optionally writes the artifact copy.
 //
 // Level file format:
 //   name: Long Haul
@@ -9,7 +9,7 @@
 //   special: 12,5 gravity on             (optional, repeatable: a port that switches gravity;
 //                                         may add "freeze-zonks" and/or "freeze-enemies")
 //   ---
-//   <map rows, see the key in index.html>
+//   <map rows, see the key in play.html>
 //
 // Usage: node build.mjs [--artifact path\to\copy.html]
 import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
@@ -82,18 +82,18 @@ function render(levels) {
 
 const files = readdirSync(join(root, 'levels')).filter(f => /^\d{3}-.*\.txt$/.test(f)).sort();
 const levels = files.map(f => parseLevel(f, readFileSync(join(root, 'levels', f), 'utf8')));
-const htmlPath = join(root, 'index.html');
+const htmlPath = join(root, 'play.html');
 let html = readFileSync(htmlPath, 'utf8');
 const block = render(levels);
 if (html.includes('// LEVELS-START')) {
   html = html.replace(/\/\/ LEVELS-START[\s\S]*?\/\/ LEVELS-END/, () => block);
 } else {
   const re = /const LEVELS=\[[\s\S]*?\n\];/;
-  if (!re.test(html)) throw new Error('index.html: could not find the LEVELS block');
+  if (!re.test(html)) throw new Error('play.html: could not find the LEVELS block');
   html = html.replace(re, () => block);
 }
 writeFileSync(htmlPath, html);
-console.log(`Built ${levels.length} levels into index.html`);
+console.log(`Built ${levels.length} levels into play.html`);
 
 const ai = process.argv.indexOf('--artifact');
 if (ai > 0) {

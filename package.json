@@ -1,8 +1,8 @@
 {
-  "name": "fission",
+  "name": "robomind",
   "version": "1.0.0",
   "private": true,
-  "description": "Fission, the one-file puzzle game, wrapped for iOS and Android with Capacitor.",
+  "description": "RoboMind, the one-file robot puzzle game, wrapped for iOS and Android with Capacitor.",
   "type": "module",
   "scripts": {
     "www": "node tools/www.mjs",

@@ -27,7 +27,7 @@ const { chromium } = createRequire(from)('playwright-core');
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
 const errors = []; page.on('pageerror', e => errors.push(e.message));
-await page.goto(pathToFileURL(join(ROOT, 'index.html')).href);
+await page.goto(pathToFileURL(join(ROOT, 'play.html')).href);
 await page.waitForFunction(() => window.__fission && window.__fission().part && window.__fission().names);
 // The poster fonts must be in before anything is measured or drawn.
 await page.evaluate(() => Promise.all([document.fonts.load('700 40px "Chakra Petch"'), document.fonts.load('600 20px "IBM Plex Mono"'), document.fonts.ready]));

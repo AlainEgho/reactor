@@ -1,4 +1,4 @@
-// Runs the game engine from index.html headless: level sanity, physics, and a greedy auto-player.
+// Runs the game engine from play.html headless: level sanity, physics, and a greedy auto-player.
 // Usage: node tests/engine.test.mjs
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -6,7 +6,7 @@ import { dirname, join } from 'node:path';
 import assert from 'node:assert/strict';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const html = readFileSync(join(here, '..', 'index.html'), 'utf8');
+const html = readFileSync(join(here, '..', 'play.html'), 'utf8');
 const src = html.slice(html.indexOf('// ENGINE-START'), html.indexOf('// ENGINE-END'));
 const E = new Function(src + `
 return {createGame,step,at,explode,parseDat,LEVELS,DX,DY,beamCells,

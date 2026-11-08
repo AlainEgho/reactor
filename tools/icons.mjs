@@ -27,7 +27,7 @@ const from = process.env.PLAYWRIGHT_FROM || 'D:/Omtech/workspace/omtech-agent-po
 const { chromium } = createRequire(from)('playwright-core');
 const browser = await chromium.launch();
 const page = await browser.newPage();
-await page.goto(pathToFileURL(join(ROOT, 'index.html')).href);
+await page.goto(pathToFileURL(join(ROOT, 'play.html')).href);
 await page.waitForFunction(() => window.__fission && window.__fission().drawIso);
 
 for (const icon of ICONS) {
